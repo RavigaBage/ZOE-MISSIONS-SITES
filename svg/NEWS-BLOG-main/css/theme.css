@@ -1,0 +1,106 @@
+@font-face {
+    font-family:news_default;
+    src: url('../fonts/d1.ttf');
+}
+:root{
+ --text-color:#f3f3f3;
+ --white-dim:#dddddd17;
+ --black-text:#0000;
+ --dim:rgb(17, 17, 17);
+ --black-shades:#00000070;
+ --bg:#1a1919;
+ --image-gradient-overlay-start-color: rgba(91,46,48,0);
+--image-gradient-overlay-end-color: rgba(91,46,48,0.8);
+--image-gradient-overlay-end-color-blue: rgba(37,50,96,0.8);
+--gradient-end-color-green: #17352F;
+--gradient-end-color-cream: #58042b;
+--gradient-end-color-blue:rgb(3, 28, 80);
+--font-family: Segoe UI, Segoe WP, Arial, Sans-Serif;
+
+}
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: news_default;
+}
+body{
+    background-color:var(--bg);
+    color:#fff;
+    min-height:110vh;
+}
+.overlay_main{
+    position: absolute;
+    inset: 0;
+     border-radius: 16px;
+}
+.overlay_shade{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+.trans{
+    opacity: 0.3;
+}
+.trans video{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay_main.gray{
+    background:linear-gradient(137deg,#dddddd63,var(--image-gradient-overlay-start-color));
+}
+.overlay_shade.gray{
+    background:var(--white-dim);
+}
+.overlay_main.green{
+    background:linear-gradient(137deg,#013a6963,var(--gradient-end-color-green));
+}
+.overlay_main.blue{
+    background:linear-gradient(137deg,#030d2063,var(--gradient-end-color-blue));
+}
+.overlay_main.pink{
+    background:linear-gradient(137deg,#0055f363,rgb(53, 2, 53));
+}
+.overlay_main.cream{
+    background:linear-gradient(137deg,#e9b50c63,var(--gradient-end-color-cream));
+}
+.overlay_main.yellow{
+    background:linear-gradient(137deg,#0b7c1dd8,rgb(16, 184, 100));
+}
+.overlay_main.occean{
+    background:linear-gradient(137deg,#0b7c1dd8,rgb(5, 166, 194));
+}
+.overlay_shade.green{
+    background:var(--white-dim);
+}
+.overlay_shade.black{
+    background:var(--black-shades);
+}
+.overlay_main.brown{
+    background:linear-gradient(137deg,#02004663,rgba(0, 44, 73, 0.459));
+}
+.bolder{
+    font-size:23px;
+    font-weight: 700;
+}
+.bolder_light{
+    font-size:15px;
+    font-weight:700;
+}
+@media screen and (max-width: 900px){
+    .bolder{
+    font-size:20px;
+    }
+    .item1 .bolder{
+        font-size:23px;
+    }
+}
+@media screen and (max-width: 495px){
+    .bolder{
+    font-size:18px;
+    }
+    .item1 .bolder{
+        font-size:20px;
+    }
+}

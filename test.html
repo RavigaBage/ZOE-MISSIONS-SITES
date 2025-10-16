@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="partnership/style.css" />
+    <title>About page design</title>
+</head>
+<style>
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0a1f2c;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 10%;
+  background: radial-gradient(circle at right, #0a1f2c 0%, #002d40 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  color: #ffb84d;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ffb84d;
+  color: #0a1f2c;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ff9900;
+}
+
+/* --- Curved Image Mask --- */
+.hero-image img {
+  width: 380px;
+  height: auto;
+  object-fit: cover;
+  clip-path: path(
+    "M100,0 C160,0 200,60 200,120 C200,180 160,240 100,240 C40,240 0,180 0,120 C0,60 40,0 100,0 Z"
+  );
+}
+
+
+</style>
+<body>
+<section class="hero">
+  <div class="hero-content">
+    <h1><span>SCHOOL</span> ARTSHOW</h1>
+    <p>April 31st – Picasso Gallery Hall</p>
+    <a href="#" class="btn">Register Now →</a>
+  </div>
+  <div class="hero-image">
+    <img src="svg/vinpearl-land-6847412_1920.jpg" alt="Art Student">
+  </div>
+</section>
+</body>
+</html>
