@@ -95,7 +95,6 @@
                     let denial_of_service = false;
                     const LoadCounter = document.querySelector('#loadCounter');
                     var ImageClassLoader = document.querySelector('.image_class');
-                    var Elements = document.querySelectorAll("figure");
                     const BodyElement = document.documentElement;
                     const Bodyloader = document.querySelector('.loader');
                     const HomeData = {
@@ -108,40 +107,19 @@
                         "name_7":'IMG_7620.jpg',
                         "name_8":'IMG_7697.jpg',
                     }
-                    renderHomeImages(HomeData);
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                entryImage = entry.target;
-                                if (entryImage) {
-                                    if (!entryImage.hasAttribute('src') && entryImage.hasAttribute('data-src') && !entryImage.classList.contains('srcLoad')) {
-                                        SectionName = entryImage.getAttribute("data-src");
-                                        entryImage.setAttribute('src', SectionName);
-                                        entryImage.classList.add('srcLoad');
-                                    }
-                                }
 
-
-                            }
-                        });
-                    });
-
-                    
-                    Elements.forEach((el) => observer.observe(el));
                     function renderHomeImages(Obj) {
                         const Containers = document.querySelectorAll('.grid_content_box');
                         counter = 0;
                         if (typeof Obj == 'object') {
                             const ObjectData = Obj;
                             for (const key in ObjectData) {
-                                if (!Object.hasOwn(ObjectData, key)) continue;
-                                
                                 const element = ObjectData[key];
                                 radmi = ShuffleKeys(Color_ranges)[0];
                                 Containers[counter].querySelector('ul').innerHTML +=
                                     `<li class="card">
                                         <figure class="c4-izmir c4-border-cc-3 c4-image-rotate-right swiper-slide card" style="--secondary-color:${radmi}; --primary-color:${radmi}">
-                                            <img data-src="images/missions/${element}" alt="" />
+                                            <img src="images/missions/${element}" alt="" />
                                         </figure>
                                     </li>`;
                                 counter++;
@@ -153,6 +131,7 @@
                                 entries.forEach((entry) => {
                                     if (entry.isIntersecting) {
                                         entryImage = entry.target.querySelector('img');
+                                        console.log(entryImage);
                                         if (entryImage) {
                                             if (!entryImage.hasAttribute('src') && entryImage.hasAttribute('data-src') && !entryImage.classList.contains('srcLoad')) {
                                                 SectionName = entryImage.getAttribute("data-src");
@@ -179,6 +158,8 @@
 
                         return returnArray;
                     }
+
+                    renderHomeImages(HomeData);
 
                 });
 
