@@ -1069,6 +1069,12 @@ i.fa-times{
         font-size:23px;
     }
 }
+@media screen and (max-width:400px) {
+    .content .content_style_one {
+        grid-template-columns:1fr;
+        grid-auto-rows: minmax(250px, 280px);
+    }
+}
 @media screen and (max-width:320px) {
     .item2, .item3, .item4 {
         grid-column: 1 /3;
