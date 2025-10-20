@@ -1,4 +1,35 @@
  $(document).ready(function () {
+
+    
+  const counters = document.querySelectorAll('.count');
+  const speed = 80; // lower is faster
+
+  const animateCount = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / speed;
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(() => animateCount(counter), 30);
+    } else {
+      counter.innerText = target.toLocaleString(); // add commas
+    }
+  };
+
+  // Animate only when visible
+  const observer_r = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer_r.observe(counter));
+
+
             const lazyImages = document.querySelectorAll('.lazy-img');
 
             // Intersection Observer setup

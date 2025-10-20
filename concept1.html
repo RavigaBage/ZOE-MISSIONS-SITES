@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  :root {
+  --crimson: #a7001e;
+  --blue: #003366;
+  --teal: #1abc9c;
+  --white: #ffffff;
+  --text-dark: #222;
+  --overlay-gradient: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+}
+
+.get-involved {
+  padding: 5rem 1rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--crimson);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-dark);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+}
+
+.involved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.involved-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.involved-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+  position: relative;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-gradient);
+  z-index: 1;
+}
+
+.card-text {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  text-align: left;
+  padding: 1.5rem;
+}
+
+.card-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.card-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+</style>
+<body>
+  <section class="get-involved">
+  <div class="container">
+    <h2 class="section-title">How You Can Get Involved</h2>
+    <p class="section-subtitle">Be part of what God is doing through missions — every act of service counts.</p>
+
+    <div class="involved-grid">
+      <div class="involved-card">
+        <div class="card-image" style="background-image: url('images/pray.jpg');">
+          <div class="overlay"></div>
+          <div class="card-text">
+            <h3>Pray</h3>
+            <p>Stand with us in prayer for the missionaries, the souls, and the nations we reach.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="involved-card">
+        <div class="card-image" style="background-image: url('images/give.jpg');">
+          <div class="overlay"></div>
+          <div class="card-text">
+            <h3>Give</h3>
+            <p>Your giving helps us send teams, support missions, and transform lives in communities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="involved-card">
+        <div class="card-image" style="background-image: url('images/go.jpg');">
+          <div class="overlay"></div>
+          <div class="card-text">
+            <h3>Go</h3>
+            <p>Join our next outreach or mission trip and make an eternal impact through service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
