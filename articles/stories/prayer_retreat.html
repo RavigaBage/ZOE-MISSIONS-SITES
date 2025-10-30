@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Journeys of Faith — Missions & Prayer Retreats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --glass: rgba(255,255,255,0.04);
+      --muted:#9db0bf;
+      --radius:14px;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      font-family: Inter, Poppins, system-ui, -apple-system;
+      background: linear-gradient(180deg,#071226 0%, #071827 55%, #021826 100%);
+      color: #eaf6ff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.55;
+    }
+
+    .container{max-width:var(--max);margin:0 auto;padding:36px}
+
+    /* Top nav */
+    nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#ffb86b,#ff9b4a);display:grid;place-items:center;font-weight:700;color:#051018}
+    .brand h1{margin:0;font-size:18px}
+    .navlinks{display:flex;gap:12px}
+    .navlinks a{color:var(--muted);text-decoration:none;font-size:14px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .hero .intro h2{font-family:Poppins,Inter;font-size:28px;margin:0 0 8px}
+    .hero .intro p{margin:0;color:var(--muted)}
+    .hero .badge{display:flex;flex-direction:column;gap:8px;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    .badge small{color:var(--muted);font-size:13px}
+    .cta{background:linear-gradient(90deg,#ffb86b,#ff9b4a);color:#06121a;padding:10px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+
+    /* Sections */
+    section.story{margin-top:34px;border-radius:16px;overflow:hidden;position:relative}
+    .story-inner{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:stretch;padding:36px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+    .story-inner .text h3{margin:0 0 8px;font-size:20px}
+    .story-inner .text p{margin:0 0 12px;color:#d8eefc}
+
+    /* unique styles per story */
+    /* 1: Mountain Prayer Retreat */
+    #mountain{background-image:linear-gradient(180deg, rgba(6,18,28,0.6), rgba(3,9,16,0.75));border:1px solid rgba(255,255,255,0.02)}
+    #mountain .panel{padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));}
+    #mountain .media{border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+
+    /* 2: City Awakening */
+    #city{background:linear-gradient(180deg, rgba(1,12,30,0.6), rgba(1,6,12,0.8));border:1px solid rgba(255,255,255,0.02)}
+    #city .panel{backdrop-filter: blur(6px);background:rgba(255,255,255,0.02);padding:18px;border-radius:12px}
+    .card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .card{padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+
+    /* 3: Desert Well Mission */
+    #desert{background:linear-gradient(180deg,#2b1b0f 0%, #3b2616 100%);border:1px solid rgba(255,255,255,0.02)}
+    #desert .panel{padding:22px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .parallax{position:relative;height:280px;border-radius:12px;overflow:hidden}
+    .parallax img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);}
+
+    /* 4: Island of Light */
+    #island{background:linear-gradient(180deg, rgba(6,26,26,0.45), rgba(2,18,22,0.6));border:1px solid rgba(255,255,255,0.02)}
+    #island .panel{padding:22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));}
+    .waves{height:120px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);position:relative;border-radius:0 0 12px 12px}
+
+    /* shared media styles */
+    .media img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* subtle reveal animation */
+    .reveal{opacity:0;transform:translateY(18px);transition:all 600ms cubic-bezier(.2,.9,.3,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .story-inner{grid-template-columns:1fr}
+      .story-inner .media{order:-1}
+      .card-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:520px){
+      .container{padding:18px}
+      .logo{width:40px;height:40px}
+      .navlinks{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="logo">JF</div>
+        <div>
+          <h1 style="margin:0;font-size:16px">Journeys of Faith</h1>
+          <div style="font-size:12px;color:var(--muted)">Missions & Prayer Retreats</div>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="#mountain">Mountain</a>
+        <a href="#city">City</a>
+        <a href="#desert">Desert</a>
+        <a href="#island">Island</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="intro">
+        <h2>Journeys of Faith — Stories of Mission & Prayer</h2>
+        <p>Four short, beautifully designed vignettes — each a window into prayer retreats and mission life.</p>
+      </div>
+      <div class="badge">
+        <small>Curated collection • Modern design</small>
+        <div style="font-weight:700">No music — visual & textual only</div>
+        <button class="cta" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">Explore All</button>
+      </div>
+    </header>
+
+    <!-- 1: Mountain Prayer Retreat -->
+    <section id="mountain" class="story reveal">
+      <div class="story-inner">
+        <div class="text panel">
+          <h3>Mountain Prayer Retreat</h3>
+          <p>At dawn the fog held secrets. A small group gathered on a ridge for seven days of silence, scripture, and slow coffee. They walked the same stone path each morning, carrying petitions like lanterns, releasing them into the valley one by one.</p>
+          <p>On the final morning, the sun rose behind the peaks and the mountain seemed to answer — the group left with quiet faces and brimming courage to serve in their communities.</p>
+        </div>
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60" alt="Mountain retreat">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2: City Awakening -->
+    <section id="city" class="story reveal">
+      <div class="story-inner">
+        <div class="text panel">
+          <h3>City Awakening — Urban Missions</h3>
+          <p>They walked streets lit by neon and quiet dawn markets alike. Their mission was simple: listen, be present, and create spaces for prayer among busy schedules. A pop-up prayer corner by the transit hub became a daily haven.</p>
+          <div class="card-grid">
+            <div class="card"><strong>Evening Prayer</strong><p style="margin:6px 0 0;color:var(--muted)">Commuters paused. A chorus of whispered hopes grew into a rhythm that steadied weary hearts.</p></div>
+            <div class="card"><strong>Community Nights</strong><p style="margin:6px 0 0;color:var(--muted)">Meals shared on folding tables, stories swapped like good coins — small, life-giving exchanges.</p></div>
+          </div>
+        </div>
+
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1200&q=60" alt="City mission">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3: Desert Well Mission -->
+    <section id="desert" class="story reveal">
+      <div class="story-inner">
+        <div class="text panel">
+          <h3>Desert Well Mission</h3>
+          <p>They hiked to a village where the well had run low. With a water pump, prayer, and hands that did not tire, they restored the well. The work became a ritual of blessing; each morning the villagers, and the team, gathered to say a short prayer of gratitude.</p>
+          <p style="color:var(--muted)">A single well gave more than water — it became the axis of renewed hope.</p>
+        </div>
+        <div class="media parallax">
+          <img src="https://images.unsplash.com/photo-1501785888041-5c0f6f3d6c3e?auto=format&fit=crop&w=1200&q=60" alt="Desert well">
+        </div>
+      </div>
+    </section>
+
+    <!-- 4: Island of Light -->
+    <section id="island" class="story reveal">
+      <div class="story-inner">
+        <div class="text panel">
+          <h3>Island of Light — Prayer & Revival</h3>
+          <p>On a small island, evenings were for prayer circles beneath a canopy of stars. Music rose like tide, each voice a gentle wave. The retreat drew neighbors who had once been strangers; they found a new language of prayer that stitched their lives together.</p>
+          <p class="" style="color:var(--muted)">When the team left, the island kept the songs and the light — a living echo of what had been shared.</p>
+        </div>
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=60" alt="Island prayer">
+        </div>
+      </div>
+      <div class="waves"></div>
+    </section>
+
+    <footer style="margin-top:28px;text-align:center;color:var(--muted)">
+      <div style="font-size:13px">© 2025 Journeys of Faith — Created for storytelling and inspiration</div>
+    </footer>
+  </div>
+
+  <script>
+    // Scroll reveal — no external libraries
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      })
+    },{threshold:0.12});
+    reveals.forEach(r => io.observe(r));
+
+    // simple parallax effect for desert image
+    const parallax = document.querySelector('#desert .parallax img');
+    if(parallax){
+      window.addEventListener('scroll', () => {
+        const rect = parallax.getBoundingClientRect();
+        const winH = window.innerHeight;
+        const pct = Math.min(Math.max((winH - rect.top) / (winH + rect.height), -1), 1);
+        parallax.style.transform = `translateY(${pct * 18}px) scale(1.02)`;
+      }, {passive:true});
+    }
+  </script>
+</body>
+</html>

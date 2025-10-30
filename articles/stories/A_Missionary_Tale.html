@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Journey of Light — A Missionary Tale</title>
+  <style>
+    *{
+        box-sizing:border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#ffb86b;
+      --muted:#9aa7b2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      --max:900px;
+      --g1: linear-gradient(135deg,#0f1724 0%, #071023 60%);
+    }
+    body{
+        width: 100%;
+        margin:0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        background: radial-gradient(100px 600px at 10% 10%, rgba(255,184,107,0.06), transparent), var(--g1);
+        color:#e6eef6;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{
+      width:98%;
+      margin:20px auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:calc(var(--radius) + 4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    header.hero{
+      padding:36px 36px 28px 36px;
+      display:flex;
+      gap:24px;
+      align-items:center;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    }
+    .avatar{
+      flex:0 0 96px;
+      height:96px;
+      border-radius:20px;
+      background: linear-gradient(135deg, rgba(255,184,107,0.12), rgba(255,255,255,0.02));
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .avatar svg{width:60px;height:60px;opacity:0.95}
+    .title{
+      flex:1 1 auto;
+    }
+    h1{
+      margin:0 0 6px 0;
+      font-size:22px;
+      letter-spacing:-0.2px;
+    }
+    p.lead{margin:0;color:var(--muted);font-size:14px}
+
+    main.content{padding:28px 36px; display:grid; grid-template-columns: 1fr; gap:18px}
+
+    .scene{
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:20px;
+      border:1px solid rgba(255,255,255,0.02);
+      box-shadow: 0 6px 18px rgba(5,10,20,0.5);
+      overflow:hidden;
+    }
+    .scene h2{margin:0 0 8px 0;font-size:18px}
+    .scene p{margin:0 0 12px 0;line-height:1.6;color:#d9e7f2}
+
+    .quote{
+      padding:14px 16px;
+      border-radius:10px;
+      background: linear-gradient(90deg, rgba(255,184,107,0.06), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,184,107,0.06);
+      font-style:italic;
+      color:#fff9ef;
+    }
+
+    .row{display:flex;gap:16px;align-items:flex-start}
+    .col{flex:1}
+
+    .photo-stack{
+      width:220px;min-width:180px;border-radius:12px;overflow:hidden;flex:0 0 220px;padding:0;background:var(--glass);border:1px solid rgba(255,255,255,0.02)
+    }
+    .photo-stack .photo{height:120px;display:block;background-size:cover;background-position:center}
+    .photo-stack .caption{padding:12px;font-size:13px;color:var(--muted)}
+
+    footer.actions{padding:20px 36px;background:transparent;display:flex;gap:12px;align-items:center}
+    .btn{
+      background:linear-gradient(90deg,var(--accent),#ff9b4a);
+      color:#06202b;padding:10px 14px;border-radius:10px;font-weight:600;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(255,155,70,0.12);
+    }
+    .link{color:var(--muted);font-size:13px;text-decoration:none}
+
+    @media (max-width:720px){
+      .row{flex-direction:column}
+      .photo-stack{width:100%;flex:unset}
+    }
+    @media screen and (max-width:350px) {
+      header.hero{
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="storyTitle">
+    <header class="hero">
+      <div class="avatar" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="12" fill="url(#g)"/>
+          <path d="M32 10c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12S25.373 10 32 10z" fill="#fff" opacity="0.9"/>
+          <path d="M12 52c0-11 9-20 20-20s20 9 20 20H12z" fill="#fff" opacity="0.06"/>
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb86b" stop-opacity="0.9"/><stop offset="1" stop-color="#ff9b4a" stop-opacity="0.9"/></linearGradient></defs>
+        </svg>
+      </div>
+      <div class="title">
+        <h1 id="storyTitle">Journey of Light — Stories from the Mission Field</h1>
+        <p class="lead">Handpicked and imagined vignettes of courage, kindness and quiet miracles — told as if around a warm evening fire.</p>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <section class="scene">
+        <h2>Prologue — The Call</h2>
+        <p>They came from different corners — a teacher, a farmer's son, a nurse, and a young musician — each carrying nothing more than a worn Bible, a small bag, and a fierce, gentle hope. The town they arrived in had a clay road, a market that sang at dawn, and an old mango tree that the children believed could grant courage.</p>
+      </section>
+
+      <section class="scene row">
+        <div class="col">
+          <h2>First Light — Mansa's Lesson</h2>
+          <p>On her first morning, Mansa sat with a group of children under the mango tree. She had a chalkboard but no chalk; she had a song in her heart but no instrument. The children taught her a game of measuring shadows to tell time. In return, she taught them a song about counting blessings.</p>
+          <p class="quote">"A language you teach with your hands is remembered the same day the stomach is full." — Mansa</p>
+          <p>By the end of the week, the small class had grown: mothers joined to learn a simple sewing stitch, and men came to borrow books. What started as a lesson became a circle of exchange — knowledge wrapped in hospitality.</p>
+        </div>
+
+        <aside class="photo-stack" aria-hidden="true">
+          <div class="photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.24)), url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%23071a33\'/><text x=\'50%\' y=\'50%\' font-size=\'36\' fill=\'%23ffdfb8\' text-anchor=\'middle\'>Mango Tree Lessons</text></svg>')"></div>
+          <div class="caption">Mornings under the mango tree — where the smallest gatherings became a school.</div>
+        </aside>
+      </section>
+
+      <section class="scene">
+        <h2>Crossing Rivers — Jonah's Night</h2>
+        <p>One night a storm rose. Jonah, the musician, kept vigil for a family whose house had flooded. With only a rope and two lamps, he guided the family across a swollen river, singing softly to keep spirits steady. The next morning, when the sun found them cold and safe, the mother pressed a single orange into his hand — a small, bright thanksgiving that tasted like the whole world.</p>
+        <p>The true measure of the night wasn't the danger but the quiet way the town woke with a new story: "Jonah, who sang the river still."</p>
+      </section>
+
+      <section class="scene row">
+        <div class="col">
+          <h2>Medicine and Mercy — Amina the Nurse</h2>
+          <p>Amina set up a tiny clinic beneath a corrugated roof. She had bandages, a jar of sugar, and hands that folded like soft instruments. Between treating wounds and sharing laughter, she started a weekly circle where women learned about herbs, hygiene, and how to read the labels on tins. The clinic became more than cures; it was a place where people learned to be keepers of one another.</p>
+          <p class="quote">"You cannot mend a wound with haste — you mend it with presence." — Amina</p>
+        </div>
+
+        <aside class="photo-stack" aria-hidden="true">
+          <div class="photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.24)), url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'500\'><rect width=\'100%\' height=\'100%\' fill=\'%230a2736\'/><text x=\'50%\' y=\'50%\' font-size=\'36\' fill=\'%23dff2ff\' text-anchor=\'middle\'>The Little Clinic</text></svg>')"></div>
+          <div class="caption">Amina's clinic — a place for small hands to learn big care.</div>
+        </aside>
+      </section>
+
+      <section class="scene">
+        <h2>The Harvest — A Celebration</h2>
+        <p>Months passed. Crops were tended, songs were taught, wounds were healed. The harvest came — not just of yams and millet, but of friendships and trust. They rolled out mats and lit lanterns; the band of neighbors and new friends shared food and stories. Children performed the shadow-game Mansa had taught them, and Jonah's song turned into a hymn the crowd hummed as they ate.</p>
+        <p>That night, the missionaries sat with the village elders and felt, quietly, that the work they had come to do had come back to them tenfold in warmth and belonging.</p>
+      </section>
+
+      <section class="scene">
+        <h2>Epilogue — The Letter</h2>
+        <p>Before they left, the town gathered to write a single letter. It was a patchwork of thanks, doodles, and names. The elders sealed it with a grin and the children pressed flowers between the pages. They handed the letter to the missionaries as a promise — a promise that the story would travel on.</p>
+        <p class="quote">"We were strangers once, but now we are a story in each other's pockets."</p>
+      </section>
+
+    </main>
+
+    <footer class="actions">
+      <button class="btn" onclick="alert('Share this story with someone who needs light today 🌅')">Share the Light</button>
+      <a class="link" href="#" onclick="alert('Download feature not implemented in this demo')">Download as PDF (demo)</a>
+    </footer>
+
+  </div>
+</body>
+</html>

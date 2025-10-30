@@ -297,12 +297,12 @@ color:#fff;
     margin-inline:10px;
 }
 .min-menu .preference select:not(.personalise){
-background:transparent;
-width:100%;
-border-radius: 16px;
-height:30px;
-color:#fff;
-margin-inline:10px;
+    background:transparent;
+    width:100%;
+    border-radius: 16px;
+    height:30px;
+    color:#fff;
+    margin-inline:10px;
 }
 .min-menu .preference select option{
     color:#000;
@@ -349,7 +349,7 @@ color:#fff;
     width: 100%;
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    grid-auto-rows: minmax(360px, auto);
+    grid-auto-rows: minmax(280px, 300px);
     grid-template-rows: 1fr;
     gap:10px;
 }
@@ -364,7 +364,7 @@ color:#fff;
 }
 .item1 .slideMain{
     width:100%;
-    height:360px;
+    height:300px;
     position: relative;
 }
 .item1_last{
@@ -378,7 +378,7 @@ color:#fff;
 }
 .item1_last .slideMain{
     width:100%;
-    height:360px;
+    height:300px;
     position: relative;
 }
 #slide .slick-list.draggable{
@@ -525,7 +525,7 @@ a{
 }
 .item2 .contentproper img{
     width:100%;
-    height: 50%;
+    height: 60%;
     object-fit: cover;
     position: center center;
     border-top-right-radius: 16px;
@@ -537,7 +537,7 @@ a{
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
     width:100%;
-    height: 50%;
+    height: 40%;
     padding:10px;
 }
 .contentproper.plain .text{
@@ -1108,8 +1108,6 @@ i.fa-times{
     75% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
     80% { opacity: 1; } 
    }
-      
-  
    @keyframes dominos {
     50% { opacity: 0.7; }
     75% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
