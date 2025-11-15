@@ -1,21 +1,37 @@
  $(document).ready(function () {
 
-    
-  const counters = document.querySelectorAll('.count');
-  const speed = 80; // lower is faster
+    //encode whatsApp link
+    const enquiryText = "Hello, I would like to know more about donation options.";
 
-  const animateCount = (counter) => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / speed;
+// URL-encode the text
+const encodedText = encodeURIComponent(enquiryText);
+
+// Create the WhatsApp link
+const whatsappLink = `https://wa.me/233553838464?text=${encodedText}`;
+document.getElementById('whatsappLink').href = whatsappLink;
+document.getElementById('whatsappLink_footer').href = whatsappLink;
+document.getElementById('whatsappLink_footer_2').href = whatsappLink;
+  const counters = document.querySelectorAll('.count');
+
+const animateCount = (counter) => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+
+  const step = () => {
+    // dynamic increment: bigger at start, smaller near target
+    let increment = Math.ceil((target - count) / 10); // ease-out effect
+    count += increment;
 
     if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(() => animateCount(counter), 30);
+      counter.innerText = count.toLocaleString();
+      requestAnimationFrame(step);
     } else {
-      counter.innerText = target.toLocaleString(); // add commas
+      counter.innerText = target.toLocaleString(); // ensure exact target
     }
   };
+
+  step(); // start animation
+};
 
   // Animate only when visible
   const observer_r = new IntersectionObserver(entries => {
@@ -27,7 +43,11 @@
     });
   }, { threshold: 0.5 });
 
-  counters.forEach(counter => observer_r.observe(counter));
+counters.forEach(counter => {
+  observer_r.observe(counter);
+});
+
+
 
 
             const lazyImages = document.querySelectorAll('.lazy-img');
@@ -213,3 +233,40 @@
                 }
                 });
             })
+
+            document.querySelectorAll("#closeHeaderBtn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const targetId = btn.getAttribute('data-spawn');
+                    document.querySelector(`.timeline-container#${targetId}`).classList.remove('active');
+                    document.body.style.overflow = "";
+                });
+            });
+            document.querySelectorAll(".involve-card .cta-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    btn.parentElement.parentElement.classList.toggle('focus');
+                });
+            });
+            document.querySelectorAll(".btn_exec_summ").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    btn.parentElement.parentElement.classList.toggle('focus');
+                });
+            });
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const targetId = card.getAttribute('data-spawn');
+                    document.querySelector(`.timeline-container#${targetId}`).classList.add('active');
+                    document.body.style.overflow = "hidden";
+                }); 
+            });
+
+        $('.linear-slider').slick({
+            slidesToShow: 1,      // show one slide at a time
+            slidesToScroll: 1,
+            speed: 2000,           // transition speed
+            autoplaySpeed: 0,      // delay between slides
+            cssEase: 'linear',     // linear animation (continuous)
+            arrows: true,         // hide navigation arrows
+            pauseOnHover: false,   // continuous even on hover
+            fade: false,           // no fade
+        });
+

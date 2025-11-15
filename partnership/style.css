@@ -545,12 +545,11 @@ section {
 #brxe-ltjlax {
   display: flex;
   justify-content: space-between;
-  padding-top: 70px;
   padding-right: 64px;
   padding-left: 64px;
   background-color: var(--bricks-color-komcge);
   border-radius: 40px;
-  margin-top: 120px;
+  margin-top: 10px;
   width: 100%;
 }
 #brxe-icclti {
@@ -766,7 +765,7 @@ video {
 }
 
 .fs-18.brxe-text {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 29px;
   letter-spacing: -0.376842px;
 }
@@ -1265,6 +1264,7 @@ footer .container .field ul li span {
 footer .container .links ul li {
   margin-inline: auto;
   margin-block: 5px;
+  text-transform: capitalize;
 }
 footer .container .links ul {
   margin-bottom: 10px;
