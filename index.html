@@ -99,16 +99,17 @@
                         </div>
                     </div>
                     <ul class="menu_links">
-                        <li><a href="#"><p>Home</p></a></li>
-                        <li><a href="About_missions.html"><p>About us</p></a></li>
-                        <li><a href="NEWS-BLOG-main/main.html"><p>Article and stories</p></a></li>
-                        <li><a href="payment/index.html"><p>Donate</p></a></li>
-                        <li><a href="About_gallery.html"><p>Gallery</p></a></li>
+                        <li><a href="#"><p class="menu_home">Home</p></a></li>
+                        <li><a href="About_missions.html" class="menu_about"><p>About us</p></a></li>
+                        <li><a href="NEWS-BLOG-main/main.html"><p class="menu_article">Article and stories</p></a></li>
+                        <li><a href="payment/index.html"><p class="menu_donate">Donate</p></a></li>
+                        <li><a href="About_gallery.html"><p class="menu_gallerys">Gallery</p></a></li>
                     </ul>
                     <div class="language">
-                        <select name="language" name="select_language">
-                            <option value="english">EN</option>
-                            <option value="French">Fr</option>
+                        <select name="language" id="select_language">
+                            <option value="en">english</option>
+                            <option value="fr">French</option>
+                            <option value="ar">arabic</option>
                         </select>
                     </div>
                 </div>
@@ -116,15 +117,15 @@
             
             <div class="container__left">
                 <div class="content">
-                    <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900">Carrying</h1>
-                    <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900">Christ to the</h1>
-                    <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900"><span>Nations</span>  </h1>
-                    <p data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000">
+                    <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900" class="content_h1 first">Carrying</h1>
+                    <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900" class="content_h1 second">Christ to the</h1>
+                    <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900"><span class="content_h1 third">Nations</span>  </h1>
+                    <p data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000" class="content_h2 first">
                         “Go therefore and make disciples of all nations.”<br/>Zoe Tirzah exists to carry the light of Christ into every community and nation. Our mission is to reach the unreached, serve the needy, and nurture spiritual growth through the power of the Gospel. We believe that lasting change begins when hearts encounter the love of Jesus — healing lives, restoring dignity, and inspiring hope for generations.
                     </p>
                     <div class="cta-buttons">
-                        <a href="#missions" class="btn-primary">Discover Missions</a>
-                        <a href="#partner" class="btn-secondary">Join the Movement</a>
+                        <a href="#missions" class="content_ btn-primary">Discover Missions</a>
+                        <a href="#partner" class="content_ btn-secondary">Join the Movement</a>
                     </div>
                     <div class="social_links" data-aos="fade-right" data-aos-delay="150" data-aos-duration="1000">
                         <a href="www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 56 56"><path fill="#2196f3" fill-rule="evenodd" d="M3 7.007A4.007 4.007 0 0 1 7.007 3h41.986A4.007 4.007 0 0 1 53 7.007v41.986A4.007 4.007 0 0 1 48.993 53H7.007A4.007 4.007 0 0 1 3 48.993zM37.28 51V31.842h6.486l.971-7.466H37.28v-4.767c0-2.162.605-3.635 3.732-3.635L45 15.972V9.294C44.31 9.204 41.943 9 39.189 9c-5.75 0-9.686 3.48-9.686 9.87v5.506H23v7.466h6.503V51z"/></svg></a>
@@ -153,12 +154,12 @@
                     <div id="brxe-zsmlum" class="brxe-div">
                         <div id="brxe-cgclau" class="brxe-div" >
                             <div id="brxe-ckytzs" class="brxe-text main-subtitle">
-                                <p>Who are we ?</p>
+                                <p class="p who">Who are we ?</p>
                             </div>
                             <div id="brxe-ijntgq" class="brxe-text main-title main-title__fonts">
-                                <p><strong>Winning Souls</strong><br> and Advancing the Kingdom Across the Nations</p>
+                                <p class="p wsoul"><strong>Winning Souls</strong><br> and Advancing the Kingdom Across the Nations</p>
                             </div>
-                            <div id="brxe-odgchg" class="brxe-text fs-18">
+                            <div id="brxe-odgchg" class="brxe-text fs-18 div who_txt">
                                 <p>At Zoe Tirzah, we are a Christ-centered church dedicated to spreading the Gospel and serving those in need — both locally and globally. Our heart beats for missions, compassion, and transformation. We also place a strong focus on children’s ministry, nurturing young believers through engaging, age-appropriate programs that help them grow in faith. Beyond ministry, we invest in education and spiritual development, equipping every member to serve God and impact their world.
                                 </p>
                             </div>
@@ -179,37 +180,37 @@
 
         <section class="impact-stats">
             <div class="stats-header">
-                <h2><span class="medigreen">Our Impact</span> in Numbers</h2>
-                <p>Through God’s grace and the support of our partners, Zoe Tirzah continues to expand its reach—transforming lives, building communities, and spreading the Gospel across nations.</p>
+                <h2 class="impact-stats-txt"><span class="medigreen">Our Impact</span> in Numbers</h2>
+                <p class="impact-stats-txt-p">Through God’s grace and the support of our partners, Zoe Tirzah continues to expand its reach—transforming lives, building communities, and spreading the Gospel across nations.</p>
             </div>
 
             <div class="stats-grid">
                 <div class="stat-card" data-spawn="yrs_missions" title="hover to check details">
                 <h3 class="count" data-target="10">10+</h3>
-                <p>Years of Active Mission Work</p>
+                <p class="stat-yr-tx">Years of Active Mission Work</p>
                 </div>
                 <div class="stat-card" data-spawn="yrs_missions_church" title="hover to check details">
                 <h3 class="count" data-target="9">9</h3>
-                <p>Local Churches Established</p>
+                <p class="stat-local-tx">Local Churches Established</p>
                 </div>
                 <div class="stat-card">
                 <h3 class="count" data-target="2000">2,000+</h3>
-                <p>Lives Reached Through Medical Outreach</p>
+                <p class="stat-lives-tx">Lives Reached Through Medical Outreach</p>
                 </div>
                 <div class="stat-card">
                 <h3 class="count" data-target="15">15+</h3>
-                <p>Communities Served Across Nations</p>
+                <p class="stat-comm-tx">Communities Served Across Nations</p>
                 </div>
                 <div class="stat-card">
                 <h3 class="count" data-target="500">500+</h3>
-                <p>Children Discipled and Trained</p>
+                <p class="stat-children-tx">Children Discipled and Trained</p>
                 </div>
             </div>
         </section>
 
         <div class="timeline-container" id="yrs_missions">
             <div class="header">
-                <span class="title">Years in Mission</span>
+                <span class="title title-yr">Years in Mission</span>
 
                 <button class="close-btn" data-spawn="yrs_missions" id="closeHeaderBtn">
                     <!-- Close Icon (SVG) -->
@@ -316,21 +317,21 @@
 
         <section>
             <div class="destination_header ">
-                <h1>Our Mission in Action</h1>
-                <h2>See How Lives Are Being Transformed Across the Nations</h2>
+                <h1 class="destination_header-tx-h1">Our Mission in Action</h1>
+                <h2 class="destination_header-tx-h1">See How Lives Are Being Transformed Across the Nations</h2>
             </div>
             <div id="brxe-mvsiov" class="brxe-container" data-aos="fade-right" data-aos-duration="1200">
                 <div id="brxe-zzzqgr" class="brxe-div">
                     <div id="brxe-zsmlum" class="brxe-div">
                         <div id="brxe-cgclau" class="brxe-div" >
                             <div id="brxe-ckytzs" class="brxe-text main-subtitle">
-                                <p>community impact</p>
+                                <p class="destination_header-tx-h1-comm">community impact</p>
                             </div>
                             <div id="brxe-ijntgq" class="brxe-text main-title main-title__fonts">
-                                <p><strong>Lasting Impact</strong><br>
+                                <p class="destination_header-tx-h1-impact"><strong>Lasting Impact</strong><br>
                                     and Transforming lives</p>
                             </div>
-                            <div id="brxe-odgchg" class="brxe-text fs-18">
+                            <div id="brxe-odgchg" class="brxe-text fs-18 destination_header-tx-h1-para">
                                 <p>Over the past 10 years of active missions, Zoe has witnessed the faithful hand of God at work. Through relentless outreach and dedication, we have established nine local churches across various communities — each one a beacon of hope and a center for spreading the Gospel. These local assemblies now serve as vibrant hubs of worship, discipleship, and community transformation, continuing the mission to win souls and build the Kingdom of God.
                                 </p>
                             </div>
@@ -379,12 +380,12 @@
                     <div id="brxe-zsmlum" class="brxe-div">
                         <div id="brxe-cgclau" class="brxe-div" >
                             <div id="brxe-ckytzs" class="brxe-text main-subtitle">
-                                <p>Donations</p>
+                                <p class="donation-tx">Donations</p>
                             </div>
                             <div id="brxe-ijntgq" class="brxe-text main-title main-title__fonts">
-                                <p><strong>Extending a Helping Hand</strong><br> and Reflecting God’s Heart to the Needy</p>
+                                <p class="donation-tx-title"><strong>Extending a Helping Hand</strong><br> and Reflecting God’s Heart to the Needy</p>
                             </div>
-                            <div id="brxe-odgchg" class="brxe-text fs-18">
+                            <div id="brxe-odgchg" class="brxe-text fs-18 donate-tx-para">
                                 <p>At Zoe Tirzah, we believe that love is most powerful when it is shown through action. As part of our outreach, we donate food, clothing, and essential supplies to families and communities in need. Each act of giving reflects the heart of Christ — meeting physical needs while opening doors for the message of hope. Through these gestures of compassion, lives are restored, hearts are encouraged, and the light of the Gospel continues to shine.
                                 </p>
                             </div>
@@ -404,27 +405,27 @@
 
         <section class="impact-stats">
             <div class="stats-header">
-                <h2>Transparency You Can Trust</h2>
-                <p class="subtitle">Every seed sown goes into transforming lives and building the Kingdom.</p>
+                <h2 class="stat-hd-tr">Transparency You Can Trust</h2>
+                <p class="subtitle stat-hd-tr-p">Every seed sown goes into transforming lives and building the Kingdom.</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-card">
                     <h3 class="count" data-target="120000">0</h3>
-                    <p>Funds Raised (USD)</p>
+                    <p class="stat-hd-tr-fn">Funds Raised (USD)</p>
                 </div>
                 <div class="stat-card">
                     <h3 class="count" data-target="95">0</h3>
-                    <p>Goes Directly to Mission Projects (%)</p>
+                    <p class="stat-hd-tr-go">Goes Directly to Mission Projects (%)</p>
                 </div>
                 <div class="stat-card">
                     <h3 class="count" data-target="10">0</h3>
-                    <p>Communities Impacted</p>
+                    <p class="stat-hd-tr-comm">Communities Impacted</p>
                 </div>
             </div>
         </section>
         <section class="team-section">
-        <h2>Meet Our Mission Team</h2>
-        <p class="subtitle">Dedicated men and women leading the charge for Christ across the globe.</p>
+        <h2 class="team-section-tite">Meet Our Mission Team</h2>
+        <p class="subtitle team-section-tite-tx">Dedicated men and women leading the charge for Christ across the globe.</p>
         <div class="team-grid">
             <div class="team-card"  data-aos="fade-up" data-aos-duration="1200">
             <img src="images/missionaries/px (1).jpg" alt="Team Member">
@@ -475,8 +476,8 @@
 
         <section>
                 <div class="destination_header">
-                    <h1>Lives Transformed</h1>
-                    <h1>Hear from those whose lives were changed through our missions.</h1> 
+                    <h1 class="transform-title-tx">Lives Transformed</h1>
+                    <h1 class="transform-title-tx-p">Hear from those whose lives were changed through our missions.</h1> 
                 </div>    
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -558,8 +559,8 @@
 
         <section class="involvement-section">
             <div class="involvement-header">
-                <h1>How You Can Get Involved</h1>
-                <p>
+                <h1 class="involvement-title-tx">How You Can Get Involved</h1>
+                <p class="involvement-title-tx-p">
                 Every hand, every prayer, every gift makes a difference. Join us as we 
                 bring the gospel to the nations and transform lives through love in action.
                 </p>
@@ -569,24 +570,24 @@
                 <div class="involve-card" data-aos="zoom-in" data-aos-duration="1200">
                 <div class="card-image" style="background-image: url('images/missions/IMG_6512.jpg');"></div>
                 <div class="card-content">
-                    <h2>Volunteer</h2>
-                    <p>
+                    <h2 class="involvement-title-vt">Volunteer</h2>
+                    <p class="involvement-title-vt-p">
                     Serve alongside us on the mission field — from church planting to community outreach. 
                     Be the hands and feet of Christ where help is needed most.
                     </p>
-                    <button class="cta-btn">Join a Mission</button>
+                    <button class="cta-btn involvement-title-vt-btn">Join a Mission</button>
                 </div>
                 </div>
 
                 <div class="involve-card" data-aos-delay="100" data-aos="zoom-in" data-aos-duration="1200">
                     <div class="card-image" style="background-image: url('images/missions/IMG_7697.jpg');"></div>
                     <div class="card-content">
-                        <h2>Give</h2>
-                        <p>
+                        <h2 class="involvement-title-vt-g">Give</h2>
+                        <p class="involvement-title-vt-g-p">
                         Your generous donations help us build churches, provide food, and support 
                         the spread of the gospel across communities. Partner with us today.
                         </p>
-                        <button class="cta-btn" type="button">Donate Now</button>
+                        <button class="cta-btn involvement-title-vt-g-btn" type="button">Donate Now</button>
                     </div>
                     <div class="exec_summ">
                         <button class="btn_exec_summ">
@@ -595,7 +596,7 @@
                             </svg>
                         </button>
                             <div class="donation-list">
-                                <h3>Ways You Can Donate</h3>
+                                <h3 class="involvement-title-wy">Ways You Can Donate</h3>
                                 <ul>
                                     <li>Volunteer your time (e.g., cleaning, church maintenance)</li>
                                     <li>Provide food and essential supplies for those in need</li>
@@ -650,7 +651,7 @@
 
 
         <section class="gallery">
-            <h2>Mission Moments</h2>
+            <h2 class="gallery-title-tx">Mission Moments</h2>
             <div class="gallery-grid">
                 <img src="images/missions/IMG_8668.jpg" alt="Mission photo">
                 <img src="images/missions/IMG_7525.jpg" alt="Mission photo">
@@ -672,7 +673,7 @@
                         <div id="brxe-gytjvu" class="brxe-div">
                             <div id="brxe-qbhlur" class="brxe-text-basic small-text">did you know ?</div>
                             <div id="brxe-eeylca" class="brxe-text big-text">
-                                <p>
+                                <p class="partner-title-vt-g">
                                     We are deeply grateful to our <span class="medigreen">faithful partners</span> whose generosity and prayers 
                                     have <span class="medigreen">empowered</span> us to extend our reach both 
                                     <strong>within our communities and across nations.</strong><br>
@@ -1183,8 +1184,8 @@
         <footer>
             <div class="container">
                 <div class="brand">
-                    <header>ZOE Tirzah</header>
-                    <p>Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others.
+                    <header class="brand-title-vt-g">ZOE Tirzah</header>
+                    <p class="brand-title-vt-p">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others.
                         We invite you to join us as we explore God's Word, experience His presence and serve our community.
                         ?</p>
                         <div class="social_links">

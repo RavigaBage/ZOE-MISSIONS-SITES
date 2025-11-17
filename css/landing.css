@@ -1241,7 +1241,18 @@ fill:#000000;
     font-size:24px;
     font-family:monserate_bold;
 }
+.animate_x {
+  display: inline-block !important ;      /* needed for transform */
+  transition: opacity 0.5s ease, transform 0.5s ease !important ;
+  opacity: 1 !important ;
+  transform: translateY(0) !important ;
+}
 
+/* Hidden state before animation */
+.animate_x.hide {
+  opacity: 0 !important ;
+  transform: translateY(-10px) !important ;
+}
 @media screen  and (max-width:1200px){
     .scr1 .container__left{
         flex-wrap: wrap;
