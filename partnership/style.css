@@ -503,9 +503,8 @@ section {
   align-items: flex-start;
 }
 .main-subtitle.brxe-text {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 38px;
-  letter-spacing: 1.5px;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;

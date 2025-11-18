@@ -1,7 +1,7 @@
  $(document).ready(function () {
 
     //encode whatsApp link
-    const enquiryText = "Hello, I would like to know more about donation options.";
+const enquiryText = "Hello, I would like to know more about donation options.";
 
 // URL-encode the text
 const encodedText = encodeURIComponent(enquiryText);
@@ -159,8 +159,31 @@ counters.forEach(counter => {
             } else {
                 console.error('Slider element with class "recentSlider_main" not found.');
             }
-            
-            
+            $('#slider_container_id').slick({
+                slidesToShow: 1,
+                autoplay: true,
+                arrows:false,
+                dots:false,
+                autoplaySpeed: 10000,
+                fade: false,           // no fade
+            });
+            setInterval(() => {
+                var images_all = document.querySelectorAll('.slider_landing img');
+                var Cross_img =  document.querySelector('.image_convey');
+                images_all.forEach(element=>{
+                    if(element.classList.contains('slick-current')){
+                        
+                            if(Cross_img.src != element.src){
+                                Cross_img.classList.add('hide');
+                                setTimeout(()=>{
+                                Cross_img.src = element.src;
+                                Cross_img.classList.remove('hide');
+                            },0)
+                            }
+                        
+                    }
+                })
+            }, 1000);
             Slider_event = document.querySelector('#mission_stories');
                 var $slider = $('#mission_stories');
                 if ($slider.length) {
@@ -259,16 +282,6 @@ counters.forEach(counter => {
                 }); 
             });
 
-        $('.linear-slider').slick({
-            slidesToShow: 1,      // show one slide at a time
-            slidesToScroll: 1,
-            speed: 2000,           // transition speed
-            autoplaySpeed: 0,      // delay between slides
-            cssEase: 'linear',     // linear animation (continuous)
-            arrows: true,         // hide navigation arrows
-            pauseOnHover: false,   // continuous even on hover
-            fade: false,           // no fade
-        });
         document.querySelector('#select_language').addEventListener('change',(e)=> loadLanguage(e.target.value));
         async function loadLanguage(lang = "en") {
     try {

@@ -18,7 +18,7 @@
     :root {
     --primary-color: #9B111E;
     --accent-color: #E3B505;
-    --background-color: radial-gradient(circle at right, #0a1f2c 0%, #002d40 100%);
+    --background-color: radial-gradient(circle at right, #0a1f2c81 0%, #002d40 100%);
     --secondary-color: #0A2342;
   /* === Zoe Missions Core Colors === */
   --color-crimson: #b80f0a;   /* Passion, Sacrifice */
@@ -103,6 +103,10 @@
     .cta-buttons {
         display: flex;
         gap: 20px;
+        margin-block: 10px;
+    }
+    .transformation_x{
+        overflow-x: hidden;
     }
 
 .btn-primary,
@@ -298,6 +302,10 @@
         height: 300px;
         width:100%;
     }
+.slider_container{
+    position: relative;
+    display: flex;
+}
 .article_image,.testimonial,.release_article .slick-slide, .swiper-slide{
     width: 400px !important;
     height: 300px;
@@ -319,7 +327,7 @@
     object-fit: cover;
     border-radius: 5px;
 }
-team
+
 .article_image .details{
     position: absolute;
     bottom: 0;
@@ -500,6 +508,14 @@ nav .menu_icon{
     height: auto;
     object-fit: cover;
     clip-path: path("");
+}
+.slider_landing{
+    width: 100%;
+    max-height: 1000px;
+    overflow: hidden;
+}
+.slider_landing .slider_img{
+    width: 100%;
 }
 
 .scr1 .container__left{
@@ -709,6 +725,7 @@ h1{
     position: relative;
     width: 100%;
     height: 400px;
+    transform: scale(1.2);
 
 }
 .scr1.container .image_design img.bg,.scr1.container .image_design .main img{
@@ -1253,6 +1270,66 @@ fill:#000000;
   opacity: 0 !important ;
   transform: translateY(-10px) !important ;
 }
+.ui_bt_header{
+    text-align: center;
+    font-size: 60px;
+    text-transform: capitalize;
+    line-height: 55px;
+    max-width: 700px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:20px auto;
+    position: relative;
+    z-index: 1;
+    color: #000000;
+    font-family: rubik,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+.ui_intro_grid{
+    width: 98%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap:20px;
+    margin-top: 80px;
+    position: relative;
+
+}
+.ui_intro_grid .vid_bg{
+    grid-column: 1/13;
+    grid-row: 1;
+    width: 100%;
+    max-height: 400px;
+    transform: scale(1.5);
+    object-fit: cover;
+}
+.ui_intro_grid .video_x{
+    position: absolute;
+    top:-20%;
+    right:12%;
+    width: 940px;
+    height: 520px;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+}
+.ui_intro_grid .video_x video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes hover {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 @media screen  and (max-width:1200px){
     .scr1 .container__left{
         flex-wrap: wrap;
@@ -1269,6 +1346,9 @@ fill:#000000;
     }
 }
 @media screen and (max-width: 1024px) {
+    .ui_intro_grid{
+        grid-template-columns: 20% 80%;
+    }
     footer .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -1318,6 +1398,35 @@ fill:#000000;
 
 }
 @media screen and (max-width:768px) {
+    .ui_bt_ss{
+        padding: 10px 10px;
+    }
+    .ui_intro_grid{
+        width: 100%;
+        grid-template-columns: 100%;
+    }
+    .ui_bt_header{
+        font-size: 45px;
+        color: transparent;
+        background-image: none;
+        color: #000;
+    }
+    .ui_intro_grid .video_x{
+        height: 300px;
+    }
+    .ui_bt_header::before{
+        content:"none";
+        display: none;
+    }
+    .ui_intro_grid .pic_x{
+        display: none;
+    }
+    .landing_page_content{
+        margin-top: 50px;
+    }
+    .stats-header h2{
+        font-size: 2rem;
+    }
     .timeline-item, .timeline-item.right {
         width: 100%;
         left: 0 !important;
@@ -1462,6 +1571,9 @@ fill:#000000;
     }
 }
 @media screen and (max-width:400px) {
+     .ui_bt_header{
+        font-size: 30px;
+     }
     .launch_timer{
         gap:5px;
     }
@@ -1513,5 +1625,15 @@ fill:#000000;
     } 
     .release_article{
         gap: 5px;
+    }
+    .btn-primary, .btn-secondary {
+        padding: 10px 5px;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:280px) {
+    .stats-header h2{
+        font-size: 1rem;
     }
 }
