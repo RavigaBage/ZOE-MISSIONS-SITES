@@ -51,7 +51,51 @@ document.querySelectorAll('.stat-card').forEach(card => {
 
 document.querySelector('#select_language').addEventListener('change',(e)=> loadLanguage(e.target.value));
 
+    // 1. Calculate Target Date (Next Dec 25th)
+    function getNextChristmas() {
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        const christmas = new Date(`December 25, ${currentYear} 00:00:00`);
+        
+        // If Christmas has passed this year, target next year
+        if (now > christmas) {
+            christmas.setFullYear(currentYear + 1);
+        }
+        return christmas.getTime();
+    }
 
+    const countDate = getNextChristmas();
+
+    // 2. The Interval Function
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const gap = countDate - now;
+
+        // Math for time units
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+
+        // Calculate
+        const d = Math.floor(gap / day);
+        const h = Math.floor((gap % day) / hour);
+        const m = Math.floor((gap % hour) / minute);
+        const s = Math.floor((gap % minute) / second);
+
+        // Update DOM elements with leading zeros
+        document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+        document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+        document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+        document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+
+        // If timer ends
+        if (gap < 0) {
+            clearInterval(timer);
+            document.querySelector('.timer-header').innerText = "Merry Christmas!";
+            document.getElementById('countdown').style.display = "none";
+        }
+    }, 1000);
 const animateCount = (counter) => {
   const target = +counter.getAttribute('data-target');
   let count = 0;

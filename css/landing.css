@@ -20,6 +20,10 @@
 --accent-color: #E3B505;
 --background-color: radial-gradient(circle at right, #0a1f2c81 0%, #002d40 100%);
 --secondary-color: #0A2342;
+        --xmas-red: #D42426;
+        --xmas-green: #146B3A;
+        --xmas-gold: #F8B229;
+        --xmas-bg: linear-gradient(135deg, #0f572e 0%, #1a2530 100%);
 /* === Zoe Missions Core Colors === */
 --color-crimson: #b80f0a;   /* Passion, Sacrifice */
 --color-blue: #0a1f2c;      /* Faith, Trust */
@@ -1292,37 +1296,32 @@ fill:#000000;
     font-family: rubik,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 .ui_intro_grid{
-    width: 98%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap:20px;
+    width: 100%;
+    height: 400px;
     margin-top: 80px;
     position: relative;
 
 }
-.ui_intro_grid .vid_bg{
-    grid-column: 1/13;
-    grid-row: 1;
-    width: 100%;
-    max-height: 400px;
-    transform: scale(1.5);
-    object-fit: cover;
+.ui_intro_grid .bg{
+    width:100%;
+    height:400px;
+    object-fit:cover;
 }
 .ui_intro_grid .video_x{
-    position: absolute;
-    top:-20%;
-    right:12%;
-    width: 940px;
-    height: 520px;
-    border-radius: 16px;
-    overflow: hidden;
-    z-index: 2;
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
 }
 .ui_intro_grid .video_x video{
-    width: 100%;
-    height: 100%;
+    grid-column:3/11;
+    width:100%;
+    height:400px;
     object-fit: cover;
+    border-radius:16px;
+    margin-block:40px;
 }
 .up_send{
     position: fixed;
@@ -1344,6 +1343,189 @@ fill:#000000;
     opacity: 1;
     z-index: 9999999999999999;
 }
+.slider_container .slick-track,.slider_container .slick-list{
+    height:100vh;
+}
+    .xmas-section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 650px; /* Slightly taller for the timer */
+        background: var(--xmas-bg);
+        overflow: hidden;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Ambient Glow (Orbs) */
+    .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        opacity: 0.5;
+        z-index: 1;
+        animation: pulse 4s infinite alternate;
+    }
+    .orb-1 { width: 300px; height: 300px; background: var(--xmas-red); top: -50px; left: -50px; }
+    .orb-2 { width: 400px; height: 400px; background: var(--xmas-gold); bottom: -100px; right: -100px; }
+
+    @keyframes pulse {
+        0% { opacity: 0.4; transform: scale(1); }
+        100% { opacity: 0.6; transform: scale(1.1); }
+    }
+
+    /* Content Wrapper */
+    .xmas-content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    /* Left Text Side */
+    .text-box {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .text-box h2 {
+        font-family: 'Mountains of Christmas', cursive;
+        font-size: 4.5rem;
+        margin: 0 0 20px 0;
+        line-height: 1;
+        text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .text-box p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        color: #e0e0e0;
+    }
+
+    /* CTA Button */
+    .btn-holiday {
+        display: inline-block;
+        padding: 18px 45px;
+        background-color: var(--xmas-red);
+        color: white;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        box-shadow: 0 0 20px rgba(212, 36, 38, 0.5);
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .btn-holiday:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 40px rgba(212, 36, 38, 0.8);
+        background-color: #ff3336;
+    }
+
+    /* Right Visual Side (Timer Card) */
+    .visual-box {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timer-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 40px;
+        border-radius: 30px;
+        text-align: center;
+        width: 100%;
+        max-width: 450px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .timer-header {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: var(--xmas-gold);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* Timer Flex Layout */
+    .countdown {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .time-unit {
+        flex: 1;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        padding: 15px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: white;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-variant-numeric: tabular-nums; /* Prevents jumping numbers */
+    }
+
+    .label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #bbb;
+        letter-spacing: 1px;
+    }
+
+    /* Snow Animation */
+    .snowflake {
+        color: #fff;
+        font-size: 1.2em;
+        position: absolute;
+        top: -10%;
+        z-index: 5;
+        animation-name: snowflakes-fall, snowflakes-shake;
+        animation-duration: 10s, 3s;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: infinite, infinite;
+    }
+
+    @keyframes snowflakes-fall { 0% { top: -10%; } 100% { top: 100%; } }
+    @keyframes snowflakes-shake { 0% { transform: translateX(0px); } 50% { transform: translateX(80px); } 100% { transform: translateX(0px); } }
+
+    .snowflake:nth-of-type(1) { left: 10%; animation-delay: 0s, 0s; }
+    .snowflake:nth-of-type(2) { left: 20%; animation-delay: 5s, 1s; }
+    .snowflake:nth-of-type(3) { left: 35%; animation-delay: 2s, 2s; }
+    .snowflake:nth-of-type(4) { left: 50%; animation-delay: 8s, 0.5s; }
+    .snowflake:nth-of-type(5) { left: 65%; animation-delay: 4s, 1.5s; }
+    .snowflake:nth-of-type(6) { left: 85%; animation-delay: 1s, 2s; }
+
+    /* Responsive Adjustments */
+    @media (max-width: 900px) {
+        .xmas-content { flex-direction: column; text-align: center; }
+        .text-box h2 { font-size: 3rem; }
+        .countdown { gap: 5px; }
+        .number { font-size: 1.8rem; }
+    }
 @keyframes hover {
     0%{
         transform: translateY(0px);
@@ -1362,6 +1544,8 @@ fill:#000000;
         justify-content: center;
         margin-top:30px;
         gap:20px;
+        padding:10px;
+        width:95%;
     }
     .scr1 .container__left .content h1{
         font-size: 50px;
@@ -1369,11 +1553,15 @@ fill:#000000;
     .container.landing_page{
         width: 100%;
     }
+    .scr1.container .image_design {
+        display:none;
+    }
+    .scr1.container {
+        display:block;
+    }
+    
 }
 @media screen and (max-width: 1024px) {
-    .ui_intro_grid{
-        grid-template-columns: 20% 80%;
-    }
     footer .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -1419,6 +1607,9 @@ fill:#000000;
     .landing_page .page_details .page_counter .location_icon,
     .landing_page .page_details .page_counter .counter{
         max-width:900px;
+    }
+    .slider_landing{
+        height:100vh;
     }
 
 }
@@ -1606,6 +1797,32 @@ fill:#000000;
         margin-right:0px;
     }
     .launch_timer .launch_pad span{
+        font-size:18px;
+    }
+}
+@media screen and (max-width:500px){
+    .ui_intro_grid .video_x video{
+        grid-column:1/13;
+        height:350px;
+        margin-top:20px;
+    }
+        .scr1.container {
+            padding:10px;
+        }
+    .landing_page_content {
+        margin-top: 30px;
+    }
+    .btn-primary, .btn-secondary {
+        display: inline-block;
+        padding: 10px 20px;
+    }
+    .scr1 .content h1 {
+        line-height:40px;
+    }
+    .slider_landing,.slider_container .slick-track,.slider_container .slick-list{
+        height:115vh;
+    }
+    .scr1 .container__left .content p{
         font-size:18px;
     }
 }
