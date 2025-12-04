@@ -170,18 +170,18 @@ const Timer = setInterval(()=>{
     document.querySelector('.min h1').innerHTML = `${timer_refiner(minutes)} <span>m</span>`;
     document.querySelector('.sec h1').innerHTML = `${timer_refiner(seconds)} <span>s</span>`;
 });
-const Timer2 = setInterval(()=>{
-    let distance = LaunchDate - (new Date().getTime());
-    const days = Math.floor(distance / (1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24))  / (1000*60*60));
-    const minutes = Math.floor((distance %(1000*60*60)) /(1000*60));
-    const seconds = Math.floor((distance %(1000*60)) /1000);
+// const Timer2 = setInterval(()=>{
+//     let distance = LaunchDate - (new Date().getTime());
+//     const days = Math.floor(distance / (1000*60*60*24));
+//     const hours = Math.floor((distance % (1000*60*60*24))  / (1000*60*60));
+//     const minutes = Math.floor((distance %(1000*60*60)) /(1000*60));
+//     const seconds = Math.floor((distance %(1000*60)) /1000);
 
-    document.querySelector('.launch_pad.day span').innerText = `${timer_refiner(days)}`;
-    document.querySelector('.launch_pad.hour span').innerText = `${timer_refiner(hours)}`;
-    document.querySelector('.launch_pad.minute span').innerText = `${timer_refiner(minutes)}`;
-    document.querySelector('.launch_pad.second span').innerText = `${timer_refiner(seconds)}`;
-});
+//     document.querySelector('.launch_pad.day span').innerText = `${timer_refiner(days)}`;
+//     document.querySelector('.launch_pad.hour span').innerText = `${timer_refiner(hours)}`;
+//     document.querySelector('.launch_pad.minute span').innerText = `${timer_refiner(minutes)}`;
+//     document.querySelector('.launch_pad.second span').innerText = `${timer_refiner(seconds)}`;
+// });
 
 window.addEventListener('scroll', function(e){
     if(window.scrollY > 100){
