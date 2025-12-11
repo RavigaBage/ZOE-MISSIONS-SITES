@@ -136,7 +136,7 @@ body {
 
 .scr1.container {
   display: flex;
-  height: fit-content;
+  height: 100%;
   width:100%;
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
