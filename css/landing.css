@@ -1834,12 +1834,12 @@ fill:#000000;
 /* Responsive */
 @media (max-width:880px){
     .wrap{grid-template-columns:1fr;}
-    .wrap .card{min-height:200px}
+    .wrap .card{min-height:300px}
     .wrap .card .media{flex-basis:40%}
 }
 @media (max-width:520px){
-    .wrap .card{flex-direction:column}
-    .wrap .card .media{width:100%;flex-basis:auto;height:180px}
+    .wrap .card,.wrap .card.rev{flex-direction:column}
+    .wrap .card .media{width:100%;flex-basis:auto;height:250px}
 }
 
 /* Small decorative corner */
