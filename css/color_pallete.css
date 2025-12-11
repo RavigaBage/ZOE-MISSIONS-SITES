@@ -1,0 +1,84 @@
+:root {
+    /* Primary Project/Theme Colors */
+    --primary-main: #003460;
+    --primary-light:rgb(255, 196, 0);
+    --primary-red:crimson;
+
+    --primary-color: #9B111E;
+    --accent-color: #f8c805;
+    --secondary-color: #0A2342;
+    --color-crimson: #b80f0a; 
+    --color-blue: #0a1f2c;
+    --color-teal: #0ba26e;
+    --color-white: #ffffff;
+    --white:#ffffff;
+    
+    /* Supporting Colors & Text */
+    --color-bg-light: #f8fafc;
+    --color-text-dark: #1a1a1a;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --crimson: #b70b2e;
+    --blue: #003366;
+    --teal: #008080;
+    --light-bg: #f5f7fa;
+    --text-dark: #222;
+    --dark-bg: #1a1a1a;        /* Deep Black/Charcoal */
+    --light-text: #f0f0f0;     /* Off-White for readability on dark */
+    --subtle-text: #aaaaaa;    /* Lighter grey for titles */
+
+    --bubble-green: #a8e698;
+    --text-dark: #333;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-heavy: rgba(0, 0, 0, 0.3);
+
+
+    /* Backgrounds */
+    --background-color: radial-gradient(circle at right, #0a1f2c81 0%, #002d40 100%);
+
+    /* Christmas Theme Variables (Used in temporary sections) */
+    --xmas-red: #D42426;
+    --xmas-green: #146B3A;
+    --xmas-gold: #F8B229;
+    --xmas-bg: linear-gradient(135deg, #0f572e 0%, #1a2530 100%);
+    --xmas-bg-color: #FFF0EB; 
+    --primary-red: #FF4D4D;
+    --primary-green: #006400;
+    --text-color: #5a3e3e;
+    --accent-yellow: #FBC02D;
+
+    /* Donation Theme Variables (Used in temporary sections) */
+    --don_primary-blue: #007bff;
+    --don_secondary-blue: #0056b3; 
+    --don_accent-red: #D90000;
+    --don_accent-yellow: #FFC107;
+    --don_text-white: #FFFFFF;
+    --don_block-bg: rgba(255, 255, 255, 0.9);
+    --don_code-color: #333333;
+
+        --fuel-bank-blue: #007bff; /* Primary Blue */
+    --fuel-bank-dark: #0a0a0a;
+    --fuel-bank-light-grey: #f8f8f8;
+    --fuel-bank-text: #000000;
+    --accent-green: #28a745;
+}
+
+.donate-button{
+    background-color: #ffd300;
+    border-radius: 30px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+    color: #000;
+    font-family: Plumpfull;
+    font-size: 18px;
+    letter-spacing: 0;
+    margin-right: 10px;
+    padding: 10px 20px 8px;
+    pointer-events: auto;
+    text-transform: uppercase;
+    transition: all 0.5s ease ;
+    position: relative;
+    z-index: 1;
+}
+.donate-button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+    transform: scale(1.1);
+}

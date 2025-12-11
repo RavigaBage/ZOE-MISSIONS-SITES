@@ -3,7 +3,7 @@
     src: url('../fonts/d1.ttf');
 }
 :root{
- --text-color:#f3f3f3;
+ --text-color-main:#f3f3f3;
  --white-dim:#dddddd17;
  --black-text:#0000;
  --dim:rgb(17, 17, 17);

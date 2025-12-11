@@ -1,0 +1,210 @@
+@import url('https://fonts.cdnfonts.com/css/plumpfull');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--fuel-bank-text);
+    background-color: #fff;
+    font-family: Poppins, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color:var(--text-color-main);
+}
+/* --- Utility Classes --- */
+.mt-40 { margin-top: 40px; }
+
+/* --- Header & Navigation (Reused) --- */
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--fuel-bank-blue);
+}
+
+/* --- Hero Section (Reused) --- */
+.hero {
+    padding: 40px 0;
+    height: 400px;
+    text-align: center;
+    background-color: #FFD300;
+    display: grid;
+    place-items: center;
+    font-weight: 400;
+    font-family: 'Plumpfull', sans-serif;
+    position: relative;
+}
+.overlay_bg{
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 50' fill='%23FFD300'%3E%3Cpath d='m0 0 100 50V0z'/%3E%3C/svg%3E");
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: var(--fuel-bank-dark);
+    margin-bottom: 10px;
+}
+
+/* --- Contact Section: Grid Layout --- */
+.contact-section {
+    margin: 0 auto;
+    padding:10px 20px;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.contact-details h2 {
+    color: var(--fuel-bank-dark);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+}
+
+.media-email a {
+    color: var(--fuel-bank-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-details address {
+    font-style: normal;
+    white-space: pre-line; /* Preserves line breaks for address */
+}
+
+/* --- Contact Section: Form Styling --- */
+.contact-form-container {
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-form-container h2 {
+    color: var(--fuel-bank-dark);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--fuel-bank-dark);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 300px;
+}
+
+.submit-btn {
+    display: block;
+    width: 40%;
+    background-color: var(--fuel-bank-blue);
+    color: #fff;
+    border: none;
+    padding: 20px;
+    margin: 25px auto;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 30px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+.policy {
+    margin-top: 15px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.policy input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+.location_pin {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+@keyframes hoverBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 10px ;
+    }
+
+    /* Stack columns on small screens */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details {
+        margin-bottom: 30px;
+    }
+    .submit-btn {
+    width: 80%;
+    }
+}

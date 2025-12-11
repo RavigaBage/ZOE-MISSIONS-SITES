@@ -1,0 +1,287 @@
+
+nav{
+    display: none;
+}
+nav.active{
+    position: fixed;
+    padding: 0px;
+    top:0;
+    background: url('../svg/Colored\ Shapes\ \(1\).svg');
+    background-size: contain;
+    display: block;
+}
+nav .navigation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+    top:0;
+}
+
+nav select{
+    color:#fff;
+}
+nav option{
+    background-color: #000;
+}
+nav select{
+    background: transparent;
+    border:0px;
+    outline: none;
+    font-size: 18px;
+}
+nav .menu_links{
+    width: calc(100% - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap:20px;
+}
+nav .menu_links p{
+    margin-inline:5px;
+    margin-block: 10px;
+    font-size: 20px;
+}
+
+nav .menu_links,nav .language{
+    display: none;
+}
+nav .navigation{
+    justify-content: flex-end;
+    padding:10px;
+}
+nav.active .navigation{
+    padding: 0px;
+}
+nav .logo{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    width: 100%;
+    height: fit-content;
+    left: 0;
+    z-index: 999;
+}
+nav.active .language{
+    display: block;
+    height: 30px;
+    width: 100%;
+    color:#fff;
+    margin-top:10px;
+}
+nav.active .language select{
+color:#fff;
+}
+nav.active .menu_links {
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: flex-start;
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+nav .menu_links li p{
+    opacity: 0;
+    transition: opacity 5s ease;
+}
+nav.active .menu_links li p{
+    animation: reveal 1s;
+    opacity: 1;
+        transform: scale(1.2);
+}
+nav.active .menu_links li p{
+    transition: all 0.3s ease;
+}
+nav.active .menu_links li:hover p{
+    transform: scale(1.1);
+    color:crimson !important;
+}
+nav.active .logo{
+    height: 30px;
+}
+nav.active .navigation{
+    background:linear-gradient(210deg, #000, rgb(0 0 0 / 95%));
+    color:#fff;
+    display: block;
+    padding: 20px;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+.overlay_bg{
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 50' fill='%23FFD300'%3E%3Cpath d='m0 0 100 50V0z'/%3E%3C/svg%3E");
+}
+
+.div_main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:20px;
+    width:90%;
+    margin:10px auto;
+    height: fit-content;
+    z-index: 999;
+}
+.menu_icon{
+    display: grid;
+    background-color: var(--color-bg-light);
+    padding:10px;
+    place-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.menu_icon.active{
+    z-index: 999;
+    transform:scale(1.1) translateY(10px);
+}
+.menu_icon.active .open{
+    display: none;
+}
+.menu_icon.active .close{
+    display: block;
+}
+.menu_icon .open{
+display: block;
+}
+.menu_icon .close{
+display: none;
+}
+
+.scene_kep{
+    position: absolute;
+   right: 0;
+   bottom:8%;
+    width:300px;
+    height: 400px;
+    animation:bounce 3s infinite;
+}
+
+.scene-container {
+    position: relative;
+    width: 100%; /* Define the area for our elements */
+    height: 400px;
+}
+
+/* --- 1. The Central Video Card --- */
+.video-card {
+    background-color: var(--card-white);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px var(--shadow-heavy);
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the card */
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Video/Image Placeholder */
+.video-content {
+    height: 100%;
+    background-color: #f0f0f0; /* Placeholder gray */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Simulating the two people image content */
+.video-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Top bar simulation */
+.video-content::before {
+    content: "I'm E CGI";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: white;
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+/* --- 2. Floating Notification Bubble (Green) --- */
+.floating-bubble {
+    position: absolute;
+    top: 15%;
+    left: 10%; /* Positioned relative to the .scene-container */
+    background-color: var(--bubble-green);
+    color: var(--text-dark);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    /* Optional: Add a slight rotation for dynamic feel */
+    transform: rotate(-3deg);
+    z-index:9;
+}
+
+/* --- 3. Floating Notification Bubble (Orange Circle) --- */
+.floating-circle {
+    position: absolute;
+    top: 25%;
+    right: 0%; 
+    background-color: #ff8c42; /* Orange color from image */
+    color: var(--card-white);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    z-index:9;
+}
+.floating-circle span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+@keyframes reveal {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px) scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1.2); 
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }   
+    100% {
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width:500px) {
+    .donate-button{
+        display: none;
+    }
+    .scene_kep{
+        display: none;
+    }
+}

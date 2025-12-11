@@ -1,5 +1,4 @@
  $(document).ready(function () {
-
     //encode whatsApp link
 const enquiryText = "Hello, I would like to know more about donation options.";
 const UpSend = document.querySelector('.up_send');
@@ -8,10 +7,10 @@ const encodedText = encodeURIComponent(enquiryText);
 const lazyImages = document.querySelectorAll('.lazy-img');
 // Create the WhatsApp link
 const counters = document.querySelectorAll('.count');
-var S_lider = $('.recentSlider_main');
 
 const receivedDate = new Date(2025,11,16).getTime();
 const LaunchDate = new Date(2025,10,8).getTime();
+const menu_icon_main = document.querySelector('.menu_icon');
 const menu_icon = document.querySelector('.menu_icon .open');
 const menu_icon_close = document.querySelector('.menu_icon .close');
 const nav_bar = document.querySelector('nav');
@@ -43,59 +42,61 @@ document.querySelectorAll(".btn_exec_summ").forEach(btn => {
 });
 document.querySelectorAll('.stat-card').forEach(card => {
     card.addEventListener('click', () => {
+        console.log('ksd');
         const targetId = card.getAttribute('data-spawn');
         document.querySelector(`.timeline-container#${targetId}`).classList.add('active');
         document.body.style.overflow = "hidden";
+        console.log(targetId);
     }); 
 });
 
 document.querySelector('#select_language').addEventListener('change',(e)=> loadLanguage(e.target.value));
 
     // 1. Calculate Target Date (Next Dec 25th)
-    function getNextChristmas() {
-        const now = new Date();
-        const currentYear = now.getFullYear();
-        const christmas = new Date(`December 25, ${currentYear} 00:00:00`);
-        
-        // If Christmas has passed this year, target next year
-        if (now > christmas) {
-            christmas.setFullYear(currentYear + 1);
-        }
-        return christmas.getTime();
+function getNextChristmas() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const christmas = new Date(`December 25, ${currentYear} 00:00:00`);
+    
+    // If Christmas has passed this year, target next year
+    if (now > christmas) {
+        christmas.setFullYear(currentYear + 1);
     }
+    return christmas.getTime();
+}
 
-    const countDate = getNextChristmas();
+const countDate = getNextChristmas();
 
-    // 2. The Interval Function
-    const timer = setInterval(function() {
-        const now = new Date().getTime();
-        const gap = countDate - now;
+// 2. The Interval Function
+const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const gap = countDate - now;
 
-        // Math for time units
-        const second = 1000;
-        const minute = second * 60;
-        const hour = minute * 60;
-        const day = hour * 24;
+    // Math for time units
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
 
-        // Calculate
-        const d = Math.floor(gap / day);
-        const h = Math.floor((gap % day) / hour);
-        const m = Math.floor((gap % hour) / minute);
-        const s = Math.floor((gap % minute) / second);
+    // Calculate
+    const d = Math.floor(gap / day);
+    const h = Math.floor((gap % day) / hour);
+    const m = Math.floor((gap % hour) / minute);
+    const s = Math.floor((gap % minute) / second);
 
-        // Update DOM elements with leading zeros
-        document.getElementById('days').innerText = d < 10 ? '0' + d : d;
-        document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
-        document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
-        document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+    // Update DOM elements with leading zeros
+    document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+    document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+    document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+    document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
 
-        // If timer ends
-        if (gap < 0) {
-            clearInterval(timer);
-            document.querySelector('.timer-header').innerText = "Merry Christmas!";
-            document.getElementById('countdown').style.display = "none";
-        }
-    }, 1000);
+    // If timer ends
+    if (gap < 0) {
+        clearInterval(timer);
+        document.querySelector('.timer-header').innerText = "Merry Christmas!";
+        document.getElementById('countdown').style.display = "none";
+    }
+}, 1000);
 const animateCount = (counter) => {
   const target = +counter.getAttribute('data-target');
   let count = 0;
@@ -131,24 +132,6 @@ counters.forEach(counter => {
 });
 
 
-// Intersection Observer setup
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-    if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;   // set actual src
-        img.classList.add('loaded');
-        observer.unobserve(img);     // stop observing once loaded
-    }
-    });
-}, {
-    rootMargin: "50px",   // preload just before it enters the view
-    threshold: 0.1        // trigger when 10% is visible
-});
-
-lazyImages.forEach(img => {
-    observer.observe(img);
-});
 AOS.init();
 
 function timer_refiner(num){
@@ -199,55 +182,16 @@ UpSend.addEventListener('click',function(){
 })
 menu_icon.addEventListener('click',function(){
     nav_bar.classList.add('active');
+    menu_icon_main.classList.add('active');
     document.body.style.overflow = "hidden";
 });
 menu_icon_close.addEventListener('click',function(){
     nav_bar.classList.remove('active');
+    menu_icon_main.classList.remove('active');
     document.body.style.overflow = "";
 });
 
 
-if (S_lider.length) { 
-    var cardCount = S_lider.find('.card').length;
-    var isLargeScreen = $(window).width() >= 1024;
-
-    if (isLargeScreen && cardCount < 3) {
-    // Check if Slick is initialized before unslicking
-        if (S_lider.hasClass('slick-initialized')) {
-            S_lider.slick('unslick'); 
-        }
-    } else {
-        S_lider.slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            autoplay: true,
-            arrows: false,
-            dots: true,
-            infinite: true,
-            cssEase: 'linear', // Corrected typo
-            responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true
-                }
-            }
-            ]
-        });
-    }
-} else {
-    console.error('Slider element with class "recentSlider_main" not found.');
-}
 $('#slider_container_id').slick({
     slidesToShow: 1,
     autoplay: true,
@@ -272,49 +216,7 @@ setInterval(() => {
     })
 }, 1000);
 
-    var S_lider = $('#mission_stories');
-    if (S_lider.length) {
-        var cardCount = S_lider.find('.card').length;
-        var isLargeScreen = $(window).width() >= 1024;
-        if (isLargeScreen && cardCount < 3) {
-        if (S_lider.hasClass('slick-initialized')) {
-            S_lider.slick('unslick'); 
-        }
-        } else {
-            S_lider.slick({
-                slidesToShow: 3,
-                slidesToScroll: 2,
-                autoplay: true,
-                arrows: false,
-                dots: true,
-                infinity: true,
-                cssCase: true,
-                responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinity: true
-                    }
-                }, {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinity: true
-                    }
-
-
-                }]
-
-            });
-        }
-}else {
-    console.error('Slider element with class  not found.');
-}
-
 var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
     grabCursor: true,
     // centeredSlides: true,
     slidesPerView: "auto",
@@ -324,7 +226,6 @@ var swiper = new Swiper(".swiper", {
         stretch: 0,
         depth: 100,
         modifier: 2,
-        slideShadows: true
     },
     keyboard: {
         enabled: true

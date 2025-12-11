@@ -1,0 +1,209 @@
+/* --- Footer (Reused) --- */
+footer {
+  overflow: hidden;
+  width: 100%;
+  margin-top:30px;
+  background-color: var(--fuel-bank-dark);
+}
+footer .container {
+  width: 100%;
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: var(--fuel-bank-dark);
+  gap: 20px;
+  color: #fff;
+  padding: 40px;
+}
+footer .container .brand header {
+  font-size: 23px;
+  min-height: 0px;
+  font-family: plumpfull, sans-serif;
+}
+.footer-text {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-text .church-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 5px;
+    display: block;
+}
+
+footer .container .brand ul,
+footer .container .links ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+footer .container .links ul{
+    flex-direction: column;
+}
+footer .container .field ul {
+  width: 100%;
+  margin-top: 10px;
+  list-style: none;
+  display: block;
+}
+footer .container .brand ul li {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border: 2px solid #fff;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+footer .container .field ul li {
+  margin-block: 10px;
+}
+footer .container .field ul li span {
+  text-decoration: underline;
+}
+footer .container .links{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+footer .container .links ul li {
+  margin:0px;
+  word-break: break-word;
+}
+footer .container .links ul {
+  margin-bottom: 10px;
+}
+.site-footer {
+
+    color: #fff;
+    padding: 30px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-top {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.email-signup h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.email-signup form {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.email-signup input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 80%;
+    height: 40px;
+}
+
+.email-signup button {
+    background-color: var(--fuel-bank-blue);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    width:20%;
+    cursor: pointer;
+}
+
+.email-signup p {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer-bottom {
+    max-width: 960px;
+    margin: 15px auto 0;
+    text-align: center;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.footer-bottom p {
+    margin-top: 10px;
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+.animate_hover{
+    animation: hoverBounce 1.5s infinite ease-in-out;
+}
+@media screen and (max-width:1024px) {
+    footer .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap:20px;
+        column-gap: 50px;
+    }
+    footer .container .brand {
+        width: 100%;
+        grid-column: 1;
+        text-align: start;
+    }
+}
+@media screen and (max-width:768px) {
+    
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .social-links {
+        margin-top: 20px;
+    }
+    .email-signup form {
+        justify-content: center;
+    }
+}
+@media screen and (max-width:600px) {
+    footer .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap:30px;
+        column-gap: 0px;
+        padding: 10px;
+    }
+}
+@media screen and (max-width:280px) {
+    .email-signup input[type="email"]{
+        width: 70%;
+    }
+    .email-signup button{
+        width:30%;
+    }
+}

@@ -1,169 +1,133 @@
-
-        <!DOCTYPE html>
-        <html lang="en">
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description"
-                content="Explore our gallery of photos and videos capturing the moments of worship, fellowship, and community at Zoe Worship Centre, Accra.">
-            <meta name="keywords"
-                content="church gallery, photos, videos, Accra, Ghana, Zoe Worship Centre, church events, community">
-
-            <meta property="og:title" content="Gallery | Zoe Worship Centre, Accra">
-            <meta property="og:type" content="website">
-            <meta property="og:url" content="https://zoeworshipcentre.wuaze.com/pages/gallery">
-            <meta property="og:image" content=" https://zoeworshipcentre.wuaze.com/icons/logo.jpg">
-            <meta property="og:site_name" content="Zoe Worship Centre">
-            <meta property="og:description"
-                content="Explore our gallery of photos and videos capturing the moments of worship, fellowship, and community at Zoe Worship Centre, Accra.">
-
-            <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:title" content="Gallery | Zoe Worship Centre, Accra">
-            <meta name="twitter:description"
-                content="Explore our gallery of photos and videos capturing the moments of worship, fellowship, and community at Zoe Worship Centre, Accra.">
-            <meta name="twitter:image" content=" https://zoeworshipcentre.wuaze.com/icons/logo.jpg">
-
-            <link rel="stylesheet" href="css/color_pallete.css" /> 
-            <link rel="stylesheet" href="css/nav.css" /> 
-            <link rel="stylesheet" href="css/footer.css" />
-            <title>Zoe memories</title>
-        </head>
-
-        <body>
-<style>
-    @import url('https://fonts.cdnfonts.com/css/plumpfull');
-@import url('https://fonts.cdnfonts.com/css/poppins');
-    a{
-        text-decoration: none;
-        color: var(--color-bg-light);
-    }
-/* Page background and font */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+/* Page Background and Font */
 body {
     margin: 0;
-    font-family: poppins, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: #f4f7f9;
     color: #1e293b;
 }
 
-/* Gallery Section */
-.gallery-section {
+.partnerships-section {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.gallery-header {
+.partnerships-header {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.gallery-header h1 {
+.partnerships-header h1 {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 12px;
-        font-family: plumpfull, sans-serif;
 }
 
-.gallery-header p {
+.partnerships-header p {
     font-size: 16px;
     color: #64748b;
     line-height: 1.6;
 }
 
-/* Gallery Grid */
-.gallery-grid {
+/* Logo Grid */
+.partner-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
 }
 
-.gallery-item {
-    position: relative;
-    overflow: hidden;
+.partner-card {
+    background: white;
     border-radius: 16px;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-item:hover {
-    transform: translateY(-6px) scale(1.03);
+.partner-card:hover {
+    transform: translateY(-6px) scale(1.05);
     box-shadow: 0 14px 28px rgba(0,0,0,0.12);
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
+.partner-card img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-/* Optional overlay text on hover */
-.gallery-item .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.4);
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
-
-/* Responsive adjustments */
+/* Responsive Text for Mobile */
 @media (max-width: 480px) {
-    .gallery-header h1 {
+    .partnerships-header h1 {
         font-size: 28px;
+    }
+
+    .partner-card {
+        padding: 16px;
     }
 }
 </style>
 
-<section class="gallery-section">
-    <div class="gallery-header">
-        <h1>Our Gallery</h1>
-        <p>Explore moments captured from our events, missions, and community activities. Every picture tells a story.</p>
+<body>
+
+<section class="partnerships-section">
+    <div class="partnerships-header">
+        <h1>Our Trusted Partners</h1>
+        <p>We are grateful to work alongside amazing organizations that help us achieve our mission. Together, we make a greater impact in our communities and beyond.</p>
     </div>
 
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="images/missions/FB_IMG_1730342219995.jpg" alt="Gallery 1">
-            <div class="overlay">Beach Mission Trip</div>
+    <div class="partner-grid">
+        <div class="partner-card">
+            <img src="https://plottcreative.s3.eu-west-2.amazonaws.com/fuelbank/wp-content/uploads/2022/09/07134549/carrgom.jpg.webp" alt="Partner 1">
         </div>
-        <div class="gallery-item">
-            <img src="images/missions/FB_IMG_1730342289255.jpg" alt="Gallery 2">
-            <div class="overlay">Community Outreach</div>
+        <div class="partner-card">
+            <img src="https://plottcreative.s3.eu-west-2.amazonaws.com/fuelbank/wp-content/uploads/2021/11/24105946/scarf.jpg.webp" alt="Partner 2">
         </div>
-        <div class="gallery-item">
-            <img src="images/missions/FB_IMG_1730342292365.jpg" alt="Gallery 3">
-            <div class="overlay">Children’s Ministry</div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Partner 3">
         </div>
-        <div class="gallery-item">
-            <img src="images/missions/FB_IMG_1730342388876.jpg" alt="Gallery 4">
-            <div class="overlay">Volunteers at Work</div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Stack_Overflow_logo.svg" alt="Partner 4">
         </div>
-        <div class="gallery-item">
-            <img src="images/missions/FB_IMG_1730342401440.jpg" alt="Gallery 5">
-            <div class="overlay">Church Event</div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Partner 5">
         </div>
-        <div class="gallery-item">
-            <img src="images/missions/FB_IMG_1730342446875.jpg" alt="Gallery 6">
-            <div class="overlay">Mission Team</div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Partner 6">
+        </div>
+           <div class="partner-card">
+            <img src="https://plottcreative.s3.eu-west-2.amazonaws.com/fuelbank/wp-content/uploads/2022/09/07134549/carrgom.jpg.webp" alt="Partner 1">
+        </div>
+        <div class="partner-card">
+            <img src="https://plottcreative.s3.eu-west-2.amazonaws.com/fuelbank/wp-content/uploads/2021/11/24105946/scarf.jpg.webp" alt="Partner 2">
+        </div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Partner 3">
+        </div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Stack_Overflow_logo.svg" alt="Partner 4">
+        </div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Partner 5">
+        </div>
+        <div class="partner-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Partner 6">
         </div>
     </div>
 </section>
+
         <footer>
             <div class="container">
                 <div class="brand">
@@ -184,10 +148,10 @@ body {
                 <div class="links">
                     <h2>Quick links</h2>
                     <ul>
-                        <li><a href="About_missions.html"><p>About us</p></a></li>
-                        <li><a href="NEWS-BLOG-main/main.html"><p>our story</p></a></li>
-                        <li><a href="About_gallery.html"><p>Gallery</p></a></li>   
-                        <li><a href="contact/index.html"><p class="menu_article">contact</p></a></li>   
+                        <li><a href="../About_missions.html"><p>About us</p></a></li>
+                        <li><a href="../NEWS-BLOG-main/main.html"><p>our story</p></a></li>
+                        <li><a href="../About_gallery.html"><p>Gallery</p></a></li>   
+                        <li><a href="../contact/index.html"><p class="menu_article">contact</p></a></li>   
                     </ul>
                     
                 </div>
@@ -195,10 +159,10 @@ body {
                 <div class="links">
                     <h2>Missions</h2>
                     <ul>
-                        <li><a href="individuals/index.html"><p>individuals</p></a></li>
-                        <li><a href="partnership/index.html"><p>partners</p></a></li>
-                        <li><a href="individuals/index.html"><p>Donate</p></a></li>
-                        <li><a href="https://forms.gle/LG43ReJcDcAizGBr7"><p>partner with us</p></a></li>
+                        <li><a href="../individuals/index.html"><p>individuals</p></a></li>
+                        <li><a href="../partnership/index.html"><p>partners</p></a></li>
+                        <li><a href="../individuals/index.html"><p>Donate</p></a></li>
+                        <li><a href="../https://forms.gle/LG43ReJcDcAizGBr7"><p>partner with us</p></a></li>
                     </ul>
                     
                 </div>
@@ -240,6 +204,6 @@ body {
                 </div>
             </div>
         </footer>
-        </body>
 
-        </html>
+</body>
+</html>
