@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/plumpfull');
 @font-face {
     font-family:news_default;
     src: url('../fonts/d1.ttf');
@@ -33,6 +34,9 @@ body{
     position: absolute;
     inset: 0;
      border-radius: 16px;
+}
+h1,h2{
+    font-family: plumpfull,sans-serif;
 }
 .overlay_shade{
     position: absolute;

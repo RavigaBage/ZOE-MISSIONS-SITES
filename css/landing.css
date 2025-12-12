@@ -1825,7 +1825,9 @@ fill:#000000;
     background: linear-gradient(90deg,var(--accent), #ffd29d);
 }
 
-  
+.recentSlider_main{
+    justify-content: center;
+}
 @media screen  and (max-width:1200px){
     .scr1 .container__left{
         flex-wrap: wrap;
