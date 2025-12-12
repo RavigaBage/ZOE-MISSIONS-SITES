@@ -17,6 +17,8 @@ const nav_bar = document.querySelector('nav');
 const Slider_event = document.querySelector('#mission_stories');
 const images_all = document.querySelectorAll('.slider_landing img');
 const Cross_img =  document.querySelector('.image_convey');
+const TimeLineAnimate = document.querySelectorAll('.timeline-item .wrap');
+const TimeLineAnimate_items = document.querySelectorAll('.timeline-item.main');
 
 const whatsappLink = `https://wa.me/233553838464?text=${encodedText}`;
 document.getElementById('whatsappLink').href = whatsappLink;
@@ -116,15 +118,29 @@ const animateCount = (counter) => {
 
   step(); // start animation
 };
-
+const timeLineObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate_timeline');
+        }else{
+            entry.target.classList.remove('animate_timeline');
+        }
+})
+}, { threshold: 0.5 });
+TimeLineAnimate.forEach(item => {
+    timeLineObserver.observe(item);
+});
+TimeLineAnimate_items.forEach(item => {
+    timeLineObserver.observe(item);
+});
   // Animate only when visible
 const observer_r = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-    if (entry.isIntersecting) {
-    animateCount(entry.target);
-    observer.unobserve(entry.target); // animate once
-    }
-});
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer_r.unobserve(entry.target); // animate once
+        }
+    });
 }, { threshold: 0.5 });
 
 counters.forEach(counter => {
@@ -283,4 +299,14 @@ async function loadLanguage(lang = "en") {
     }
 }
 
-
+function sharePage() {
+    if (navigator.share) {
+        navigator.share({
+            title: "Working Together to Advance the Kingdom",
+            text: "Here’s a glimpse of the impact we are making in communities across Ghana. Join us as we build, lift, and shine the light of Christ.",
+            url: window.location.href
+        });
+    } else {
+        alert('Sharing is not supported on this device.');
+    }
+}

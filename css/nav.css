@@ -114,11 +114,7 @@ nav.active .navigation{
     position: relative;
     z-index: 2;
 }
-.overlay_bg{
-    width: 100%;
-    height: 100px;
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 50' fill='%23FFD300'%3E%3Cpath d='m0 0 100 50V0z'/%3E%3C/svg%3E");
-}
+
 
 .div_main{
     position: relative;
