@@ -37,8 +37,8 @@ h1,h2{
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: #f4f7f9;
-    color: #1e293b;
+    color: var(--don_text-white);
+    background: linear-gradient(135deg, #004d99 0%, #00264d 100%);
 }
 
 /* Donation Section */
@@ -61,7 +61,6 @@ body {
 
 .donation-header p {
     font-size: 16px;
-    color: #64748b;
     line-height: 1.6;
 }
 
@@ -167,7 +166,6 @@ body {
     text-align: center;
 }
 .donation_bg{
-    background: linear-gradient(135deg, #004d99 0%, #00264d 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,38 +301,65 @@ body {
 
 </style>
 <body>
-
 <nav>
     <div class="navigation">
         <div class="logo">
             <div class="logo_png"></div>
         </div>
         <ul class="menu_links">
-            <li><a href="../About_missions.html" class="menu_about"><p>Our Story</p></a></li>
-            <li><a href="../NEWS-BLOG-main/main.html"><p class="menu_article">News</p></a></li>
-            <li><a href="../impact/index.html"><p class="menu_article">community impact</p></a></li>
-            <li><a href="../About_gallery.html"><p class="menu_gallery">Gallery</p></a></li>
-            <li><a href="../partnership/index.html"><p class="menu_gallery">Partners</p></a></li>
-            <li><a href="../individuals/index.html"><p class="menu_article">FAQs</p></a></li>
-            <li><a href="../contact/index.html"><p class="menu_article">contact</p></a></li>
+            <li>
+                <a href="About_missions.html" class="menu_about">
+                    <p data-i18n="menu_story">Our Story</p>
+                </a>
+            </li>
+            <li>
+                <a href="NEWS-BLOG-main/main.html">
+                    <p class="menu_article" data-i18n="menu_news">News</p>
+                </a>
+            </li>
+            <li>
+                <a href="impact/index.html">
+                    <p class="menu_impact" data-i18n="menu_impact">Community Impact</p>
+                </a>
+            </li>
+            <li>
+                <a href="About_gallery.html">
+                    <p class="menu_gallery" data-i18n="menu_gallery">Gallery</p>
+                </a>
+            </li>
+            <li>
+                <a href="partnership/index.html">
+                    <p class="menu_partner" data-i18n="menu_partners">Partners</p>
+                </a>
+            </li>
+            <li>
+                <a href="individuals/index.html">
+                    <p class="menu_faq" data-i18n="menu_faq">FAQs</p>
+                </a>
+            </li>
+            <li>
+                <a href="contact/index.html">
+                    <p class="menu_contact" data-i18n="menu_contact">Contact</p>
+                </a>
+            </li>
         </ul>
         <div class="language">
             <select name="language" id="select_language">
-                <option value="en">english</option>
-                <option value="fr">French</option>
-                <option value="ar">arabic</option>
+                <option value="en" data-i18n="lang_en">English</option>
+                <option value="fr" data-i18n="lang_fr">French</option>
+                <option value="ar" data-i18n="lang_ar">Arabic</option>
             </select>
         </div>
         <div class="overlay_bg"></div>
         <div class="scene_kep">
             <div class="scene-container">
 
-                <div class="floating-bubble">
-                    Body of christ
+                <div class="floating-bubble content_bubble mn" data-i18n="bubble_body">
+                    Body of Christ
                 </div>
                 
-                <div class="floating-circle">
-                    <span>Missions</span>
+                <div class="floating-circle content_bubble min">
+                    <span data-i18n="bubble_missions">Missions</span>
                 </div>
 
                 <div class="video-card">
@@ -342,108 +367,169 @@ body {
                         <img src="https://cdn.prod.website-files.com/680f4bfe41a5cdeb6255b1e8/6824a0b849d6b4a241d52066_5f62353bbd07f81f1d794bb14f716618_home-intro-photo-3.avif" alt="Two people talking in a video call">
                     </div>
                 </div>
-                                    
+                                        
             </div>
         </div>
-    
+    </div>
 </nav>
 <div class="div_main">
     <div class="col-6 text-right">
         <div class="header-buttons">
-            <a href="../donate/index.html" class="main-header__button d-none d-lg-inline-block black"><div class=" donate-button">Donate Now</div></a>
+            <a href="donate/index.html" class="main-header__button d-none d-lg-inline-block black">
+                <div class="donate-button content_donate_mn" data-i18n="button_donate">
+                    Donate Now
+                </div>
+            </a>
         </div>
     </div>
     <div class="menu_icon">
-        <svg class="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#000000" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"/></svg>
+        <svg class="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+             viewBox="0 0 24 24" aria-label="Open Menu" data-i18n="icon_open">
+            <path fill="#000000" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"/>
+        </svg>
 
-        <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+        <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24" width="24" 
+             viewBox="0 0 24 24" aria-label="Close Menu" data-i18n="icon_close">
             <path d="M0 0h24v24H0z" fill="none"/>
-            <path  fill="crimson" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            <path fill="crimson" d="M19 6.41L17.59 5 12 10.59 
+                                   6.41 5 5 6.41 10.59 12 
+                                   5 17.59 6.41 19 12 13.41 
+                                   17.59 19 19 17.59 13.41 12z"/>
         </svg>
     </div>                
 </div>
-    <section class="donation-section">
+<section class="donation-section">
     <div class="donation-header">
-        <h1>Support Our Mission</h1>
-        <p>Your generosity helps us reach more people, support our programs, and make a lasting impact. Choose a donation tier or enter your own amount below.</p>
+        <h1 data-i18n="donation_title">Support Our Mission</h1>
+        <p data-i18n="donation_intro">
+            Your generosity helps us reach more people, support our programs, and make a lasting impact.
+            Choose a donation tier or enter your own amount below.
+        </p>
     </div>
 
     <div class="donation-grid">
         <div class="donation-card">
             <h2>$10</h2>
-            <p>Help provide learning materials for children in our programs.</p>
-            <button>Donate</button>
+            <p data-i18n="donation_tier_10_desc">
+                Help provide learning materials for children in our programs.
+            </p>
+            <button data-i18n="donation_button">Donate</button>
         </div>
+
         <div class="donation-card">
             <h2>$25</h2>
-            <p>Support community outreach events and local missions.</p>
-            <button>Donate</button>
+            <p data-i18n="donation_tier_25_desc">
+                Support community outreach events and local missions.
+            </p>
+            <button data-i18n="donation_button">Donate</button>
         </div>
+
         <div class="donation-card">
             <h2>$50</h2>
-            <p>Assist with operational costs and program expansion.</p>
-            <button>Donate</button>
+            <p data-i18n="donation_tier_50_desc">
+                Assist with operational costs and program expansion.
+            </p>
+            <button data-i18n="donation_button">Donate</button>
         </div>
+
         <div class="donation-card">
             <h2>$100</h2>
-            <p>Make a strong impact and help sustain multiple initiatives.</p>
-            <button>Donate</button>
+            <p data-i18n="donation_tier_100_desc">
+                Make a strong impact and help sustain multiple initiatives.
+            </p>
+            <button data-i18n="donation_button">Donate</button>
         </div>
     </div>
 
     <div class="custom-donation">
-        <input type="number" placeholder="Custom Amount">
-        <button>Donate Now</button>
+        <input
+            type="number"
+            placeholder="Custom Amount"
+            data-i18n-placeholder="donation_custom_placeholder"
+        >
+        <button data-i18n="donation_custom_button">Donate Now</button>
     </div>
 </section>
 
-            <section class="donation_bg" id="Donation_box">
-            <div class="donation-container">
-            
-            <div class="header-text">YOU CAN NOW PAY YOUR</div>
-            
-            <div class="payment-logos">
-                <div>
-                    <div class="logo-circle logo-mtn">
-                        <img src="https://images.seeklogo.com/logo-png/55/1/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png" alt="MTN Mobile Money Logo">
-                    </div>
-                    <div class="logo-label">Mobile Money</div>
-                </div>
+<section class="donation_bg" id="Donation_box">
+    <div class="donation-container">
 
-                <div>
-                    <div class="logo-circle logo-airteltigo">
-                        <img src="https://static.wikia.nocookie.net/logopedia/images/7/7b/ATGhana.png/revision/latest?cb=20230705220618" alt="AirtelTigo Money Logo">
-                    </div>
-                    <div class="logo-label">Money</div>
-                </div>
+        <div class="header-text" data-i18n="donation_via_title">
+            MAKE DONATIONS VIA
+        </div>
 
-                <div>
-                    <div class="logo-circle logo-cash">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFMimL60qjpGw/company-logo_200_200/company-logo_200_200/0/1710192723468?e=2147483647&v=beta&t=F7jN2tiZqGos6c2mTTIOPQHqAPUs0oUAvKdyBDLeFaE" alt="Telecel money Logo">
-                    </div>
-                    <div class="logo-label">Cash</div>
+        <div class="payment-logos">
+            <div>
+                <div class="logo-circle logo-mtn">
+                    <img
+                        src="https://images.seeklogo.com/logo-png/55/1/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png"
+                        alt="MTN Mobile Money Logo"
+                    >
+                </div>
+                <div class="logo-label" data-i18n="donation_payment_mobile_money">
+                    Mobile Money
                 </div>
             </div>
-            <div class="payment-block">
-                <div class="payment-label">Donations:</div>
-                <div class="ussd-code">**234*16932*GHS#</div>
+
+            <div>
+                <div class="logo-circle logo-airteltigo">
+                    <img
+                        src="https://static.wikia.nocookie.net/logopedia/images/7/7b/ATGhana.png/revision/latest?cb=20230705220618"
+                        alt="AirtelTigo Money Logo"
+                    >
+                </div>
+                <div class="logo-label" data-i18n="donation_payment_money">
+                    Money
+                </div>
             </div>
 
-            <div class="name-block">
-                <div class="label">NAME:</div>
-                <div class="value">TAC-ZOE WORSHIP CENTRE</div>
+            <div>
+                <div class="logo-circle logo-cash">
+                    <img
+                        src="https://media.licdn.com/dms/image/v2/D4D0BAQFMimL60qjpGw/company-logo_200_200/company-logo_200_200/0/1710192723468?e=2147483647&v=beta&t=F7jN2tiZqGos6c2mTTIOPQHqAPUs0oUAvKdyBDLeFaE"
+                        alt="Telecel money Logo"
+                    >
+                </div>
+                <div class="logo-label" data-i18n="donation_payment_cash">
+                    Cash
+                </div>
             </div>
-            
-            <div class="footer-text">
-                <div class="church-name">The Apostolic Church - Ghana</div>
+        </div>
+
+        <div class="payment-block">
+            <div class="payment-label" data-i18n="donation_label">
+                Donations:
+            </div>
+            <div class="ussd-code">
+                **234*16932*GHS#
+            </div>
+        </div>
+
+        <div class="name-block">
+            <div class="label" data-i18n="donation_name_label">
+                NAME:
+            </div>
+            <div class="value" data-i18n="donation_name_value">
+                TAC-ZOE WORSHIP CENTRE
+            </div>
+        </div>
+
+        <div class="footer-text">
+            <div class="church-name" data-i18n="donation_church_parent">
+                The Apostolic Church - Ghana
+            </div>
+            <span data-i18n="donation_church_name">
                 Zoe Worship Centre
-            </div>
-            
-            <div class="thank-you">
-                GOD BLESS YOU FOR GIVING
-            </div>
-            </div>
-        </section>
+            </span>
+        </div>
+
+        <div class="thank-you" data-i18n="donation_thank_you">
+            GOD BLESS YOU FOR GIVING
+        </div>
+
+    </div>
+</section>
+
     <footer>
         <div class="container">
             <div class="brand">

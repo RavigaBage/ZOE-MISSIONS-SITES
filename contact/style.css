@@ -192,17 +192,21 @@ a{
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .contact-form-container {
+    .contact-form-container,.contact-section {
         padding: 10px ;
     }
 
     /* Stack columns on small screens */
     .contact-grid {
-        grid-template-columns: 1fr;
+        display: block;
     }
 
     .contact-details {
         margin-bottom: 30px;
+        width: 100%;
+    }
+    .contact-details p {
+        word-wrap: break-word;
     }
     .submit-btn {
     width: 80%;

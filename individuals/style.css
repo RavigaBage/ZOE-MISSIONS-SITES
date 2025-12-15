@@ -128,7 +128,7 @@ body {
 }
 
 .accordion-content p, .accordion-content ul, .accordion-content ol {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 .accordion-content ul, .accordion-content ol {
@@ -177,7 +177,7 @@ body {
     height: 100%;
     z-index: 1;
     border-radius: 0px 300px 300px 0px;
-    background-color: red;
+    background-color: #007bff;
     
 }
 .img_help .text h2{

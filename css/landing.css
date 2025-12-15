@@ -1999,6 +1999,9 @@ fill:#000000;
         flex-direction: column-reverse;
         text-align: center;
     }
+    .hero.middle{
+        flex-direction: column;
+    }
 
     .hero-content, .hero-image {
         width: 100%;

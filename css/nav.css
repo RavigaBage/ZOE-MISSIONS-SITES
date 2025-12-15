@@ -252,6 +252,17 @@ display: none;
     font-size: 1.2em;
     font-weight: bold;
 }
+.animate_x {    /* needed for transform */
+  transition: opacity 0.5s ease, transform 0.5s ease !important ;
+  opacity: 1 !important ;
+  transform: translateY(0) !important ;
+}
+
+/* Hidden state before animation */
+.animate_x.hide {
+  opacity: 0 !important ;
+  transform: translateY(-10px) !important ;
+}
 @keyframes reveal {
     0%{
         opacity: 0;
