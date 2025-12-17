@@ -115,8 +115,8 @@
     PayBtn.addEventListener('click',function(){
         if(Ismomo){
             Get_amount = window.location.href.split('{Am}=')[1];
-            const phoneNumber = "**234*16932*100#"; 
-            window.location.href = `tel:${Get_amount}`; 
+            const phoneNumber = encodeURIComponent(`**234*16932*$${Get_amount}#`); 
+            window.location.href = `tel:${phoneNumber}`; 
         }
     })
 </script>
