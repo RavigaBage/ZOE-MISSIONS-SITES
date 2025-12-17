@@ -49,7 +49,6 @@
         }); 
     });
 
-    document.querySelector('#select_language').addEventListener('change',(e)=> loadLanguage(e.target.value));
 
 
     const countDate = getNextChristmas();

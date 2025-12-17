@@ -2,6 +2,7 @@ if(window.localStorage.getItem('language_request')){
     const requested_language = window.localStorage.getItem('language_request');
     loadLanguage(requested_language);
 }
+console.log(window.localStorage.getItem('language_request'));
 
 
 async function loadLanguage(lang = "en") {

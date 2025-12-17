@@ -1,99 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="tailwindcss-colors.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Payment Page</title>
+<meta charset="UTF-8">
+<title>Secure Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    
-    <!-- start: Payment -->
-    <section class="payment-section">
-        <div class="container">
-            <div class="payment-wrapper">
-                <div class="payment-left">
-                    <div class="payment-header">
-                        <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
-                        <div class="payment-header-title">Order Summary</div>
-                        <p class="payment-header-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                    </div>
-                    <div class="payment-content">
-                        <div class="payment-body">
-                            <div class="payment-plan">
-                                <div class="payment-plan-type">Pro</div>
-                                <div class="payment-plan-info">
-                                    <div class="payment-plan-info-name">Professional Plan</div>
-                                    <div class="payment-plan-info-price">$49 per month</div>
-                                </div>
-                                <a href="#" class="payment-plan-change">Change</a>
-                            </div>
-                            <div class="payment-summary">
-                                <div class="payment-summary-item">
-                                    <div class="payment-summary-name">Additional fee</div>
-                                    <div class="payment-summary-price">$10</div>
-                                </div>
-                                <div class="payment-summary-item">
-                                    <div class="payment-summary-name">Discount 20%</div>
-                                    <div class="payment-summary-price">-$10</div>
-                                </div>
-                                <div class="payment-summary-divider"></div>
-                                <div class="payment-summary-item payment-summary-total">
-                                    <div class="payment-summary-name">Total</div>
-                                    <div class="payment-summary-price">-$10</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="payment-right">
-                    <form action="" class="payment-form">
-                        <h1 class="payment-title">Payment Details</h1>
-                        <div class="payment-method">
-                            <input type="radio" name="payment-method" id="method-1" checked>
-                            <label for="method-1" class="payment-method-item">
-                                <img src="images/visa.png" alt="">
-                            </label>
-                            <input type="radio" name="payment-method" id="method-2">
-                            <label for="method-2" class="payment-method-item">
-                                <img src="images/mastercard.png" alt="">
-                            </label>
-                            <input type="radio" name="payment-method" id="method-3">
-                            <label for="method-3" class="payment-method-item">
-                                <img src="images/paypal.png" alt="">
-                            </label>
-                            <input type="radio" name="payment-method" id="method-4">
-                            <label for="method-4" class="payment-method-item">
-                                <img src="images/stripe.png" alt="">
-                            </label>
-                        </div>
-                        <div class="payment-form-group">
-                            <input type="email" placeholder=" " class="payment-form-control" id="email">
-                            <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
-                        </div>
-                        <div class="payment-form-group">
-                            <input type="text" placeholder=" " class="payment-form-control" id="card-number">
-                            <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
-                        </div>
-                        <div class="payment-form-group-flex">
-                            <div class="payment-form-group">
-                                <input type="date" placeholder=" " class="payment-form-control" id="expiry-date">
-                                <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
-                            </div>
-                            <div class="payment-form-group">
-                                <input type="text" placeholder=" " class="payment-form-control" id="cvv">
-                                <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
-                            </div>
-                        </div>
-                        <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
-                    </form>
-                </div>
+
+<div class="payment-shell">
+    <div class="header">
+        <h2>Payment Method</h2>
+        <p>Select how you want to pay</p>
+    </div>
+
+    <!-- METHODS -->
+    <div class="methods">
+
+        <label class="method">
+            <input type="radio" name="pay" value="card">
+           <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+            <span>Card</span>
+        </label>
+
+        <label class="method">
+            <input type="radio" name="pay" value="bank">
+            <img src="https://img.icons8.com/fluency/48/bank.png" alt="Bank Transfer">
+            <span>Bank</span>
+        </label>
+
+        <label class="method">
+            <input type="radio" name="pay" value="momo">
+            <img src="https://img.icons8.com/color/48/google-wallet.png" alt="Mobile Money">
+            <span>MoMo</span>
+        </label>
+
+    </div>
+
+    <!-- CARD -->
+    <div id="card" class="details">
+        <div class="field">
+            <label>Card Number</label>
+            <input placeholder="1234 5678 9012 3456">
+        </div>
+
+        <div class="row">
+            <div class="field">
+                <label>Expiry</label>
+                <input type="month">
+            </div>
+            <div class="field">
+                <label>CVV</label>
+                <input type="password" placeholder="***">
             </div>
         </div>
-    </section>
-    <!-- end: Payment -->
+    </div>
+
+    <!-- BANK -->
+    <div id="bank" class="details">
+        <div class="field">
+            <label>Bank Name</label>
+            <input placeholder="e.g. GCB Bank">
+        </div>
+
+        <div class="field">
+            <label>Account Number</label>
+            <input>
+        </div>
+    </div>
+
+    <!-- MOMO -->
+    <div id="momo" class="details">
+        <div class="field">
+            <label>Network</label>
+            <select>
+                <option>MTN MoMo</option>
+                <option>Telecel Cash</option>
+                <option>AirtelTigo Money</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Mobile Number</label>
+            <input placeholder="024xxxxxxx" id="mobile_number">
+        </div>
+    </div>
+
+    <button class="pay-btn">Pay Now</button>
+</div>
+
+<script>
+    const methods = document.querySelectorAll('.method');
+    const radios  = document.querySelectorAll('input[name="pay"]');
+    const panels  = document.querySelectorAll('.details');
+    const PayBtn = document.querySelector('.pay-btn');
+    Ismomo = false;
+    methods.forEach((method,i)=>{
+        method.addEventListener('click',()=>{
+            radios[i].checked = true;
+
+            methods.forEach(m=>m.classList.remove('active'));
+            method.classList.add('active');
+
+            panels.forEach(p=>p.classList.remove('active'));
+            document.getElementById(radios[i].value).classList.add('active');
+            if(radios[i].value == 'momo'){
+                Ismomo =  true;    
+            }else{
+                Ismomo = fase;
+            }
+        });
+    });
+    PayBtn.addEventListener('click',function(){
+        if(Ismomo){
+            Get_amount = window.location.href.split('{Am}=')[1];
+            const phoneNumber = "**234*16932*100#"; 
+            window.location.href = `tel:${Get_amount}`; 
+        }
+    })
+</script>
 
 </body>
 </html>

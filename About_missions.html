@@ -132,12 +132,24 @@
                     <li><a href="About_gallery.html"><p class="menu_gallery">Gallery</p></a></li>
                     <li><a href="partnership/index.html"><p class="menu_gallery">Partners</p></a></li>
                 </ul>
-                <div class="language">
-                    <select name="language" id="select_language">
-                        <option value="en">english</option>
-                        <option value="fr">French</option>
-                        <option value="ar">arabic</option>
-                    </select>
+                <div class="lang-switcher-container">
+                    <div class="lang-current" id="langCurrent" onclick="toggleLangPopup()">
+                        <img src="https://flagcdn.com/w40/gb.png" id="currentFlag" alt="English">
+                        <span id="currentLangText">English</span>
+                        <i class="arrow-down"></i>
+                    </div>
+
+                    <div class="lang-popup" id="langPopup">
+                        <div class="lang-option" onclick="changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png')">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
+                        </div>
+                        <div class="lang-option" onclick="changeLanguage('fr', 'Français', 'https://flagcdn.com/w40/fr.png')">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="French"> Français
+                        </div>
+                        <div class="lang-option" onclick="changeLanguage('ar', 'العربية', 'https://flagcdn.com/w40/sa.png')">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="Arabic"> العربية
+                        </div>
+                    </div>
                 </div>
                 <div class="scene_kep">
                         <div class="scene-container">
@@ -1609,6 +1621,7 @@
         <script src="js/slick/slick.min.js"></script>
         <script src="svg/package/swiper-bundle.min.js"></script>
         <script src="js/aos.js"></script>
+        <script src="js/nav.js"></script>
         <script>
             $(document).ready(function () {
             AOS.init();
