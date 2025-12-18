@@ -125,75 +125,120 @@
                     <div class="logo_png"></div>
                 </div>
                 <ul class="menu_links">
-                    <li><a href="contact/index.html"><p class="menu_article">contact</p></a></li>
-                    <li><a href="NEWS-BLOG-main/main.html"><p class="menu_article">News</p></a></li>
-                    <li><a href="impact/index.html"><p class="menu_article">community impact</p></a></li>
-                    <li><a href="individuals/index.html"><p class="menu_article">Individuals</p></a></li>
-                    <li><a href="About_gallery.html"><p class="menu_gallery">Gallery</p></a></li>
-                    <li><a href="partnership/index.html"><p class="menu_gallery">Partners</p></a></li>
-                </ul>
-                <div class="lang-switcher-container">
-                    <div class="lang-current" id="langCurrent" onclick="toggleLangPopup()">
-                        <img src="https://flagcdn.com/w40/gb.png" id="currentFlag" alt="English">
-                        <span id="currentLangText">English</span>
-                        <i class="arrow-down"></i>
-                    </div>
+                    <li>
+                        <a href="index.html" class="menu_about">
+                            <p >Home</p>
+                        </a>
+                    </li>
 
-                    <div class="lang-popup" id="langPopup">
-                        <div class="lang-option" onclick="changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png')">
-                            <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
-                        </div>
-                        <div class="lang-option" onclick="changeLanguage('fr', 'Français', 'https://flagcdn.com/w40/fr.png')">
-                            <img src="https://flagcdn.com/w40/fr.png" alt="French"> Français
-                        </div>
-                        <div class="lang-option" onclick="changeLanguage('ar', 'العربية', 'https://flagcdn.com/w40/sa.png')">
-                            <img src="https://flagcdn.com/w40/sa.png" alt="Arabic"> العربية
-                        </div>
+                    <li>
+                        <a href="About_missions.html" class="menu_about">
+                            <p data-i18n="menu_story">Our Story</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="NEWS-BLOG-main/main.html">
+                            <p class="menu_article" data-i18n="menu_news">News</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="impact/index.html">
+                            <p class="menu_impact" data-i18n="menu_impact">Community Impact</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="About_gallery.html">
+                            <p class="menu_gallery" data-i18n="menu_gallery">Gallery</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="partnership/index.html">
+                            <p class="menu_partner" data-i18n="menu_partners">Partners</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="individuals/index.html">
+                            <p class="menu_faq" data-i18n="menu_faq">FAQs</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact/index.html">
+                            <p class="menu_contact" data-i18n="menu_contact">Contact</p>
+                        </a>
+                    </li>
+                </ul>
+            <div class="lang-switcher-container">
+                <div class="lang-current" id="langCurrent" onclick="toggleLangPopup()">
+                    <img src="https://flagcdn.com/w40/gb.png" id="currentFlag" alt="English">
+                    <span id="currentLangText">English</span>
+                    <i class="arrow-down"></i>
+                </div>
+
+                <div class="lang-popup" id="langPopup">
+                    <div class="lang-option" onclick="changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png')">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
+                    </div>
+                    <div class="lang-option" onclick="changeLanguage('fr', 'Français', 'https://flagcdn.com/w40/fr.png')">
+                        <img src="https://flagcdn.com/w40/fr.png" alt="French"> Français
+                    </div>
+                    <div class="lang-option" onclick="changeLanguage('ar', 'العربية', 'https://flagcdn.com/w40/sa.png')">
+                        <img src="https://flagcdn.com/w40/sa.png" alt="Arabic"> العربية
                     </div>
                 </div>
-                <div class="scene_kep">
-                        <div class="scene-container">
-
-                            <div class="floating-bubble">
-                                Applications reviewed
-                            </div>
-                            
-                            <div class="floating-circle">
-                                <span>3:00</span>
-                                Human
-                            </div>
-
-                            <div class="video-card">
-                                <div class="video-content">
-                                    <img src="https://cdn.prod.website-files.com/680f4bfe41a5cdeb6255b1e8/6824a0b849d6b4a241d52066_5f62353bbd07f81f1d794bb14f716618_home-intro-photo-3.avif" alt="Two people talking in a video call">
-                                </div>
-                            </div>
-                                                
-                        </div>
-                    </div>
+            </div>
                 <div class="overlay_bg"></div>
+                <div class="scene_kep">
+                    <div class="scene-container">
+
+                        <div class="floating-bubble content_bubble mn" data-i18n="bubble_body">
+                            Body of Christ
+                        </div>
+                        
+                        <div class="floating-circle content_bubble min">
+                            <span data-i18n="bubble_missions">Missions</span>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-content">
+                                <img src="https://cdn.prod.website-files.com/680f4bfe41a5cdeb6255b1e8/6824a0b849d6b4a241d52066_5f62353bbd07f81f1d794bb14f716618_home-intro-photo-3.avif" alt="Two people talking in a video call">
+                            </div>
+                        </div>
+                                                
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="div_main">
             <div class="col-6 text-right">
                 <div class="header-buttons">
-                    <a href="donate/index.html" class="main-header__button d-none d-lg-inline-block black"><div class=" donate-button">Donate Now</div></a>
+                    <a href="donate/index.html" class="main-header__button d-none d-lg-inline-block black">
+                        <div class="donate-button content_donate_mn" data-i18n="button_donate">
+                            Donate Now
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="menu_icon">
-                <svg class="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#000000" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"/></svg>
+                <svg class="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+                    viewBox="0 0 24 24" aria-label="Open Menu" data-i18n="icon_open">
+                    <path fill="#000000" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"/>
+                </svg>
 
-                <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24" width="24" 
+                    viewBox="0 0 24 24" aria-label="Close Menu" data-i18n="icon_close">
                     <path d="M0 0h24v24H0z" fill="none"/>
-                    <path  fill="crimson" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    <path fill="crimson" d="M19 6.41L17.59 5 12 10.59 
+                                        6.41 5 5 6.41 10.59 12 
+                                        5 17.59 6.41 19 12 13.41 
+                                        17.59 19 19 17.59 13.41 12z"/>
                 </svg>
             </div>                
         </div>
                 <div class="container__left">
                     <div class="content">
-                        <h1>The People </h1>
-                        <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900">Turning Purpose Into </h1>
-                        <h1><span>Impact</span>  </h1>
+                        <h1 data-i18n="content_title">The People </h1>
+                        <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900" data-i18n="content-p">Turning Purpose Into </h1>
+                        <h1><span data-i18n="content-span">Impact</span>  </h1>
                         <div class="social_links">
                                 <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 56 56"><path fill="#2196f3" fill-rule="evenodd" d="M3 7.007A4.007 4.007 0 0 1 7.007 3h41.986A4.007 4.007 0 0 1 53 7.007v41.986A4.007 4.007 0 0 1 48.993 53H7.007A4.007 4.007 0 0 1 3 48.993zM37.28 51V31.842h6.486l.971-7.466H37.28v-4.767c0-2.162.605-3.635 3.732-3.635L45 15.972V9.294C44.31 9.204 41.943 9 39.189 9c-5.75 0-9.686 3.48-9.686 9.87v5.506H23v7.466h6.503V51z"/></svg></a>
                                 <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 56 56"><path fill="#d50772" fill-rule="evenodd" d="M39.006 3C46.735 3 53 9.27 53 16.994v22.012C53 46.735 46.73 53 39.006 53H16.994C9.265 53 3 46.73 3 39.006V16.994C3 9.265 9.27 3 16.994 3zM28 15c-7.18 0-13 5.82-13 13s5.82 13 13 13s13-5.82 13-13s-5.82-13-13-13m0 4a9 9 0 1 1 0 18a9 9 0 0 1 0-18m14.5-9a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7"/></svg></a>
@@ -213,18 +258,18 @@
         
         <section>
             <div class="destination_header">
-                <h1>ABOUT US </h1>
-                <h1>Connect with the leaders of zoe-Tirzah</h1> 
+                <h1 data-i18n="about_us_title">ABOUT US</h1>
+                <h1 data-i18n="connect_leaders_title">Connect with the leaders of zoe-Tirzah</h1>
             </div>
             <div id="brxe-mvsiov" class="brxe-container missions_about_page">
                 <div id="brxe-zzzqgr" class="brxe-div">
                     <div id="brxe-zsmlum" class="brxe-div">
                         <div id="brxe-cgclau" class="brxe-div" >
                             <div id="brxe-ijntgq" class="brxe-text main-title main-title__fonts">
-                                <h1 style="font-size:40px;">Rev. Daniella Owusu</h1>
+                                <h1 style="font-size:40px;" data-i18n="missionary_name_1">Rev. Daniella Owusu</h1>
                             </div>
                             <div id="brxe-odgchg" class="brxe-text fs-18">
-                                <p>
+                                <p data-i18n="about_us_p">
                                     A steady voice with a heart for missions, he leads both local and international outreach with courage and clarity. Daniella trains volunteers, organizes mission trips, and keeps the church focused on spreading the gospel and serving those in need. His leadership brings direction, compassion, and a spirit of excellence.
                                 </p>
                             </div>
@@ -1035,10 +1080,10 @@
                         </div>
                         <div id="brxe-cgclau" class="brxe-div" >
                             <div id="brxe-ijntgq" class="brxe-text main-title main-title__fonts">
-                                <h1 style="font-size:40px;">Pastor. Grace Mensah</h1>
+                                <h1 style="font-size:40px;" data-i18n="missionary_name_2">Pastor. Grace Mensah</h1>
                             </div>
                             <div id="brxe-odgchg" class="brxe-text fs-18">
-                                <p>Grace oversees the children’s ministry with warmth that feels like sunlight. She develops age-appropriate programs, mentors young believers, and ensures every child learns about Christ in ways they can understand. Her care builds the foundation of faith for the next generation.
+                                <p data-i18n="missionary_name_2_p">Grace oversees the children’s ministry with warmth that feels like sunlight. She develops age-appropriate programs, mentors young believers, and ensures every child learns about Christ in ways they can understand. Her care builds the foundation of faith for the next generation.
                                 </p>
                             </div>
                         
@@ -1052,10 +1097,10 @@
                     <div id="brxe-zsmlum" class="brxe-div">
                         <div id="brxe-cgclau" class="brxe-div" >
                             <div id="brxe-ijntgq" class="brxe-text main-title main-title__fonts">
-                                <h1 style="font-size:40px;">Elder Michael Tetteh</h1>
+                                <h1 style="font-size:40px;" data-i18n="missionary_name_3">Elder Michael Tetteh</h1>
                             </div>
                             <div id="brxe-odgchg" class="brxe-text fs-18">
-                                <p>
+                                <p data-i18n="missionary_name_3_p">
                                     Michael guides educational programs within the church, creating opportunities for spiritual growth and equipping members for service. His teaching is practical, clear, and grounded in Scripture. He helps the church grow stronger through learning and discipleship.
                                 </p>
                             </div>
@@ -1471,15 +1516,15 @@
         <div class="scr1 container">
                 <div class="container__left">
                     <div class="content">
-                        <h1>SUPPORTING </h1>
-                        <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900">US TO CARRY</h1>
-                        <h1><span>OUT MISSIONS</span>  </h1>
-                        <p data-aos="fade-right" data-aos-delay="150" data-aos-duration="1900">
+                        <h1 data-i18n="support_title">SUPPORTING </h1>
+                        <h1 data-aos="fade-right" data-aos-delay="150" data-aos-duration="900" data-i18n="support_title_h1">US TO CARRY</h1>
+                        <h1><span data-i18n="support_title_span">OUT MISSIONS</span>  </h1>
+                        <p data-aos="fade-right" data-aos-delay="150" data-aos-duration="1900" data-i18n="support_title_p">
                             “Go therefore and make disciples of all nations.”</p>
-                            <p>Join us as we partner with Christ to bring His love and hope to communities around the world. Through your partnership with Zoe, you become part of God’s redemptive mission — uplifting lives, empowering people, and spreading the light of the Gospel. Together, we are transforming hearts and nations, one act of love at a time.
+                            <p data-i18n="support_title_p_cont">Join us as we partner with Christ to bring His love and hope to communities around the world. Through your partnership with Zoe, you become part of God’s redemptive mission — uplifting lives, empowering people, and spreading the light of the Gospel. Together, we are transforming hearts and nations, one act of love at a time.
                         </p>
                         <div class="donate_links">
-                            <a href="donate/index.html"><button>DONATE HERE </button></a>
+                            <a href="donate/index.html"><button data-i18n="donate_btn_1">DONATE HERE </button></a>
                         </div>
                     </div>
                     <div class="image_design">
@@ -1496,126 +1541,126 @@
         <div class="team-container">
             <div class="team-card">
             <img src="images/missionaries/client-1.jpg" class="team-photo">
-            <div class="team-name">Sarah Mensah</div>
-            <div class="team-role">Project Lead</div>
-            <p class="team-desc">Organizes strategy, keeps the squad focused, and makes impossible tasks feel small.</p>
+            <div class="team-name" data-i18n="missionary_name_cont_1">Sarah Mensah</div>
+            <div class="team-role" data-i18n="missionary_name_cont_1_position">Project Lead</div>
+            <p class="team-desc" data-i18n="missionary_name_cont_1_description">Organizes strategy, keeps the squad focused, and makes impossible tasks feel small.</p>
             </div>
 
             <div class="team-card">
             <img src="images/missionaries/client-2.jpg" class="team-photo">
-            <div class="team-name">Abigail Tetteh</div>
-            <div class="team-role">Communications</div>
-            <p class="team-desc">Crafts clear stories, warm messages, and connects partners with purpose.</p>
+            <div class="team-name" data-i18n="missionary_name_cont_2">Abigail Tetteh</div>
+            <div class="team-role" data-i18n="missionary_name_cont_2_position">Communications</div>
+            <p class="team-desc" data-i18n="missionary_name_cont_2_description">Crafts clear stories, warm messages, and connects partners with purpose.</p>
             </div>
 
             <div class="team-card">
             <img src="images/missionaries/client-3.jpg" class="team-photo">
-            <div class="team-name">John Oppong</div>
-            <div class="team-role">Field Coordinator</div>
-            <p class="team-desc">Ensures every mission trip runs smoothly from planning to the final handshake.</p>
+            <div class="team-name" data-i18n="missionary_name_cont_3">John Oppong</div>
+            <div class="team-role" data-i18n="missionary_name_cont_3_position">Field Coordinator</div>
+            <p class="team-desc" data-i18n="missionary_name_cont_3_description">Ensures every mission trip runs smoothly from planning to the final handshake.</p>
             </div>
 
             <div class="team-card">
             <img src="images/missionaries/client-4.jpg" class="team-photo">
-            <div class="team-name">Michael Adu</div>
-            <div class="team-role">Tech Support</div>
-            <p class="team-desc">Makes the system run like fresh breeze—fast, stable and always ready.</p>
+            <div class="team-name" data-i18n="missionary_name_cont_4">Michael Adu</div>
+            <div class="team-role" data-i18n="missionary_name_cont_4_position">Tech Support</div>
+            <p class="team-desc" data-i18n="missionary_name_cont_4_description">Makes the system run like fresh breeze—fast, stable and always ready.</p>
             </div>
 
             <div class="team-card">
             <img src="images/missionaries/client-4.jpg" class="team-photo">
-            <div class="team-name">Michael Adu</div>
-            <div class="team-role">Tech Support</div>
-            <p class="team-desc">Makes the system run like fresh breeze—fast, stable and always ready.</p>
+            <div class="team-name" data-i18n="missionary_name_cont_5">Michael Adu</div>
+            <div class="team-role" data-i18n="missionary_name_cont_5_position">Tech Support</div>
+            <p class="team-desc" data-i18n="missionary_name_cont_5_description">Makes the system run like fresh breeze—fast, stable and always ready.</p>
             </div>
             
             <div class="team-card">
             <img src="images/missionaries/client-4.jpg" class="team-photo">
-            <div class="team-name">Michael Adu</div>
-            <div class="team-role">Tech Support</div>
-            <p class="team-desc">Makes the system run like fresh breeze—fast, stable and always ready.</p>
+            <div class="team-name" data-i18n="missionary_name_cont_6">Michael Adu</div>
+            <div class="team-role" data-i18n="missionary_name_cont_6_position">Tech Support</div>
+            <p class="team-desc" data-i18n="missionary_name_cont_6_description">Makes the system run like fresh breeze—fast, stable and always ready.</p>
             </div>
 
         </div>
         </section>
 
-        <footer>
-            <div class="container">
-                <div class="brand">
-                    <header class="brand-title-vt-g">ZOE Tirzah</header>
-                    <p class="brand-title-vt-p">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others.
-                        We invite you to join us as we explore God's Word, experience His presence and serve our community.
-                        ?</p>
+            <footer>
+                <div class="container">
+                    <div class="brand">
+                        <header class="brand-title-vt-g" data-i18n="footer_brand_title">ZOE Tirzah</header>
+                        <p class="brand-title-vt-p" data-i18n="footer_brand_desc">
+                            Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others.
+                            We invite you to join us as we explore God's Word, experience His presence and serve our community.
+                        </p>
                         <div class="social_links">
-                            <a href="https://facebook.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 56 56"><path fill="#2196f3" fill-rule="evenodd" d="M3 7.007A4.007 4.007 0 0 1 7.007 3h41.986A4.007 4.007 0 0 1 53 7.007v41.986A4.007 4.007 0 0 1 48.993 53H7.007A4.007 4.007 0 0 1 3 48.993zM37.28 51V31.842h6.486l.971-7.466H37.28v-4.767c0-2.162.605-3.635 3.732-3.635L45 15.972V9.294C44.31 9.204 41.943 9 39.189 9c-5.75 0-9.686 3.48-9.686 9.87v5.506H23v7.466h6.503V51z"/></svg></a>
-                            <a href="https://instagram.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 56 56"><path fill="#d50772" fill-rule="evenodd" d="M39.006 3C46.735 3 53 9.27 53 16.994v22.012C53 46.735 46.73 53 39.006 53H16.994C9.265 53 3 46.73 3 39.006V16.994C3 9.265 9.27 3 16.994 3zM28 15c-7.18 0-13 5.82-13 13s5.82 13 13 13s13-5.82 13-13s-5.82-13-13-13m0 4a9 9 0 1 1 0 18a9 9 0 0 1 0-18m14.5-9a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7"/></svg></a>
-                            <a href="https://tiktok.com"><svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="24" height="24" viewBox="0 0 32 32" version="1.1">
-                                <title>tiktok</title>
-                                <path  fill="#EE1D52" d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"/>
-                                </svg></a>
-                            <a id="whatsappLink_footer_2" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="#4caf50" d="M30.47 11.43H32v9.14h-1.53Zm-1.52 9.14h1.52v3.05h-1.52Zm0-12.19h1.52v3.05h-1.52Zm-1.53 15.24h1.53v3.04h-1.53Zm0-18.29h1.53v3.05h-1.53Zm-3.04 21.33h3.04v1.53h-3.04Zm0-22.85h3.04v1.52h-3.04Zm0 13.71h-4.57v1.53h-1.53v-1.53h-1.52V16h-1.53v-1.53h-1.52v-1.52h1.52V8.38h-1.52V6.85H9.14v1.53H7.61v4.57h1.53V16h1.52v1.52h1.53v1.53h1.52v1.52h1.52v1.52h1.53v1.53h3.05v1.52h4.57v-1.52h1.52v-4.57h-1.52zm-3.05 10.67h3.05v1.52h-3.05Zm0-25.91h3.05v1.53h-3.05Zm-9.14 27.43h9.14v1.53h-9.14Zm0-28.95h9.14v1.52h-9.14ZM7.61 28.19h4.58v1.52H7.61ZM9.14 2.28h3.05v1.53H9.14ZM6.09 3.81h3.05v1.52H6.09Zm-3.05 25.9v-1.52H1.52v1.52H0v1.53h7.61v-1.53zm1.53-6.09h1.52v3.04H4.57Zm0-18.29h1.52v3.05H4.57ZM3.04 26.66h1.53v1.53H3.04Zm0-6.09h1.53v3.05H3.04Zm0-12.19h1.53v3.05H3.04Zm-1.52 3.05h1.52v9.14H1.52Z"/></svg></a>
+                            <a href="https://facebook.com" aria-label="Facebook" data-i18n="footer_social_facebook"></a>
+                            <a href="https://instagram.com" aria-label="Instagram" data-i18n="footer_social_instagram"></a>
+                            <a href="https://tiktok.com" aria-label="TikTok" data-i18n="footer_social_tiktok"></a>
+                            <a id="whatsappLink_footer_2" href="" aria-label="WhatsApp" data-i18n="footer_social_whatsapp"></a>
                         </div>
-                </div>
-                <div class="links">
-                    <h2>Quick links</h2>
-                    <ul>
-                        <li><a href="About_missions.html"><p>About us</p></a></li>
-                        <li><a href="NEWS-BLOG-main/main.html"><p>our story</p></a></li>
-                        <li><a href="About_gallery.html"><p>Gallery</p></a></li>   
-                        <li><a href="contact/index.html"><p class="menu_article">contact</p></a></li>   
-                    </ul>
-                    
-                </div>
-
-                <div class="links">
-                    <h2>Missions</h2>
-                    <ul>
-                        <li><a href="individuals/index.html"><p>individuals</p></a></li>
-                        <li><a href="partnership/index.html"><p>partners</p></a></li>
-                        <li><a href="individuals/index.html"><p>Donate</p></a></li>
-                        <li><a href="https://forms.gle/LG43ReJcDcAizGBr7"><p>partner with us</p></a></li>
-                    </ul>
-                    
-                </div>
-
-                <div class="links">
-                    <h2>Contact</h2>
-                    <ul>
-                        <li><a href="mailto:tac.azwc@gmail.com"><p>zoeworshipcentreorganization@gmail.com</p></a>
-                        </li>
-                        <li><span>WhatsApp :</span></li>
-                        <li><a id="whatsappLink_footer" href="tel:+233553838464"><p>(233) - 553 838 464</p></a></a></li>
-                        <li><span>Caller :</span></li>
-                        <li><a href="tel:+475534 838 4649"><p>(+47) - 5534 838 4649</p></a></a></li>
-                    </ul>
-                </div>
-                
-            </div>
-            <div class="site-footer">
-                <div class="footer-top">
-                    <div class="email-signup">
-                        <h3>Stay up to date.</h3>
-                        <form>
-                            <input type="email" placeholder="Email Address">
-                            <button type="submit">Sign Up</button>
-                        </form>
-                        <p>We occasionally send newsletters & mission information emails. Please read our privacy policy for more information.</p>
                     </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+
+                    <div class="links">
+                        <h2 data-i18n="footer_quicklinks_title">Quick links</h2>
+                        <ul>
+                            <li><a href="../About_missions.html"><p data-i18n="footer_quicklinks_story">Our Story</p></a></li>
+                            <li><a href="../index.html"><p data-i18n="footer_quicklinks_home">Home</p></a></li>
+                            <li><a href="../NEWS-BLOG-main/main.html"><p data-i18n="footer_quicklinks_news">News</p></a></li>
+                            <li><a href="../About_gallery.html"><p data-i18n="footer_quicklinks_gallery">Gallery</p></a></li>
+                            <li><a href="../contact/index.html"><p class="menu_article" data-i18n="footer_quicklinks_contact">Contact</p></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links">
+                        <h2 data-i18n="footer_missions_title">Missions</h2>
+                        <ul>
+                            <li><a href="../individuals/index.html"><p data-i18n="footer_missions_faqs">FAQs</p></a></li>
+                            <li><a href="../partnership/index.html"><p data-i18n="footer_missions_partners">Partners</p></a></li>
+                            <li><a href="../donate/index.html"><p data-i18n="footer_missions_donate">Donate</p></a></li>
+                            <li><a href="https://forms.gle/LG43ReJcDcAizGBr7"><p data-i18n="footer_missions_partnerwithus">Partner with Us</p></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="links">
+                        <h2 data-i18n="footer_contact_title">Contact</h2>
+                        <ul>
+                            <li><a href="mailto:tac.azwc@gmail.com"><p data-i18n="footer_contact_email">zoeworshipcentreorganization@gmail.com</p></a></li>
+                            <li><span data-i18n="footer_contact_whatsapp_label">WhatsApp :</span></li>
+                            <li><a id="whatsappLink_footer" href="tel:+233553838464"><p data-i18n="footer_contact_whatsapp_number">(233) - 553 838 464</p></a></li>
+                            <li><span data-i18n="footer_contact_caller_label">Caller :</span></li>
+                            <li><a href="tel:+4755348384649"><p data-i18n="footer_contact_caller_number">(+47) - 5534 838 4649</p></a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <nav class="footer-nav">
-                        <a href="#">Cookies</a>
-                        <a href="#">Terms</a>
-                        <a href="#">Privacy</a>
-                    </nav>
-                    <p>© 2020 Reg. mission in Ghana & Beyound (1175049) and Scotland (SCO48330).</p>
-                </div>
-            </div>
-        </footer>
 
+                <div class="site-footer">
+                    <div class="footer-top">
+                        <div class="email-signup">
+                            <h3 data-i18n="footer_signup_title">Stay up to date.</h3>
+                            <form>
+                                <input type="email" placeholder="Email Address" data-i18n="footer_signup_placeholder">
+                                <button type="submit" data-i18n="footer_signup_button">Sign Up</button>
+                            </form>
+                            <p data-i18n="footer_signup_desc">
+                                We occasionally send newsletters & mission information emails. Please read our privacy policy for more information.
+                            </p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter" data-i18n="footer_social_twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <nav class="footer-nav">
+                            <a href="#" data-i18n="footer_nav_cookies">Cookies</a>
+                            <a href="#" data-i18n="footer_nav_terms">Terms</a>
+                            <a href="#" data-i18n="footer_nav_privacy">Privacy</a>
+                        </nav>
+                        <p data-i18n="footer_bottom_text">
+                            © 2020 Reg. mission in Ghana & Beyond (1175049) and Scotland (SCO48330).
+                        </p>
+                    </div>
+                </div>
+            </footer>
 
         <script src="js/slick/jquery-3.4.1.min.js"></script>
         <script src="js/slick/slick.min.js"></script>

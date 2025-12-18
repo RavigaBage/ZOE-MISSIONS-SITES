@@ -77,8 +77,53 @@
     transition: all 0.5s ease ;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    height: 50px;
 }
 .donate-button:hover{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
     transform: scale(1.1);
+}
+.final{
+  padding:120px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+}
+
+.final h2{
+  font-size:2.6rem;
+  
+}
+
+.final p{
+  max-width:700px;
+  margin:20px auto 30px;
+  font-size:1.1rem;
+  opacity:.9;
+  color: var(--white);
+}
+
+.cta{
+  margin-top:18px;
+  align-self:flex-start;
+  padding:12px 22px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ffd300,#fad107);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 25px #ffd300;
+  transition:.25s;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 15px 35px #fad107;
 }

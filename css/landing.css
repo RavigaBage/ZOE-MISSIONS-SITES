@@ -1178,7 +1178,7 @@ fill:#000000;
     font-family:monserate_bold;
 }
 .animate_x {
-  display: inline-block !important ;      /* needed for transform */
+       /* needed for transform */
   transition: opacity 0.5s ease, transform 0.5s ease !important ;
   opacity: 1 !important ;
   transform: translateY(0) !important ;

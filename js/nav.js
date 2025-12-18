@@ -13,8 +13,9 @@ menu_icon_close.addEventListener('click',function(){
     document.body.style.overflow = "";
 });
 
-if(window.localStorage.getItem('language_request')){
-    const requested_language = window.localStorage.getItem('language_request');
+if(localStorage.getItem('language_request')){
+    const requested_language = localStorage.getItem('language_request');
+    
     if(requested_language == 'en'){
         changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png');
     }
@@ -31,26 +32,18 @@ function toggleLangPopup() {
     const popup = document.getElementById('langPopup');
     popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
 }
-async function loadLanguage(lang = "en") {
-    try {
-        //get page
-        window.localStorage.setItem('language_request',lang);
-        const GetPage = window.location.href;
-        const SplitLink = GetPage.split('/');
-        var PageName = SplitLink[SplitLink.length-1];
-        if(SplitLink[SplitLink.length - 1] == 'index.html'){
-            PageName = SplitLink[SplitLink.length-2];
-        }
-        PageName = PageName.split('.html')[0];
-        
 
+async function loadEntryLanguage(lang) {
+    try {
+        
+        localStorage.setItem('language_request',lang);
+        PageName = 'index'
         const res = await fetch(`../js/languages/${PageName}.json`,
         {
             method: 'GET',
             cache: 'no-cache'
         }
         );
-        if (!res.ok) return console.error("Language file not found");
 
         const data = await res.json();
         const langObj = data[lang]; 
@@ -80,6 +73,60 @@ async function loadLanguage(lang = "en") {
 
     } catch (err) {
     console.error("Language loading error:", err);
+    }
+}
+async function loadLanguage(lang = "en") {
+    try {
+        //get page
+        localStorage.setItem('language_request',lang);
+        const GetPage = window.location.href;
+        const SplitLink = GetPage.split('/');
+        PageName = SplitLink[SplitLink.length-1];
+        if(SplitLink[SplitLink.length - 1] == 'index.html'){
+            PageName = SplitLink[SplitLink.length-2];
+        }
+        PageName = PageName.split('.html')[0];
+        
+
+        const res = await fetch(`../js/languages/${PageName}.json`,
+        {
+            method: 'GET',
+            cache: 'no-cache'
+        }
+        );
+        if(res.ok){
+            const data = await res.json();
+            const langObj = data[lang]; 
+
+            if (!langObj) return console.error("Language not found in JSON");
+
+            Object.entries(langObj).forEach(([key, value]) => {
+            // check if a dom element has a class that matches the key
+            const elMain = document.querySelectorAll(`[data-i18n="${key}"]`);  
+                elMain.forEach(el =>{
+                    if (el) {
+                        el.classList.add('animate_x');
+                        el.classList.add('hide');   
+                        setTimeout(()=>{
+                            if (value.includes("<") && value.includes(">")) {
+                            el.innerHTML = value;
+                            } else {
+                                el.textContent = value;
+                            }
+                            el.classList.remove('hide'); 
+                        },900)
+                    }
+                })
+            });
+        }else{
+            console.error("Language file not found");
+            loadEntryLanguage(lang);
+        } 
+
+
+
+    } catch (err) {
+        console.error("Language loading error:");
     }
 }
 function changeLanguage(langCode, langName, flagUrl) {

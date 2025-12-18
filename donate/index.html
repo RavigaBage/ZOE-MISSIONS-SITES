@@ -147,6 +147,64 @@ body {
     background: #2563eb;
     transform: scale(1.05);
 }
+  .give-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+  }
+
+  .give-card{
+    position:relative;
+    height:420px;
+    border-radius:22px;
+    overflow:hidden;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+  }
+
+  .give-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(1px);
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    color:#fff;
+  }
+
+  .give-overlay h3{
+    font-size:1.6rem;
+    margin-bottom:10px;
+  }
+
+  .give-overlay p{
+    font-size:.95rem;
+    opacity:.9;
+    max-width:90%;
+  }
+
+  .cta{
+    margin-top:18px;
+    align-self:flex-start;
+    padding:12px 22px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#c62828,#8e0000);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(198,40,40,.5);
+    transition:.25s;
+  }
+
+  .cta:hover{
+    transform:translateY(-2px);
+    box-shadow:0 15px 35px rgba(198,40,40,.7);
+  }
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
@@ -308,6 +366,12 @@ body {
                 </div>
                 <ul class="menu_links">
                     <li>
+                        <a href="../index.html" class="menu_about">
+                            <p >Home</p>
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="../About_missions.html" class="menu_about">
                             <p data-i18n="menu_story">Our Story</p>
                         </a>
@@ -410,6 +474,15 @@ body {
                 </svg>
             </div>                
         </div>
+
+        <section class="final">
+        <h2>Every Act of Giving Matters</h2>
+        <p>
+            You may not be able to give everything,
+            but through giving something, lives are transformed.
+        </p>
+        </section>
+
         <section class="donation-section">
             <div class="donation-header">
                 <h1 data-i18n="donation_title">Support Our Mission</h1>
@@ -462,6 +535,64 @@ body {
                 <button data-i18n="donation_custom_button donation_button" data-amn="10">Donate Now</button>
             </div>
         </section>
+<section style="
+  padding:100px 20px;
+">
+
+
+<div class="give-grid">
+
+  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=900&q=80');">
+    <div class="give-overlay">
+      <h3>Clothes & Personal Items</h3>
+      <p>Restore dignity through clothing, shoes, bedding, and essential items.</p>
+      <a href="#" class="cta">Give Items</a>
+    </div>
+  </div>
+
+  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80');">
+    <div class="give-overlay">
+      <h3>Food Stuffs</h3>
+      <p>Support families and outreach programs with food and basic necessities.</p>
+      <a href="#" class="cta">Donate Food</a>
+    </div>
+  </div>
+
+  <div class="give-card" style="background-image:url('https://amrefusa.org/wp-content/uploads/2020/01/Medical-Outreach-2_1.jpg');">
+    <div class="give-overlay">
+      <h3>Medicines & Supplies</h3>
+      <p>Help bring healing through medical support and approved medications.</p>
+      <a href="#" class="cta">Support Health</a>
+    </div>
+  </div>
+
+  <div class="give-card" style="background-image:url(https://ichef.bbci.co.uk/news/480/cpsprodpb/41B6/production/_100722861_image16.jpg.webp);">
+    <div class="give-overlay">
+      <h3>Financial Giving</h3>
+      <p>Partner with us through financial support for missions and ministry work.</p>
+      <a href="#" class="cta">Give Now</a>
+    </div>
+  </div>
+
+  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80');">
+    <div class="give-overlay">
+      <h3>Your Time</h3>
+      <p>Volunteer your skills, strength, and presence to serve others.</p>
+      <a href="#" class="cta">Volunteer</a>
+    </div>
+  </div>
+
+  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=900&q=80');">
+    <div class="give-overlay">
+      <h3>Prayer</h3>
+      <p>Stand with us in prayer for souls, leadership, and ongoing missions.</p>
+      <a href="#" class="cta">Join Prayer</a>
+    </div>
+  </div>
+
+</div>
+</section>
+
 
         <section class="donation_bg" id="Donation_box">
             <div class="donation-container">
