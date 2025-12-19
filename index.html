@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+  <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';img-src 'self' https: data:;script-src 'self' https:;style-src 'self' 'unsafe-inline' https:;font-src 'self' https:;connect-src 'self' https:;frame-ancestors 'none';">
   <title>Zoe Tirzah | Transforming Lives Through the Gospel</title>
   <!-- Primary Meta Tags -->
   <meta name="title" content="Zoe Tirzah | Transforming Lives Through the Gospel" />
@@ -14,6 +15,7 @@
   <meta name="author" content="Zoe Tirzah Team" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zoe-tirzah.netlify.app/" />
+  
 
   <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:site_name" content="Zoe Tirzah" />
@@ -32,12 +34,15 @@
   <meta name="twitter:title" content="Zoe Tirzah | Transforming Lives Through the Gospel" />
   <meta name="twitter:description" content="Be part of God's redemptive mission — uplifting lives, empowering people, and spreading the Gospel of Christ across nations." />
   <meta name="twitter:image" content="https://zoe-tirzah.netlify.app/images/missions/cta_image.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Favicon and Manifest -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
-  <meta name="theme-color" content="#b70b2e" />
+  <link rel="icon" href="svg/logo.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/svg/logo.png" />
+  <link rel="manifest" href="manifest.json" />
+
+  
 
   <!-- Preconnect & Preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -146,7 +151,7 @@
                     <div class="scene-container">
 
                         <div class="floating-bubble content_bubble mn" data-i18n="bubble_body">
-                            Body of Christ
+                            ZOE-TIRZAH
                         </div>
                         
                         <div class="floating-circle content_bubble min">
@@ -155,7 +160,7 @@
 
                         <div class="video-card">
                             <div class="video-content">
-                                <img src="https://cdn.prod.website-files.com/680f4bfe41a5cdeb6255b1e8/6824a0b849d6b4a241d52066_5f62353bbd07f81f1d794bb14f716618_home-intro-photo-3.avif" alt="Two people talking in a video call">
+                                
                             </div>
                         </div>
                                                 
@@ -169,6 +174,7 @@
                     <a href="donate/index.html" class="main-header__button d-none d-lg-inline-block black">
                         <div class="donate-button content_donate_mn" data-i18n="button_donate">
                             Donate Now
+                            <img src="svg/logo.png" alt="" style="width:50px;height: 50px; border-radius: 50%;" />
                         </div>
                     </a>
                 </div>

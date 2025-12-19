@@ -160,9 +160,7 @@ display: none;
 
 /* --- 1. The Central Video Card --- */
 .video-card {
-    background-color: var(--card-white);
     border-radius: 20px;
-    box-shadow: 0 15px 30px var(--shadow-heavy);
     width: 90%;
     height: 80%;
     position: absolute;
@@ -176,7 +174,10 @@ display: none;
 /* Video/Image Placeholder */
 .video-content {
     height: 100%;
-    background-color: #f0f0f0; /* Placeholder gray */
+    background: url('../svg/logo.png'); /* Placeholder gray */
+    object-fit: cover;
+    background-size:cover;
+    background-repeat:no-repeat;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -190,17 +191,6 @@ display: none;
 }
 
 /* Top bar simulation */
-.video-content::before {
-    content: "I'm E CGI";
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    color: white;
-    font-size: 0.8em;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 4px 8px;
-    border-radius: 10px;
-}
 
 /* --- 2. Floating Notification Bubble (Green) --- */
 .floating-bubble {

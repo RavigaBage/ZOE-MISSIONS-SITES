@@ -1,0 +1,20 @@
+{
+  "name": "Zoe-Tirzah",
+  "short_name": "Zoe-Tirzah",
+  "start_url": "https::zoe-tirzah.netlify.app",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#d4a850",
+  "icons": [
+    {
+      "src": "/svg/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/svg/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
