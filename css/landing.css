@@ -3,7 +3,7 @@
 /* --- Font-Face Declarations --- */
 @font-face {
     font-family: header_font;
-    src: url('../font/header_fonts/KitoraDemo-vnLOM.otf');
+    src: url('../font/Qilka-Bold.otf');
 }
 
 @font-face {
@@ -537,7 +537,7 @@ section{
 }
 .scr1 .container__left .content h1{
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 80px;
 }
 .scr1 .container__left .content h1 span{
     color:crimson;
@@ -903,7 +903,7 @@ section h2 {
 .team-card img {
   width: 100%;
   height: 500px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 15px;
 }

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missionary Legacy - Pastor Emmanuel Agordorku</title>
+
+<style>
+:root {
+  --primary: #1a3a5f;
+  --secondary: #c9a227;
+  --accent: #e8d28a;
+  --text: #2f2f2f;
+  --muted: #6f7a85;
+  --bg: #f3f6f9;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont;
+  background: linear-gradient(180deg, #eef2f6, #f9fbfd);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 960px;
+  margin: 60px auto;
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* ===== HEADER ===== */
+header {
+  background:
+    linear-gradient(135deg, rgba(26,58,95,0.95), rgba(26,58,95,0.85)),
+    radial-gradient(circle at top, #2d5c8a, transparent 60%);
+  color: #fff;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 14px;
+  font-size: 1.15rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  padding: 60px 50px;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+/* ===== SECTION HEADINGS ===== */
+.section h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: 80%;
+  width: 5px;
+  background: linear-gradient(180deg, var(--secondary), var(--primary));
+  border-radius: 5px;
+}
+
+/* ===== PARAGRAPHS ===== */
+.section p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ===== STATS ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.stat-card {
+  background: linear-gradient(180deg, #ffffff, #f6f8fb);
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ===== LISTS ===== */
+.impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.impact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  background: #fafbfc;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px #eef1f4;
+}
+
+.tag {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: var(--primary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* ===== BULLET LIST ===== */
+.section ul {
+  margin-top: 16px;
+  padding-left: 22px;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+/* ===== QUOTE ===== */
+.quote {
+  margin: 70px 0;
+  padding: 40px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--primary);
+  background:
+    linear-gradient(180deg, #ffffff, #f6f8fb);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.quote small {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(135deg, #f0f3f7, #e8ecf1);
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+footer strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <h1>A Decade of Faith in Action</h1>
+    <p>The Missionary Legacy of Pastor Emmanuel Agordorku (2015–2025)</p>
+  </header>
+
+  <div class="content">
+
+    <div class="section">
+      <h2>The Vision</h2>
+      <p>
+        In 2015, Pastor Emmanuel Agordorku led a missionary drive that would
+        transform the spiritual landscape of the Nyanyano/Kasoa Area.
+        Marking ten solid years of establishing churches, his ministry became
+        a steady light across rural communities nationwide.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">9</span>
+          <span class="stat-label">Locals Established</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Locals Empowered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">410%</span>
+          <span class="stat-label">Membership Growth</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Established Assemblies</h2>
+      <ul class="impact-list">
+        <li>Denchira Assembly <span class="tag">Kasoa</span></li>
+        <li>Hobor Assembly (3 Locals) <span class="tag">Kasoa</span></li>
+        <li>Agona Nyarkrom <span class="tag">Swedru</span></li>
+        <li>Zoe Assembly (Woe) <span class="tag">Keta</span></li>
+        <li>Tirzah Assembly <span class="tag">Navrongo</span></li>
+        <li>Kyiase <span class="tag">Komenda</span></li>
+        <li>Nsawdir <span class="tag">Ayensudo</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Holistic Community Impact</h2>
+      <ul>
+        <li><strong>Free Medical Screenings:</strong> Health care for the underserved.</li>
+        <li><strong>Counseling:</strong> Spiritual and emotional guidance.</li>
+        <li><strong>Benevolence:</strong> Clothing support for those in need.</li>
+      </ul>
+    </div>
+
+    <div class="quote">
+      “Go into all the world and proclaim the gospel to the whole creation.”
+      <small>— Mark 16</small>
+    </div>
+
+    <div class="section">
+      <h2>Infrastructural Investment</h2>
+      <p>
+        Total recorded expenditure for mission-related projects reached
+        approximately <strong>GHS 93,465.00</strong>, covering land acquisition,
+        building construction, and essential equipment to sustain these assemblies.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    “Your good works shall indeed follow you.”
+    <strong>God Richly Bless You, Pastor Agordorku & Family</strong>
+  </footer>
+</div>
+
+</body>
+</html>
