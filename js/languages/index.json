@@ -14,8 +14,13 @@
     "hero_christ": "CHRIST",
     "hero_p_span": "TO THE",
     "hero_nations": "NATIONS",
+<<<<<<< HEAD
     "cta_hreo": "\n“Go therefore and make disciples of all nations.”\nOur mission To encircle the globe with the gospel and make Disciples of christ who manifest the fruit and gifts of the Holyspirit.",
     "hero_p_quote": "“Go therefore and make disciples of all nations.”",
+=======
+    "cta_hreo": "\n“Go therefore and make disciples of all nations.”\nOur mission is to belt the globe with the gospel and make disciples of christ, who manifest the fruit and gifts of the Holy-Spirit",
+    "hero_p_quote": "",
+>>>>>>> 173b4d910353b92022494c3a5d076f40ffe66f49
     "hero_p_mission": "Our mission",
     "hero_p_quote__": "To encircle the globe with the gospel and make Disciples of christ who manifest the fruit and gifts of the Holyspirit.",
     "cta_discover": "Discover Missions",
@@ -45,9 +50,15 @@
     "time_rais_year": "2022",
     "time_decade": "A Decade of Impact",
     "time_decade_p": "2025",
+<<<<<<< HEAD
     "intro_txt": "OUR VISION",
     "intro_txt_span": "VISION",
     "intro_txt_p": "Our vision is to see lives transformed, communities impacted, and generations empowered through the preaching of the Gospel, discipleship, and service, as we strive to build a vibrant, Spirit-filled community that honors God and reflects His love… to encircle the globe",
+=======
+    "intro_txt": "Working Together to Advance the Kingdom",
+    "intro_txt_span": "to Advance the Kingdom",
+    "intro_txt_p": "To see libes transformed, communities impacted, and gnerations empowered through the preaching of the Gospel, discipleship and service, as we strive to build a vibrant, Spirit-filled community that honors God and reflects his love.",
+>>>>>>> 173b4d910353b92022494c3a5d076f40ffe66f49
     "yrs_build_title": "Church Buildings Over the Years",
     "yrs_first_church": "First Church Hall",
     "yrs_comm_center": "Community Center Added",
@@ -100,6 +111,7 @@
     "stat_more": "Read more",
     "team_meet_title": "Meet Our Mission Team",
     "team_des": "Dedicated men and women leading the charge for Christ across the globe.",
+<<<<<<< HEAD
     "team_dir_name_pres": "Apostle Aaron Ami-Narh",
     "team_director_title_president": "President T.A.C",
     "team_feild_name_tirzah": "Dr. Henrietta Cudjoe",
@@ -113,6 +125,16 @@
     "team_feild_header": "",
     "team_feild_p": "",
     "team_comm_head_name": "MRS ESTHER DOKU",
+=======
+    "team_dir_name": "ELD. NANA BONSU",
+    "team_director_title": "Missions Director",
+    "team_director_p": "",
+    "team_feild_name": "ELD. EMMANUEL DESMOND B.",
+    "team_feild_title": "Field Coordinator",
+    "team_feild_header": "",
+    "team_feild_p": "",
+    "team_comm_head_name": "Esther Doku",
+>>>>>>> 173b4d910353b92022494c3a5d076f40ffe66f49
     "team_comm_head_title": "Community Health Lead",
     "team_comm_head": "",
     "about_team_comm_p": "",
@@ -163,9 +185,15 @@
     "mission_location_h1": "AXIM",
     "mission_count": "MISSION COUNT DOWN",
     "mission_departure": "Depature",
+<<<<<<< HEAD
     "mission_departure_date": "SUN, 16 AUG",
     "mission_return": "Return",
     "mission_return_date": "MON, 24 AUG",
+=======
+    "mission_departure_date": "FRI, 16 AUG",
+    "mission_return": "Return",
+    "mission_return_date": "MON, 23 AUGUST",
+>>>>>>> 173b4d910353b92022494c3a5d076f40ffe66f49
     "final_title": "Every Act of Giving Matters",
     "final_give": "You may not be able to give everything, but through giving something, lives are transformed.",
     "cta_give": "Start Giving Today",
@@ -211,7 +239,11 @@
     "footer_missions_donate": "Donate",
     "footer_missions_partnerwithus": "Partner With Us",
     "footer_contact_title": "Contact",
+<<<<<<< HEAD
     "footer_contact_email": "Taczoemissions@Gmail.Com",
+=======
+    "footer_contact_email": "taczoemissions@gmail.com",
+>>>>>>> 173b4d910353b92022494c3a5d076f40ffe66f49
     "footer_contact_whatsapp_label": "WhatsApp :",
     "footer_contact_whatsapp_number": "(+233) - 509-660-388",
     "footer_contact_caller_label": "Caller :",
@@ -323,6 +355,7 @@
     "stat_seed": "Chaque graine semée sert à transformer des vies et à bâtir le Royaume.",
     "stat_funds": "Fonds collectés (GHS)",
     "team_project_stat": "Va directement aux projets de mission (%)",
+<<<<<<< HEAD
     "team_comm_impact": "Communautés touchées",
     "stat_more": "En savoir plus",
     "team_meet_title": "Rencontrez notre équipe",
@@ -336,6 +369,16 @@
     "team_feild_name": "Overseer Foster Ahiadu Quarshie",
     "team_feild_title": "Coordinateur de terrain",
     "team_comm_head_name": "MME ESTHER DOKU",
+=======
+    "team_comm_impact": "Communautés impactées",
+    "stat_more": "Lire plus",
+    "team_meet_title": "Rencontrez notre équipe missionnaire",
+    "team_des": "Des hommes et des femmes dévoués menant le combat pour Christ à travers le monde.",
+    "team_dir_name": "Rév. John Doe",
+    "team_feild_name": "ELD. EMMANUEL DESMOND B.",
+    "team_feild_title": "Coordonnatrice de terrain",
+    "team_comm_head_name": "Daniel Mensah",
+>>>>>>> 173b4d910353b92022494c3a5d076f40ffe66f49
     "team_comm_head_title": "Responsable santé communautaire",
     "team_view": "voir notre équipe",
     "testimonial_p_title": "Vies Transformées",

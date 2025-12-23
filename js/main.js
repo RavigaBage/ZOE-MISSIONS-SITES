@@ -5,7 +5,7 @@
     const lazyImages = document.querySelectorAll('.lazy-img');
     const counters = document.querySelectorAll('.count');
 
-    const receivedDate = new Date(2025,11,16).getTime();
+    const receivedDate = new Date(2026,8,16).getTime();
     const LaunchDate = new Date(2025,10,8).getTime();
     const menu_icon_main = document.querySelector('.menu_icon');
     const menu_icon = document.querySelector('.menu_icon .open');
