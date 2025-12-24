@@ -166,7 +166,26 @@ body{
   background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
   z-index: 1;
 }
-
+/*-------brochure------------------------*/
+.brochure_report{
+    width: 100%;
+    display: block;
+}
+.brochure_report img{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+.brochure_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(197 0 30);
+    padding:30px;
+    color: var(--white);
+}
 .card-content {
   position: absolute;
   bottom: 0;
@@ -1100,22 +1119,29 @@ section h2 {
     place-items: center;
 }
 .about_missions._q1{
-border:5px dashed #0d6916;
+border:5px dashed #f7e327;
 }
 .brxe-missions._q1 svg{
-fill:#0d6916;
+fill:#f7e327;
 }
 .about_missions._q2 {
-border:5px dashed #04a6fa;
+border:5px dashed #fa9304;
 }
 .brxe-missions._q2 svg{
-fill:#04a6fa;
+fill:#000000;
 }
 .about_missions._q3{
-border:5px dashed #000000;
+border:5px dashed #0444a3;
 }
 .brxe-missions._q3 svg{
-fill:#000000;
+fill:#034704;
+}
+
+.about_missions._q4{
+border:5px dashed #0444a3;
+}
+.brxe-missions._q4 svg{
+fill:#473a03;
 }
 
 .about_missions img{
