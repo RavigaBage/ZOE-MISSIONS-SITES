@@ -559,9 +559,9 @@ body {
                 <input
                     type="number"
                     placeholder="Custom Amount"
-                    data-i18n-placeholder="donation_custom_placeholder"
+                    data-i18n-placeholder="donation_custom_placeholder" id='custom_amount'
                 >
-                <button data-i18n="donation_custom_button donation_button" data-amn="10">Donate Now</button>
+                <button data-i18n="donation_custom_button donation_button" data-amn="10" onclick="GetAmount()">Donate Now</button>
             </div>
         </section>
 <section style="
@@ -788,6 +788,14 @@ body {
                     window.location.href = `../payment/index.html?{Amn}=${Amount}`;
                 })
             })
+            function GetAmount(){
+                const InputAmount = document.querySelector('#custom_amount').value;
+                if(InputAmount > 0 && InputAmount !=""){
+                     window.location.href = `../payment/index.html?{Amn}=${InputAmount}`;
+                }else{
+                    alert('Add a number value to proceed');
+                }
+            }
        </script>
 
     </body>
