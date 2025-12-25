@@ -13,8 +13,8 @@ menu_icon_close.addEventListener('click',function(){
     document.body.style.overflow = "";
 });
 
-if(localStorage.getItem('language_request')){
-    const requested_language = localStorage.getItem('language_request');
+if(sessionStorage.getItem('language_request')){
+    const requested_language = sessionStorage.getItem('language_request');
     
     if(requested_language == 'en'){
         changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png');
@@ -36,7 +36,7 @@ function toggleLangPopup() {
 async function loadEntryLanguage(lang) {
     try {
         
-        localStorage.setItem('language_request',lang);
+        sessionStorage.setItem('language_request',lang);
         PageName = 'index'
         const res = await fetch(`../js/languages/${PageName}.json`,
         {
@@ -78,7 +78,7 @@ async function loadEntryLanguage(lang) {
 async function loadLanguage(lang = "en") {
     try {
         //get page
-        localStorage.setItem('language_request',lang);
+        sessionStorage.setItem('language_request',lang);
         const GetPage = window.location.href;
         const SplitLink = GetPage.split('/');
         PageName = SplitLink[SplitLink.length-1];
@@ -153,7 +153,3 @@ window.onclick = function(event) {
         document.getElementById('langPopup').style.display = 'none';
     }
 }
-
-window.addEventListener('close',function(){
-    localStorage.setItem('language_request','en');
-})
