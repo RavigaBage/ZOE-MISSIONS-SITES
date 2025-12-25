@@ -154,3 +154,6 @@ window.onclick = function(event) {
     }
 }
 
+window.addEventListener('close',function(){
+    localStorage.setItem('language_request','en');
+})

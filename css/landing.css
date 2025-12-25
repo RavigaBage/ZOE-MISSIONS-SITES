@@ -740,6 +740,7 @@ section{
     position: fixed;
     inset: 0;
     z-index: 999;
+    margin-top: 0px;
 }
 
 /* Timeline */
@@ -910,7 +911,7 @@ section h2 {
   gap: 25px;
   justify-content: center;
 }
-.team-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.team-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top:20px;}
 .team-card {
   background: #f7f7f7;
   border-radius: 15px;
@@ -2236,7 +2237,6 @@ fill:#473a03;
         justify-content: center;
         gap:10px;
     }
-
 }
 
 @media screen and (max-width:280px) {
