@@ -300,6 +300,22 @@ header{
     display: grid;
     place-items: center;
 }
+.chapter-title p {
+  font-size: 25px;
+  font-weight: 900;
+  background: linear-gradient(to right, #2c3e50, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chapter-sub p {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
 .article_posts{
     width: 100%;
     display: grid;
