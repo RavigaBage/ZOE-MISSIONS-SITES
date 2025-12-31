@@ -125,6 +125,7 @@ async function loadLanguage(lang = "en") {
                         setTimeout(()=>{
                             if (value.includes("<") && value.includes(">")) {
                             el.innerHTML = value;
+                            console.log('er');
                             } else {
                                 el.textContent = value;
                             }
