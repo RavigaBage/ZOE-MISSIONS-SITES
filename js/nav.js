@@ -12,7 +12,22 @@ menu_icon_close.addEventListener('click',function(){
     menu_icon_main.classList.remove('active');
     document.body.style.overflow = "";
 });
+// const extractLanguageData = () => {
+//     const elements = document.querySelectorAll('[data-i18n]');
+//     const languageMap = {};
 
+//     elements.forEach(el => {
+//         const langCode = el.getAttribute('data-i18n');
+//         // Using innerText to get the visible text content
+//         // You can use textContent if you want hidden text as well
+//         languageMap[langCode] = el.innerText;
+//     });
+
+//     return languageMap;
+// };
+
+// // Execute and log the result
+// console.log(extractLanguageData());
 if(sessionStorage.getItem('language_request')){
     const requested_language = sessionStorage.getItem('language_request');
     

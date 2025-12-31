@@ -548,6 +548,11 @@ a{
     width:100%;
     display:flex;
     font-size:14px;
+    transition: all 0.3s ease;
+}
+p.bolder:hover{
+    text-decoration: underline;
+
 }
 .bottom{
     grid-row:4;

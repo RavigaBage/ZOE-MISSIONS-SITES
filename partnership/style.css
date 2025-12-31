@@ -499,6 +499,7 @@ section {
   column-gap: 80px;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 #brxe-cgclau {
   display: flex;
