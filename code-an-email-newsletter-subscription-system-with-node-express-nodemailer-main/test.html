@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+  async function sendEmails() {
+    // Your data payload
+    const payload = {
+      password: "supersecretpassword123",                // Backend expects this
+      subject: "ZOE-TIRZAH WELCOME MESSAGE",        // Email subject
+      body: "ZOE-TIRZAH WELCOME MESSAGE"      // Email body
+    };
+
+    try {
+      const response = await fetch("http://localhost:5001/subscriber/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      const data = await response.text();
+      console.log("Emails sent:", data);
+    } catch (err) {
+      console.error("Error sending emails:", err.message);
+    }
+  }
+
+  // Call the function
+  sendEmails();
+</script>
+
+</body>
+</html>
