@@ -9,3 +9,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"password": "password", "s
 
 # Verify a subscriber
 curl "http://localhost:5001/subscriber/verify?id=<ID>&email=<EMAIL>"
+
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"email": "<EMAIL_TO_ADD>"}' localhost:5001/subscriber/add

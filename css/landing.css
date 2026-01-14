@@ -1145,6 +1145,21 @@ border:5px dashed #0444a3;
 fill:#473a03;
 }
 
+
+.about_missions._q3_1{
+border:5px dashed #ccc;
+}
+.brxe-missions._q3_1 svg{
+fill:teal;
+}
+
+.about_missions._q3_2{
+border:5px dashed gold;
+}
+.brxe-missions._q3_2 svg{
+fill:crimson;
+}
+
 .about_missions img{
     width: calc(300px * (90 / 100));
     height: calc(300px * (90 / 100));

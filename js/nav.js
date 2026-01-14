@@ -159,40 +159,60 @@ window.onclick = function(event) {
 }
 
 
-    async function addSubscriber(email) {
-        try {
-            if(email.length > 0){
-                const validateEmail = (email) => {
-                    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                    return re.test(String(email).toLowerCase());
-                };
-                if(!validateEmail(email)){
-                    throw new Error('Invalid email address');
-                }
-                const response = await fetch('http://localhost:5001/subscriber/add', {
-                    method: 'POST',
-                    headers: {
-                    'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ email })
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to subscribe');
-                }
-
-                const data = await response.text();
-                console.log('Subscribed:', data)
-                alert(data);
-            }else{
-                throw new Error(`Email is required ${email}`);
+async function addSubscriber(email) {
+    try {
+        if(email.length > 0){
+            const validateEmail = (email) => {
+                const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            };
+            if(!validateEmail(email)){
+                throw new Error('Invalid email address');
             }
-        } catch (err) {
-        console.error(err.message);
+            const response = await fetch('http://localhost:5001/subscriber/add', {
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to subscribe');
+            }
+
+            const data = await response.text();
+            console.log('Subscribed:', data)
+            alert(data);
+        }else{
+            throw new Error(`Email is required ${email}`);
         }
+    } catch (err) {
+    console.error(err.message);
     }
-    newsletter_form.addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        console.log(Newsletter_email);
-        addSubscriber(Newsletter_email.value);
-    });
+}
+newsletter_form.addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    console.log(Newsletter_email);
+    addSubscriber(Newsletter_email.value);
+});
+
+/**
+ * Extracts elements with a 'lang' attribute and maps them.
+ * Format: "lang-value": "innerText"
+ */
+// const extractLanguageArrays = () => {
+//     const elements = document.querySelectorAll('[data-i18n]');
+//     const languageMap = {};
+
+//     elements.forEach(el => {
+//         const langCode = el.getAttribute('data-i18n');
+//         if (!languageMap[langCode]) {
+//             languageMap[langCode] = el.innerText;
+//         }
+//     });
+
+//     return languageMap;
+// };
+
+// console.log(extractLanguageArrays());
