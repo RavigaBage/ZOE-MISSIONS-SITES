@@ -233,6 +233,33 @@
             </div>
         </main>
 
+    <div id="popup-overlay">
+        <div class="axim-modal">
+            <button class="close-trigger">&times;</button>
+            <div class="modal-banner">
+                <div class="location-tag">Next Mission</div>
+            </div>
+            <div class="modal-body">
+                <h2>Axim Calling</h2>
+                <p>Be a part of our next journey as we take the Gospel to the historic shores of Axim. We need your heart and your hands.</p>
+                
+                <div class="date-box">
+                    <div class="date-item">
+                        <span>Month</span>
+                        <strong>AUGUST 16TH</strong>
+                    </div>
+                    <div style="width: 1px; background: #e2e8f0;"></div>
+                    <div class="date-item">
+                        <span>Year</span>
+                        <strong>2026</strong>
+                    </div>
+                </div>
+
+                <button class="join-btn" onclick="handleJoin()">I Want to Join</button>
+            </div>
+        </div>
+    </div>
+
         <section class="impact-stats">
             <div class="stats-header">
                 <h2 class="impact-stats-txt" data-i18n="imp_title_main"><span class="medigreen impact-stats-txt-span" data-i18n="imp_title">Our Impact</span> in Numbers</h2>
@@ -858,8 +885,6 @@
             </div></a>      
         </section>
 
-
-
         <section class="gallery">
             <h2 class="gallery-title-tx" data-i18n="mission_moment">Mission Moments</h2>
             <div class="gallery-grid">
@@ -900,8 +925,6 @@
                     </div>
             </div>
         </section>
-
-
 
         <section data-aos="fade-up" data-aos-delay="150" data-aos-duration="900">
             <div class="scr1 container landing_page" >
@@ -1133,50 +1156,6 @@
 
         </section>
 
-
-       <section class="xmas-section">
-            <div class="orb orb-1"></div>
-            <div class="orb orb-2"></div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-
-            <div class="xmas-content">
-                <div class="text-box">
-                    <h2 style="color:var(--color-bg-light)" data-i18n="xmas_content_h2">Be a <br><span style="color:var(--xmas-gold)" data-i18n="xmas_content_main"> Light </span data-i18n="xmas_content_span">in the World</h2>
-                    <p data-i18n="xmas_content">You are the light of the world. Let your light shine before others, that they may see your good deeds and glorify your Father in heaven</p>
-                </div>
-
-                <div class="visual-box">
-                    <div class="timer-card">
-                        <div class="timer-header" data-i18n="xmas_content_div">The Dawning of Salvation</div>
-                        
-                        <div id="countdown" class="countdown">
-                            <div class="time-unit">
-                                <span class="number" id="days">00</span>
-                                <span class="label">Days</span>
-                            </div>
-                            <div class="time-unit">
-                                <span class="number" id="hours">00</span>
-                                <span class="label" data-i18n="xmas_content_hr">Hours</span>
-                            </div>
-                            <div class="time-unit">
-                                <span class="number" id="minutes">00</span>
-                                <span class="label" data-i18n="xmas_content_mn">Mins</span>
-                            </div>
-                            <div class="time-unit">
-                                <span class="number" id="seconds">00</span>
-                                <span class="label" data-i18n="xmas_content_sc">Secs</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="brxe-opgrte" class="brxe-section brx-animated">
             <div id="brxe-mvsiov" class="brxe-container" style="overflow: hidden;">
                     <h1 data-i18n="gallary_title">Check out our gallary</h1>
@@ -1286,11 +1265,13 @@
                 </div>
             </div>
         </footer>
+
         <script src="js/slick/jquery-3.4.1.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
         <script src="js/swiper-bundle.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
         <script src="js/nav.js"></script>
+        
         </body>
         </html>
