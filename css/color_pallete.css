@@ -105,6 +105,8 @@
     background-position:center;
     background-repeat:no-repeat;
     margin-top:0px;
+    display: grid;
+    place-items: center;
 }
 .final h2{
   font-size:2.6rem;

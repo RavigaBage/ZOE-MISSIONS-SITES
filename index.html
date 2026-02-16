@@ -14,8 +14,6 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zoe-tirzah.netlify.app/" />
   
-
-  <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:site_name" content="Zoe Tirzah" />
   <meta property="og:title" content="Zoe Tirzah | Transforming Lives Through the Gospel" />
   <meta property="og:description" content="Join Zoe Tirzah in spreading Christ’s love across Ghana and beyond. Discover how you can get involved — through giving, serving, and sharing the message of hope." />
@@ -26,7 +24,6 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_GB" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@zoetirzah" />
   <meta name="twitter:title" content="Zoe Tirzah | Transforming Lives Through the Gospel" />
@@ -34,15 +31,11 @@
   <meta name="twitter:image" content="https://zoe-tirzah.netlify.app/images/missions/cta_image.png" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- Favicon and Manifest -->
   <link rel="icon" href="images/logo/tirzah.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/tirzah.ico" />
   <link rel="manifest" href="manifest.json" />
 
   
-
-  <!-- Preconnect & Preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="js/slick/slick.min.js" as="script" />
@@ -64,9 +57,12 @@
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/color_pallete.css" />  
   <link rel="stylesheet" href="js/aos.css" />
+  <link rel="stylesheet" href="css/lang-switcher.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link rel="stylesheet" href="css/lang-switcher.css" />
+    <script src="js/i18n.js" defer></script>
 
 </head>
 
@@ -125,25 +121,26 @@
                         </a>
                     </li>
                 </ul>
-            <div class="lang-switcher-container">
-                <div class="lang-current" id="langCurrent" onclick="toggleLangPopup()">
-                    <img src="https://flagcdn.com/w40/gb.png" id="currentFlag" alt="English">
-                    <span id="currentLangText">English</span>
-                    <i class="arrow-down"></i>
+                <div class="lang-switcher-container">
+                        <div class="lang-current" id="langCurrent" onclick="toggleLangPopup()">
+                            <img src="https://flagcdn.com/w40/gb.png" id="currentFlag" alt="English">
+                            <span id="currentLangText">English</span>
+                            <i class="arrow-down"></i>
+                        </div>
+
+                        <div class="lang-popup" id="langPopup">
+                            <div class="lang-option" onclick="changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png')">
+                                <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
+                            </div>
+                            <div class="lang-option" onclick="changeLanguage('fr', 'Français', 'https://flagcdn.com/w40/fr.png')">
+                                <img src="https://flagcdn.com/w40/fr.png" alt="French"> Français
+                            </div>
+                            <div class="lang-option" onclick="changeLanguage('ar', 'العربية', 'https://flagcdn.com/w40/sa.png')">
+                                <img src="https://flagcdn.com/w40/sa.png" alt="Arabic"> العربية
+                            </div>
+                        </div>
                 </div>
 
-                <div class="lang-popup" id="langPopup">
-                    <div class="lang-option" onclick="changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png')">
-                        <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
-                    </div>
-                    <div class="lang-option" onclick="changeLanguage('fr', 'Français', 'https://flagcdn.com/w40/fr.png')">
-                        <img src="https://flagcdn.com/w40/fr.png" alt="French"> Français
-                    </div>
-                    <div class="lang-option" onclick="changeLanguage('ar', 'العربية', 'https://flagcdn.com/w40/sa.png')">
-                        <img src="https://flagcdn.com/w40/sa.png" alt="Arabic"> العربية
-                    </div>
-                </div>
-            </div>
                 <div class="overlay_bg"></div>
                 <div class="scene_kep">
                     <div class="scene-container">
@@ -280,11 +277,11 @@
                 <p class="stat-lives-tx" data-i18n="imp_lines">Lives Reached Through Medical Outreach</p>
                 </div>
                 <div class="stat-card">
-                <h3 class="count" data-target="15">11</h3>
+                <h3 class="count" data-target="10">10</h3>
                 <p class="stat-comm-tx" data-i18n="imp_comm">Communities Served Across Nations - </p><a href="impact/index.html"><span style="padding:10px;display: grid;place-items:center;background-color: var(--primary-light); box-shadow:0 0 25px rgba(251,191,36,0.8);" class="read_btn_more"class="read_btn_more" data-i18n="cta_read">Read more</span></a>
                 </div>
                 <div class="stat-card">
-                <h3 class="count" data-target="500">500+</h3>
+                <h3 class="count" data-target="1000">1000+</h3>
                 <p class="stat-children-tx" data-i18n="imp_child">Children Discipled and Trained</p>
                 </div>
             </div>
@@ -660,37 +657,34 @@
                 </div>
                 </div>
                 <div class="team-card" data-aos-delay="150" data-aos="fade-up" data-aos-duration="1200">
-                <img src="images/missionaries/tirzah.png" alt="Team Member">
-                <h3 data-i18n="team_feild_name_tirzah">Dr. Henrietta Cudjoe </h3>
-                <p data-i18n="team_feild_title_tirzah">CEO, Tirzah Oasis Foundation.</p>
-                
+                    <img src="images/missionaries/m_dir.png" alt="Team Member">
+                    <h3 data-i18n="team_feild_name_ovr">Overseer Foster Ahiadu Quarshie</h3>
+                    <p data-i18n="team_feild_title_ovr">Founder, Tirzah Oasis Foundation</p>
                 </div>
             </div>
 
             <div class="team-grid">
                 
-
-
+                <div class="team-card" data-aos-delay="150" data-aos="fade-up" data-aos-duration="1200" >
+                    <img src="images/missionaries/patrone.png" alt="Team Member">
+                    <h3 data-i18n="team_feild_name_pr">Pastor Emmanuel Agordorku</h3>
+                    <p data-i18n="team_feild_title_pr">Mission Patrone</p>
+                    <div class="exec_summ">
+                        <header class="tx_fr" data-i18n="team_feild_header_pr">Missions Patrone</header>
+                        <p class="tx_fr_main" data-i18n="team_feild_p_pr">
+                            The Mission Patron serves as a high-level advocate and figurehead for the organization. While He typically does not handle daily operations, He uses his personal influence, reputation, and professional network to boost the mission's credibility.His primary function is to open doors for high-level negotiations, provide moral support, and champion the cause to the public and political stakeholders.
+                        </p>
+                    </div>
+                </div>
                 <div class="team-card" data-aos-delay="150" data-aos="fade-up" data-aos-duration="1200">
-                <img src="images/missionaries/m_dir.png" alt="Team Member">
-                <h3 data-i18n="team_feild_name_ovr">Overseer Foster Ahiadu Quarshie <br>Founder, Tirzah Oasis Foundation</h3>
-                <p data-i18n="team_feild_title_ovr">Founder, Tirzah Oasis Foundation</p>
+                    <img src="images/missionaries/tirzah.png" alt="Team Member">
+                    <h3 data-i18n="team_feild_name_tirzah">Dr. Henrietta Cudjoe </h3>
+                    <p data-i18n="team_feild_title_tirzah">CEO, Tirzah Oasis Foundation.</p>
                 </div>
 
                 <div class="team-card" data-aos-delay="150" data-aos="fade-up" data-aos-duration="1200" >
-                <img src="images/missionaries/patrone.png" alt="Team Member">
-                <h3 data-i18n="team_feild_name_pr">Pastor Emmanuel Agordorku <br>Patrone,zeo-tirzah mission</h3>
-                <p data-i18n="team_feild_title_pr">Mission Patrone</p>
-                <div class="exec_summ">
-                    <header class="tx_fr" data-i18n="team_feild_header_pr">Missions Patrone</header>
-                    <p class="tx_fr_main" data-i18n="team_feild_p_pr">
-                        The Mission Patron serves as a high-level advocate and figurehead for the organization. While they typically do not handle daily operations, they use their personal influence, reputation, or professional network to boost the mission's credibility. Their primary goal is to open doors for high-level fundraising, provide moral support, and champion the cause to the public and political stakeholders.
-                    </p>
-                </div>
-                </div>
-                <div class="team-card" data-aos-delay="150" data-aos="fade-up" data-aos-duration="1200" >
                 <img src="images/missionaries/m_dir.png" alt="Team Member">
-                <h3 data-i18n="team_feild_name_cor">Elder Emmanuel Desmond Baston </h3>
+                <h3 data-i18n="team_feild_name_cor">Elder Emmanuel Desmond Buxton </h3>
                 <p data-i18n="team_feild_title_cor">Field Coordinator</p>
                 <div class="exec_summ">
                     <header class="tx_fr" data-i18n="team_feild_header_cor">Field Coordinator</header>
@@ -1272,6 +1266,7 @@
         <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
         <script src="js/nav.js"></script>
+
         
         </body>
         </html>

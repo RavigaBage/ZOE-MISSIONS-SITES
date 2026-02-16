@@ -1,0 +1,151 @@
+/* Language Switcher Styles */
+.lang-switcher-container {
+    position: relative;
+    z-index: 1000;
+}
+
+.lang-current {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.lang-current:hover {
+    border-color: #3b6ff7;
+    box-shadow: 0 2px 8px rgba(59, 111, 247, 0.1);
+}
+
+.lang-current img {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.lang-current span {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #6b7280;
+    transition: transform 0.3s ease;
+}
+
+.lang-current:hover .arrow-down {
+    border-top-color: #3b6ff7;
+}
+
+.lang-popup {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.lang-popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: block;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.lang-option:hover {
+    background-color: #f3f4f6;
+}
+
+.lang-option img {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* RTL Support for Arabic */
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] .lang-popup {
+    right: auto;
+    left: 0;
+}
+
+/* Ensure translations don't break layout */
+[data-i18n] {
+    transition: none; /* Prevent layout shifts during translation */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .lang-current {
+        min-width: 120px;
+        padding: 6px 12px;
+    }
+    
+    .lang-current span {
+        font-size: 13px;
+    }
+    
+    .lang-popup {
+        min-width: 150px;
+    }
+    
+    .lang-option {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lang-popup.active {
+    animation: fadeIn 0.3s ease forwards;
+}

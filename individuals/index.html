@@ -39,7 +39,8 @@
     <link rel="stylesheet" href="../css/color_pallete.css" />
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="../js/langauges.js" defer></script>
+      <link rel="stylesheet" href="../css/lang-switcher.css" />
+   <script src="../js/i18n.js" defer></script>
 </head>
 <body style="background-color: #FFD300;">
         <nav>
@@ -500,6 +501,30 @@
         </div>
     </footer>
     <script src="../js/nav.js"></script>
+    <script>
+        const ReadBtn = document.querySelectorAll('.read-toggle');
+        ReadBtn.forEach(element=>{
+            element.addEventListener('click',function(){
+                const ParentMain = element.parentElement.parentElement.parentElement;
+                if(ParentMain){
+                    const AccordionHeader = ParentMain.querySelector('.accordion-header');
+                    if(AccordionHeader.hasAttribute('aria-expanded')){
+                        const Header = AccordionHeader.getAttribute('aria-expanded');
+                       
+                        if(Header == 'true'){
+                             console.log(Header);
+                            AccordionHeader.setAttribute('aria-expanded',false)
+                        }else{
+                            AccordionHeader.setAttribute('aria-expanded',true)
+                        }
+                    }
+                    
+                }
+
+            })
+        })
+
+    </script>
 
 
 </body>
