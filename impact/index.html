@@ -1,487 +1,1293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MissionPulse - Church Missions News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta name="description" content="See how Zoe-Tirzah impacts communities through missions, outreach, compassion, and practical service that advances the Kingdom of God.">
-<meta name="robots" content="index, follow">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Open Graph / Social -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Community Impact | Zoe-Tirzah">
-<meta property="og:description" content="Lives touched. Communities strengthened. See the real impact of gospel-centered outreach through Zoe-Tirzah.">
-<meta property="og:image" content="https://zoe-tirzah.netlify.app/images/missions/cta_image.png">
-<meta property="og:url" content="https://zoe-tirzah.netlify.app/impact/index.html">
-<meta property="og:site_name" content="Zoe-Tirzah">
-
-<!-- X / Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Community Impact | Zoe-Tirzah">
-<meta name="twitter:description" content="Discover how faith in action is transforming communities through service and missions.">
-<meta name="twitter:image" content="https://zoe-tirzah.netlify.app/images/missions/cta_image.png">
-
-<!-- Brand & App -->
-<meta name="theme-color" content="#d4a850">
- <link rel="icon" href="../images/logo/tirzah.ico" type="image/x-icon" />
-<link rel="manifest" href="/manifest.json">
-
-<!-- Trust & Identity -->
-<meta name="author" content="Zoe-Tirzah Ministries">
-<meta name="keywords" content="community impact, Christian outreach, missions, social impact, gospel in action, Zoe-Tirzah">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="../css/nav.css">
-<link rel="stylesheet" href="../css/color_pallete.css" />
-<link rel="stylesheet" href="../css/footer.css">
-<link rel="stylesheet" href="../css/lang-switcher.css" />
-   <script src="../js/i18n.js" defer></script>
-<title>Community Impact</title>
-<style>
-    @import url('https://fonts.cdnfonts.com/css/plumpfull');
-    *{
-        margin:0px;
-        padding:0px;
+  <style>
+    :root {
+      --blue: #0b5ed7;
+      --deep-blue: #06357a;
+      --yellow: #ffcc00;
+      --red: #e63946;
+      --white: #ffffff;
+      --light: #f4f7fb;
+      --text: #1b1f2a;
+      --muted: #7b8494;
+      --shadow: 0 20px 50px rgba(0,0,0,0.08);
+      --radius: 28px;
+       --tr:           0.3s cubic-bezier(0.4,0,0.2,1);
+       --teal:         #16DA95;
+      --crimson:      #C5001E;
+      --crimson-dk:   #8B0015;
+      --navy:         #0D1F2D;
+      --navy-mid:     #132840;
     }
-    body {
-        margin: 0;
-        background: #ffffff;
-        font-family: "Segoe UI", Arial, sans-serif;
-        color: #333;
-        line-height: 1.6;
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a{
-        text-decoration: none;
-        color: #fff;
+
+        body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #eef5ff, #ffffff);
+      color: var(--text);
+      overflow-x: hidden;
     }
-    h1,h2{
-        font-family: plumpfull, sans-serif;
+a { text-decoration: none; color: inherit; }
+
+    .logo-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, var(--yellow), #ffd94d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: var(--shadow);
     }
+
+      .nav-wrap {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: var(--tr);
+    }
+    .nav-wrap.scrolled {
+      background: rgba(13,31,45,0.96);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 5%;
+    }
+    .nav-logo {
+      font-family: var(--font-head); font-size: 1.3rem; font-weight: 800;
+      color: var(--white); letter-spacing: -.5px;
+    }
+    .nav-logo .dot { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.8); font-size: .88rem; font-weight: 500;
+      padding: 7px 13px; border-radius: var(--radius-sm); transition: var(--tr);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: var(--teal); background: rgba(22,218,149,0.1); }
+    .nav-donate {
+      background: var(--crimson); color: var(--white);
+      padding: 9px 22px; border-radius: 999px; font-size: .88rem; font-weight: 600;
+      transition: var(--tr);
+    }
+    .nav-donate:hover { background: var(--crimson-dk); transform: translateY(-1px); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--tr); display: block; }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: var(--navy); padding: 24px 6%; flex-direction: column;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+    .mobile-close { background: none; border: none; color: var(--white); font-size: 1.9rem; cursor: pointer; }
+    .mobile-links { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+    .mobile-links a {
+      color: rgba(255,255,255,0.82); font-size: 1.1rem; font-weight: 500;
+      padding: 13px 10px; border-radius: var(--radius-sm); transition: var(--tr);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-links a:hover { background: rgba(255,255,255,0.07); color: var(--white); }
+    .mobile-btn { margin-top: 28px; }
 
     .hero {
-        padding: 60px 20px;
-        text-align: center;
+      min-height: 95vh;
+      padding: 70px 7% 40px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      background-color: var(--navy);
+    }
+
+    .hero-text {
+      animation: fadeUp 1s ease;
+    }
+
+    .mini-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 204, 0, 0.18);
+      color: #7a5a00;
+      padding: 10px 18px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 24px;
     }
 
     .hero h1 {
-        font-size: 42px;
-        font-weight: 700;
-        letter-spacing: -1px;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1;
+      font-weight: 900;
+      margin-bottom: 28px;
+      color: var(--deep-blue);
+    }
+
+    .hero h1 span {
+      color: var(--red);
     }
 
     .hero p {
-        font-size: 20px;
-        max-width: 700px;
-        margin: 10px auto 0;
-        font-family: "Trebuchet MS", sans-serif;
-    }
-    p{
-        font-size: 20px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--white);
+      max-width: 700px;
+      margin-bottom: 36px;
     }
 
-    .section {
-        padding: 50px 20px;
-        max-width: 1100px;
-        margin: auto;
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    h2 {
-        font-size: 32px;
-        margin-bottom: 10px;
+    .primary-btn,
+    .secondary-btn {
+      padding: 18px 28px;
+      border-radius: 18px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: 0.35s ease;
+      font-size: 1rem;
     }
 
-    .impact-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .primary-btn {
+      background: linear-gradient(145deg, var(--blue), var(--deep-blue));
+      color: white;
+      box-shadow: 0 16px 35px rgba(11,94,215,0.25);
+    }
+
+    .secondary-btn {
+      background: white;
+      border: 2px solid rgba(0,0,0,0.08);
+      color: var(--text);
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .visual-card {
+      width: 100%;
+      max-width: 500px;
+      background: white;
+      border-radius: 36px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visual-image {
+      width: 100%;
+      height: 360px;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .visual-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.6s ease;
+    }
+
+    .visual-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .overlay-card {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      right: 25px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-radius: 22px;
+      padding: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .overlay-card h4 {
+      color: var(--deep-blue);
+      margin-bottom: 6px;
+    }
+
+    .overlay-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .badge-live {
+      background: var(--red);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .stats-section {
+      padding: 60px 7%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 30px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: 0.4s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .stat-card::before {
+      content: '';
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      background: rgba(255,204,0,0.15);
+      border-radius: 50%;
+    }
+
+    .stat-number {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--deep-blue);
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .news-section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 45px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--deep-blue);
+    }
+
+    .section-title p {
+      max-width: 600px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.4s ease;
+      position: relative;
+    }
+
+    .news-card:hover {
+      transform: translateY(-12px);
+    }
+
+    .news-image {
+      height: 240px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .news-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s ease;
+    }
+
+    .news-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .news-tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: var(--yellow);
+      color: #6a5000;
+      padding: 10px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .news-content {
+      padding: 28px;
+    }
+
+    .news-date {
+      color: var(--red);
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .news-content h3 {
+      font-size: 1.45rem;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      color: var(--deep-blue);
+    }
+
+    .news-content p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .news-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .news-link:hover {
+      gap: 16px;
+      color: var(--red);
+    }
+
+    .impact-section {
+      padding: 90px 7%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .impact-image {
+      position: relative;
+    }
+
+    .impact-image img {
+      width: 100%;
+      border-radius: 38px;
+      box-shadow: var(--shadow);
+    }
+
+    .floating-box {
+      position: absolute;
+      bottom: -25px;
+      right: -20px;
+      background: white;
+      padding: 24px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      width: 260px;
+    }
+
+    .floating-box h3 {
+      font-size: 2rem;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+
+    .impact-content h2 {
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: 1.1;
+      color: var(--deep-blue);
+      margin-bottom: 28px;
+    }
+
+    .impact-content p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 30px;
+      font-size: 1.02rem;
+    }
+
+    .impact-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .impact-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      background: white;
+      padding: 22px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .impact-icon {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, var(--yellow), #ffe06d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .newsletter {
+      padding: 80px 7% 100px;
+    }
+
+    .newsletter-box {
+      background: linear-gradient(135deg, var(--deep-blue), var(--blue));
+      border-radius: 40px;
+      padding: 60px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .newsletter-box::before {
+      content: '';
+      width: 250px;
+      height: 250px;
+      background: rgba(255,255,255,0.08);
+      position: absolute;
+      right: -50px;
+      top: -50px;
+      border-radius: 50%;
+    }
+
+    .newsletter-box h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      margin-bottom: 18px;
+    }
+
+    .newsletter-box p {
+      line-height: 1.8;
+      color: rgba(255,255,255,0.85);
+      max-width: 650px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      padding: 18px 22px;
+      border-radius: 18px;
+      border: none;
+      min-width: 280px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      padding: 18px 28px;
+      border: none;
+      background: var(--yellow);
+      color: #5a4500;
+      border-radius: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      transform: scale(1.05);
+    }
+
+footer {
+      background: var(--navy); border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 60px; color: rgba(255,255,255,.6);
+    }
+    .footer-grid {
+      width: min(1160px,92vw); margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .f-brand-name { font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .f-brand-desc { font-size: .87rem; line-height: 1.7; margin-bottom: 20px; }
+    .f-socials { display: flex; gap: 10px; margin-bottom: 22px; }
+    .f-social {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,.08); display: grid; place-items: center;
+      color: rgba(255,255,255,.6); font-size: .88rem; transition: var(--tr);
+    }
+    .f-social:hover { background: var(--crimson); color: var(--white); }
+    .f-newsletter { display: flex; gap: 8px; }
+    .f-newsletter input {
+      flex: 1; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px; padding: 9px 16px; color: var(--white); font-size: .84rem;
+      font-family: var(--font-body); outline: none;
+    }
+    .f-newsletter input::placeholder { color: rgba(255,255,255,.3); }
+    .f-newsletter input:focus { border-color: var(--teal); }
+    .f-newsletter button {
+      background: var(--teal-dk); color: var(--white); border: none;
+      padding: 9px 18px; border-radius: 999px; font-size: .84rem; font-weight: 700;
+      cursor: pointer; font-family: var(--font-body); white-space: nowrap; transition: var(--tr);
+    }
+    .f-newsletter button:hover { background: var(--teal-mid); }
+    .f-col-title { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--white); margin-bottom: 16px; }
+    .f-links { display: flex; flex-direction: column; gap: 9px; }
+    .f-links a { font-size: .87rem; transition: color .2s; }
+    .f-links a:hover { color: var(--teal); }
+    .footer-bottom {
+      width: min(1160px,92vw); margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0; font-size: .8rem; gap: 12px; flex-wrap: wrap;
+    }
+    .footer-bottom nav { display: flex; gap: 20px; }
+    .footer-bottom nav a:hover { color: var(--teal); }
+
+    .socials {
+      display: flex;
+      gap: 16px;
+    }
+
+    .socials a {
+      width: 46px;
+      height: 46px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--deep-blue);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: translateY(-5px);
+      background: var(--yellow);
+    }
+
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width: 1100px) {
+      .hero,
+      .impact-section {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .newsletter-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
         gap: 20px;
-        margin-top: 30px;
-    }
+      }
 
-    .impact-card {
-        background: #fafafa;
-        border-radius: 14px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        transition: transform 0.2s;
-    }
-
-    .impact-card:hover {
-        transform: translateY(-4px);
-    }
-
-    .impact-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .impact-card .text {
-        padding: 20px;
-        font-family: "Gill Sans MT", sans-serif;
-    }
-
-    .stats-box {
-        display: flex;
+      nav {
         flex-wrap: wrap;
-        gap: 20px;
-        margin-top: 25px;
-    }
+        justify-content: center;
+      }
 
-    .stat {
-        background: #f3f3f3;
-        padding: 20px;
-        border-radius: 12px;
-        flex: 1;
-        min-width: 220px;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-    }
+      .stats-section {
+        grid-template-columns: 1fr;
+      }
 
-    .stat .num {
-        font-size: 40px;
-        font-weight: bold;
-    }
+      .newsletter-box {
+        padding: 40px 28px;
+      }
 
-    .story {
-        background: #f9f9f9;
-        border-left: 4px solid #4a8af4;
-        padding: 20px;
-        margin: 15px 0;
-        border-radius: 6px;
-        font-family: "Georgia", serif;
-        font-size: 20px;
+      .newsletter-form {
+        width: 100%;
+      }
+
+      .newsletter-form input {
+        width: 100%;
+      }
+
+      .floating-box {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+        width: 100%;
+      }
     }
-</style>
+  </style>
 </head>
-
 <body>
-        <nav>
-            <div class="navigation">
-                <div class="logo">
-                    <div class="logo_png"></div>
-                </div>
-                <ul class="menu_links">
-                    <li>
-                        <a href="../index.html" class="menu_about">
-                            <p >Home</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../About_missions.html" class="menu_about">
-                            <p data-i18n="menu_story">Our Story</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../NEWS-BLOG-main/main.html">
-                            <p class="menu_article" data-i18n="menu_news">News</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../impact/index.html">
-                            <p class="menu_impact" data-i18n="menu_impact">Community Impact</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../About_gallery.html">
-                            <p class="menu_gallery" data-i18n="menu_gallery">Gallery</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../partnership/index.html">
-                            <p class="menu_partner" data-i18n="menu_partners">Partners</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../individuals/index.html">
-                            <p class="menu_faq" data-i18n="menu_faq">FAQs</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../contact/index.html">
-                            <p class="menu_contact" data-i18n="menu_contact">Contact</p>
-                        </a>
-                    </li>
-                </ul>
-            <div class="lang-switcher-container">
-                <div class="lang-current" id="langCurrent" onclick="toggleLangPopup()">
-                    <img src="https://flagcdn.com/w40/gb.png" id="currentFlag" alt="English">
-                    <span id="currentLangText">English</span>
-                    <i class="arrow-down"></i>
-                </div>
 
-                <div class="lang-popup" id="langPopup">
-                    <div class="lang-option" onclick="changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png')">
-                        <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
-                    </div>
-                    <div class="lang-option" onclick="changeLanguage('fr', 'Français', 'https://flagcdn.com/w40/fr.png')">
-                        <img src="https://flagcdn.com/w40/fr.png" alt="French"> Français
-                    </div>
-                    <div class="lang-option" onclick="changeLanguage('ar', 'العربية', 'https://flagcdn.com/w40/sa.png')">
-                        <img src="https://flagcdn.com/w40/sa.png" alt="Arabic"> العربية
-                    </div>
-                </div>
-            </div>
-                <div class="overlay_bg"></div>
-                <div class="scene_kep">
-                    <div class="scene-container">
+    <div class="nav-wrap" id="navWrap">
+    <nav>
+        <a href="../index.html" class="nav-logo">ZOE<span class="dot">·</span>TIRZAH</a>
+        <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../About_missions.html">Our Story</a>
+        <a href="../NEWS-BLOG-main/main.html">News</a>
+        <a href="../impact/index.html">Impact</a>
+        <a href="../About_gallery.html">Gallery</a>
+        <a href="../partnership/index.html">Partners</a>
+        <a href="../contact/index.html" class="active">Contact</a>
+        </div>
+        <a href="../donate/index.html" class="nav-donate">Donate Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+        </button>
+    </nav>
+    </div>
 
-                        <div class="floating-bubble content_bubble mn" data-i18n="bubble_body">
-                            ZOE-TIRZAH
-                        </div>
-                        
-                        <div class="floating-circle content_bubble min">
-                            <span data-i18n="bubble_missions">Missions</span>
-                        </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-top">
+            <span class="nav-logo">ZOE<span class="dot">·</span>TIRZAH</span>
+            <button class="mobile-close" id="mobileClose">&times;</button>
+        </div>
+        <div class="mobile-links">
+            <a href="../index.html">Home</a>
+            <a href="../About_missions.html">Our Story</a>
+            <a href="../NEWS-BLOG-main/main.html">News</a>
+            <a href="../impact/index.html">Community Impact</a>
+            <a href="../About_gallery.html">Gallery</a>
+            <a href="../partnership/index.html">Partners</a>
+            <a href="../individuals/index.html">FAQs</a>
+            <a href="../contact/index.html">Contact</a>
+        </div>
+        <div class="mobile-btn">
+            <a href="../donate/index.html" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:var(--crimson);color:#fff;border-radius:999px;font-weight:700;font-size:.95rem;">
+            <i class="fa-solid fa-heart"></i> Donate Now
+            </a>
+        </div>
+    </div>
 
-                        <div class="video-card">
-                            <div class="video-content">
-                                
-                            </div>
-                        </div>
-                                                
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="div_main">
-            <div class="col-6 text-right">
-                <div class="header-buttons">
-                    <a href="../donate/index.html" class="main-header__button d-none d-lg-inline-block black">
-                        <div class="donate-button content_donate_mn" data-i18n="button_donate">
-                            Donate Now
-                            <img src="../images/logo/logo_tirzah.png" alt="" style="width:50px;height: 50px; border-radius: 50%;" />
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="menu_icon">
-                <svg class="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-                    viewBox="0 0 24 24" aria-label="Open Menu" data-i18n="icon_open">
-                    <path fill="#000000" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"/>
-                </svg>
+  <section class="hero">
+    <div class="hero-text">
+      <div class="mini-tag">
+        🌍 A Decade of Global Transformation
+      </div>
 
-                <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24" width="24" 
-                    viewBox="0 0 24 24" aria-label="Close Menu" data-i18n="icon_close">
-                    <path d="M0 0h24v24H0z" fill="none"/>
-                    <path fill="crimson" d="M19 6.41L17.59 5 12 10.59 
-                                        6.41 5 5 6.41 10.59 12 
-                                        5 17.59 6.41 19 12 13.41 
-                                        17.59 19 19 17.59 13.41 12z"/>
-                </svg>
-            </div>                
+      <h1>
+        10+ Years of <span>Mission Impact</span>
+      </h1>
+
+      <p>
+        For more than a decade, our missions organization has carried the message of hope, compassion, and transformation into communities across continents. Through evangelism, humanitarian outreach, education support, medical missions, and leadership development, thousands of lives have been empowered spiritually and socially.
+      </p>
+
+      <p>
+        What began as a small outreach movement has grown into a global mission network reaching vulnerable families, underserved communities, and emerging church leaders. From remote villages to urban centers, every mission trip, relief campaign, and discipleship initiative has contributed to lasting change and community restoration.
+      </p>
+
+      <p>
+        Today, our impact continues to expand through strategic partnerships, youth mobilization, church planting initiatives, and sustainable community projects designed to transform generations for years to come.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn">Explore Our Journey</button>
+        <button class="secondary-btn">View Impact Stories</button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-card">
+        <div class="visual-image">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop" alt="Mission impact over the decade">
         </div>
 
-        <section class="hero">
-            <h1 data-i18n="hero_title">Our Community Impact</h1>
-            <p data-i18n="hero_desc">Here’s a window into the places we’ve touched, the lives uplifted, and the beautiful ripple of kindness made possible by generous hearts. Every project shown here is a true story of partnership, grit, and hope.</p>
-        </section>
+        <div class="overlay-card">
+          <div>
+            <h4>Communities Restored Worldwide</h4>
+            <p>Empowering lives through faith, outreach, and compassion.</p>
+          </div>
 
-        <section class="section">
-            <h2 data-i18n="how_funds_raised_title">How the Funds Were Raised</h2>
-            <div class="story" data-i18n="funds_story">
-                It began with small steps. A youth group decided to donate a portion of their monthly offerings. Then local families joined, giving what they could. A few partners abroad added support. Slowly the river grew from drops into streams. 
-                Every cedi raised was tracked, documented, and channeled directly into community needs like clean water, school support, health screenings, and food aid.
-            </div>
+          <div class="badge-live">10 YEARS</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="stats-box">
-                <div class="stat">
-                    <div class="num">₵234,277</div>
-                    <span data-i18n="stat_total_funds">Total Funds Raised</span>
-                </div>
-                <div class="stat">
-                    <div class="num">10</div>
-                    <span data-i18n="stat_communities">Communities Reached</span>
-                </div>
-                <div class="stat">
-                    <div class="num">2,474</div>
-                    <span data-i18n="stat_impacted">People Impacted</span>
-                </div>
-            </div>
-        </section>
+  <section class="stats-section">
+    <div class="stat-card">
+      <div class="stat-number" data-count="42">0</div>
+      <div class="stat-label">Mission Countries</div>
+    </div>
 
-        <section class="section">
-            <h2 data-i18n="impacted_communities_title">Our Impacted Communities</h2>
-            <p data-i18n="impacted_communities_desc">Each community carries a unique story, but the goal is always the same: bring hope, bring tools, and bring change.</p>
+    <div class="stat-card">
+      <div class="stat-number" data-count="680">0</div>
+      <div class="stat-label">Volunteers Worldwide</div>
+    </div>
 
-            <div class="impact-grid">
-                <a href="../articles/stories/mission_2015.html" style="color:#000 !important;">
-                    <div class="impact-card">
-                    <img src="https://www.volunteerhq.org/images/projects/ghana/volunteer-abroad-in-ghana-ivhq-healthcare-outreach-education.jpg?utm_source=chatgpt.com" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_1_name">1. Domeabra (2015)</h3>
-                        <p data-i18n="community_1_desc">A total of 250 souls were won,a major highlight was the conversion of the community's chief priestess and her assistant, both long-time devotees of ancestral gods, who denounced their idols and became active members of the church</p>
-                    </div>
-                </div></a>
+    <div class="stat-card">
+      <div class="stat-number" data-count="128">0</div>
+      <div class="stat-label">Church Planting Projects</div>
+    </div>
 
-                <a href="../articles/stories/mission_2016.html" style="color:#000 !important;"><div class="impact-card">
-                    <img src="https://www.fairobserver.com/wp-content/uploads/2016/10/African-youth-and-brain-drain.jpg?utm_source=chatgpt.com" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_2_name">2. Tomefa (2016)</h3>
-                        <p data-i18n="community_2_desc">The mission team reached 115 souls through various methods, including crusades and counseling.</p>
-                    </div>
-                </div></a>
+    <div class="stat-card">
+      <div class="stat-number" data-count="15000">0</div>
+      <div class="stat-label">Lives Reached</div>
+    </div>
+  </section>
 
-                <a href="../articles/stories/mission_2017.html" style="color:#000 !important;"><div class="impact-card">
-                    <img src="https://assets.mcc.gov/content/uploads/photo-062620-ghana-rural-water-eval-brief-featured-img.jpg?utm_source=chatgpt.com" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_3_name">3. Danchyira (2017)</h3>
-                        <p data-i18n="community_3_desc">The team achieved a total of 135 souls won, utilizing dawn broadcasting in addition to traditional outreach.</p>
-                    </div>
-                </div></a>
+<section class="news-section">
+  <div class="section-title">
+    <div>
+      <h2>A Decade of Mission Impact</h2>
+      <h4 class="section-subtitle">
+        Communities Reached • Souls Won • Lives Transformed
+      </h4>
+    </div>
 
-                <div class="impact-card">
-                    <img src="https://borgenproject.org/wp-content/uploads/29790467370_bbd851fd58_z.jpg?utm_source=chatgpt.com" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_4_name">4. Avornyor (2018)</h3>
-                        <p data-i18n="community_4_desc">A total of 219 souls were won, with a significant portion (55) coming from crusade efforts.</p>
-                    </div>
-                </div>
+    <p>
+      Over the past decade, the Zoe-Tirzah Missions movement has carried the Gospel
+      into towns, villages, and underserved communities across Ghana. Through crusades,
+      house-to-house evangelism, prayer outreach, counseling sessions, and community
+      engagement, thousands of lives have encountered hope, healing, and spiritual
+      transformation.
+    </p>
+  </div>
 
-                <div class="impact-card">
-                    <img src="https://images.unsplash.com/photo-1707155539719-9864ac4372d8?q=80&w=856&auto=format&fit=crop" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_5_name">5. Hobor (2019)</h3>
-                        <p data-i18n="community_5_desc">This mission resulted in 240 souls won, nearly half of which (112) were reached through crusades.</p>
-                    </div>
-                </div>
+  <div class="news-grid">
 
-                <div class="impact-card">
-                    <img src="https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?w=500&auto=format&fit=crop" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_6_name">6. Asensohu Shed (2021)</h3>
-                        <p data-i18n="community_6_desc">The team reached 150 souls during this outreach.</p>
-                    </div>
-                </div>
+    <!-- CARD 1 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="Village outreach crusade">
+        <div class="news-tag">1. Domeabra • 2015</div>
+      </div>
 
-                <div class="impact-card">
-                    <img src="https://images.unsplash.com/photo-1543181077-099f32f30a1c?q=80&w=1032&auto=format&fit=crop" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_7_name">7. Nyakrom (2022)</h3>
-                        <p data-i18n="community_7_desc">This community saw the highest number of souls won in the decade, totaling 519.</p>
-                    </div>
-                </div>
+      <div class="news-content">
+        <div class="news-date">Historic Mission Breakthrough</div>
 
-                <div class="impact-card">
-                    <img src="https://images.unsplash.com/photo-1584789874194-b82d600b16f4?w=500&auto=format&fit=crop" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_8_name">8. Navrongo (2023)</h3>
-                        <p data-i18n="community_8_desc">A total of 343 souls were won. A landmark achievement was the miraculous healing of an elderly woman who suffered from severe physical pain and mobility issues; after being healed during a prayer session, she was baptized and committed her life to Christ.</p>
-                    </div>
-                </div>
+        <h3>
+          Revival Ignites Transformation in Domeabra
+        </h3>
 
-                <div class="impact-card">
-                    <img src="../images/missions/Woe.jpg" alt="">
-                    <div class="text">
-                        <h3 data-i18n="community_9_name">9. Woe (2024)</h3>
-                        <p data-i18n="community_9_desc">The mission resulted in 503 souls won, with a strong emphasis on house-to-house (351) and crusade (115) outreach.</p>
-                    </div>
-                </div>
+        <h4 class="card-subheader">
+          250 Souls Won Through Evangelism & Community Outreach
+        </h4>
 
-            </div>
-        </section>
+        <p>
+          The Domeabra mission became one of the ministry’s most remarkable early
+          breakthroughs. Through crusades, prayer sessions, and personal evangelism,
+          over 250 individuals surrendered their lives to Christ. A defining moment
+          came when the community’s chief priestess and her assistant publicly
+          renounced idol worship and joined the church community.
+        </p>
 
-        <section class="section">
-            <h2 data-i18n="whats_next_title">What’s Next?</h2>
-            <p data-i18n="whats_next_desc">
-                The work continues. More hands. More hearts. More ground to cover.  
-                Our goal is to double our reach in the next year, focusing on sanitation, education, and sustainable community development.
-            </p>
-        </section>
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
 
-        <footer>
-            <div class="container">
-                <div class="brand">
-                    <header class="brand-title-vt-g" data-i18n="footer_brand_title">ZOE Tirzah</header>
-                    <p class="brand-title-vt-p" data-i18n="footer_brand_desc">
-                        Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others.
-                        We invite you to join us as we explore God's Word, experience His presence and serve our community.
-                    </p>
-                    <div class="social_links">
-                        <a href="https://www.facebook.com/AZWC17" aria-label="Facebook" data-i18n="footer_social_facebook"></a>
-                        <a href="https://www.instagram.com/tac_zoe" aria-label="Instagram" data-i18n="footer_social_instagram"></a>
-                        <a href="https://www.tiktok.com/@tac_zoe" aria-label="TikTok" data-i18n="footer_social_tiktok"></a>
-                        <a id="whatsappLink_footer_2" href="" aria-label="WhatsApp" data-i18n="footer_social_whatsapp"></a>
-                    </div>
-                </div>
+    <!-- CARD 2 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" alt="Community prayer gathering">
+        <div class="news-tag">2. Tomefa • 2016</div>
+      </div>
 
-                <div class="links">
-                    <h2 data-i18n="footer_quicklinks_title">Quick links</h2>
-                    <ul>
-                        <li><a href="../About_missions.html"><p data-i18n="footer_quicklinks_story">Our Story</p></a></li>
-                        <li><a href="../index.html"><p data-i18n="footer_quicklinks_home">Home</p></a></li>
-                        <li><a href="../NEWS-BLOG-main/main.html"><p data-i18n="footer_quicklinks_news">News</p></a></li>
-                        <li><a href="../About_gallery.html"><p data-i18n="footer_quicklinks_gallery">Gallery</p></a></li>
-                        <li><a href="../contact/index.html"><p class="menu_article" data-i18n="footer_quicklinks_contact">Contact</p></a></li>
-                    </ul>
-                </div>
+      <div class="news-content">
+        <div class="news-date">Community Evangelism Campaign</div>
 
-                <div class="links">
-                    <h2 data-i18n="footer_missions_title">Missions</h2>
-                    <ul>
-                        <li><a href="../individuals/index.html"><p data-i18n="footer_missions_faqs">FAQs</p></a></li>
-                        <li><a href="../partnership/index.html"><p data-i18n="footer_missions_partners">Partners</p></a></li>
-                        <li><a href="../donate/index.html"><p data-i18n="footer_missions_donate">Donate</p></a></li>
-                        <li><a href="https://forms.gle/LG43ReJcDcAizGBr7"><p data-i18n="footer_missions_partnerwithus">Partner with Us</p></a></li>
-                    </ul>
-                </div>
+        <h3>
+          Hope and Healing Reach the Tomefa Community
+        </h3>
 
-                <div class="links">
-                    <h2 data-i18n="footer_contact_title">Contact</h2>
-                    <ul>
-                        <li><a href="mailto:tac.azwc@gmail.com"><p data-i18n="footer_contact_email">zoeworshipcentreorganization@gmail.com</p></a></li>
-                        <li><span data-i18n="footer_contact_whatsapp_label">WhatsApp :</span></li>
-                        <li><a id="whatsappLink_footer" href="tel:+233553838464"><p data-i18n="footer_contact_whatsapp_number">(233) - 553 838 464</p></a></li>
-                        <li><span data-i18n="footer_contact_caller_label">Caller :</span></li>
-                        <li><a href="tel:+4755348384649"><p data-i18n="footer_contact_caller_number">(+47) - 5534 838 4649</p></a></li>
-                    </ul>
-                </div>
-            </div>
+        <h4 class="card-subheader">
+          115 Souls Reached Through Counseling & Crusades
+        </h4>
 
-            <div class="site-footer">
-                <div class="footer-top">
-                    <div class="email-signup">
-                        <h3 data-i18n="footer_signup_title">Stay up to date.</h3>
-                        <form>
-                            <input type="email" placeholder="Email Address" data-i18n="footer_signup_placeholder">
-                            <button type="submit" data-i18n="footer_signup_button">Sign Up</button>
-                        </form>
-                        <p data-i18n="footer_signup_desc">
-                            We occasionally send newsletters & mission information emails. Please read our privacy policy for more information.
-                        </p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter" data-i18n="footer_social_twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <nav class="footer-nav">
-                        <a href="#" data-i18n="footer_nav_cookies">Cookies</a>
-                        <a href="#" data-i18n="footer_nav_terms">Terms</a>
-                        <a href="#" data-i18n="footer_nav_privacy">Privacy</a>
-                    </nav>
-                    <p data-i18n="footer_bottom_text">
-                        © 2020 Reg. mission in Ghana & Beyond (1175049) and Scotland (SCO48330).
-                    </p>
-                </div>
-            </div>
-        </footer>
-        <script src="../js/nav.js"></script>
-        <script>
-                        const elements = document.querySelectorAll('[data-i18n]');
+        <p>
+          The Tomefa outreach combined open-air crusades, personal counseling,
+          discipleship encounters, and prayer ministry to impact families across the
+          region. The mission team successfully ministered to over 115 individuals,
+          bringing encouragement, restoration, and renewed faith to the community.
+        </p>
 
-            // Step 2: Create an object to store key-value pairs
-            const translations = {};
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
 
-            // Step 3: Loop through elements and populate the object
-            elements.forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            translations[key] = el.innerText;
-            });
+    <!-- CARD 3 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200&auto=format&fit=crop" alt="Morning outreach prayer">
+        <div class="news-tag">3. Danchyira • 2017</div>
+      </div>
 
-            // Step 4: Log the JSON to the console
-            console.log(translations);
-        </script>
+      <div class="news-content">
+        <div class="news-date">Dawn Broadcasting Outreach</div>
+
+        <h3>
+          Danchyira Experiences a Powerful Spiritual Awakening
+        </h3>
+
+        <h4 class="card-subheader">
+          135 Souls Won Through Innovative Evangelism
+        </h4>
+
+        <p>
+          The Danchyira mission introduced strategic dawn broadcasting alongside
+          traditional outreach efforts. Early morning Gospel broadcasts drew large
+          crowds and opened doors for meaningful conversations, resulting in over
+          135 documented salvations and renewed community engagement with the church.
+        </p>
+
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop" alt="Mission volunteers">
+        <div class="news-tag">4. Avornyor • 2018</div>
+      </div>
+
+      <div class="news-content">
+        <div class="news-date">Regional Crusade Expansion</div>
+
+        <h3>
+          Avornyor Crusade Draws Hundreds to Christ
+        </h3>
+
+        <h4 class="card-subheader">
+          219 Souls Won During Multi-Day Outreach
+        </h4>
+
+        <p>
+          Through large-scale crusades, youth evangelism, and prayer ministry,
+          the Avornyor mission touched lives across the region. More than 219
+          people responded to the Gospel message, with over 55 decisions recorded
+          during the main crusade gatherings alone.
+        </p>
+
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop" alt="Children and families outreach">
+        <div class="news-tag">5. Hobor • 2019</div>
+      </div>
+
+      <div class="news-content">
+        <div class="news-date">Mass Evangelism Initiative</div>
+
+        <h3>
+          Hobor Mission Records Extraordinary Harvest
+        </h3>
+
+        <h4 class="card-subheader">
+          240 Souls Won Across Crusades & Community Visits
+        </h4>
+
+        <p>
+          The Hobor mission became one of the ministry’s largest evangelistic
+          outreaches at the time. Through crusades, family visits, and discipleship
+          programs, 240 individuals committed their lives to Christ, nearly half
+          through the main evening crusade events.
+        </p>
+
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1200&auto=format&fit=crop" alt="Church worship service">
+        <div class="news-tag">6. Asensohu Shed • 2021</div>
+      </div>
+
+      <div class="news-content">
+        <div class="news-date">Post-Pandemic Mission Revival</div>
+
+        <h3>
+          Asensohu Shed Outreach Restores Faith and Unity
+        </h3>
+
+        <h4 class="card-subheader">
+          150 Lives Reached Through Community Ministry
+        </h4>
+
+        <p>
+          Following challenging pandemic seasons, the Asensohu Shed outreach
+          reignited spiritual passion through worship gatherings, evangelism,
+          counseling, and youth engagement activities. The mission successfully
+          reached 150 souls with messages of healing and hope.
+        </p>
+
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1200&auto=format&fit=crop" alt="Large outreach crowd">
+        <div class="news-tag">7. Nyakrom • 2022</div>
+      </div>
+
+      <div class="news-content">
+        <div class="news-date">Largest Outreach of the Decade</div>
+
+        <h3>
+          Nyakrom Witnesses Historic Gospel Response
+        </h3>
+
+        <h4 class="card-subheader">
+          519 Souls Won in Record-Breaking Mission
+        </h4>
+
+        <p>
+          The Nyakrom mission marked the highest number of documented salvations
+          in the organization’s history. Through coordinated evangelism, crusades,
+          youth ministry, and house-to-house outreach, an incredible 519 people
+          responded to the Gospel message.
+        </p>
+
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1469571486292-b53601020f1b?q=80&w=1200&auto=format&fit=crop" alt="Prayer and healing service">
+        <div class="news-tag">8. Navrongo • 2023</div>
+      </div>
+
+      <div class="news-content">
+        <div class="news-date">Miracles & Healing Encounters</div>
+
+        <h3>
+          Navrongo Mission Sparks Testimonies of Healing
+        </h3>
+
+        <h4 class="card-subheader">
+          343 Souls Won Through Prayer & Evangelism
+        </h4>
+
+        <p>
+          The Navrongo mission became widely remembered for powerful testimonies
+          of healing and restoration. One elderly woman reportedly regained mobility
+          after prayer ministry and later chose to be baptized. Overall, the outreach
+          recorded 343 salvations and widespread community participation.
+        </p>
+
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="news-card">
+      <div class="news-image">
+        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="House to house outreach">
+        <div class="news-tag">9. Woe • 2024</div>
+      </div>
+
+      <div class="news-content">
+        <div class="news-date">Community House-to-House Mission</div>
+
+        <h3>
+          Woe Outreach Concludes the Decade With Massive Impact
+        </h3>
+
+        <h4 class="card-subheader">
+          503 Souls Won Through Personal Evangelism
+        </h4>
+
+        <p>
+          The Woe mission emphasized house-to-house evangelism, personal discipleship,
+          and crusade ministry. The outreach concluded with 503 documented salvations,
+          including over 351 individuals reached through direct home visits and
+          community-centered ministry efforts.
+        </p>
+
+        <a href="../articles/uploading.html" class="news-link">
+          Read Full Mission Story →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <section class="impact-section">
+    <div class="impact-image">
+      <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1200&auto=format&fit=crop" alt="Mission impact">
+
+      <div class="floating-box">
+        <h3>12,000+</h3>
+        <p>Families impacted through global missions and humanitarian outreach programs.</p>
+      </div>
+    </div>
+
+    <div class="impact-content">
+      <h2>Transforming Communities Through Missions</h2>
+
+      <p>
+        Our mission network combines evangelism, education, healthcare support, leadership training, and relief initiatives to bring practical and spiritual transformation to communities worldwide.
+      </p>
+
+      <div class="impact-list">
+        <div class="impact-item">
+          <div class="impact-icon">⛪</div>
+
+          <div>
+            <h3>Church Planting</h3>
+            <p>Supporting new churches and training local leaders in developing regions.</p>
+          </div>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-icon">❤️</div>
+
+          <div>
+            <h3>Humanitarian Relief</h3>
+            <p>Delivering medical aid, food supplies, and emergency support during crises.</p>
+          </div>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-icon">📖</div>
+
+          <div>
+            <h3>Bible Distribution</h3>
+            <p>Providing translated Bibles and discipleship materials to remote communities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="newsletter-box">
+      <div>
+        <h2>Stay Updated With Every Mission Story</h2>
+        <p>
+          Subscribe to receive outreach updates, prayer requests, event announcements, and inspiring testimonies directly in your inbox.
+        </p>
+      </div>
+
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="f-brand-name">ZOE · TIRZAH</div>
+      <p class="f-brand-desc">A welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve the world.</p>
+      <div class="f-socials">
+        <a href="https://www.facebook.com/AZWC17" class="f-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/tac_zoe" class="f-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@tac_zoe" class="f-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://wa.me/233509660388" class="f-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <p style="font-size:.75rem;margin-bottom:8px;color:rgba(255,255,255,.3);">Stay updated:</p>
+      <div class="f-newsletter">
+        <input type="email" placeholder="Your email address" aria-label="Newsletter"/>
+        <button>Sign Up</button>
+      </div>
+    </div>
+    <div>
+      <div class="f-col-title">Quick Links</div>
+      <div class="f-links">
+        <a href="../index.html">Home</a>
+        <a href="../About_missions.html">Our Story</a>
+        <a href="../NEWS-BLOG-main/main.html">News</a>
+        <a href="../About_gallery.html">Gallery</a>
+        <a href="../contact/index.html">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="f-col-title">Missions</div>
+      <div class="f-links">
+        <a href="../individuals/index.html">FAQs</a>
+        <a href="../partnership/index.html">Partners</a>
+        <a href="../donate/index.html">Donate</a>
+        <a href="https://forms.gle/LG43ReJcDcAizGBr7">Partner With Us</a>
+      </div>
+    </div>
+    <div>
+      <div class="f-col-title">Contact</div>
+      <div class="f-links">
+        <a href="mailto:taczoemissions@gmail.com">taczoemissions@gmail.com</a>
+        <a href="https://wa.me/233509660388">WhatsApp: +233 509 660 388</a>
+        <a href="tel:+233555033857">Call: +233 555 033 857</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <nav><a href="#">Cookies</a><a href="#">Terms</a><a href="#">Privacy</a></nav>
+    <p>© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
+  </div>
+</footer>
+
+  <script>
+    const counters = document.querySelectorAll('.stat-number');
+    const nav = document.getElementById('navWrap');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+    const animateCounter = (counter) => {
+      const target = +counter.getAttribute('data-count');
+      let current = 0;
+      const increment = target / 120;
+
+      const update = () => {
+        current += increment;
+
+        if(current < target) {
+          counter.innerText = Math.floor(current).toLocaleString();
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target.toLocaleString() + '+';
+        }
+      }
+
+      update();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      })
+    }, {
+      threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+
+    const newsletterForm = document.getElementById('newsletterForm');
+
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const button = newsletterForm.querySelector('button');
+      button.innerText = 'Subscribed ✓';
+      button.style.background = '#ffffff';
+
+      setTimeout(() => {
+        button.innerText = 'Subscribe';
+        button.style.background = '';
+        newsletterForm.reset();
+      }, 3000);
+    });
+
+  </script>
+
 </body>
 </html>

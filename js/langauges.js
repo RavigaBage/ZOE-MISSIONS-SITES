@@ -6,14 +6,16 @@ console.log(window.localStorage.getItem('language_request'));
 
 
 async function loadLanguage(lang = "en") {
+    lang = lang.toLocaleLowerCase();
     try {
         //get page
         const GetPage = window.location.href;
         const SplitLink = GetPage.split('/');
         var PageName = SplitLink[SplitLink.length-1];
-        if(SplitLink[SplitLink.length - 1] == 'index.html'){
-            PageName = SplitLink[SplitLink.length-2];
+        if(SplitLink[SplitLink.length - 1] == ('index.html'|"")){
+            PageName = 'missions';
         }
+        console.log(SplitLink);
         
 
         const res = await fetch(`../js/languages/${PageName}.json`,
@@ -25,12 +27,11 @@ async function loadLanguage(lang = "en") {
         if (!res.ok) return console.error("Language file not found");
 
         const data = await res.json();
-        const langObj = data[lang]; 
-
+        const langObj = data[lang.toLocaleLowerCase()]; 
         if (!langObj) return console.error("Language not found in JSON");
 
+        
         Object.entries(langObj).forEach(([key, value]) => {
-        // check if a dom element has a class that matches the key
         const elMain = document.querySelectorAll(`[data-i18n="${key}"]`);  
             elMain.forEach(el =>{
                 if (el) {
@@ -49,6 +50,7 @@ async function loadLanguage(lang = "en") {
 
 
         });
+        document.querySelector('html').setAttribute('lang',lang);
 
     } catch (err) {
     console.error("Language loading error:", err);
