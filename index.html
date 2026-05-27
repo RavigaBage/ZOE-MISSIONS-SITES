@@ -4,14 +4,26 @@
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zoe Tirzah | Transforming Lives Through the Gospel</title>
-  <meta name="description" content="Zoe Tirzah of The Apostolic Church Ghana is committed to reaching the unreached with the Gospel — building churches, empowering communities, and transforming lives through faith in action."/>
+  <title>Gospel Missions in Ghana | Zoe Tirzah — Reaching the Unreached</title>
+  <meta name="description"
+        content="Zoe Tirzah brings the Gospel to unreached communities across Ghana. Join our August 2026 Axim mission — volunteer, donate, or pray with us today.">
+
   <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://zoe-tirzah.netlify.app/"/>
-  <meta property="og:title" content="Zoe Tirzah | Transforming Lives Through the Gospel"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://zoe-tirzah.netlify.app/"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="canonical" href="https://zoe-tirzahmissions.com"/>
+  <meta property="og:type"         content="website">
+  <meta property="og:site_name"    content="Zoe Tirzah Missions">
+  <meta property="og:url"          content="https://www.zoe-tirzahmissions.com/">
+  <meta property="og:title"        content="Gospel Missions in Ghana | Zoe Tirzah">
+  <meta property="og:description"   content="Join Zoe Tirzah as we carry the Gospel to unreached communities. Our next mission: Axim, Ghana — August 2026.">
+  <meta property="og:image"        content="https://www.zoe-tirzahmissions.com/images/og-cover.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"       content="en_GH">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@tac_zoe">
+  <meta name="twitter:title"       content="Gospel Missions in Ghana | Zoe Tirzah">
+  <meta name="twitter:description"  content="Join us on our next mission to Axim, Ghana. Volunteer, donate, or pray — every act of obedience advances the Kingdom.">
+  <meta name="twitter:image"       content="https://www.zoe-tirzahmissions.com/images/og-cover.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -1060,15 +1072,15 @@
     <div class="mission-axim-grid">
 
       <div class="mission-left reveal">
-        <p class="mission-title-sm"><i class="fa-solid fa-location-dot"></i> <div data-i18n="mission.next">Next Mission</div></p>
+        <p class="mission-title-sm"><i class="fa-solid fa-location-dot"></i> <span data-i18n="mission.next">Next Mission</span></p>
         <h2 class="mission-h2" data-i18n="missin.h2">Axim, Ghana<br><em data-i18n="mission.em">August 2026</em></h2>
         <p class="mission-desc" data-i18n="mission.desc">
           We are heading to the historic coastal shores of Axim — a city in need of the Gospel. Join us as we preach, serve, and demonstrate the love of Christ to a community hungry for transformation.
         </p>
         <div class="mission-meta-row">
-          <div class="mission-meta-chip"><i class="fa-solid fa-plane-departure"></i> <div data-i18n="mission.depart">Departs SUN, Aug 16</div></div>
-          <div class="mission-meta-chip"><i class="fa-solid fa-plane-arrival"></i> <div data-i18n="mission.return">Returns MON, Aug 24</div></div>
-          <div class="mission-meta-chip"><i class="fa-solid fa-map-pin"></i> <div data-i18n="mission.location">Axim, Western Region</div></div>
+          <div class="mission-meta-chip"><i class="fa-solid fa-plane-departure"></i> <span data-i18n="mission.depart">Departs SUN, Aug 16</span></div>
+          <div class="mission-meta-chip"><i class="fa-solid fa-plane-arrival"></i> <span data-i18n="mission.return">Returns MON, Aug 24</span></div>
+          <div class="mission-meta-chip"><i class="fa-solid fa-map-pin"></i> <span data-i18n="mission.location">Axim, Western Region</span></div>
         </div>
 
         <div class="countdown-block">
@@ -1094,8 +1106,8 @@
         </div>
 
         <div class="mission-cta-row">
-          <a href="https://forms.gle/1hiozyTDTEVeCxBx7" class="btn btn-gold"><i class="fa-solid fa-user-plus"></i> <div data-i18n="missionCta.register">Register for Axim</div></a>
-          <a href="donate/index.html" class="btn btn-outline" style="color:var(--teal);border-color:var(--teal);"><i class="fa-solid fa-heart"></i> <div data-i18n="missionCta.support">Support this Mission</div></a>
+          <a href="https://forms.gle/1hiozyTDTEVeCxBx7" class="btn btn-gold"><i class="fa-solid fa-user-plus"></i> <dspaniv data-i18n="missionCta.register">Register for Axim</span></a>
+          <a href="donate/index.html" class="btn btn-outline" style="color:var(--teal);border-color:var(--teal);"><i class="fa-solid fa-heart"></i> <span data-i18n="missionCta.support">Support this Mission</span></a>
         </div>
       </div>
 
@@ -1174,7 +1186,6 @@
           </div>
         </div>
 
-        <!-- Updates feed -->
         <div class="updates-card">
           <div class="updates-header">
             <span class="updates-title"><i class="fa-solid fa-rss"></i> &nbsp;<span data-i18n="updates.title">Mission Updates</span></span>
@@ -1625,18 +1636,18 @@
   (() => {
     'use strict';
 
-const translationMap = {};
-document.querySelectorAll('[data-i18n]').forEach(element => {
-  const key = element.getAttribute('data-i18n');
-  // Avoid overwriting parent keys if nested (skip if element has a data-i18n parent)
-  if (element.closest('[data-i18n]') !== element.parentElement?.closest('[data-i18n]')) {
-    // but simpler: only take leaf elements (no children with data-i18n)
-    if (!element.querySelector('[data-i18n]')) {
-      translationMap[key] = element.textContent.trim();
-    }
-  }
-});
-console.log(translationMap);
+    const translationMap = {};
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      // Avoid overwriting parent keys if nested (skip if element has a data-i18n parent)
+      if (element.closest('[data-i18n]') !== element.parentElement?.closest('[data-i18n]')) {
+        // but simpler: only take leaf elements (no children with data-i18n)
+        if (!element.querySelector('[data-i18n]')) {
+          translationMap[key] = element.textContent.trim();
+        }
+      }
+    });
+    console.log(translationMap);
 
     const nav = document.getElementById('navWrapper');
     const scrollTopBtn = document.getElementById('scrollTop');

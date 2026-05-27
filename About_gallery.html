@@ -9,23 +9,26 @@
     <meta name="keywords"
         content="church gallery, photos, videos, Accra, Ghana, Zoe Worship Centre, church events, community">
 
-    <meta property="og:title" content="Gallery | Zoe Worship Centre, Accra">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zoeworshipcentre.wuaze.com/pages/gallery">
-    <meta property="og:image" content=" https://zoeworshipcentre.wuaze.com/icons/logo.jpg">
-    <meta property="og:site_name" content="Zoe Worship Centre">
-    <meta property="og:description"
-        content="Explore our gallery of photos and videos capturing the moments of worship, fellowship, and community at Zoe Worship Centre, Accra.">
+<meta property="og:type"         content="website">
+<meta property="og:site_name"    content="Zoe Tirzah Missions">
+<meta property="og:url"          content="https://www.zoe-tirzahmissions.com/">
+<meta property="og:title"        content="Gospel Missions in Ghana | Zoe Tirzah">
+<meta property="og:description"   content="Join Zoe Tirzah as we carry the Gospel to unreached communities. Our next mission: Axim, Ghana — August 2026.">
+<meta property="og:image"        content="https://www.zoe-tirzahmissions.com/images/og-cover.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale"       content="en_GH">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gallery | Zoe Worship Centre, Accra">
-    <meta name="twitter:description"
-        content="Explore our gallery of photos and videos capturing the moments of worship, fellowship, and community at Zoe Worship Centre, Accra.">
-    <meta name="twitter:image" content=" https://zoeworshipcentre.wuaze.com/icons/logo.jpg">
+<!-- ── Twitter / X Card ── -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@tac_zoe">
+<meta name="twitter:title"       content="Gospel Missions in Ghana | Zoe Tirzah">
+<meta name="twitter:description"  content="Join us on our next mission to Axim, Ghana. Volunteer, donate, or pray — every act of obedience advances the Kingdom.">
+<meta name="twitter:image"       content="https://www.zoe-tirzahmissions.com/images/og-cover.jpg">
  <link rel="icon" href="images/logo/tirzah.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/lang-switcher.css" />
    <script src="js/i18n.js" defer></script>
+   <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement":[ { "@type":"ListItem","position":1,"name":"Home","item":"https://www.zoe-tirzahmissions.com/" }, { "@type":"ListItem","position":2,"name":"Community Impact","item":"https://www.zoe-tirzahmissions.com/impact/index.html" } ] } </script>
     <title>Zoe memories</title>
 </head>
 <style>
@@ -77,13 +80,56 @@ a { text-decoration: none; color: inherit; }
       box-shadow: var(--shadow);
     }
 
-      .nav-wrap {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      transition: var(--tr);
+
+             .hide{
+      transform: translateY(-10px);
+      opacity: 0;
+      visibility: hidden;
     }
-    .nav-wrap.scrolled {
+    .animate_x{
+
+      opacity: 1;
+    }
+    .lan_select{
+      width:70px;
+      min-height: 30px;
+      color:var(--white);
+      position: relative;
+       padding:5px;
+      background-color: #071b2a;
+
+    }
+
+    .lan_select .item{
+      border-bottom: 1px solid var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap:0px;
+      width: 100%;
+      height: 30px;
+      padding-block: 5px;
+    }
+    .lan_select .List_drop .item:hover{
+      background-color: #078A5C;
+    }
+    .lan_select .List_drop{
+      width: 100%;
+      height: fit-content;
+      position: absolute;
+      top:35px;
+      background-color: #071b2a;
+      display: none;
+    }
+    .lan_select:hover .List_drop{
+      display: block;
+    }
+    .nav-wrapper {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: var(--transition);
+    }
+    .nav-wrapper.scrolled {
       background: rgba(13,31,45,0.96);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(12px);
       box-shadow: 0 2px 20px rgba(0,0,0,0.25);
     }
     nav {
@@ -91,40 +137,77 @@ a { text-decoration: none; color: inherit; }
       padding: 18px 5%;
     }
     .nav-logo {
-      font-family: var(--font-head); font-size: 1.3rem; font-weight: 800;
-      color: var(--white); letter-spacing: -.5px;
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-head); font-size: 1.3rem; font-weight: 700;
+      color: var(--white);
     }
-    .nav-logo .dot { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-logo-dot { color: var(--gold); }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+    }
     .nav-links a {
-      color: rgba(255,255,255,0.8); font-size: .88rem; font-weight: 500;
-      padding: 7px 13px; border-radius: var(--radius-sm); transition: var(--tr);
+      color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500;
+      padding: 7px 13px; border-radius: 8px;
+      transition: var(--transition);
     }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(255,255,255,0.1); }
-    .nav-links a.active { color: var(--teal); background: rgba(22,218,149,0.1); }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
     .nav-donate {
       background: var(--crimson); color: var(--white);
-      padding: 9px 22px; border-radius: 999px; font-size: .88rem; font-weight: 600;
-      transition: var(--tr);
+      padding: 9px 22px; border-radius: 999px; font-size: 0.88rem; font-weight: 600;
+      transition: var(--transition);
     }
-    .nav-donate:hover { background: var(--crimson-dk); transform: translateY(-1px); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
-    .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--tr); display: block; }
+    .nav-donate:hover { background: var(--crimson-dark); color: var(--white); transform: translateY(-1px); }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 6px; background: none; border: none;
+    }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: var(--transition); border-radius: 2px; }
     .mobile-menu {
       display: none; position: fixed; inset: 0; z-index: 2000;
-      background: var(--navy); padding: 24px 6%; flex-direction: column;
+      background: var(--navy); padding: 24px 6%;
+      flex-direction: column; gap: 0;
     }
     .mobile-menu.open { display: flex; }
-    .mobile-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
-    .mobile-close { background: none; border: none; color: var(--white); font-size: 1.9rem; cursor: pointer; }
-    .mobile-links { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+    .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+    .mobile-close { background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; }
+    .mobile-links { display: flex; flex-direction: column; gap: 4px; flex: 1; }
     .mobile-links a {
-      color: rgba(255,255,255,0.82); font-size: 1.1rem; font-weight: 500;
-      padding: 13px 10px; border-radius: var(--radius-sm); transition: var(--tr);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.85); font-size: 1.15rem; font-weight: 500;
+      padding: 14px 12px; border-radius: var(--radius-sm);
+      transition: var(--transition); border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-    .mobile-links a:hover { background: rgba(255,255,255,0.07); color: var(--white); }
-    .mobile-btn { margin-top: 28px; }
+    .mobile-links a:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+    .mobile-cta { margin-top: 24px; }
+        .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1.5px; padding: 5px 14px; border-radius: 999px;
+    }
+    .tag-teal  { background: rgba(22,218,149,0.15); color: var(--teal-dark); }
+    .tag-red   { background: rgba(197,0,30,0.1);   color: var(--crimson); }
+    .tag-gold  { background: rgba(251,192,45,0.15); color: #8B6914; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: 999px;
+      font-family: var(--font-body); font-size: 0.95rem; font-weight: 600;
+      cursor: pointer; border: none; transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--teal-dark); color: var(--white);
+      box-shadow: 0 4px 18px rgba(11,162,110,0.32);
+    }
+    .btn-primary:hover { background: var(--teal-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,162,110,0.42); }
+    .btn-outline {
+      background: transparent; color: var(--teal-dark);
+      border: 2px solid var(--teal-dark);
+    }
+    .btn-outline:hover { background: var(--teal-dark); color: var(--white); }
+    .btn-red { background: var(--crimson); color: var(--white); box-shadow: 0 4px 18px rgba(197,0,30,0.28); }
+    .btn-red:hover { background: var(--crimson-dark); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: #3a2800; box-shadow: 0 4px 18px rgba(251,192,45,0.38); }
+    .btn-gold:hover { background: #E0A800; transform: translateY(-2px); }
 
 /* Gallery Section */
 .gallery-section {
@@ -271,6 +354,15 @@ footer {
       transform: translateY(-5px);
       background: var(--yellow);
     }
+    @media screen and (max-width:768px) {
+         .nav-links, .nav-donate { display: none; }
+      .hamburger { display: flex; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+        @media screen and (max-width:500px){
+      .footer-grid { grid-template-columns: 1fr; }
+    }
 /* Responsive adjustments */
 @media (max-width: 480px) {
     .gallery-header h1 {
@@ -281,46 +373,73 @@ footer {
     <body>
         <main>
 
-    <div class="nav-wrap" id="navWrap">
-    <nav>
-        <a href="../index.html" class="nav-logo">ZOE<span class="dot">·</span>TIRZAH</a>
-        <div class="nav-links">
-        <a href="../index.html">Home</a>
-        <a href="../About_missions.html">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html">News</a>
-        <a href="../impact/index.html">Impact</a>
-        <a href="../About_gallery.html">Gallery</a>
-        <a href="../partnership/index.html">Partners</a>
-        <a href="../contact/index.html" class="active">Contact</a>
-        </div>
-        <a href="../donate/index.html" class="nav-donate">Donate Now</a>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-        </button>
-    </nav>
-    </div>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-top">
-            <span class="nav-logo">ZOE<span class="dot">·</span>TIRZAH</span>
-            <button class="mobile-close" id="mobileClose">&times;</button>
+  <div class="nav-wrapper" id="navWrapper">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        ZOE<span class="nav-logo-dot">·</span>TIRZAH
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="About_missions.html" data-i18n="nav.ourstory">Our Story</a>
+        <a href="NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
+        <a href="impact/index.html" data-i18n="nav.impact">Impact</a>
+        <a href="About_gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a href="partnership/index.html" data-i18n="nav.partners">Partners</a>
+        <a href="contact/index.html" data-i18n="nav.contact">Contact</a>
+      </div>
+      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+    <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html" data-i18n="navMobile.home">Home</a>
+    <a href="About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
+    <a href="NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
+    <a href="impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
+    <a href="About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
+    <a href="partnership/index.html" data-i18n="navMobile.partners">Partners</a>
+    <a href="individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
+    <a href="contact/index.html" data-i18n="navMobile.contact">Contact</a>
+        <div class="lan_select">
+      <div class="item default" data-lang="en">
+        <div class="flag">🌐</div>
+        <b>En</b>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+      </div>
+      <div class="List_drop">
+        <div class="item" data-lang="fr">
+          <div class="flag"></div>
+          <b>Fr</b>
         </div>
-        <div class="mobile-links">
-            <a href="../index.html">Home</a>
-            <a href="../About_missions.html">Our Story</a>
-            <a href="../NEWS-BLOG-main/main.html">News</a>
-            <a href="../impact/index.html">Community Impact</a>
-            <a href="../About_gallery.html">Gallery</a>
-            <a href="../partnership/index.html">Partners</a>
-            <a href="../individuals/index.html">FAQs</a>
-            <a href="../contact/index.html">Contact</a>
+        <div class="item" data-lang="ar">
+          <div class="flag"></div>
+          <b>Ar</b>
         </div>
-        <div class="mobile-btn">
-            <a href="../donate/index.html" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:var(--crimson);color:#fff;border-radius:999px;font-weight:700;font-size:.95rem;">
-            <i class="fa-solid fa-heart"></i> Donate Now
-            </a>
+        <div class="item" data-lang="ar">
+          <div class="flag"></div>
+          <b>En</b>
         </div>
+      </div>
+
     </div>
+  </div>
+  <div class="mobile-cta">
+    <a href="donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
+      <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
+    </a>
+  </div>
+</div>
+
+
             <section class="gallery-section">
                 <div class="gallery-header">
                     <h1 data-i18n="gallery_main_title">Our Gallery</h1>
@@ -522,29 +641,24 @@ footer {
                 
         
         <script>
-            const menu_icon_main = document.querySelector('.menu_icon');
-            const menu_icon = document.querySelector('.menu_icon .open');
-            const menu_icon_close = document.querySelector('.menu_icon .close');
             const nav_bar = document.querySelector('nav');
-            const nav = document.getElementById('navWrap');
-            window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 60);
-            }, { passive: true });
+    const nav = document.getElementById('navWrapper');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    });
             const enquiryText = "Hello, I would like to know more about community impact.";
             const whatsappLink = `https://wa.me/233553838464?text=${enquiryText}`;
             document.getElementById('whatsappLink_footer').href = whatsappLink;
             document.getElementById('whatsappLink_footer_2').href = whatsappLink;
 
-            menu_icon.addEventListener('click',function(){
-                nav_bar.classList.add('active');
-                menu_icon_main.classList.add('active');
-                document.body.style.overflow = "hidden";
-            });
-            menu_icon_close.addEventListener('click',function(){
-                nav_bar.classList.remove('active');
-                menu_icon_main.classList.remove('active');
-                document.body.style.overflow = "";
-            });
         </script>
     </body>
 
