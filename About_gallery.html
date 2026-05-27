@@ -33,7 +33,6 @@
 <meta name="twitter:description"  content="Join us on our next mission to Axim, Ghana. Volunteer, donate, or pray — every act of obedience advances the Kingdom.">
 <meta name="twitter:image"       content="https://www.zoe-tirzahmissions.com/images/og-cover.jpg">
  <link rel="icon" href="images/logo/tirzah.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/lang-switcher.css" />
    <script src="js/i18n.js" defer></script>
    <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement":[ { "@type":"ListItem","position":1,"name":"Home","item":"https://www.zoe-tirzahmissions.com/" }, { "@type":"ListItem","position":2,"name":"Community Impact","item":"https://www.zoe-tirzahmissions.com/impact/index.html" } ] } </script>
     <title>Zoe memories</title>
@@ -58,6 +57,7 @@
       --muted: #7b8494;
       --shadow: 0 20px 50px rgba(0,0,0,0.08);
       --radius: 28px;
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
 }
     a{
         text-decoration: none;
@@ -292,6 +292,16 @@ a { text-decoration: none; color: inherit; }
 .gallery-item:hover .overlay {
     opacity: 1;
 }
+.gal-card{
+  border-radius:12px; 
+  overflow:hidden; 
+  box-shadow:0 4px 12px rgba(0, 0, 0, 0.452);
+}
+.gal-card-main{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
 footer {
       background: var(--navy); border-top: 1px solid rgba(255,255,255,.07);
       padding-top: 60px; color: rgba(255,255,255,.6);
@@ -362,6 +372,9 @@ footer {
       background: var(--yellow);
     }
     @media screen and (max-width:768px) {
+      .gallery-section {
+        padding: 60px 5px;
+      }
          .nav-links, .nav-donate { display: none; }
       .hamburger { display: flex; }
         .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -381,26 +394,27 @@ footer {
         <main>
 
 
-  <div class="nav-wrapper" id="navWrapper">
-    <nav>
-      <a href="index.html" class="nav-logo">
-        ZOE<span class="nav-logo-dot">·</span>TIRZAH
-      </a>
-      <div class="nav-links">
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="About_missions.html" data-i18n="nav.ourstory">Our Story</a>
-        <a href="NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
-        <a href="impact/index.html" data-i18n="nav.impact">Impact</a>
-        <a href="About_gallery.html" data-i18n="nav.gallery">Gallery</a>
-        <a href="partnership/index.html" data-i18n="nav.partners">Partners</a>
-        <a href="contact/index.html" data-i18n="nav.contact">Contact</a>
-      </div>
-      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
+
+<div class="nav-wrapper" id="navWrapper">
+  <nav>
+    <a href="index.html" class="nav-logo">
+      ZOE<span class="nav-logo-dot">·</span>TIRZAH
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="About_missions.html" data-i18n="nav.ourstory">Our Story</a>
+      <a href="NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
+      <a href="impact/index.html" data-i18n="nav.impact">Impact</a>
+      <a href="About_gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="partnership/index.html" data-i18n="nav.partners">Partners</a>
+      <a href="contact/index.html" data-i18n="nav.contact">Contact</a>
+    </div>
+    <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</div>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-header">
@@ -447,6 +461,7 @@ footer {
 </div>
 
 
+
             <section class="gallery-section">
                 <div class="gallery-header">
                     <h1 data-i18n="gallery_main_title">Our Gallery</h1>
@@ -454,7 +469,7 @@ footer {
                 </div>
             </section>
 
-            <section class="gallery-section" style="padding: 40px 20px; max-width: 1200px; margin:auto;">
+            <section class="gallery-section">
 
                 <!-- MAJOR EVENTS -->
                 <div style="margin-bottom: 60px;">
@@ -465,14 +480,9 @@ footer {
                         The big moments. The gatherings that shaped our year, moved hearts, and marked a turning point in our journey.
                     </p>
 
-                    <div style="
-                        display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                        gap: 20px;">
+                    <div  class="gal-card-main">
                         
-                        <div class="gal-card" style="
-                            background:#fafafa; border-radius:12px; overflow:hidden; 
-                            box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+                        <div class="gal-card">
                             <img src="images/missions/missions@10_42.jpg" style="width:100%; height:230px; object-fit:cover;">
                             <div style="padding:18px; font-family:'Trebuchet MS', sans-serif;">
                             <h3 style="margin:0 0 8px;" data-i18n="event_1_title">10years Anniversary launch</h3>
@@ -480,9 +490,7 @@ footer {
                             </div>
                         </div>
 
-                        <div class="gal-card" style="
-                            background:#fafafa; border-radius:12px; overflow:hidden; 
-                            box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+                        <div class="gal-card">
                             <img src="images/missions/nsadwir.jpg" style="width:100%; height:230px; object-fit:cover;">
                             <div style="padding:18px; font-family:'Trebuchet MS', sans-serif;">
                                 <h3 style="margin:0 0 8px;" data-i18n="event_2_title">Nsadwir Mission 25</h3>
@@ -490,9 +498,7 @@ footer {
                             </div>
                         </div>
 
-                        <div class="gal-card" style="
-                            background:#fafafa; border-radius:12px; overflow:hidden; 
-                            box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+                        <div class="gal-card">
                             <img src="images/missions/kyiasi.jpg" style="width:100%; height:230px; object-fit:cover;">
                             <div style="padding:18px; font-family:'Trebuchet MS', sans-serif;">
                                 <h3 style="margin:0 0 8px;" data-i18n="event_3_title">Kyiase</h3>
@@ -648,24 +654,19 @@ footer {
                 
         
         <script>
-            const nav_bar = document.querySelector('nav');
-    const nav = document.getElementById('navWrapper');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-    document.getElementById('mobileClose').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.remove('open');
-      document.body.style.overflow = '';
-    });
-            const enquiryText = "Hello, I would like to know more about community impact.";
-            const whatsappLink = `https://wa.me/233553838464?text=${enquiryText}`;
-            document.getElementById('whatsappLink_footer').href = whatsappLink;
-            document.getElementById('whatsappLink_footer_2').href = whatsappLink;
-
+          const nav_bar = document.querySelector('nav');
+          const nav = document.getElementById('navWrapper');
+          window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+          }, { passive: true });
+          document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+          });
+          document.getElementById('mobileClose').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.body.style.overflow = '';
+          });
         </script>
     </body>
 

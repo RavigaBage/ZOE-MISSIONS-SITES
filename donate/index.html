@@ -531,7 +531,7 @@ body {
 
             <div class="donation-grid">
                 <div class="donation-card">
-                    <h2>$10</h2>
+                    <h2>100 cedis</h2>
                     <p data-i18n="donation_tier_10_desc">
                         Help provide learning materials for children in our programs.
                     </p>
@@ -539,7 +539,7 @@ body {
                 </div>
 
                 <div class="donation-card">
-                    <h2>$25</h2>
+                    <h2>50 cedis</h2>
                     <p data-i18n="donation_tier_25_desc">
                         Support community outreach events and local missions.
                     </p>
@@ -547,7 +547,7 @@ body {
                 </div>
 
                 <div class="donation-card">
-                    <h2>$50</h2>
+                    <h2>500 cedis</h2>
                     <p data-i18n="donation_tier_50_desc">
                         Assist with operational costs and program expansion.
                     </p>
@@ -555,7 +555,7 @@ body {
                 </div>
 
                 <div class="donation-card">
-                    <h2>$100</h2>
+                    <h2>100 cedis0</h2>
                     <p data-i18n="donation_tier_100_desc">
                         Make a strong impact and help sustain multiple initiatives.
                     </p>
@@ -793,13 +793,13 @@ body {
             Donate_Btn.forEach(element=>{
                 element.addEventListener('click',function(){
                     Amount = element.getAttribute('data-amn');
-                    window.location.href = `../payment/index.html?{Amn}=${Amount}`;
+                    window.location.href = `../payment/index.html?{Amn}={A0 cedismount}`;
                 })
             })
             function GetAmount(){
                 const InputAmount = document.querySelector('#custom_amount').value;
                 if(InputAmount > 0 && InputAmount !=""){
-                     window.location.href = `../payment/index.html?{Amn}=${InputAmount}`;
+                     window.location.href = `../payment/index.html?{Amn}={I0 cedisnputAmount}`;
                 }else{
                     alert('Add a number value to proceed');
                 }

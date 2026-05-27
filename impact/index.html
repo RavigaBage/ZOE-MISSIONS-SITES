@@ -66,7 +66,7 @@ a { text-decoration: none; color: inherit; }
       box-shadow: var(--shadow);
     }
 
-             .hide{
+    .hide{
       transform: translateY(-10px);
       opacity: 0;
       visibility: hidden;
@@ -323,6 +323,7 @@ a { text-decoration: none; color: inherit; }
       border-radius: 22px;
       padding: 18px;
       display: flex;
+
       justify-content: space-between;
       align-items: center;
       gap: 15px;
@@ -628,7 +629,7 @@ a { text-decoration: none; color: inherit; }
       padding: 18px 22px;
       border-radius: 18px;
       border: none;
-      min-width: 280px;
+      min-width: 180px;
       font-size: 1rem;
       outline: none;
     }
@@ -769,15 +770,19 @@ footer {
       }
 
       .newsletter-box {
-        padding: 40px 28px;
+        padding: 10px;
       }
 
       .newsletter-form {
         width: 100%;
       }
-
+      .overlay-card {
+        flex-wrap: wrap;
+      }
       .newsletter-form input {
         width: 100%;
+      }.news-section {
+        padding:10px;
       }
 
       .floating-box {
@@ -797,68 +802,68 @@ footer {
 
   <div class="nav-wrapper" id="navWrapper">
     <nav>
-      <a href="index.html" class="nav-logo">
+      <a href="../index.html" class="nav-logo">
         ZOE<span class="nav-logo-dot">·</span>TIRZAH
       </a>
       <div class="nav-links">
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="About_missions.html" data-i18n="nav.ourstory">Our Story</a>
-        <a href="NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
-        <a href="impact/index.html" data-i18n="nav.impact">Impact</a>
-        <a href="About_gallery.html" data-i18n="nav.gallery">Gallery</a>
-        <a href="partnership/index.html" data-i18n="nav.partners">Partners</a>
-        <a href="contact/index.html" data-i18n="nav.contact">Contact</a>
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="../About_missions.html" data-i18n="nav.ourstory">Our Story</a>
+        <a href="../NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
+        <a href="../impact/index.html" data-i18n="nav.impact">Impact</a>
+        <a href="../About_gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a href="../partnership/index.html" data-i18n="nav.partners">Partners</a>
+        <a href="../contact/index.html" data-i18n="nav.contact">Contact</a>
       </div>
-      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+      <a href="../donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </div>
 
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-header">
-    <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
-    <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
-  </div>
-  <div class="mobile-links">
-    <a href="index.html" data-i18n="navMobile.home">Home</a>
-    <a href="About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
-    <a href="NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
-    <a href="impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
-    <a href="About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
-    <a href="partnership/index.html" data-i18n="navMobile.partners">Partners</a>
-    <a href="individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
-    <a href="contact/index.html" data-i18n="navMobile.contact">Contact</a>
-        <div class="lan_select">
-      <div class="item default" data-lang="en">
-        <div class="flag">🌐</div>
-        <b>En</b>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
-      </div>
-      <div class="List_drop">
-        <div class="item" data-lang="fr">
-          <div class="flag"></div>
-          <b>Fr</b>
-        </div>
-        <div class="item" data-lang="ar">
-          <div class="flag"></div>
-          <b>Ar</b>
-        </div>
-        <div class="item" data-lang="ar">
-          <div class="flag"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="mobile-links">
+      <a href="../index.html" data-i18n="navMobile.home">Home</a>
+      <a href="../About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
+      <a href="../NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
+      <a href="../impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
+      <a href="../About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
+      <a href="../partnership/index.html" data-i18n="navMobile.partners">Partners</a>
+      <a href="../individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
+      <a href="../../contact/index.html" data-i18n="navMobile.contact">Contact</a>
+          <div class="lan_select">
+        <div class="item default" data-lang="en">
+          <div class="flag">🌐</div>
           <b>En</b>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
         </div>
-      </div>
+        <div class="List_drop">
+          <div class="item" data-lang="fr">
+            <div class="flag"></div>
+            <b>Fr</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>Ar</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>En</b>
+          </div>
+        </div>
 
+      </div>
+    </div>
+    <div class="mobile-cta">
+      <a href="../donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
+        <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
+      </a>
     </div>
   </div>
-  <div class="mobile-cta">
-    <a href="donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
-      <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
-    </a>
-  </div>
-</div>
 
 
   <section class="hero">
@@ -929,308 +934,308 @@ footer {
     </div>
   </section>
 
-<section class="news-section">
-  <div class="section-title">
-    <div>
-      <h2>A Decade of Mission Impact</h2>
-      <h4 class="section-subtitle">
-        Communities Reached • Souls Won • Lives Transformed
-      </h4>
-    </div>
-
-    <p>
-      Over the past decade, the Zoe-Tirzah Missions movement has carried the Gospel
-      into towns, villages, and underserved communities across Ghana. Through crusades,
-      house-to-house evangelism, prayer outreach, counseling sessions, and community
-      engagement, thousands of lives have encountered hope, healing, and spiritual
-      transformation.
-    </p>
-  </div>
-
-  <div class="news-grid">
-
-    <!-- CARD 1 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="Village outreach crusade">
-        <div class="news-tag">1. Domeabra • 2015</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Historic Mission Breakthrough</div>
-
-        <h3>
-          Revival Ignites Transformation in Domeabra
-        </h3>
-
-        <h4 class="card-subheader">
-          250 Souls Won Through Evangelism & Community Outreach
+  <section class="news-section">
+    <div class="section-title">
+      <div>
+        <h2>A Decade of Mission Impact</h2>
+        <h4 class="section-subtitle">
+          Communities Reached • Souls Won • Lives Transformed
         </h4>
-
-        <p>
-          The Domeabra mission became one of the ministry’s most remarkable early
-          breakthroughs. Through crusades, prayer sessions, and personal evangelism,
-          over 250 individuals surrendered their lives to Christ. A defining moment
-          came when the community’s chief priestess and her assistant publicly
-          renounced idol worship and joined the church community.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
       </div>
+
+      <p>
+        Over the past decade, the Zoe-Tirzah Missions movement has carried the Gospel
+        into towns, villages, and underserved communities across Ghana. Through crusades,
+        house-to-house evangelism, prayer outreach, counseling sessions, and community
+        engagement, thousands of lives have encountered hope, healing, and spiritual
+        transformation.
+      </p>
     </div>
 
-    <!-- CARD 2 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" alt="Community prayer gathering">
-        <div class="news-tag">2. Tomefa • 2016</div>
+    <div class="news-grid">
+
+      <!-- CARD 1 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="Village outreach crusade">
+          <div class="news-tag">1. Domeabra • 2015</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Historic Mission Breakthrough</div>
+
+          <h3>
+            Revival Ignites Transformation in Domeabra
+          </h3>
+
+          <h4 class="card-subheader">
+            250 Souls Won Through Evangelism & Community Outreach
+          </h4>
+
+          <p>
+            The Domeabra mission became one of the ministry’s most remarkable early
+            breakthroughs. Through crusades, prayer sessions, and personal evangelism,
+            over 250 individuals surrendered their lives to Christ. A defining moment
+            came when the community’s chief priestess and her assistant publicly
+            renounced idol worship and joined the church community.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
       </div>
 
-      <div class="news-content">
-        <div class="news-date">Community Evangelism Campaign</div>
+      <!-- CARD 2 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" alt="Community prayer gathering">
+          <div class="news-tag">2. Tomefa • 2016</div>
+        </div>
 
-        <h3>
-          Hope and Healing Reach the Tomefa Community
-        </h3>
+        <div class="news-content">
+          <div class="news-date">Community Evangelism Campaign</div>
 
-        <h4 class="card-subheader">
-          115 Souls Reached Through Counseling & Crusades
-        </h4>
+          <h3>
+            Hope and Healing Reach the Tomefa Community
+          </h3>
 
-        <p>
-          The Tomefa outreach combined open-air crusades, personal counseling,
-          discipleship encounters, and prayer ministry to impact families across the
-          region. The mission team successfully ministered to over 115 individuals,
-          bringing encouragement, restoration, and renewed faith to the community.
-        </p>
+          <h4 class="card-subheader">
+            115 Souls Reached Through Counseling & Crusades
+          </h4>
 
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
+          <p>
+            The Tomefa outreach combined open-air crusades, personal counseling,
+            discipleship encounters, and prayer ministry to impact families across the
+            region. The mission team successfully ministered to over 115 individuals,
+            bringing encouragement, restoration, and renewed faith to the community.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
       </div>
+
+      <!-- CARD 3 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200&auto=format&fit=crop" alt="Morning outreach prayer">
+          <div class="news-tag">3. Danchyira • 2017</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Dawn Broadcasting Outreach</div>
+
+          <h3>
+            Danchyira Experiences a Powerful Spiritual Awakening
+          </h3>
+
+          <h4 class="card-subheader">
+            135 Souls Won Through Innovative Evangelism
+          </h4>
+
+          <p>
+            The Danchyira mission introduced strategic dawn broadcasting alongside
+            traditional outreach efforts. Early morning Gospel broadcasts drew large
+            crowds and opened doors for meaningful conversations, resulting in over
+            135 documented salvations and renewed community engagement with the church.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop" alt="Mission volunteers">
+          <div class="news-tag">4. Avornyor • 2018</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Regional Crusade Expansion</div>
+
+          <h3>
+            Avornyor Crusade Draws Hundreds to Christ
+          </h3>
+
+          <h4 class="card-subheader">
+            219 Souls Won During Multi-Day Outreach
+          </h4>
+
+          <p>
+            Through large-scale crusades, youth evangelism, and prayer ministry,
+            the Avornyor mission touched lives across the region. More than 219
+            people responded to the Gospel message, with over 55 decisions recorded
+            during the main crusade gatherings alone.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop" alt="Children and families outreach">
+          <div class="news-tag">5. Hobor • 2019</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Mass Evangelism Initiative</div>
+
+          <h3>
+            Hobor Mission Records Extraordinary Harvest
+          </h3>
+
+          <h4 class="card-subheader">
+            240 Souls Won Across Crusades & Community Visits
+          </h4>
+
+          <p>
+            The Hobor mission became one of the ministry’s largest evangelistic
+            outreaches at the time. Through crusades, family visits, and discipleship
+            programs, 240 individuals committed their lives to Christ, nearly half
+            through the main evening crusade events.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1200&auto=format&fit=crop" alt="Church worship service">
+          <div class="news-tag">6. Asensohu Shed • 2021</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Post-Pandemic Mission Revival</div>
+
+          <h3>
+            Asensohu Shed Outreach Restores Faith and Unity
+          </h3>
+
+          <h4 class="card-subheader">
+            150 Lives Reached Through Community Ministry
+          </h4>
+
+          <p>
+            Following challenging pandemic seasons, the Asensohu Shed outreach
+            reignited spiritual passion through worship gatherings, evangelism,
+            counseling, and youth engagement activities. The mission successfully
+            reached 150 souls with messages of healing and hope.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1200&auto=format&fit=crop" alt="Large outreach crowd">
+          <div class="news-tag">7. Nyakrom • 2022</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Largest Outreach of the Decade</div>
+
+          <h3>
+            Nyakrom Witnesses Historic Gospel Response
+          </h3>
+
+          <h4 class="card-subheader">
+            519 Souls Won in Record-Breaking Mission
+          </h4>
+
+          <p>
+            The Nyakrom mission marked the highest number of documented salvations
+            in the organization’s history. Through coordinated evangelism, crusades,
+            youth ministry, and house-to-house outreach, an incredible 519 people
+            responded to the Gospel message.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1469571486292-b53601020f1b?q=80&w=1200&auto=format&fit=crop" alt="Prayer and healing service">
+          <div class="news-tag">8. Navrongo • 2023</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Miracles & Healing Encounters</div>
+
+          <h3>
+            Navrongo Mission Sparks Testimonies of Healing
+          </h3>
+
+          <h4 class="card-subheader">
+            343 Souls Won Through Prayer & Evangelism
+          </h4>
+
+          <p>
+            The Navrongo mission became widely remembered for powerful testimonies
+            of healing and restoration. One elderly woman reportedly regained mobility
+            after prayer ministry and later chose to be baptized. Overall, the outreach
+            recorded 343 salvations and widespread community participation.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="House to house outreach">
+          <div class="news-tag">9. Woe • 2024</div>
+        </div>
+
+        <div class="news-content">
+          <div class="news-date">Community House-to-House Mission</div>
+
+          <h3>
+            Woe Outreach Concludes the Decade With Massive Impact
+          </h3>
+
+          <h4 class="card-subheader">
+            503 Souls Won Through Personal Evangelism
+          </h4>
+
+          <p>
+            The Woe mission emphasized house-to-house evangelism, personal discipleship,
+            and crusade ministry. The outreach concluded with 503 documented salvations,
+            including over 351 individuals reached through direct home visits and
+            community-centered ministry efforts.
+          </p>
+
+          <a href="../articles/uploading.html" class="news-link">
+            Read Full Mission Story →
+          </a>
+        </div>
+      </div>
+
     </div>
-
-    <!-- CARD 3 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200&auto=format&fit=crop" alt="Morning outreach prayer">
-        <div class="news-tag">3. Danchyira • 2017</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Dawn Broadcasting Outreach</div>
-
-        <h3>
-          Danchyira Experiences a Powerful Spiritual Awakening
-        </h3>
-
-        <h4 class="card-subheader">
-          135 Souls Won Through Innovative Evangelism
-        </h4>
-
-        <p>
-          The Danchyira mission introduced strategic dawn broadcasting alongside
-          traditional outreach efforts. Early morning Gospel broadcasts drew large
-          crowds and opened doors for meaningful conversations, resulting in over
-          135 documented salvations and renewed community engagement with the church.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 4 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop" alt="Mission volunteers">
-        <div class="news-tag">4. Avornyor • 2018</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Regional Crusade Expansion</div>
-
-        <h3>
-          Avornyor Crusade Draws Hundreds to Christ
-        </h3>
-
-        <h4 class="card-subheader">
-          219 Souls Won During Multi-Day Outreach
-        </h4>
-
-        <p>
-          Through large-scale crusades, youth evangelism, and prayer ministry,
-          the Avornyor mission touched lives across the region. More than 219
-          people responded to the Gospel message, with over 55 decisions recorded
-          during the main crusade gatherings alone.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 5 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop" alt="Children and families outreach">
-        <div class="news-tag">5. Hobor • 2019</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Mass Evangelism Initiative</div>
-
-        <h3>
-          Hobor Mission Records Extraordinary Harvest
-        </h3>
-
-        <h4 class="card-subheader">
-          240 Souls Won Across Crusades & Community Visits
-        </h4>
-
-        <p>
-          The Hobor mission became one of the ministry’s largest evangelistic
-          outreaches at the time. Through crusades, family visits, and discipleship
-          programs, 240 individuals committed their lives to Christ, nearly half
-          through the main evening crusade events.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 6 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1200&auto=format&fit=crop" alt="Church worship service">
-        <div class="news-tag">6. Asensohu Shed • 2021</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Post-Pandemic Mission Revival</div>
-
-        <h3>
-          Asensohu Shed Outreach Restores Faith and Unity
-        </h3>
-
-        <h4 class="card-subheader">
-          150 Lives Reached Through Community Ministry
-        </h4>
-
-        <p>
-          Following challenging pandemic seasons, the Asensohu Shed outreach
-          reignited spiritual passion through worship gatherings, evangelism,
-          counseling, and youth engagement activities. The mission successfully
-          reached 150 souls with messages of healing and hope.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 7 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1200&auto=format&fit=crop" alt="Large outreach crowd">
-        <div class="news-tag">7. Nyakrom • 2022</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Largest Outreach of the Decade</div>
-
-        <h3>
-          Nyakrom Witnesses Historic Gospel Response
-        </h3>
-
-        <h4 class="card-subheader">
-          519 Souls Won in Record-Breaking Mission
-        </h4>
-
-        <p>
-          The Nyakrom mission marked the highest number of documented salvations
-          in the organization’s history. Through coordinated evangelism, crusades,
-          youth ministry, and house-to-house outreach, an incredible 519 people
-          responded to the Gospel message.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 8 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1469571486292-b53601020f1b?q=80&w=1200&auto=format&fit=crop" alt="Prayer and healing service">
-        <div class="news-tag">8. Navrongo • 2023</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Miracles & Healing Encounters</div>
-
-        <h3>
-          Navrongo Mission Sparks Testimonies of Healing
-        </h3>
-
-        <h4 class="card-subheader">
-          343 Souls Won Through Prayer & Evangelism
-        </h4>
-
-        <p>
-          The Navrongo mission became widely remembered for powerful testimonies
-          of healing and restoration. One elderly woman reportedly regained mobility
-          after prayer ministry and later chose to be baptized. Overall, the outreach
-          recorded 343 salvations and widespread community participation.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 9 -->
-    <div class="news-card">
-      <div class="news-image">
-        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="House to house outreach">
-        <div class="news-tag">9. Woe • 2024</div>
-      </div>
-
-      <div class="news-content">
-        <div class="news-date">Community House-to-House Mission</div>
-
-        <h3>
-          Woe Outreach Concludes the Decade With Massive Impact
-        </h3>
-
-        <h4 class="card-subheader">
-          503 Souls Won Through Personal Evangelism
-        </h4>
-
-        <p>
-          The Woe mission emphasized house-to-house evangelism, personal discipleship,
-          and crusade ministry. The outreach concluded with 503 documented salvations,
-          including over 351 individuals reached through direct home visits and
-          community-centered ministry efforts.
-        </p>
-
-        <a href="../articles/uploading.html" class="news-link">
-          Read Full Mission Story →
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <section class="impact-section">
     <div class="impact-image">
