@@ -1,811 +1,906 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<meta name="description" content="Support the mission of Zoe-Tirzah through giving. Your generosity helps spread the gospel, serve communities, and advance the Kingdom of God worldwide.">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/apple-touch-icon.png">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<!-- Apple devices (homescreen icon) -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<!-- Android / PWA -->
-<link rel="manifest" href="/site.webmanifest">
-<meta property="og:type"         content="website">
-<meta property="og:site_name"    content="Zoe Tirzah Missions">
-<meta property="og:url"          content="https://www.zoe-tirzahmissions.com/">
-<meta property="og:title"        content="Gospel Missions in Ghana | Zoe Tirzah">
-<meta property="og:description"   content="Join Zoe Tirzah as we carry the Gospel to unreached communities. Our next mission: Axim, Ghana — August 2026.">
-<meta property="og:image"        content="https://www.zoe-tirzahmissions.com/images/og-cover.jpg">
-<meta property="og:image:width"  content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale"       content="en_GH">
-
-<!-- ── Twitter / X Card ── -->
-<meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:site"        content="@tac_zoe">
-<meta name="twitter:title"       content="Gospel Missions in Ghana | Zoe Tirzah">
-<meta name="twitter:description"  content="Join us on our next mission to Axim, Ghana. Volunteer, donate, or pray — every act of obedience advances the Kingdom.">
-<meta name="twitter:image"       content="https://www.zoe-tirzahmissions.com/images/og-cover.jpg">
-
-<!-- Trust & Identity -->
-<meta name="author" content="Zoe-Tirzah Ministries">
-<meta name="keywords" content="donation, Christian giving, support ministry, missions donation, gospel outreach, Zoe-Tirzah">
-
-    <link rel="stylesheet" href="../css/color_pallete.css" /> 
-    <link rel="stylesheet" href="../css/nav.css" /> 
-    <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="stylesheet" href="../css/lang-switcher.css" />
-   <script src="../js/i18n.js" defer></script>
-   <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement":[ { "@type":"ListItem","position":1,"name":"Home","item":"https://www.zoe-tirzahmissions.com/" }, { "@type":"ListItem","position":2,"name":"Community Impact","item":"https://www.zoe-tirzahmissions.com/impact/index.html" } ] } </script>
-    <title>Donation | zoe-tirzah</title>
-</head>
+<title>Give · Zoe-Tirzah Missions</title>
+<meta name="description" content="Support the mission of Zoe-Tirzah through giving. Your generosity helps spread the gospel, serve communities, and advance the Kingdom of God worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.cdnfonts.com/css/plumpfull');
-@import url('https://fonts.cdnfonts.com/css/poppins');
-    /* --- Donation Box --- */
-*{
-    --don_primary-blue: #007bff;
-    --don_secondary-blue: #0056b3; 
-    --don_accent-red: #D90000;
-    --don_accent-yellow: #FFC107;
-    --don_text-white: #FFFFFF;
-    --don_block-bg: rgba(255, 255, 255, 0.9);
-    --don_code-color: #333333;
-}
-p,ul,label,button,select,strong{
-    font-family: poppins, sans-serif;
-    font-weight: 500;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-h1,h2{
-    font-family: plumpfull, sans-serif;
-    word-wrap: break-word;
-}
-/* Page background and font */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: var(--don_text-white);
-    background: linear-gradient(135deg, #004d99 0%, #00264d 100%);
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Donation Section */
-.donation-section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+  :root {
+    --navy:      #0a1628;
+    --navy-mid:  #0f1f38;
+    --navy-card: #132848;
+    --navy-line: rgba(255,255,255,0.08);
+    --gold:      #d4a847;
+    --gold-light:#f0cc7a;
+    --gold-dim:  rgba(212,168,71,0.15);
+    --gold-glow: rgba(212,168,71,0.08);
+    --crimson:   #c5001e;
+    --crimson-d: #8b0015;
+    --teal:      #16da95;
+    --teal-d:    #0ba26e;
+    --white:     #ffffff;
+    --off:       #f5f0e8;
+    --text-1:    rgba(255,255,255,0.92);
+    --text-2:    rgba(255,255,255,0.60);
+    --text-3:    rgba(255,255,255,0.35);
+    --serif:     'Cormorant Garamond', Georgia, serif;
+    --sans:      'DM Sans', sans-serif;
+    --ease:      cubic-bezier(0.4,0,0.2,1);
+  }
 
-.donation-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
+  html { scroll-behavior: smooth; }
 
-.donation-header h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.donation-header p {
+  body {
+    background: var(--navy);
+    color: var(--text-1);
+    font-family: var(--sans);
     font-size: 16px;
     line-height: 1.6;
-}
-
-/* Donation Tiers Grid */
-.donation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    justify-items: center;
-    align-items: stretch;
-}
-
-.donation-card {
-    background: white;
-    border-radius: 16px;
-    padding: 25px 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.donation-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-}
-
-.donation-card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #1e293b;
-}
-
-.donation-card p {
-    font-size: 14px;
-    color: #475569;
-    margin-bottom: 15px;
-}
-
-.donation-card button {
-    background: #fbbf24;
-    border: none;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.donation-card button:hover {
-    background: #f59e0b;
-    transform: scale(1.05);
-}
-
-/* Custom Donation Input */
-.custom-donation {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.custom-donation input[type="number"] {
-    padding: 12px 16px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid #cbd5e1;
-    width: 200px;
-    margin-right: 10px;
-}
-
-.custom-donation button {
-    background: #3b82f6;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.custom-donation button:hover {
-    background: #2563eb;
-    transform: scale(1.05);
-}
-  .give-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
+    overflow-x: hidden;
   }
 
-  .give-card{
-    position:relative;
-    height:420px;
-    border-radius:22px;
-    overflow:hidden;
-    background-size:cover;
-    background-position:center;
-    box-shadow:0 25px 60px rgba(0,0,0,.25);
-  }
+      .skeleton{
+        display: none;
+        transition:all 1s ease;
+        transform: scale(0);
 
-  .give-overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
-    backdrop-filter:blur(1px);
-    padding:35px;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    color:#fff;
-  }
+      }
+      .skeleton.scrolled{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #071b2a;
+        z-index: 999999999;
+        display: grid;
+        place-items: center;
+        color:var(--white);
+        font-size: 3rem;
+        transform: scale(1);
+      }
+      .skeleton span{
+        color:var(--gold);
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
+          .lan_select{
+      width:70px;
+      min-height: 30px;
+      color:var(--white);
+      position: relative;
+       padding:5px;
+      background-color: #071b2a;
 
-  .give-overlay h3{
-    font-size:1.6rem;
-    margin-bottom:10px;
-  }
-
-  .give-overlay p{
-    font-size:.95rem;
-    opacity:.9;
-    max-width:90%;
-  }
-
-  .cta{
-    margin-top:18px;
-    align-self:flex-start;
-    padding:12px 22px;
-    border-radius:30px;
-    background:linear-gradient(135deg,#c62828,#8e0000);
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    box-shadow:0 10px 25px rgba(198,40,40,.5);
-    transition:.25s;
-  }
-
-  .cta:hover{
-    transform:translateY(-2px);
-    box-shadow:0 15px 35px rgba(198,40,40,.7);
-  }
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-    .donation-header h1 {
-        font-size: 28px;
     }
 
-    .custom-donation input[type="number"] {
-        width: 140px;
-        margin-bottom: 10px;
+    .lan_select .item{
+      border-bottom: 1px solid var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap:0px;
+      width: 100%;
+      height: 30px;
+      padding-block: 5px;
     }
-}
-.donation-container {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    text-align: center;
-}
-.donation_bg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .lan_select .List_drop .item:hover{
+      background-color: #078A5C;
+    }
+    .lan_select .List_drop{
+      width: 100%;
+      height: fit-content;
+      position: absolute;
+      top:35px;
+      background-color: #071b2a;
+      display: none;
+    }
+    .lan_select:hover .List_drop{
+      display: block;
+    }
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 0 5%;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+  .nav.scrolled {
+    background: rgba(10,22,40,0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 0 var(--navy-line);
+  }
+  .nav-brand {
+    font-family: var(--serif); font-size: 1.25rem; font-weight: 600;
+    color: var(--white); letter-spacing: 0.04em; text-decoration: none;
+  }
+  .nav-brand span { color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 2px; }
+  .nav-links a {
+    color: var(--text-2); font-size: 0.85rem; font-weight: 400;
+    padding: 6px 12px; border-radius: 6px; text-decoration: none;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.07); }
+  .nav-cta {
+    background: var(--gold); color: var(--navy) !important; font-weight: 600 !important;
+    padding: 8px 20px !important; border-radius: 999px !important;
+    transition: background 0.2s, transform 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px) !important; color: var(--navy) !important; }
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-hamburger span { width: 22px; height: 1.5px; background: var(--white); display: block; border-radius: 2px; transition: 0.3s; }
+
+  /* ─── HERO ─── */
+  .hero {
     min-height: 100vh;
-    color: var(--don_text-white);
-}
-
-/* --- Header Section --- */
-.header-text {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* --- Payment Logos --- */
-.payment-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 50px;
-}
-
-.logo-circle {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Styling individual logos (placeholders) */
-.logo-mtn { 
-    background-color: #fdd835; /* MTN Yellow */
-    padding: 5px;
-}
-.logo-airteltigo { background-color: white; }
-.logo-cash { 
-    background-color: var(--don_accent-red); 
-    border: 3px solid white;
-}
-
-.logo-circle img {
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 50%; /* For visual style */
-}
-
-/* Placeholder styling for Cash icon */
-.logo-cash i {
-    font-size: 3rem;
-    color: white;
-}
-
-.logo-label {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
     position: relative;
-    top: 5px;
-    font-size: 0.8rem;
-    color: var(--don_text-white);
-    font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,71,0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(22,218,149,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(212,168,71,0.3);
+    padding: 6px 16px; border-radius: 999px;
+    margin-bottom: 32px; background: var(--gold-glow);
+  }
+  .hero-label::before {
+    content: '✦'; font-size: 0.6rem;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 300; line-height: 1.08; letter-spacing: -0.01em;
+    color: var(--white); max-width: 820px;
+    margin-bottom: 24px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub {
+    font-size: 1.05rem; font-weight: 300; color: var(--text-2);
+    max-width: 520px; line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 30px; border-radius: 999px;
+    font-family: var(--sans); font-size: 0.9rem; font-weight: 500;
+    text-decoration: none; cursor: pointer; border: none;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s;
+    white-space: nowrap;
+  }
+  .btn-gold { background: var(--gold); color: var(--navy); box-shadow: 0 8px 28px rgba(212,168,71,0.35); }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 14px 36px rgba(212,168,71,0.45); }
+  .btn-ghost { background: transparent; color: var(--text-1); border: 1px solid var(--navy-line); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); border-color: rgba(255,255,255,0.2); }
+  .hero-scroll {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: var(--text-3); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  .hero-scroll svg { width: 16px; opacity: 0.4; }
+  @keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
 
+  /* ─── SECTION WRAPPER ─── */
+  .section { padding: 100px 5%; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .section-label::before { content: '—'; opacity: 0.5; }
+  .section-title {
+    font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 300; line-height: 1.12; color: var(--white); margin-bottom: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-desc {
+    font-size: 1rem; font-weight: 300; color: var(--text-2); max-width: 540px; line-height: 1.8;
+    margin-bottom: 56px;
+  }
+  .rule { width: 48px; height: 1px; background: var(--gold); opacity: 0.4; margin: 24px 0; }
 
-/* --- Payment Blocks --- */
-.payment-block {
-    background-color: var(--don_block-bg);
-    border-radius: 25px;
-    margin-bottom: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    min-height: 80px;
-}
+  /* ─── AMOUNT PICKER ─── */
+  .amount-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .amount-card {
+    border: 1px solid var(--navy-line);
+    border-radius: 16px;
+    padding: 28px 24px;
+    cursor: pointer;
+    transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    position: relative; overflow: hidden;
+    background: var(--navy-card);
+  }
+  .amount-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--gold-dim) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .amount-card:hover { border-color: rgba(212,168,71,0.4); transform: translateY(-3px); }
+  .amount-card:hover::before { opacity: 1; }
+  .amount-card.selected {
+    border-color: var(--gold);
+    background: var(--navy-card);
+  }
+  .amount-card.selected::before { opacity: 1; }
+  .amount-card .check {
+    position: absolute; top: 14px; right: 14px;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--gold); display: none;
+    align-items: center; justify-content: center;
+  }
+  .amount-card.selected .check { display: flex; }
+  .check svg { width: 11px; stroke: var(--navy); stroke-width: 2.5; fill: none; }
+  .amount-val {
+    font-family: var(--serif); font-size: 2.4rem; font-weight: 400;
+    color: var(--white); line-height: 1; margin-bottom: 10px;
+  }
+  .amount-val span { font-size: 1.1rem; color: var(--gold); margin-right: 4px; }
+  .amount-desc { font-size: 0.83rem; font-weight: 300; color: var(--text-2); line-height: 1.6; }
+  .amount-popular {
+    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); background: var(--gold-dim); border-radius: 999px;
+    padding: 3px 10px; display: inline-flex; margin-bottom: 14px;
+  }
 
-.payment-label {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--don_accent-red);
-}
+  /* custom amount */
+  .custom-row {
+    display: flex; gap: 12px; align-items: center; margin-top: 12px;
+  }
+  .custom-input-wrap {
+    flex: 1; position: relative;
+  }
+  .currency-tag {
+    position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+    font-family: var(--serif); font-size: 1.1rem; color: var(--gold); font-weight: 600;
+  }
+  .custom-input {
+    width: 100%; padding: 16px 16px 16px 44px;
+    background: var(--navy-card); border: 1px solid var(--navy-line);
+    border-radius: 12px; color: var(--white); font-size: 1.1rem; font-family: var(--sans);
+    outline: none; transition: border-color 0.2s;
+  }
+  .custom-input:focus { border-color: rgba(212,168,71,0.5); }
+  .custom-input::placeholder { color: var(--text-3); font-size: 0.9rem; }
+  .btn-donate-now {
+    background: var(--crimson); color: var(--white);
+    padding: 16px 32px; border-radius: 12px;
+    font-size: 0.9rem; font-weight: 500; border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+  .btn-donate-now:hover { background: var(--crimson-d); transform: translateY(-2px); }
 
-.ussd-code {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--don_code-color);
-    text-align: right;
-    user-select: all; /* Allows easy copying */
-}
-.name-block {
-    background-color: var(--don_accent-yellow);
-    color: var(--code-color);
-    padding: 15px 20px;
-    border-radius: 10px;
-    margin-top: 40px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
+  /* ─── WAYS TO GIVE ─── */
+  .give-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .give-card {
+    position: relative; height: 380px; border-radius: 20px;
+    overflow: hidden; cursor: pointer;
+    transition: transform 0.35s var(--ease);
+  }
+  .give-card:hover { transform: translateY(-6px); }
+  .give-bg {
+    position: absolute; inset: 0; background-size: cover; background-position: center;
+    transition: transform 0.5s var(--ease);
+  }
+  .give-card:hover .give-bg { transform: scale(1.05); }
+  .give-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.3) 55%, transparent 100%);
+    padding: 28px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .give-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--gold-dim); border: 1px solid rgba(212,168,71,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px; color: var(--gold); font-size: 1.1rem;
+  }
+  .give-title {
+    font-family: var(--serif); font-size: 1.55rem; font-weight: 400;
+    color: var(--white); margin-bottom: 6px; line-height: 1.2;
+  }
+  .give-desc { font-size: 0.83rem; font-weight: 300; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 18px; }
+  .give-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.8rem; font-weight: 500; color: var(--gold); text-decoration: none;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    transition: gap 0.2s;
+  }
+  .give-link:hover { gap: 10px; }
+  .give-link svg { width: 14px; stroke: var(--gold); stroke-width: 2; fill: none; }
 
-.name-block .label {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
+  /* ─── PAYMENT ─── */
+  .payment-section {
+    padding: 100px 5%;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 100%);
+  }
+  .payment-inner {
+    max-width: 720px; margin: 0 auto; text-align: center;
+  }
+  .payment-logos {
+    display: flex; justify-content: center; align-items: center; gap: 20px;
+    margin: 48px 0;
+  }
+  .logo-pill {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 20px; border-radius: 999px;
+    background: var(--navy-card); border: 1px solid var(--navy-line);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .logo-pill:hover { border-color: rgba(212,168,71,0.3); transform: translateY(-2px); }
+  .logo-pill img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+  .logo-pill-name { font-size: 0.8rem; font-weight: 500; color: var(--text-2); }
 
-.name-block .value {
-    font-size: 1.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
+  .ussd-card {
+    background: var(--navy-card); border: 1px solid var(--navy-line);
+    border-radius: 20px; padding: 36px; margin-bottom: 20px;
+    text-align: left; position: relative; overflow: hidden;
+  }
+  .ussd-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--teal) 100%);
+  }
+  .ussd-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .ussd-label {
+    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-3); margin-bottom: 6px;
+  }
+  .ussd-code {
+    font-family: 'Courier New', monospace; font-size: 1.65rem; font-weight: 600;
+    color: var(--white); letter-spacing: 0.04em;
+  }
+  .ussd-copy-btn {
+    background: var(--gold-dim); border: 1px solid rgba(212,168,71,0.25);
+    border-radius: 8px; padding: 8px 14px; cursor: pointer;
+    font-size: 0.78rem; font-weight: 500; color: var(--gold);
+    transition: background 0.2s; white-space: nowrap; margin-top: 4px;
+  }
+  .ussd-copy-btn:hover { background: rgba(212,168,71,0.25); }
+  .ussd-divider { height: 1px; background: var(--navy-line); margin: 24px 0; }
+  .ussd-name-label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 6px; }
+  .ussd-name-val {
+    font-family: var(--serif); font-size: 1.8rem; font-weight: 400; color: var(--white);
+    letter-spacing: 0.02em;
+  }
+  .ussd-church {
+    margin-top: 8px; font-size: 0.82rem; color: var(--text-2);
+  }
+  .thank-note {
+    font-family: var(--serif); font-size: 1.2rem; font-style: italic;
+    color: var(--gold); opacity: 0.85; margin-top: 32px;
+  }
 
-.thank-you {
-    font-size: 1rem;
-    font-weight: 800;
-    margin-top: 20px;
-    color: var(--don_accent-yellow);
-}
-@media screen and (max-width:500px) {
-    .header-text { font-size: 1.8rem; }
-    .payment-logos { gap: 10px; }
-    .logo-circle { width: 70px; height: 70px; }
-    .logo-cash i { font-size: 2rem; }
-    .payment-label { font-size: 1.2rem; }
-    .ussd-code { font-size: 1rem; text-align: center; }
-    .name-block .value { font-size: 1.4rem; }
-}
+  /* ─── VERSE ─── */
+  .verse-section {
+    padding: 80px 5%;
+    text-align: center;
+    border-top: 1px solid var(--navy-line);
+  }
+  .verse {
+    font-family: var(--serif); font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+    font-weight: 300; font-style: italic; color: var(--text-1);
+    max-width: 700px; margin: 0 auto 16px; line-height: 1.55;
+  }
+  .verse-ref { font-size: 0.85rem; color: var(--gold); font-weight: 400; letter-spacing: 0.1em; }
 
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 64px 5% 32px;
+    border-top: 1px solid var(--navy-line);
+  }
+  .footer-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+    margin-bottom: 48px;
+  }
+  .footer-brand-name {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--white);
+    margin-bottom: 14px; letter-spacing: 0.04em;
+  }
+  .footer-brand-name span { color: var(--gold); }
+  .footer-brand-desc { font-size: 0.83rem; font-weight: 300; color: var(--text-2); line-height: 1.8; margin-bottom: 24px; }
+  .footer-col-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 18px; }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 0.85rem; font-weight: 300; color: var(--text-2); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
+  .footer-social {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--navy-card); border: 1px solid var(--navy-line);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; color: var(--text-2); font-size: 0.85rem;
+    transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+  .footer-social:hover { border-color: rgba(212,168,71,0.4); color: var(--gold); transform: translateY(-2px); }
+  .footer-bottom {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 24px; border-top: 1px solid var(--navy-line);
+    font-size: 0.78rem; color: var(--text-3);
+  }
+  .footer-bottom a { color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+  .footer-bottom a:hover { color: var(--text-2); }
+
+  /* ─── MOBILE ─── */
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 1000;
+    background: var(--navy-mid); padding: 24px 6%;
+    flex-direction: column;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+  .mobile-close { background: none; border: none; color: var(--text-2); font-size: 1.6rem; cursor: pointer; }
+  .mobile-links { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .mobile-links a {
+    color: var(--text-2); font-size: 1.1rem; font-weight: 300;
+    padding: 14px 0; text-decoration: none; border-bottom: 1px solid var(--navy-line);
+    transition: color 0.2s;
+  }
+  .mobile-links a:hover { color: var(--gold); }
+  .mobile-cta { margin-top: 28px; }
+  .mobile-cta .btn { width: 100%; justify-content: center; }
+
+  /* toast */
+  .toast {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
+    background: var(--navy-card); border: 1px solid rgba(212,168,71,0.4);
+    color: var(--gold); padding: 12px 24px; border-radius: 999px;
+    font-size: 0.85rem; font-weight: 400;
+    opacity: 0; transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none; z-index: 9999;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  @media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+  }
+  @media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .custom-row { flex-direction: column; }
+    .btn-donate-now { width: 100%; justify-content: center; }
+    .ussd-top { flex-direction: column; gap: 14px; }
+    .payment-logos { flex-wrap: wrap; }
+  }
 </style>
-    <body>
-        <nav>
-            <div class="navigation">
-                <div class="logo">
-                    <div class="logo_png"></div>
-                </div>
-                <ul class="menu_links">
-                    <li>
-                        <a href="../index.html" class="menu_about">
-                            <p >Home</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../About_missions.html" class="menu_about">
-                            <p data-i18n="menu_story">Our Story</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../NEWS-BLOG-main/main.html">
-                            <p class="menu_article" data-i18n="menu_news">News</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../impact/index.html">
-                            <p class="menu_impact" data-i18n="menu_impact">Community Impact</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../About_gallery.html">
-                            <p class="menu_gallery" data-i18n="menu_gallery">Gallery</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../partnership/index.html">
-                            <p class="menu_partner" data-i18n="menu_partners">Partners</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../individuals/index.html">
-                            <p class="menu_faq" data-i18n="menu_faq">FAQs</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../contact/index.html">
-                            <p class="menu_contact" data-i18n="menu_contact">Contact</p>
-                        </a>
-                    </li>
-                </ul>
-            <div class="lang-switcher-container">
-                <div class="lang-current" id="langCurrent" onclick="toggleLangPopup()">
-                    <img src="https://flagcdn.com/w40/gb.png" id="currentFlag" alt="English">
-                    <span id="currentLangText">English</span>
-                    <i class="arrow-down"></i>
-                </div>
+</head>
+<body>
 
-                <div class="lang-popup" id="langPopup">
-                    <div class="lang-option" onclick="changeLanguage('en', 'English', 'https://flagcdn.com/w40/gb.png')">
-                        <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
-                    </div>
-                    <div class="lang-option" onclick="changeLanguage('fr', 'Français', 'https://flagcdn.com/w40/fr.png')">
-                        <img src="https://flagcdn.com/w40/fr.png" alt="French"> Français
-                    </div>
-                    <div class="lang-option" onclick="changeLanguage('ar', 'العربية', 'https://flagcdn.com/w40/sa.png')">
-                        <img src="https://flagcdn.com/w40/sa.png" alt="Arabic"> العربية
-                    </div>
-                </div>
-            </div>
-                <div class="overlay_bg"></div>
-                <div class="scene_kep">
-                    <div class="scene-container">
-
-                        <div class="floating-bubble content_bubble mn" data-i18n="bubble_body">
-                            ZOE-TIRZAH
-                        </div>
-                        
-                        <div class="floating-circle content_bubble min">
-                            <span data-i18n="bubble_missions">Missions</span>
-                        </div>
-
-                        <div class="video-card">
-                            <div class="video-content">
-                                
-                            </div>
-                        </div>
-                                                
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="div_main">
-            <div class="col-6 text-right">
-                <div class="header-buttons">
-                    <a href="../donate/index.html" class="main-header__button d-none d-lg-inline-block black">
-                        <div class="donate-button content_donate_mn" data-i18n="button_donate">
-                            Donate Now
-                            <img src="../images/logo/logo_tirzah.png" alt="" style="width:50px;height: 50px; border-radius: 50%;" />
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="menu_icon">
-                <svg class="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-                    viewBox="0 0 24 24" aria-label="Open Menu" data-i18n="icon_open">
-                    <path fill="#000000" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"/>
-                </svg>
-
-                <svg class="close" xmlns="http://www.w3.org/2000/svg" height="24" width="24" 
-                    viewBox="0 0 24 24" aria-label="Close Menu" data-i18n="icon_close">
-                    <path d="M0 0h24v24H0z" fill="none"/>
-                    <path fill="crimson" d="M19 6.41L17.59 5 12 10.59 
-                                        6.41 5 5 6.41 10.59 12 
-                                        5 17.59 6.41 19 12 13.41 
-                                        17.59 19 19 17.59 13.41 12z"/>
-                </svg>
-            </div>                
+<div id="toast" class="toast"  data-i18n="lang">Copied to clipboard ✓</div>
+  <div class="skeleton">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+    <p  >We are converting this page to <span data-i18n="lang">FRENCH</span>, please hld on</p>
+  </div>
+<header class="nav" id="nav">
+  <a href="index.html" class="nav-brand">ZOE<span>·</span>TIRZAH</a>
+  <nav class="nav-links">
+    <a href="index.html"  data-i18n="lang">Home</a>
+    <a href="About_missions.html"  data-i18n="lang">Our Story</a>
+    <a href="NEWS-BLOG-main/main.html"  data-i18n="lang">News</a>
+    <a href="impact/index.html"  data-i18n="lang">Impact</a>
+    <a href="About_gallery.html"  data-i18n="lang">Gallery</a>
+    <a href="partnership/index.html"  data-i18n="lang">Partners</a>
+    <a href="contact/index.html"  data-i18n="lang">Contact</a>
+    <div class="lan_select">
+        <div class="item default" data-lang="en">
+        <div class="flag">🌐</div>
+        <b>En</b>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
         </div>
+        <div class="List_drop">
+        <div class="item" data-lang="fr">
+            <div class="flag"></div>
+            <b>Fr</b>
+        </div>
+        <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>Ar</b>
+        </div>
+        <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>En</b>
+        </div>
+        </div>
+    </div>
+    <a href="donate/index.html" class="nav-cta">Donate Now</a>
 
-        <section class="final">
-        <h2>Every Act of Giving Matters</h2>
-        <p>
-            You may not be able to give everything,
-            but through giving something, lives are transformed.
-        </p>
-        </section>
+  </nav>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-        <section class="donation-section">
-            <div class="donation-header">
-                <h1 data-i18n="donation_title">Support Our Mission</h1>
-                <p data-i18n="donation_intro">
-                    Your generosity helps us reach more people, support our programs, and make a lasting impact.
-                    Choose a donation tier or enter your own amount below.
-                </p>
-            </div>
-
-            <div class="donation-grid">
-                <div class="donation-card">
-                    <h2>100 cedis</h2>
-                    <p data-i18n="donation_tier_10_desc">
-                        Help provide learning materials for children in our programs.
-                    </p>
-                    <button data-i18n="donation_button" data-amn="10" >Donate</button>
-                </div>
-
-                <div class="donation-card">
-                    <h2>50 cedis</h2>
-                    <p data-i18n="donation_tier_25_desc">
-                        Support community outreach events and local missions.
-                    </p>
-                    <button data-i18n="donation_button" data-amn="25">Donate</button>
-                </div>
-
-                <div class="donation-card">
-                    <h2>500 cedis</h2>
-                    <p data-i18n="donation_tier_50_desc">
-                        Assist with operational costs and program expansion.
-                    </p>
-                    <button data-i18n="donation_button" data-amn="50">Donate</button>
-                </div>
-
-                <div class="donation-card">
-                    <h2>100 cedis0</h2>
-                    <p data-i18n="donation_tier_100_desc">
-                        Make a strong impact and help sustain multiple initiatives.
-                    </p>
-                    <button data-i18n="donation_button" data-amn="100">Donate</button>
-                </div>
-            </div>
-
-            <div class="custom-donation">
-                <input
-                    type="number"
-                    placeholder="Custom Amount"
-                    data-i18n-placeholder="donation_custom_placeholder" id='custom_amount'
-                >
-                <button data-i18n="donation_custom_button donation_button" data-amn="10" onclick="GetAmount()">Donate Now</button>
-            </div>
-        </section>
-<section style="
-  padding:100px 20px;
-">
-
-
-<div class="give-grid">
-
-  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=900&q=80');">
-    <div class="give-overlay">
-      <h3>Clothes & Personal Items</h3>
-      <p>Restore dignity through clothing, shoes, bedding, and essential items.</p>
-      <a href="#" class="cta">Give Items</a>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <span class="nav-brand">ZOE<span style="color:var(--gold)">·</span>TIRZAH</span>
+    <button class="mobile-close" id="mobileClose">✕</button>
+  </div>
+  <div class="mobile-links">
+    <a href="index.html"  data-i18n="lang">Home</a>
+    <a href="About_missions.html"  data-i18n="lang"Our Story</a>
+    <a href="NEWS-BLOG-main/main.html"  data-i18n="lang">News</a>
+    <a href="impact/index.html"  data-i18n="lang">Impact</a>
+    <a href="About_gallery.html"  data-i18n="lang">Gallery</a>
+    <a href="partnership/index.html"  data-i18n="lang">Partners</a>
+    <a href="contact/index.html"  data-i18n="lang">Contact</a>
+    <div class="lan_select">
+        <div class="item default" data-lang="en">
+        <div class="flag">🌐</div>
+        <b>En</b>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+        </div>
+        <div class="List_drop">
+        <div class="item" data-lang="fr">
+            <div class="flag"></div>
+            <b>Fr</b>
+        </div>
+        <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>Ar</b>
+        </div>
+        <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>En</b>
+        </div>
+        </div>
     </div>
   </div>
-
-  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80');">
-    <div class="give-overlay">
-      <h3>Food Stuffs</h3>
-      <p>Support families and outreach programs with food and basic necessities.</p>
-      <a href="#" class="cta">Donate Food</a>
-    </div>
+  <div class="mobile-cta">
+    <a href="donate/index.html" class="btn btn-gold"  data-i18n="lang">Donate Now</a>
   </div>
-
-  <div class="give-card" style="background-image:url('https://amrefusa.org/wp-content/uploads/2020/01/Medical-Outreach-2_1.jpg');">
-    <div class="give-overlay">
-      <h3>Medicines & Supplies</h3>
-      <p>Help bring healing through medical support and approved medications.</p>
-      <a href="#" class="cta">Support Health</a>
-    </div>
-  </div>
-
-  <div class="give-card" style="background-image:url(https://ichef.bbci.co.uk/news/480/cpsprodpb/41B6/production/_100722861_image16.jpg.webp);">
-    <div class="give-overlay">
-      <h3>Financial Giving</h3>
-      <p>Partner with us through financial support for missions and ministry work.</p>
-      <a href="#" class="cta">Give Now</a>
-    </div>
-  </div>
-
-  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80');">
-    <div class="give-overlay">
-      <h3>Your Time</h3>
-      <p>Volunteer your skills, strength, and presence to serve others.</p>
-      <a href="#" class="cta">Volunteer</a>
-    </div>
-  </div>
-
-  <div class="give-card" style="background-image:url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=900&q=80');">
-    <div class="give-overlay">
-      <h3>Prayer</h3>
-      <p>Stand with us in prayer for souls, leadership, and ongoing missions.</p>
-      <a href="#" class="cta">Join Prayer</a>
-    </div>
-  </div>
-
 </div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label"  data-i18n="lang">Giving Changes Everything</div>
+  <h1  data-i18n="lang">Every act of giving<br><em>transforms a life.</em></h1>
+  <p class="hero-sub"  data-i18n="lang">
+    You may not be able to give everything — but through giving something,
+    communities are reached, souls are touched, and the Kingdom advances.
+  </p>
+  <div class="hero-actions">
+    <a href="#give-now" class="btn btn-gold"  data-i18n="lang">Give Now</a>
+    <a href="#ways-to-give" class="btn btn-ghost"  data-i18n="lang">Ways to Give</a>
+  </div>
+  <div class="hero-scroll">
+    Scroll
+    <svg viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 3v18M3 16l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- GIVE NOW -->
+<section class="section" id="give-now">
+  <div class="section-inner">
+    <div class="section-label"  data-i18n="lang">Support the Mission</div>
+    <h2 class="section-title"  data-i18n="lang">Choose your <em>gift</em></h2>
+    <p class="section-desc"  data-i18n="lang">
+      Your generosity directly powers outreach, community programs, and missions to unreached peoples — including our next mission to Axim, Ghana in August 2026.
+    </p>
+
+    <div class="amount-grid" id="amountGrid">
+      <div class="amount-card" data-amount="50" onclick="selectCard(this, 50)">
+        <div class="amount-val"><span>₵</span  data-i18n="lang">50</div>
+        <div class="amount-desc"  data-i18n="lang">Support community outreach events and local missions.</div>
+        <div class="check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+      </div>
+      <div class="amount-card" data-amount="100" onclick="selectCard(this, 100)">
+        <div class="amount-popular">Most Given</div>
+        <div class="amount-val"><span>₵</span>100</div>
+        <div class="amount-desc">Help provide learning materials for children in our programs.</div>
+        <div class="check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+      </div>
+      <div class="amount-card" data-amount="500" onclick="selectCard(this, 500)">
+        <div class="amount-val"><span>₵</span>500</div>
+        <div class="amount-desc">Assist with operational costs and program expansion.</div>
+        <div class="check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+      </div>
+      <div class="amount-card" data-amount="1000" onclick="selectCard(this, 1000)">
+        <div class="amount-val"><span>₵</span>1,000</div>
+        <div class="amount-desc">Make a strong impact and help sustain multiple initiatives.</div>
+        <div class="check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-row">
+      <div class="custom-input-wrap">
+        <span class="currency-tag"  data-i18n="lang">₵</span>
+        <input class="custom-input" type="number" id="customAmount" placeholder="Or enter a custom amount…" min="1" oninput="clearCards()">
+      </div>
+      <button class="btn-donate-now" onclick="handleDonate()"  data-i18n="lang">Proceed to Give →</button>
+    </div>
+  </div>
+</section>
+
+<!-- WAYS TO GIVE -->
+<section class="section" id="ways-to-give" style="padding-top: 0;">
+  <div class="section-inner">
+    <div class="section-label"  data-i18n="lang">Beyond Money</div>
+    <h2 class="section-title"  data-i18n="lang">Many ways to <em>give</em></h2>
+    <div class="rule"></div>
+    <div class="give-grid">
+
+      <div class="give-card">
+        <div class="give-bg" style="background-image: url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="give-overlay">
+          <div class="give-icon">👕</div>
+          <div class="give-title"  data-i18n="lang">Clothes & Personal Items</div>
+          <div class="give-desc"  data-i18n="lang">Restore dignity through clothing, shoes, bedding, and essential items.</div>
+          <a href="#" class="give-link"  data-i18n="lang">Give Items <svg viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        </div>
+      </div>
+
+      <div class="give-card">
+        <div class="give-bg" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="give-overlay">
+          <div class="give-icon">🥦</div>
+          <div class="give-title"  data-i18n="lang">Food & Supplies</div>
+          <div class="give-desc"  data-i18n="lang">Support families and outreach programs with food and basic necessities.</div>
+          <a href="#" class="give-link"  data-i18n="lang">Donate Food <svg viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        </div>
+      </div>
+
+      <div class="give-card">
+        <div class="give-bg" style="background-image: url('https://amrefusa.org/wp-content/uploads/2020/01/Medical-Outreach-2_1.jpg');"></div>
+        <div class="give-overlay">
+          <div class="give-icon">💊</div>
+          <div class="give-title"  data-i18n="lang">Medicines & Health</div>
+          <div class="give-desc"  data-i18n="lang">Help bring healing through medical support and approved medications.</div>
+          <a href="#" class="give-link"  data-i18n="lang">Support Health <svg viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        </div>
+      </div>
+
+      <div class="give-card">
+        <div class="give-bg" style="background-image: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="give-overlay">
+          <div class="give-icon">🙌</div>
+          <div class="give-title"  data-i18n="lang">Your Time</div>
+          <div class="give-desc"  data-i18n="lang">Volunteer your skills, strength, and presence to serve others.</div>
+          <a href="https://forms.gle/LG43ReJcDcAizGBr7" class="give-link"  data-i18n="lang">Volunteer <svg viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        </div>
+      </div>
+
+      <div class="give-card">
+        <div class="give-bg" style="background-image: url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="give-overlay">
+          <div class="give-icon">🙏</div>
+          <div class="give-title"  data-i18n="lang">Prayer</div>
+          <div class="give-desc"  data-i18n="lang">Stand with us in prayer for souls, leadership, and ongoing missions.</div>
+          <a href="contact/index.html" class="give-link"  data-i18n="lang">Join Prayer <svg viewBox="0 0 14 14"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+        </div>
+      </div>
+
+      <div class="give-card" style="background: linear-gradient(135deg, var(--navy-card) 0%, #0d2442 100%); border: 1px solid var(--navy-line);">
+        <div class="give-overlay" style="background: none; justify-content: center; text-align: center; align-items: center;">
+          <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 16px;">"</div>
+          <div style="font-family: var(--serif); font-size: 1.15rem; font-style: italic; color: var(--text-1); line-height: 1.65; max-width: 240px;"  data-i18n="lang">
+            Each of you should give what you have decided in your heart to give.
+          </div>
+          <div style="font-size: 0.78rem; color: var(--gold); margin-top: 16px; letter-spacing: 0.1em;"  data-i18n="lang">2 CORINTHIANS 9:7</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="payment-section" id="payment">
+  <div class="payment-inner">
+    <div class="section-label" style="justify-content: center;"  data-i18n="lang">Mobile Money Giving</div>
+    <h2 class="section-title" style="text-align: center;"  data-i18n="lang">Give via <em>Mobile Money</em></h2>
+    <p style="font-size:0.95rem; font-weight:300; color:var(--text-2); line-height:1.8; text-align: center; max-width:440px; margin: 0 auto;"   data-i18n="lang">
+      Giving is simple and secure. Use any of Ghana's major mobile money platforms to donate directly.
+    </p>
+
+    <div class="payment-logos">
+      <div class="logo-pill">
+        <img src="https://images.seeklogo.com/logo-png/55/1/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png" alt="MTN MoMo">
+        <span class="logo-pill-name"  data-i18n="lang">MTN MoMo</span>
+      </div>
+      <div class="logo-pill">
+        <img src="https://static.wikia.nocookie.net/logopedia/images/7/7b/ATGhana.png/revision/latest?cb=20230705220618" alt="AirtelTigo">
+        <span class="logo-pill-name"  data-i18n="lang">AirtelTigo</span>
+      </div>
+      <div class="logo-pill">
+        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFMimL60qjpGw/company-logo_200_200/company-logo_200_200/0/1710192723468?e=2147483647&v=beta&t=F7jN2tiZqGos6c2mTTIOPQHqAPUs0oUAvKdyBDLeFaE" alt="Telecel">
+        <span class="logo-pill-name"  data-i18n="lang">Telecel</span>
+      </div>
+    </div>
+
+    <div class="ussd-card">
+      <div class="ussd-top">
+        <div>
+          <div class="ussd-label"  data-i18n="lang">Donations USSD Code</div>
+          <div class="ussd-code"  data-i18n="lang">**234*16932*GHS#</div>
+        </div>
+        <button class="ussd-copy-btn" onclick="copyCode()"  data-i18n="lang">Copy Code</button>
+      </div>
+      <div class="ussd-divider"></div>
+      <div class="ussd-name-label"  data-i18n="lang">Account Name</div>
+      <div class="ussd-name-val"  data-i18n="lang">TAC-ZOE Worship Centre</div>
+      <div class="ussd-church"  data-i18n="lang">The Apostolic Church — Ghana · Zoe Worship Centre</div>
+    </div>
+
+    <div class="thank-note"   data-i18n="lang">God bless you for giving.</div>
+  </div>
+</section>
+
+<!-- VERSE -->
+<section class="verse-section">
+  <div class="verse"   data-i18n="lang">
+    "Whoever sows sparingly will also reap sparingly, and whoever sows generously will also reap generously."
+  </div>
+  <div class="verse-ref"  data-i18n="lang">2 Corinthians 9:6</div>
 </section>
 
 
-        <section class="donation_bg" id="Donation_box">
-            <div class="donation-container">
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">ZOE <span>·</span> TIRZAH</div>
+      <p class="footer-brand-desc"  data-i18n="lang">A welcoming community of faith dedicated to loving God and loving others. Join us as we carry the gospel to unreached communities.</p>
+      <div class="footer-socials">
+        <a   data-i18n="lang" href="https://www.facebook.com/AZWC17" class="footer-social" aria-label="Facebook">f</a>
+        <a   data-i18n="lang" href="https://www.instagram.com/tac_zoe" class="footer-social" aria-label="Instagram">ig</a>
+        <a   data-i18n="lang" href="https://www.tiktok.com/@tac_zoe" class="footer-social" aria-label="TikTok">tt</a>
+        <a   data-i18n="lang" href="https://wa.me/233553838464" class="footer-social" aria-label="WhatsApp">wa</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title"  data-i18n="lang">Quick Links</div>
+      <div class="footer-links"  data-i18n="lang">
+        <a href="index.html"  data-i18n="lang">Home</a>
+        <a href="About_missions.html"  data-i18n="lang">Our Story</a>
+        <a href="NEWS-BLOG-main/main.html"  data-i18n="lang">News</a>
+        <a href="About_gallery.html"  data-i18n="lang">Gallery</a>
+        <a href="contact/index.html"  data-i18n="lang">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title"   data-i18n="lang">Missions</div>
+      <div class="footer-links">
+        <a href="individuals/index.html"   data-i18n="lang">FAQs</a>
+        <a href="partnership/index.html"   data-i18n="lang">Partners</a>
+        <a href="donate/index.html"  data-i18n="lang">Donate</a>
+        <a href="https://forms.gle/LG43ReJcDcAizGBr7"  data-i18n="lang">Partner With Us</a>
+        <a href="impact/index.html"  data-i18n="lang">Community Impact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title"   data-i18n="lang">Contact</div>
+      <div class="footer-links">
+        <a href="mailto:taczoemissions@gmail.com"   data-i18n="lang">taczoemissions@gmail.com</a>
+        <a href="https://wa.me/233509660388"   data-i18n="lang">WhatsApp: +233 509 660 388</a>
+        <a href="tel:+233555033857"   data-i18n="lang">Call: +233 555 033 857</a>
+      </div>
+    </div>
+  </div>
 
-                <div class="header-text" data-i18n="donation_via_title">
-                    MAKE DONATIONS VIA
-                </div>
+  <div class="footer-bottom">
+    <div style="display:flex; gap:20px;">
+      <a href="#"   data-i18n="lang">Cookies</a>
+      <a href="#"   data-i18n="lang">Terms</a>
+      <a href="#"   data-i18n="lang">Privacy</a>
+    </div>
+    <p   data-i18n="lang">© 2020 Reg. Mission in Ghana & Beyond (1175049)</p>
+  </div>
+</footer>
 
-                <div class="payment-logos">
-                    <div>
-                        <div class="logo-circle logo-mtn">
-                            <img
-                                src="https://images.seeklogo.com/logo-png/55/1/mtn-momo-mobile-money-uganda-logo-png_seeklogo-556395.png"
-                                alt="MTN Mobile Money Logo"
-                            >
-                        </div>
-                        <div class="logo-label" data-i18n="donation_payment_mobile_money">
-                            Mobile Money
-                        </div>
-                    </div>
+<script src="../js/extractor.js"></script>
+<script src="../js/langauges.js"></script>
+<script>
 
-                    <div>
-                        <div class="logo-circle logo-airteltigo">
-                            <img
-                                src="https://static.wikia.nocookie.net/logopedia/images/7/7b/ATGhana.png/revision/latest?cb=20230705220618"
-                                alt="AirtelTigo Money Logo"
-                            >
-                        </div>
-                        <div class="logo-label" data-i18n="donation_payment_money">
-                            Money
-                        </div>
-                    </div>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
 
-                    <div>
-                        <div class="logo-circle logo-cash">
-                            <img
-                                src="https://media.licdn.com/dms/image/v2/D4D0BAQFMimL60qjpGw/company-logo_200_200/company-logo_200_200/0/1710192723468?e=2147483647&v=beta&t=F7jN2tiZqGos6c2mTTIOPQHqAPUs0oUAvKdyBDLeFaE"
-                                alt="Telecel money Logo"
-                            >
-                        </div>
-                        <div class="logo-label" data-i18n="donation_payment_cash">
-                            Cash
-                        </div>
-                    </div>
-                </div>
+  // Mobile menu
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('mobileClose').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = '';
+  });
 
-                <div class="payment-block">
-                    <div class="payment-label" data-i18n="donation_label">
-                        Donations:
-                    </div>
-                    <div class="ussd-code">
-                        **234*16932*GHS#
-                    </div>
-                </div>
+  // Amount selection
+  let selectedAmount = null;
+  function selectCard(card, amount) {
+    document.querySelectorAll('.amount-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    selectedAmount = amount;
+    document.getElementById('customAmount').value = '';
+  }
+  function clearCards() {
+    document.querySelectorAll('.amount-card').forEach(c => c.classList.remove('selected'));
+    selectedAmount = null;
+  }
 
-                <div class="name-block">
-                    <div class="label" data-i18n="donation_name_label">
-                        NAME:
-                    </div>
-                    <div class="value" data-i18n="donation_name_value">
-                        TAC-ZOE WORSHIP CENTRE
-                    </div>
-                </div>
+  function handleDonate() {
+    const custom = document.getElementById('customAmount').value;
+    const amount = custom ? parseInt(custom) : selectedAmount;
+    if (!amount || amount <= 0) {
+      alert('Please select or enter a donation amount.');
+      return;
+    }
+    window.location.href = `../payment/index.html?amount=${amount}`;
+  }
 
-                <div class="footer-text">
-                    <div class="church-name" data-i18n="donation_church_parent">
-                        The Apostolic Church - Ghana
-                    </div>
-                    <span data-i18n="donation_church_name">
-                        Zoe Worship Centre
-                    </span>
-                </div>
+  // Copy USSD
+  function copyCode() {
+    navigator.clipboard.writeText('**234*16932*GHS#').then(() => {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2400);
+    });
+  }
 
-                <div class="thank-you" data-i18n="donation_thank_you">
-                    GOD BLESS YOU FOR GIVING
-                </div>
+  // Entry animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
 
-            </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <div class="brand">
-                    <header class="brand-title-vt-g" data-i18n="footer_brand_title">ZOE Tirzah</header>
-                    <p class="brand-title-vt-p" data-i18n="footer_brand_desc">
-                        Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others.
-                        We invite you to join us as we explore God's Word, experience His presence and serve our community.
-                    </p>
-                    <div class="social_links">
-                        <a href="https://www.facebook.com/AZWC17" aria-label="Facebook" data-i18n="footer_social_facebook"></a>
-                        <a href="https://www.instagram.com/tac_zoe" aria-label="Instagram" data-i18n="footer_social_instagram"></a>
-                        <a href="https://www.tiktok.com/@tac_zoe" aria-label="TikTok" data-i18n="footer_social_tiktok"></a>
-                        <a id="whatsappLink_footer_2" href="" aria-label="WhatsApp" data-i18n="footer_social_whatsapp"></a>
-                    </div>
-                </div>
-
-                <div class="links">
-                    <h2 data-i18n="footer_quicklinks_title">Quick links</h2>
-                    <ul>
-                        <li><a href="../About_missions.html"><p data-i18n="footer_quicklinks_story">Our Story</p></a></li>
-                        <li><a href="../index.html"><p data-i18n="footer_quicklinks_home">Home</p></a></li>
-                        <li><a href="../NEWS-BLOG-main/main.html"><p data-i18n="footer_quicklinks_news">News</p></a></li>
-                        <li><a href="../About_gallery.html"><p data-i18n="footer_quicklinks_gallery">Gallery</p></a></li>
-                        <li><a href="../contact/index.html"><p class="menu_article" data-i18n="footer_quicklinks_contact">Contact</p></a></li>
-                    </ul>
-                </div>
-
-                <div class="links">
-                    <h2 data-i18n="footer_missions_title">Missions</h2>
-                    <ul>
-                        <li><a href="../individuals/index.html"><p data-i18n="footer_missions_faqs">FAQs</p></a></li>
-                        <li><a href="../partnership/index.html"><p data-i18n="footer_missions_partners">Partners</p></a></li>
-                        <li><a href="../donate/index.html"><p data-i18n="footer_missions_donate">Donate</p></a></li>
-                        <li><a href="https://forms.gle/LG43ReJcDcAizGBr7"><p data-i18n="footer_missions_partnerwithus">Partner with Us</p></a></li>
-                    </ul>
-                </div>
-
-                <div class="links">
-                    <h2 data-i18n="footer_contact_title">Contact</h2>
-                    <ul>
-                        <li><a href="mailto:tac.azwc@gmail.com"><p data-i18n="footer_contact_email">zoeworshipcentreorganization@gmail.com</p></a></li>
-                        <li><span data-i18n="footer_contact_whatsapp_label">WhatsApp :</span></li>
-                        <li><a id="whatsappLink_footer" href="tel:+233553838464"><p data-i18n="footer_contact_whatsapp_number">(233) - 553 838 464</p></a></li>
-                        <li><span data-i18n="footer_contact_caller_label">Caller :</span></li>
-                        <li><a href="tel:+4755348384649"><p data-i18n="footer_contact_caller_number">(+47) - 5534 838 4649</p></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="site-footer">
-                <div class="footer-top">
-                    <div class="email-signup">
-                        <h3 data-i18n="footer_signup_title">Stay up to date.</h3>
-                        <form>
-                            <input type="email" placeholder="Email Address" data-i18n="footer_signup_placeholder">
-                            <button type="submit" data-i18n="footer_signup_button">Sign Up</button>
-                        </form>
-                        <p data-i18n="footer_signup_desc">
-                            We occasionally send newsletters & mission information emails. Please read our privacy policy for more information.
-                        </p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter" data-i18n="footer_social_twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <nav class="footer-nav">
-                        <a href="#" data-i18n="footer_nav_cookies">Cookies</a>
-                        <a href="#" data-i18n="footer_nav_terms">Terms</a>
-                        <a href="#" data-i18n="footer_nav_privacy">Privacy</a>
-                    </nav>
-                    <p data-i18n="footer_bottom_text">
-                        © 2020 Reg. mission in Ghana & Beyond (1175049) and Scotland (SCO48330).
-                    </p>
-                </div>
-            </div>
-        </footer>
-       <script src="../js/nav.js"></script>
-       <script>
-            const Donate_Btn = document.querySelectorAll('[data-i18n="donation_button"]');
-            Donate_Btn.forEach(element=>{
-                element.addEventListener('click',function(){
-                    Amount = element.getAttribute('data-amn');
-                    window.location.href = `../payment/index.html?{Amn}={A0 cedismount}`;
-                })
-            })
-            function GetAmount(){
-                const InputAmount = document.querySelector('#custom_amount').value;
-                if(InputAmount > 0 && InputAmount !=""){
-                     window.location.href = `../payment/index.html?{Amn}={I0 cedisnputAmount}`;
-                }else{
-                    alert('Add a number value to proceed');
-                }
-            }
-       </script>
-
-    </body>
+  document.querySelectorAll('.amount-card, .give-card, .ussd-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
 </html>
-

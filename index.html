@@ -89,6 +89,7 @@
       background: var(--white);
       line-height: 1.6;
       transition: all 0.3s;
+      cursor: pointer;
     }
     .hide{
       transform: translateY(-10px);
@@ -99,13 +100,39 @@
 
       opacity: 1;
     }
+    .skeleton{
+      display: none;
+      transition:all 1s ease;
+      transform: scale(0);
+
+    }
+    .skeleton.scrolled{
+      position: fixed;
+      top:0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #071b2a;
+      z-index: 999999999;
+      display: grid;
+      place-items: center;
+      color:var(--white);
+      font-size: 3rem;
+      transform: scale(1);
+    }
+    .skeleton span{
+      color:var(--gold);
+      font-weight: bolder;
+      text-transform: capitalize;
+    }
+
     .lan_select{
       width:70px;
       min-height: 30px;
       color:var(--white);
       position: relative;
-       padding:5px;
-      background-color: #071b2a;
+      padding:5px;
+      
 
     }
 
@@ -117,6 +144,7 @@
       width: 100%;
       height: 30px;
       padding-block: 5px;
+      background-color: #071b2a;
     }
     .lan_select .List_drop .item:hover{
       background-color: #078A5C;
@@ -957,6 +985,10 @@
     </div>
   </div>
 </div>
+<div class="skeleton">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+  <p>We are converting this page to <span>FRENCH</span>, please hld on</p>
+</div>
 
 <div class="nav-wrapper" id="navWrapper">
   <nav>
@@ -971,6 +1003,27 @@
       <a href="About_gallery.html" data-i18n="nav.gallery">Gallery</a>
       <a href="partnership/index.html" data-i18n="nav.partners">Partners</a>
       <a href="contact/index.html" data-i18n="nav.contact">Contact</a>
+      <div class="lan_select">
+        <div class="item default" data-lang="en">
+          <div class="flag">🌐</div>
+          <b>En</b>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+        </div>
+        <div class="List_drop">
+          <div class="item" data-lang="fr">
+            <div class="flag"></div>
+            <b>Fr</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>Ar</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>En</b>
+          </div>
+        </div>
+      </div>
     </div>
     <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -993,7 +1046,8 @@
     <a href="partnership/index.html" data-i18n="navMobile.partners">Partners</a>
     <a href="individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
     <a href="contact/index.html" data-i18n="navMobile.contact">Contact</a>
-        <div class="lan_select">
+    
+    <div class="lan_select">
       <div class="item default" data-lang="en">
         <div class="flag">🌐</div>
         <b>En</b>
@@ -1013,7 +1067,6 @@
           <b>En</b>
         </div>
       </div>
-
     </div>
   </div>
   <div class="mobile-cta">
@@ -1649,21 +1702,8 @@
   (() => {
     'use strict';
 
-    const translationMap = {};
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-      const key = element.getAttribute('data-i18n');
-      // Avoid overwriting parent keys if nested (skip if element has a data-i18n parent)
-      if (element.closest('[data-i18n]') !== element.parentElement?.closest('[data-i18n]')) {
-        // but simpler: only take leaf elements (no children with data-i18n)
-        if (!element.querySelector('[data-i18n]')) {
-          translationMap[key] = element.textContent.trim();
-        }
-      }
-    });
-    console.log(translationMap);
-
     const nav = document.getElementById('navWrapper');
-    const scrollTopBtn = document.getElementById('scrollTop');
+    const scrollTopBtn = document.getElementById('scrollTop');    
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
       nav.classList.toggle('scrolled', y > 60);
@@ -1748,14 +1788,6 @@
     const trackerSection = document.getElementById('axim-mission');
     let trackerAnimated = false;
 
-    const LanguageChange = document.querySelectorAll('.List_drop .item');
-    LanguageChange.forEach(element=>{
-      element.addEventListener('click',function(){
-        const Language_type = element.querySelector('b').textContent;
-        document.querySelector('.item.default').querySelector('b').textContent = Language_type;
-        loadLanguage(Language_type);
-      });
-    })
 
     const observed = new Set();
     const revealObs = new IntersectionObserver(entries => {

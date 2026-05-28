@@ -89,7 +89,31 @@ img{
 .container{
   width:min(1180px,92%);
   margin:auto;
-}
+}      .skeleton{
+        display: none;
+        transition:all 1s ease;
+        transform: scale(0);
+
+      }
+      .skeleton.scrolled{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #071b2a;
+        z-index: 999999999;
+        display: grid;
+        place-items: center;
+        color:var(--white);
+        font-size: 3rem;
+        transform: scale(1);
+      }
+      .skeleton span{
+        color:var(--gold);
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
     .hide{
       transform: translateY(-10px);
       opacity: 0;
@@ -99,6 +123,31 @@ img{
 
       opacity: 1;
     }
+      .skeleton{
+        display: none;
+        transition:all 1s ease;
+        transform: scale(0);
+
+      }
+      .skeleton.scrolled{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #071b2a;
+        z-index: 999999999;
+        display: grid;
+        place-items: center;
+        color:var(--white);
+        font-size: 3rem;
+        transform: scale(1);
+      }
+      .skeleton span{
+        color:var(--gold);
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
     .lan_select{
       width:70px;
       min-height: 30px;
@@ -738,21 +787,46 @@ footer {
 
 <body>
 
+  <div class="skeleton">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+    <p>We are converting this page to <span>FRENCH</span>, please hld on</p>
+  </div>
   <div class="nav-wrapper" id="navWrapper">
     <nav>
-      <a href="../index.html" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         ZOE<span class="nav-logo-dot">·</span>TIRZAH
       </a>
       <div class="nav-links">
-        <a href="../index.html" data-i18n="nav.home">Home</a>
-        <a href="../About_missions.html" data-i18n="nav.ourstory">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
-        <a href="../impact/index.html" data-i18n="nav.impact">Impact</a>
-        <a href="../About_gallery.html" data-i18n="nav.gallery">Gallery</a>
-        <a href="../partnership/index.html" data-i18n="nav.partners">Partners</a>
-        <a href="../contact/index.html" data-i18n="nav.contact">Contact</a>
+        <a href="index.html" data-i18n="lang">Home</a>
+        <a href="About_missions.html" data-i18n="lang">Our Story</a>
+        <a href="NEWS-BLOG-main/main.html" data-i18n="lang">News</a>
+        <a href="impact/index.html" data-i18n="lang">Impact</a>
+        <a href="About_gallery.html" data-i18n="lang">Gallery</a>
+        <a href="partnership/index.html" data-i18n="lang">Partners</a>
+        <a href="contact/index.html" data-i18n="lang">Contact</a>
+        <div class="lan_select">
+          <div class="item default" data-lang="en">
+            <div class="flag">🌐</div>
+            <b>En</b>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+          </div>
+          <div class="List_drop">
+            <div class="item" data-lang="fr">
+              <div class="flag"></div>
+              <b>Fr</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>Ar</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>En</b>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="../donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -804,322 +878,321 @@ footer {
   </div>
 
 
-<section class="hero">
+  <section class="hero">
 
-  <div class="container hero-flex">
+    <div class="container hero-flex">
 
-    <div>
+      <div>
 
-      <div class="hero-tag">
-        ✨ Believers & Seekers
+        <div class="hero-tag" data-i18n="hero-believer">
+          ✨ Believers & Seekers
+        </div>
+
+        <h1 data-i18n="hero-help">
+          Helping Souls Find Christ & Grow Deeply.
+        </h1>
+
+        <p data-i18n="hero-search">
+          Whether you are searching for hope, prayer, direction, healing, or spiritual growth, Zoe Tirzah Missions exists to walk with you through every step of your journey with Jesus Christ.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#" class="btn btn-primary">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="hero-prayer">Request Prayer</span>
+          </a>
+
+          <a href="#" class="btn btn-secondary" data-i18n="hero-learn">
+            Learn More
+          </a>
+
+        </div>
+
       </div>
 
-      <h1>
-        Helping Souls Find Christ & Grow Deeply.
-      </h1>
+      <div class="hero-cards">
 
-      <p>
-        Whether you are searching for hope, prayer, direction, healing, or spiritual growth, Zoe Tirzah Missions exists to walk with you through every step of your journey with Jesus Christ.
-      </p>
+        <div class="float-card card-one">
+          <h3 data-i18n="hero-spirit">Need Spiritual Help?</h3>
+          <p data-i18n="hero-connect">
+            Connect with trusted believers, receive prayer, and discover biblical guidance rooted in scripture.
+          </p>
+        </div>
 
-      <div class="hero-actions">
+        <div class="float-card card-two">
+          <h3 data-i18n="hero-grow">Grow In Faith</h3>
+          <p data-i18n="hero-access">
+            Access discipleship resources, Bible study pathways, and spiritual mentorship for deeper maturity.
+          </p>
+        </div>
 
-        <a href="#" class="btn btn-primary">
-          <i class="fa-solid fa-heart"></i>
-          Request Prayer
+        <div class="float-card card-three">
+          <h3 data-i18n="hero-globalm">Global Missions</h3>
+          <p data-i18n="hero-partner_miss">
+            Partner with mission outreaches across Ghana and beyond through prayer, service, and generosity.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="quick-help">
+
+    <div class="container">
+
+      <div class="section-intro">
+        <span data-i18n="hero-find_quick">Find Help Quickly</span>
+        <h2 data-i18n="hero-start_journey">Your Journey Starts Here</h2>
+      </div>
+
+      <div class="help-grid">
+
+        <div class="help-card">
+          <div class="help-icon">
+            <i class="fa-solid fa-hands-praying"></i>
+          </div>
+
+          <h3 data-i18n="hero-1_need">I Need Prayer</h3>
+
+          <p data-i18n="hero-submit_prayer">
+            Submit prayer requests and receive encouragement from believers who care deeply about your spiritual wellbeing.
+          </p>
+        </div>
+
+        <div class="help-card">
+          <div class="help-icon">
+            <i class="fa-solid fa-book-bible"></i>
+          </div>
+
+          <h3 data-i18n="hero-1_want">I Want To Grow</h3>
+
+          <p data-i18n="hero-build_deeper">
+            Build a deeper relationship with God through scripture study, discipleship, and mentorship.
+          </p>
+        </div>
+
+        <div class="help-card">
+          <div class="help-icon">
+            <i class="fa-solid fa-earth-africa"></i>
+          </div>
+
+          <h3 data-i18n="hero-serve">I Want To Serve</h3>
+
+          <p data-i18n="hero-outreach">
+            Join outreach efforts and become part of a mission movement transforming lives through the Gospel.
+          </p>
+        </div>
+
+        <div class="help-card">
+          <div class="help-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+
+          <h3 data-i18n="hero-i_comm">I Need Community</h3>
+
+          <p data-i18n="hero-fellowship">
+            Find fellowship with believers who will support your spiritual journey with wisdom and love.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="scripture">
+
+    <div class="container">
+
+      <div class="scripture-box">
+
+        <span data-i18n="hero-james">JAMES 4:8</span>
+
+        <h2 data-i18n="hero-draw_near">
+          “Draw near to God, and He will draw near to you.”
+        </h2>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="faq">
+
+    <div class="container">
+
+      <div class="section-intro">
+        <span data-i18n="hero-question">Questions & Guidance</span>
+        <h2 data-i18n="hero-support">Spiritual Support & Direction</h2>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item">
+
+          <button class="faq-header">
+            <span data-i18n="hero-now">I need spiritual help now. What do I do?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="faq-content">
+            <div class="faq-body">
+              <p data-i18n="hero-honesty">
+                Begin by praying honestly to Jesus Christ and seeking His guidance. Connect with a trusted church community where you can receive support, prayer, discipleship, and biblical encouragement during difficult moments.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-header">
+            <span data-i18n="hero-someone_pray">Can someone pray for me?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="faq-content">
+            <div class="faq-body">
+              <p data-i18n="hero-encourages">
+                Yes. Scripture encourages believers to pray for one another. You can reach out to ministry leaders, trusted believers, or submit a prayer request through our missions team.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-header">
+            <span data-i18n="hero-1_become">How can I become a stronger witness?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="faq-content">
+            <div class="faq-body">
+              <p data-i18n="hero-i_spend_time">
+                Spend time in prayer, study the Word consistently, and allow your life to reflect the character of Christ. Effective witnessing begins with authenticity and compassion.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="faq-item">
+
+          <button class="faq-header">
+            <span data-i18n="hero-1_mission_how">How can I support missions?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="faq-content">
+            <div class="faq-body">
+              <p data-i18n="hero-can_partner">
+                You can partner with missions through giving, volunteering, evangelism, intercession, media support, and practical outreach to communities in need.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2 data-i18n="hero-help_nations">
+          Help Us Reach The Nations
+        </h2>
+
+        <p data-i18n="hero-help_proclaim">
+          Join us as we proclaim the Gospel, disciple believers, support communities, and raise missionaries across Ghana and beyond.
+        </p>
+
+        <a href="#" class="btn btn-primary" data-i18n="hero-partner_us">
+          Partner With Us
         </a>
 
-        <a href="#" class="btn btn-secondary">
-          Learn More
-        </a>
-
       </div>
 
     </div>
 
-    <div class="hero-cards">
+  </section>
 
-      <div class="float-card card-one">
-        <h3>Need Spiritual Help?</h3>
-        <p>
-          Connect with trusted believers, receive prayer, and discover biblical guidance rooted in scripture.
-        </p>
-      </div>
-
-      <div class="float-card card-two">
-        <h3>Grow In Faith</h3>
-        <p>
-          Access discipleship resources, Bible study pathways, and spiritual mentorship for deeper maturity.
-        </p>
-      </div>
-
-      <div class="float-card card-three">
-        <h3>Global Missions</h3>
-        <p>
-          Partner with mission outreaches across Ghana and beyond through prayer, service, and generosity.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- QUICK HELP -->
-
-<section class="quick-help">
-
-  <div class="container">
-
-    <div class="section-intro">
-      <span>Find Help Quickly</span>
-      <h2>Your Journey Starts Here</h2>
-    </div>
-
-    <div class="help-grid">
-
-      <div class="help-card">
-        <div class="help-icon">
-          <i class="fa-solid fa-hands-praying"></i>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name"><span data-i18n="footer.brand">ZOE · TIRZAH</span></div>
+        <p class="footer-brand-desc"><span data-i18n="footer.desc">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve our world.</span></p>
+        <p style="font-size:0.78rem;margin-bottom:10px;color:rgba(255,255,255,0.35);"><span data-i18n="footer.stayUpdated">Stay updated:</span></p>
+        <div class="footer-newsletter">
+          <input type="email" class="footer-email-input" id="footerEmail" placeholder="Your email address" aria-label="Newsletter email" data-i18n-placeholder="footer.emailPlaceholder"/>
+          <button class="footer-sub-btn" id="footerSignup"><span data-i18n="footer.signup">Sign Up</span></button>
         </div>
-
-        <h3>I Need Prayer</h3>
-
-        <p>
-          Submit prayer requests and receive encouragement from believers who care deeply about your spiritual wellbeing.
-        </p>
-      </div>
-
-      <div class="help-card">
-        <div class="help-icon">
-          <i class="fa-solid fa-book-bible"></i>
+        <div class="footer-socials" style="margin-top:20px;">
+          <a href="https://www.facebook.com/AZWC17" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/tac_zoe" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@tac_zoe" class="footer-social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/233553838464" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
-
-        <h3>I Want To Grow</h3>
-
-        <p>
-          Build a deeper relationship with God through scripture study, discipleship, and mentorship.
-        </p>
       </div>
-
-      <div class="help-card">
-        <div class="help-icon">
-          <i class="fa-solid fa-earth-africa"></i>
+      <div>
+        <div class="footer-col-title"><span data-i18n="footer.quickLinks">Quick Links</span></div>
+        <div class="footer-links">
+          <a href="index.html"><span data-i18n="footer.linkHome">Home</span></a>
+          <a href="About_missions.html"><span data-i18n="footer.linkStory">Our Story</span></a>
+          <a href="NEWS-BLOG-main/main.html"><span data-i18n="footer.linkNews">News</span></a>
+          <a href="About_gallery.html"><span data-i18n="footer.linkGallery">Gallery</span></a>
+          <a href="contact/index.html"><span data-i18n="footer.linkContact">Contact</span></a>
         </div>
-
-        <h3>I Want To Serve</h3>
-
-        <p>
-          Join outreach efforts and become part of a mission movement transforming lives through the Gospel.
-        </p>
       </div>
-
-      <div class="help-card">
-        <div class="help-icon">
-          <i class="fa-solid fa-people-group"></i>
+      <div>
+        <div class="footer-col-title"><span data-i18n="footer.missions">Missions</span></div>
+        <div class="footer-links">
+          <a href="individuals/index.html"><span data-i18n="footer.linkFaqs">FAQs</span></a>
+          <a href="partnership/index.html"><span data-i18n="footer.linkPartners">Partners</span></a>
+          <a href="donate/index.html"><span data-i18n="footer.linkDonate">Donate</span></a>
+          <a href="https://forms.gle/LG43ReJcDcAizGBr7"><span data-i18n="footer.linkPartnerWithUs">Partner With Us</span></a>
+          <a href="impact/index.html"><span data-i18n="footer.linkImpact">Community Impact</span></a>
         </div>
-
-        <h3>I Need Community</h3>
-
-        <p>
-          Find fellowship with believers who will support your spiritual journey with wisdom and love.
-        </p>
       </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- SCRIPTURE -->
-
-<section class="scripture">
-
-  <div class="container">
-
-    <div class="scripture-box">
-
-      <span>JAMES 4:8</span>
-
-      <h2>
-        “Draw near to God, and He will draw near to you.”
-      </h2>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FAQ -->
-
-<section class="faq">
-
-  <div class="container">
-
-    <div class="section-intro">
-      <span>Questions & Guidance</span>
-      <h2>Spiritual Support & Direction</h2>
-    </div>
-
-    <div class="faq-grid">
-
-      <div class="faq-item">
-
-        <button class="faq-header">
-          I need spiritual help now. What do I do?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <div class="faq-content">
-          <div class="faq-body">
-            <p>
-              Begin by praying honestly to Jesus Christ and seeking His guidance. Connect with a trusted church community where you can receive support, prayer, discipleship, and biblical encouragement during difficult moments.
-            </p>
-          </div>
+      <div>
+        <div class="footer-col-title"><span data-i18n="footer.contact">Contact</span></div>
+        <div class="footer-links">
+          <a href="mailto:tac.azwc@gmail.com"><span data-i18n="footer.email">taczoemissions@gmail.com</span></a>
+          <a href="https://wa.me/233509660388"><span data-i18n="footer.whatsapp">WhatsApp: +233 509 660 388</span></a>
+          <a href="tel:+233555033857"><span data-i18n="footer.phone">Call: +233 555 033 857</span></a>
         </div>
-
-      </div>
-
-      <div class="faq-item">
-
-        <button class="faq-header">
-          Can someone pray for me?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <div class="faq-content">
-          <div class="faq-body">
-            <p>
-              Yes. Scripture encourages believers to pray for one another. You can reach out to ministry leaders, trusted believers, or submit a prayer request through our missions team.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="faq-item">
-
-        <button class="faq-header">
-          How can I become a stronger witness?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <div class="faq-content">
-          <div class="faq-body">
-            <p>
-              Spend time in prayer, study the Word consistently, and allow your life to reflect the character of Christ. Effective witnessing begins with authenticity and compassion.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="faq-item">
-
-        <button class="faq-header">
-          How can I support missions?
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <div class="faq-content">
-          <div class="faq-body">
-            <p>
-              You can partner with missions through giving, volunteering, evangelism, intercession, media support, and practical outreach to communities in need.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <div class="cta-box">
-
-      <h2>
-        Help Us Reach The Nations
-      </h2>
-
-      <p>
-        Join us as we proclaim the Gospel, disciple believers, support communities, and raise missionaries across Ghana and beyond.
-      </p>
-
-      <a href="#" class="btn btn-primary">
-        Partner With Us
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="f-brand-name">ZOE · TIRZAH</div>
-      <p class="f-brand-desc">A welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve the world.</p>
-      <div class="f-socials">
-        <a href="https://www.facebook.com/AZWC17" class="f-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/tac_zoe" class="f-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@tac_zoe" class="f-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://wa.me/233509660388" class="f-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-      <p style="font-size:.75rem;margin-bottom:8px;color:rgba(255,255,255,.3);">Stay updated:</p>
-      <div class="f-newsletter">
-        <input type="email" placeholder="Your email address" aria-label="Newsletter"/>
-        <button>Sign Up</button>
       </div>
     </div>
-    <div>
-      <div class="f-col-title">Quick Links</div>
-      <div class="f-links">
-        <a href="../index.html">Home</a>
-        <a href="../About_missions.html">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html">News</a>
-        <a href="../About_gallery.html">Gallery</a>
-        <a href="../contact/index.html">Contact</a>
-      </div>
+    <div class="footer-bottom">
+      <nav style="display:flex;gap:20px;">
+        <a href="#"><span data-i18n="footer.cookies">Cookies</span></a>
+        <a href="#"><span data-i18n="footer.terms">Terms</span></a>
+        <a href="#"><span data-i18n="footer.privacy">Privacy</span></a>
+      </nav>
+      <p><span data-i18n="footer.copyright">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</span></p>
     </div>
-    <div>
-      <div class="f-col-title">Missions</div>
-      <div class="f-links">
-        <a href="../individuals/index.html">FAQs</a>
-        <a href="../partnership/index.html">Partners</a>
-        <a href="../donate/index.html">Donate</a>
-        <a href="https://forms.gle/LG43ReJcDcAizGBr7">Partner With Us</a>
-      </div>
-    </div>
-    <div>
-      <div class="f-col-title">Contact</div>
-      <div class="f-links">
-        <a href="mailto:taczoemissions@gmail.com">taczoemissions@gmail.com</a>
-        <a href="https://wa.me/233509660388">WhatsApp: +233 509 660 388</a>
-        <a href="tel:+233555033857">Call: +233 555 033 857</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <nav><a href="#">Cookies</a><a href="#">Terms</a><a href="#">Privacy</a></nav>
-    <p>© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
-  </div>
-</footer>
-
-
+  </footer>
+ <script src="js/langauges.js"></script>
 <script>
-
+        
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll',()=>{

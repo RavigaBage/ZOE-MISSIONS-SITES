@@ -26,359 +26,422 @@
 </head>
 <body>
 
-<!-- scroll top -->
-<button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-<div class="nav-wrap" id="navWrap">
-  <nav>
-    <a href="../index.html" class="nav-logo">ZOE<span class="dot">·</span>TIRZAH</a>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../About_missions.html">Our Story</a>
-      <a href="../NEWS-BLOG-main/main.html">News</a>
-      <a href="../impact/index.html">Impact</a>
-      <a href="../About_gallery.html">Gallery</a>
-      <a href="../partnership/index.html">Partners</a>
-      <a href="../contact/index.html" class="active">Contact</a>
+  <div class="skeleton">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+    <p>We are converting this page to <span>FRENCH</span>, please hld on</p>
+  </div>
+  <div class="nav-wrapper" id="navWrapper">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        ZOE<span class="nav-logo-dot">·</span>TIRZAH
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="lang">Home</a>
+        <a href="About_missions.html" data-i18n="lang">Our Story</a>
+        <a href="NEWS-BLOG-main/main.html" data-i18n="lang">News</a>
+        <a href="impact/index.html" data-i18n="lang">Impact</a>
+        <a href="About_gallery.html" data-i18n="lang">Gallery</a>
+        <a href="partnership/index.html" data-i18n="lang">Partners</a>
+        <a href="contact/index.html" data-i18n="lang">Contact</a>
+        <div class="lan_select">
+          <div class="item default" data-lang="en">
+            <div class="flag">🌐</div>
+            <b>En</b>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+          </div>
+          <div class="List_drop">
+            <div class="item" data-lang="fr">
+              <div class="flag"></div>
+              <b>Fr</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>Ar</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>En</b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
     </div>
-    <a href="../donate/index.html" class="nav-donate">Donate Now</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</div>
+    <div class="mobile-links">
+      <a href="../index.html" data-i18n="navMobile.home">Home</a>
+      <a href="../About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
+      <a href="../NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
+      <a href="../impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
+      <a href="../About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
+      <a href="../partnership/index.html" data-i18n="navMobile.partners">Partners</a>
+      <a href="../individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
+      <a href="../../contact/index.html" data-i18n="navMobile.contact">Contact</a>
+          <div class="lan_select">
+        <div class="item default" data-lang="en">
+          <div class="flag">🌐</div>
+          <b>En</b>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+        </div>
+        <div class="List_drop">
+          <div class="item" data-lang="fr">
+            <div class="flag"></div>
+            <b>Fr</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>Ar</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>En</b>
+          </div>
+        </div>
 
-<!-- Mobile -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-top">
-    <span class="nav-logo">ZOE<span class="dot">·</span>TIRZAH</span>
-    <button class="mobile-close" id="mobileClose">&times;</button>
-  </div>
-  <div class="mobile-links">
-    <a href="../index.html">Home</a>
-    <a href="../About_missions.html">Our Story</a>
-    <a href="../NEWS-BLOG-main/main.html">News</a>
-    <a href="../impact/index.html">Community Impact</a>
-    <a href="../About_gallery.html">Gallery</a>
-    <a href="../partnership/index.html">Partners</a>
-    <a href="../individuals/index.html">FAQs</a>
-    <a href="../contact/index.html">Contact</a>
-  </div>
-  <div class="mobile-btn">
-    <a href="../donate/index.html" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:var(--crimson);color:#fff;border-radius:999px;font-weight:700;font-size:.95rem;">
-      <i class="fa-solid fa-heart"></i> Donate Now
-    </a>
-  </div>
-</div>
-
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb">
-      <a href="../index.html">Home</a>
-      <i class="fa-solid fa-chevron-right"></i>
-      <span style="color:rgba(255,255,255,.7);">Contact</span>
+      </div>
     </div>
-    <p class="page-hero-eyebrow">Get in Touch</p>
-    <h1 class="page-hero-title">We'd Love to <span>Hear From You</span></h1>
-    <p class="page-hero-desc">Whether you have a question, want to partner with us, or feel called to join a mission — reach out and we'll get back to you.</p>
+    <div class="mobile-cta">
+      <a href="../donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
+        <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
+      </a>
+    </div>
   </div>
-  <svg class="hero-wave" viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"/>
-  </svg>
-</section>
 
-<div class="quick-contact">
-  <div class="qc-inner">
-    <a href="tel:+233555033857" class="qc-chip">
-      <div class="qc-icon red"><i class="fa-solid fa-phone"></i></div>
-      <div class="qc-text">
-        <div class="qc-label">Call Us</div>
-        <div class="qc-value">+233 555 033 857</div>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="../index.html" data-i18n="a">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span style="color:rgba(255,255,255,.7);" data-i18n="a">Contact</span>
       </div>
-    </a>
-    <a href="mailto:taczoemissions@gmail.com" class="qc-chip">
-      <div class="qc-icon teal"><i class="fa-solid fa-envelope"></i></div>
-      <div class="qc-text">
-        <div class="qc-label">Email Us</div>
-        <div class="qc-value">taczoemissions@gmail.com</div>
-      </div>
-    </a>
-    <a href="https://wa.me/233509660388" class="qc-chip">
-      <div class="qc-icon gold"><i class="fa-brands fa-whatsapp"></i></div>
-      <div class="qc-text">
-        <div class="qc-label">WhatsApp</div>
-        <div class="qc-value">+233 509 660 388</div>
-      </div>
-    </a>
-    <a href="https://www.google.com/maps/search/Santasi+Kumasi+Ghana" target="_blank" class="qc-chip">
-      <div class="qc-icon navy"><i class="fa-solid fa-location-dot"></i></div>
-      <div class="qc-text">
-        <div class="qc-label">Visit Us</div>
-        <div class="qc-value">Santasi, Kumasi, Ghana</div>
-      </div>
-    </a>
+      <p class="page-hero-eyebrow" data-i18n="a">Get in Touch</p>
+      <h1 class="page-hero-title" data-i18n="a">We'd Love to <span>Hear From You</span></h1>
+      <p class="page-hero-desc" data-i18n="a">Whether you have a question, want to partner with us, or feel called to join a mission — reach out and we'll get back to you.</p>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,32 C360,64 1080,0 1440,32 L1440,64 L0,64 Z"/>
+    </svg>
+  </section>
+
+  <div class="quick-contact">
+    <div class="qc-inner">
+      <a href="tel:+233555033857" class="qc-chip">
+        <div class="qc-icon red"><i class="fa-solid fa-phone"></i></div>
+        <div class="qc-text">
+          <div class="qc-label" data-i18n="a">Call Us</div>
+          <div class="qc-value" data-i18n="a">+233 555 033 857</div>
+        </div>
+      </a>
+      <a href="mailto:taczoemissions@gmail.com" class="qc-chip">
+        <div class="qc-icon teal"><i class="fa-solid fa-envelope"></i></div>
+        <div class="qc-text">
+          <div class="qc-label" data-i18n="a">Email Us</div>
+          <div class="qc-value">taczoemissions@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://wa.me/233509660388" class="qc-chip">
+        <div class="qc-icon gold"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="qc-text">
+          <div class="qc-label">WhatsApp</div>
+          <div class="qc-value">+233 509 660 388</div>
+        </div>
+      </a>
+      <a href="https://www.google.com/maps/search/Santasi+Kumasi+Ghana" target="_blank" class="qc-chip">
+        <div class="qc-icon navy"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="qc-text">
+          <div class="qc-label" data-i18n="a">Visit Us</div>
+          <div class="qc-value" data-i18n="a">Santasi, Kumasi, Ghana</div>
+        </div>
+      </a>
+    </div>
   </div>
-</div>
 
-<!-- ===== MAIN CONTENT ===== -->
-<main class="contact-body">
-  <div class="container">
-    <div class="contact-grid">
+  <main class="contact-body">
+    <div class="container">
+      <div class="contact-grid">
 
-      <!-- LEFT — Info -->
-      <div class="info-col">
+        <!-- LEFT — Info -->
+        <div class="info-col">
 
-        <!-- General -->
-        <div class="info-section reveal">
-          <p class="info-section-label">General Enquiries</p>
-          <h3>How can we help you?</h3>
-          <p>Don't hesitate to get in touch if you need support, information, or just want to know more about what we do. Our team typically responds within 1–2 working days.</p>
-        </div>
-
-        <!-- Partnership -->
-        <div class="info-section reveal reveal-d1">
-          <p class="info-section-label">Become a Partner</p>
-          <h3>Fund what we do</h3>
-          <p>If you're an individual, church, Local Authority, or organisation interested in partnering with us — we'd love to hear from you. Your support sends missionaries, builds churches, and changes lives.</p>
-        </div>
-
-        <!-- Contact tiles -->
-        <div class="contact-tiles reveal reveal-d2">
-          <a href="mailto:taczoemissions@gmail.com" class="contact-tile">
-            <div class="ct-icon teal"><i class="fa-solid fa-envelope"></i></div>
-            <div class="ct-body">
-              <div class="ct-label">Email</div>
-              <div class="ct-val">taczoemissions@gmail.com</div>
-            </div>
-            <i class="fa-solid fa-arrow-right ct-arrow"></i>
-          </a>
-          <a href="mailto:media@zoetirzah.org" class="contact-tile">
-            <div class="ct-icon red"><i class="fa-solid fa-newspaper"></i></div>
-            <div class="ct-body">
-              <div class="ct-label">Media Team</div>
-              <div class="ct-val">media@zoetirzah.org</div>
-            </div>
-            <i class="fa-solid fa-arrow-right ct-arrow"></i>
-          </a>
-          <a href="tel:+233555033857" class="contact-tile">
-            <div class="ct-icon gold"><i class="fa-solid fa-phone"></i></div>
-            <div class="ct-body">
-              <div class="ct-label">Phone</div>
-              <div class="ct-val">+233 555 033 857</div>
-            </div>
-            <i class="fa-solid fa-arrow-right ct-arrow"></i>
-          </a>
-          <a href="https://wa.me/233509660388" class="contact-tile">
-            <div class="ct-icon navy"><i class="fa-brands fa-whatsapp"></i></div>
-            <div class="ct-body">
-              <div class="ct-label">WhatsApp</div>
-              <div class="ct-val">+233 509 660 388</div>
-            </div>
-            <i class="fa-solid fa-arrow-right ct-arrow"></i>
-          </a>
-        </div>
-
-        <!-- Address -->
-        <div class="address-card reveal reveal-d3">
-          <p class="address-card-label"><i class="fa-solid fa-location-dot"></i> &nbsp;Registered Address</p>
-          <address>
-            <strong>Zoe Tirzah Mission HQ</strong>
-            PLT 55 BLK F,<br>
-            Near Bekwai Road,<br>
-            Santasi,<br>
-            P.O. Box 18637,<br>
-            Kumasi, Ghana
-          </address>
-        </div>
-
-        <!-- Map -->
-        <div class="map-wrap reveal">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.372428506617!2d-1.6366!3d6.6882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDEnMTcuNSJOIDHCsDM4JzExLjYiVw!5e0!3m2!1sen!2sgh!4v1234567890"
-            allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Zoe Tirzah location map">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- RIGHT — Form -->
-      <div class="form-col reveal reveal-d1">
-        <div class="form-card">
-          <div class="form-header">
-            <p class="form-header-label">Send a Message</p>
-            <h2>We're Here to Help</h2>
-            <p>Fill in the form below and a member of our team will get back to you as soon as possible.</p>
+          <!-- General -->
+          <div class="info-section reveal">
+            <p class="info-section-label" data-i18n="a">General Enquiries</p>
+            <h3 data-i18n="a">How can we help you?</h3>
+            <p data-i18n="a">Don't hesitate to get in touch if you need support, information, or just want to know more about what we do. Our team typically responds within 1–2 working days.</p>
           </div>
 
-          <form id="contactForm" novalidate>
-            <!-- Name / Email row -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="f-name">Full Name <span class="required-star">*</span></label>
-                <div class="input-with-icon">
-                  <i class="fa-solid fa-user"></i>
-                  <input type="text" id="f-name" placeholder="e.g. Kwame Mensah" required autocomplete="name"/>
+          <!-- Partnership -->
+          <div class="info-section reveal reveal-d1">
+            <p class="info-section-label" data-i18n="a">Become a Partner</p>
+            <h3 data-i18n="a">Fund what we do</h3>
+            <p data-i18n="a">If you're an individual, church, Local Authority, or organisation interested in partnering with us — we'd love to hear from you. Your support sends missionaries, builds churches, and changes lives.</p>
+          </div>
+
+          <!-- Contact tiles -->
+          <div class="contact-tiles reveal reveal-d2">
+            <a href="mailto:taczoemissions@gmail.com" class="contact-tile">
+              <div class="ct-icon teal"><i class="fa-solid fa-envelope"></i></div>
+              <div class="ct-body">
+                <div class="ct-label" data-i18n="a">Email</div>
+                <div class="ct-val">taczoemissions@gmail.com</div>
+              </div>
+              <i class="fa-solid fa-arrow-right ct-arrow"></i>
+            </a>
+            <a href="mailto:media@zoetirzah.org" class="contact-tile">
+              <div class="ct-icon red"><i class="fa-solid fa-newspaper"></i></div>
+              <div class="ct-body">
+                <div class="ct-label" data-i18n="a">Media Team</div>
+                <div class="ct-val">media@zoetirzah.org</div>
+              </div>
+              <i class="fa-solid fa-arrow-right ct-arrow"></i>
+            </a>
+            <a href="tel:+233555033857" class="contact-tile">
+              <div class="ct-icon gold"><i class="fa-solid fa-phone"></i></div>
+              <div class="ct-body">
+                <div class="ct-label" data-i18n="a">Phone</div>
+                <div class="ct-val">+233 555 033 857</div>
+              </div>
+              <i class="fa-solid fa-arrow-right ct-arrow"></i>
+            </a>
+            <a href="https://wa.me/233509660388" class="contact-tile">
+              <div class="ct-icon navy"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="ct-body">
+                <div class="ct-label" data-i18n="a">WhatsApp</div>
+                <div class="ct-val">+233 509 660 388</div>
+              </div>
+              <i class="fa-solid fa-arrow-right ct-arrow"></i>
+            </a>
+          </div>
+
+          <!-- Address -->
+          <div class="address-card reveal reveal-d3">
+            <p class="address-card-label"><i class="fa-solid fa-location-dot"></i> &nbsp;Registered Address</p>
+            <address>
+              <strong data-i18n="a">Zoe Tirzah Mission HQ</strong>
+              PLT 55 BLK F,<br>
+              Near Bekwai Road,<br>
+              Santasi,<br>
+              P.O. Box 18637,<br>
+              Kumasi, Ghana
+            </address>
+          </div>
+
+          <!-- Map -->
+          <div class="map-wrap reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.372428506617!2d-1.6366!3d6.6882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDEnMTcuNSJOIDHCsDM4JzExLjYiVw!5e0!3m2!1sen!2sgh!4v1234567890"
+              allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Zoe Tirzah location map">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- RIGHT — Form -->
+        <div class="form-col reveal reveal-d1">
+          <div class="form-card">
+            <div class="form-header">
+              <p class="form-header-label" data-i18n="a">Send a Message</p>
+              <h2 data-i18n="a">We're Here to Help</h2>
+              <p data-i18n="a">Fill in the form below and a member of our team will get back to you as soon as possible.</p>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <!-- Name / Email row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name" data-i18n="a">Full Name <span class="required-star">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="f-name" placeholder="e.g. Kwame Mensah" required autocomplete="name"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="f-email" data-i18n="a">Email Address <span class="required-star">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="f-email" placeholder="you@example.com" required autocomplete="email"/>
+                  </div>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="f-email">Email Address <span class="required-star">*</span></label>
-                <div class="input-with-icon">
-                  <i class="fa-solid fa-envelope"></i>
-                  <input type="email" id="f-email" placeholder="you@example.com" required autocomplete="email"/>
+
+              <!-- Phone / Organisation row -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-phone" data-i18n="a">Phone Number</label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" id="f-phone" placeholder="+233 ..." autocomplete="tel"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="f-org" data-i18n="a">Organisation / Church</label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-building"></i>
+                    <input type="text" id="f-org" placeholder="Optional"/>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Phone / Organisation row -->
-            <div class="form-row">
+              <!-- Topic -->
               <div class="form-group">
-                <label for="f-phone">Phone Number</label>
-                <div class="input-with-icon">
-                  <i class="fa-solid fa-phone"></i>
-                  <input type="tel" id="f-phone" placeholder="+233 ..." autocomplete="tel"/>
+                <label data-i18n="a">What's your message about? <span class="required-star">*</span></label>
+                <div class="topic-chips" id="topicChips">
+                  <span class="topic-chip selected" data-val="General Enquiry" data-i18n="a">General Enquiry</span>
+                  <span class="topic-chip" data-val="Partnership" data-i18n="a">Partnership</span>
+                  <span class="topic-chip" data-val="Mission Axim 2026" data-i18n="a">Mission: Axim 2026</span>
+                  <span class="topic-chip" data-val="Donation" data-i18n="a">Donation</span>
+                  <span class="topic-chip" data-val="Media" data-i18n="a">Media</span>
+                  <span class="topic-chip" data-val="Other" data-i18n="a">Other</span>
+                </div>
+                <input type="hidden" id="f-topic" value="General Enquiry"/>
+              </div>
+
+              <hr class="form-divider"/>
+
+              <!-- Subject -->
+              <div class="form-group">
+                <label for="f-subject" data-i18n="a">Subject <span class="required-star">*</span></label>
+                <input type="text" id="f-subject" placeholder="Brief description of your enquiry" required/>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="f-message" data-i18n="a">Your Message <span class="required-star">*</span></label>
+                <textarea id="f-message" placeholder="Tell us how we can help you..." maxlength="1000" required></textarea>
+                <div class="char-count"><span id="charCount">0</span> / 1000</div>
+              </div>
+
+              <!-- Privacy -->
+              <div class="privacy-row">
+                <input type="checkbox" id="f-privacy" required/>
+                <label for="f-privacy" data-i18n="a">
+                  I agree to the <a href="#">Privacy Policy</a>. We will use your information only to respond to your enquiry and may occasionally send mission updates. You can unsubscribe at any time.
+                </label>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="submit-btn">
+                <span data-i18n="a">Send Message</span>
+                <i class="fa-solid fa-paper-plane btn-icon"></i>
+              </button>
+
+              <!-- Success toast -->
+              <div class="success-toast" id="successToast">
+                <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+                <div>
+                  <div class="toast-text" data-i18n="a">Message sent successfully!</div>
+                  <div class="toast-sub" data-i18n="a">We'll get back to you within 1–2 working days.</div>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="f-org">Organisation / Church</label>
-                <div class="input-with-icon">
-                  <i class="fa-solid fa-building"></i>
-                  <input type="text" id="f-org" placeholder="Optional"/>
-                </div>
-              </div>
-            </div>
+            </form>
+          </div>
+        </div>
 
-            <!-- Topic -->
-            <div class="form-group">
-              <label>What's your message about? <span class="required-star">*</span></label>
-              <div class="topic-chips" id="topicChips">
-                <span class="topic-chip selected" data-val="General Enquiry">General Enquiry</span>
-                <span class="topic-chip" data-val="Partnership">Partnership</span>
-                <span class="topic-chip" data-val="Mission Axim 2026">Mission: Axim 2026</span>
-                <span class="topic-chip" data-val="Donation">Donation</span>
-                <span class="topic-chip" data-val="Media">Media</span>
-                <span class="topic-chip" data-val="Other">Other</span>
-              </div>
-              <input type="hidden" id="f-topic" value="General Enquiry"/>
-            </div>
+      </div>
+    </div>
+  </main>
 
-            <hr class="form-divider"/>
+  <section class="social-band">
+    <div class="sb-inner">
+      <div class="sb-text">
+        <h2 data-i18n="a">Follow Our Journey</h2>
+        <p data-i18n="a">Stay updated on missions, testimonies, and community impact.</p>
+      </div>
+      <div class="sb-links">
+        <a href="https://www.facebook.com/AZWC17" class="sb-link fb"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+        <a href="https://www.instagram.com/tac_zoe" class="sb-link ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@tac_zoe" class="sb-link tk"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+        <a href="https://wa.me/233509660388" class="sb-link wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
-            <!-- Subject -->
-            <div class="form-group">
-              <label for="f-subject">Subject <span class="required-star">*</span></label>
-              <input type="text" id="f-subject" placeholder="Brief description of your enquiry" required/>
-            </div>
-
-            <!-- Message -->
-            <div class="form-group">
-              <label for="f-message">Your Message <span class="required-star">*</span></label>
-              <textarea id="f-message" placeholder="Tell us how we can help you..." maxlength="1000" required></textarea>
-              <div class="char-count"><span id="charCount">0</span> / 1000</div>
-            </div>
-
-            <!-- Privacy -->
-            <div class="privacy-row">
-              <input type="checkbox" id="f-privacy" required/>
-              <label for="f-privacy">
-                I agree to the <a href="#">Privacy Policy</a>. We will use your information only to respond to your enquiry and may occasionally send mission updates. You can unsubscribe at any time.
-              </label>
-            </div>
-
-            <!-- Submit -->
-            <button type="submit" class="submit-btn">
-              <span>Send Message</span>
-              <i class="fa-solid fa-paper-plane btn-icon"></i>
-            </button>
-
-            <!-- Success toast -->
-            <div class="success-toast" id="successToast">
-              <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
-              <div>
-                <div class="toast-text">Message sent successfully!</div>
-                <div class="toast-sub">We'll get back to you within 1–2 working days.</div>
-              </div>
-            </div>
-          </form>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name"><span data-i18n="footer.brand">ZOE · TIRZAH</span></div>
+        <p class="footer-brand-desc"><span data-i18n="footer.desc">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve our world.</span></p>
+        <p style="font-size:0.78rem;margin-bottom:10px;color:rgba(255,255,255,0.35);"><span data-i18n="footer.stayUpdated">Stay updated:</span></p>
+        <div class="footer-newsletter">
+          <input type="email" class="footer-email-input" id="footerEmail" placeholder="Your email address" aria-label="Newsletter email" data-i18n-placeholder="footer.emailPlaceholder"/>
+          <button class="footer-sub-btn" id="footerSignup"><span data-i18n="footer.signup">Sign Up</span></button>
+        </div>
+        <div class="footer-socials" style="margin-top:20px;">
+          <a href="https://www.facebook.com/AZWC17" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/tac_zoe" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@tac_zoe" class="footer-social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/233553838464" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-
-    </div>
-  </div>
-</main>
-
-<!-- ===== SOCIAL BAND ===== -->
-<section class="social-band">
-  <div class="sb-inner">
-    <div class="sb-text">
-      <h2>Follow Our Journey</h2>
-      <p>Stay updated on missions, testimonies, and community impact.</p>
-    </div>
-    <div class="sb-links">
-      <a href="https://www.facebook.com/AZWC17" class="sb-link fb"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-      <a href="https://www.instagram.com/tac_zoe" class="sb-link ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
-      <a href="https://www.tiktok.com/@tac_zoe" class="sb-link tk"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-      <a href="https://wa.me/233509660388" class="sb-link wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="f-brand-name">ZOE · TIRZAH</div>
-      <p class="f-brand-desc">A welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve the world.</p>
-      <div class="f-socials">
-        <a href="https://www.facebook.com/AZWC17" class="f-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/tac_zoe" class="f-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@tac_zoe" class="f-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://wa.me/233509660388" class="f-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <div>
+        <div class="footer-col-title"><span data-i18n="footer.quickLinks">Quick Links</span></div>
+        <div class="footer-links">
+          <a href="index.html"><span data-i18n="footer.linkHome">Home</span></a>
+          <a href="About_missions.html"><span data-i18n="footer.linkStory">Our Story</span></a>
+          <a href="NEWS-BLOG-main/main.html"><span data-i18n="footer.linkNews">News</span></a>
+          <a href="About_gallery.html"><span data-i18n="footer.linkGallery">Gallery</span></a>
+          <a href="contact/index.html"><span data-i18n="footer.linkContact">Contact</span></a>
+        </div>
       </div>
-      <p style="font-size:.75rem;margin-bottom:8px;color:rgba(255,255,255,.3);">Stay updated:</p>
-      <div class="f-newsletter">
-        <input type="email" placeholder="Your email address" aria-label="Newsletter"/>
-        <button>Sign Up</button>
+      <div>
+        <div class="footer-col-title"><span data-i18n="footer.missions">Missions</span></div>
+        <div class="footer-links">
+          <a href="individuals/index.html"><span data-i18n="footer.linkFaqs">FAQs</span></a>
+          <a href="partnership/index.html"><span data-i18n="footer.linkPartners">Partners</span></a>
+          <a href="donate/index.html"><span data-i18n="footer.linkDonate">Donate</span></a>
+          <a href="https://forms.gle/LG43ReJcDcAizGBr7"><span data-i18n="footer.linkPartnerWithUs">Partner With Us</span></a>
+          <a href="impact/index.html"><span data-i18n="footer.linkImpact">Community Impact</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title"><span data-i18n="footer.contact">Contact</span></div>
+        <div class="footer-links">
+          <a href="mailto:tac.azwc@gmail.com"><span data-i18n="footer.email">taczoemissions@gmail.com</span></a>
+          <a href="https://wa.me/233509660388"><span data-i18n="footer.whatsapp">WhatsApp: +233 509 660 388</span></a>
+          <a href="tel:+233555033857"><span data-i18n="footer.phone">Call: +233 555 033 857</span></a>
+        </div>
       </div>
     </div>
-    <div>
-      <div class="f-col-title">Quick Links</div>
-      <div class="f-links">
-        <a href="../index.html">Home</a>
-        <a href="../About_missions.html">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html">News</a>
-        <a href="../About_gallery.html">Gallery</a>
-        <a href="../contact/index.html">Contact</a>
-      </div>
+    <div class="footer-bottom">
+      <nav style="display:flex;gap:20px;">
+        <a href="#"><span data-i18n="footer.cookies" data-i18n="a">Cookies</span></a>
+        <a href="#"><span data-i18n="footer.terms" data-i18n="a">Terms</span></a>
+        <a href="#"><span data-i18n="footer.privacy" data-i18n="a">Privacy</span></a>
+      </nav>
+      <p><span data-i18n="footer.copyright" data-i18n="a">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</span></p>
     </div>
-    <div>
-      <div class="f-col-title">Missions</div>
-      <div class="f-links">
-        <a href="../individuals/index.html">FAQs</a>
-        <a href="../partnership/index.html">Partners</a>
-        <a href="../donate/index.html">Donate</a>
-        <a href="https://forms.gle/LG43ReJcDcAizGBr7">Partner With Us</a>
-      </div>
-    </div>
-    <div>
-      <div class="f-col-title">Contact</div>
-      <div class="f-links">
-        <a href="mailto:taczoemissions@gmail.com">taczoemissions@gmail.com</a>
-        <a href="https://wa.me/233509660388">WhatsApp: +233 509 660 388</a>
-        <a href="tel:+233555033857">Call: +233 555 033 857</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <nav><a href="#">Cookies</a><a href="#">Terms</a><a href="#">Privacy</a></nav>
-    <p>© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
-  </div>
-</footer>
-
+  </footer>
+<script src="js/langauges.js"></script>
 <script>
   (() => {
-    /* Nav scroll */
-    const nav = document.getElementById('navWrap');
+              const translationMap = {};
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (element.closest('[data-i18n]') !== element.parentElement?.closest('[data-i18n]')) {
+        if (!element.querySelector('[data-i18n]')) {
+          const ArrayList = [...document.querySelectorAll('[data-i18n]')];
+          const indexRange = ArrayList.indexOf(element);
+          const key_rename = key +'-'+indexRange;
+          translationMap[key_rename] = element.textContent.trim();
+        }
+      }
+    });
+    console.log(translationMap);  
+    const nav = document.getElementById('navWrapper');
     const scrollBtn = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);

@@ -18,38 +18,199 @@
   --font-head:'Cormorant Garamond',Georgia,serif;
   --font-body:'DM Sans',system-ui,sans-serif;
   --ease:cubic-bezier(.4,0,.2,1);--r:20px;
+  
+  --crimson:#C5001E;
+  --crimson-dark:#8B0015;
+  --crimson-light:#FF4D4D;
+
+  --gold:#FBC02D;
+  --gold-light:#FFF9C4;
+
+  --teal:#16DA95;
+  --teal-dark:#0BA26E;
+  --teal-mid:#078A5C;
+
+  --navy:#0D1F2D;
+  --navy-mid:#132840;
+
+  --white:#FFFFFF;
+  --off-white:#F8F8F5;
+
+  --text-dark:#1a1a2e;
+  --text-muted:#64748B;
+
+  --border:rgba(255,255,255,0.12);
+
+  --radius-sm:8px;
+  --radius-md:16px;
+  --radius-lg:28px;
+  --radius-xl:40px;
+
+  --shadow-card:0 4px 24px rgba(0,0,0,0.09);
+  --shadow-lift:0 12px 40px rgba(0,0,0,0.14);
+
+  --transition:0.3s cubic-bezier(0.4,0,0.2,1);
+
+  --font-head:'Playfair Display', serif;
+  --font-body:'Poppins', sans-serif;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--font-body);background:var(--white);color:var(--text);overflow-x:hidden;line-height:1.6}
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 
-.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:999;transition:background .3s var(--ease),box-shadow .3s var(--ease)}
-.nav-wrap.solid{background:rgba(13,31,45,.97);backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(0,0,0,.22)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 5%;max-width:1400px;margin:0 auto}
-.logo{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:var(--white);letter-spacing:-.5px}
-.logo span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:2px}
-.nav-links a{color:rgba(255,255,255,.78);font-size:.875rem;font-weight:500;padding:7px 13px;border-radius:10px;transition:color .2s,background .2s}
-.nav-links a:hover{color:var(--white);background:rgba(255,255,255,.1)}
-.nav-cta{background:var(--crimson)!important;color:var(--white)!important;padding:9px 22px!important;border-radius:999px!important;font-weight:600!important;transition:background .2s,transform .2s!important}
-.nav-cta:hover{background:var(--crimson-dk)!important;transform:translateY(-1px)!important}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
-.burger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:.3s var(--ease)}
-.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+  .hide{
+      transform: translateY(-10px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .animate_x{
 
-.mob-menu{position:fixed;inset:0;z-index:1000;background:var(--navy);display:flex;flex-direction:column;padding:24px 6%;transform:translateX(100%);transition:transform .4s var(--ease)}
-.mob-menu.open{transform:translateX(0)}
-.mob-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
-.mob-close{background:none;border:none;color:var(--white);font-size:1.8rem;cursor:pointer;line-height:1}
-.mob-links{display:flex;flex-direction:column;gap:0;flex:1}
-.mob-links a{color:rgba(255,255,255,.8);font-size:1.1rem;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);transition:color .2s,padding-left .2s}
-.mob-links a:hover{color:var(--teal);padding-left:8px}
-.mob-cta{margin-top:28px}
-.mob-btn{display:block;text-align:center;background:var(--crimson);color:var(--white);padding:14px;border-radius:999px;font-weight:600;font-size:1rem;transition:background .2s}
-.mob-btn:hover{background:var(--crimson-dk)}
+      opacity: 1;
+    }
+     .skeleton{
+        display: none;
+        transition:all 1s ease;
+        transform: scale(0);
+
+      }
+      .skeleton.scrolled{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #071b2a;
+        z-index: 999999999;
+        display: grid;
+        place-items: center;
+        color:var(--white);
+        font-size: 3rem;
+        transform: scale(1);
+      }
+      .skeleton span{
+        color:var(--gold);
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
+    .lan_select{
+      width:70px;
+      min-height: 30px;
+      color:var(--white);
+      position: relative;
+       padding:5px;
+      background-color: #071b2a;
+
+    }
+
+    .lan_select .item{
+      border-bottom: 1px solid var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap:0px;
+      width: 100%;
+      height: 30px;
+      padding-block: 5px;
+    }
+    .lan_select .List_drop .item:hover{
+      background-color: #078A5C;
+    }
+    .lan_select .List_drop{
+      width: 100%;
+      height: fit-content;
+      position: absolute;
+      top:35px;
+      background-color: #071b2a;
+      display: none;
+    }
+    .lan_select:hover .List_drop{
+      display: block;
+    }
+    .nav-wrapper {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: var(--transition);
+    }
+    .nav-wrapper.scrolled {
+      background: rgba(13,31,45,0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 5%;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-head); font-size: 1.3rem; font-weight: 700;
+      color: var(--white);
+    }
+    .nav-logo-dot { color: var(--gold); }
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500;
+      padding: 7px 13px; border-radius: 8px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+    .nav-donate {
+      background: var(--crimson); color: var(--white);
+      padding: 9px 22px; border-radius: 999px; font-size: 0.88rem; font-weight: 600;
+      transition: var(--transition);
+    }
+    .nav-donate:hover { background: var(--crimson-dark); color: var(--white); transform: translateY(-1px); }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 6px; background: none; border: none;
+    }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: var(--transition); border-radius: 2px; }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: var(--navy); padding: 24px 6%;
+      flex-direction: column; gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+    .mobile-close { background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; }
+    .mobile-links { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+    .mobile-links a {
+      color: rgba(255,255,255,0.85); font-size: 1.15rem; font-weight: 500;
+      padding: 14px 12px; border-radius: var(--radius-sm);
+      transition: var(--transition); border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .mobile-links a:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+    .mobile-cta { margin-top: 24px; }
+        .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1.5px; padding: 5px 14px; border-radius: 999px;
+    }
+    .tag-teal  { background: rgba(22,218,149,0.15); color: var(--teal-dark); }
+    .tag-red   { background: rgba(197,0,30,0.1);   color: var(--crimson); }
+    .tag-gold  { background: rgba(251,192,45,0.15); color: #8B6914; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: 999px;
+      font-family: var(--font-body); font-size: 0.95rem; font-weight: 600;
+      cursor: pointer; border: none; transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--teal-dark); color: var(--white);
+      box-shadow: 0 4px 18px rgba(11,162,110,0.32);
+    }
+    .btn-primary:hover { background: var(--teal-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(11,162,110,0.42); }
+    .btn-outline {
+      background: transparent; color: var(--teal-dark);
+      border: 2px solid var(--teal-dark);
+    }
+    .btn-outline:hover { background: var(--teal-dark); color: var(--white); }
+    .btn-red { background: var(--crimson); color: var(--white); box-shadow: 0 4px 18px rgba(197,0,30,0.28); }
+    .btn-red:hover { background: var(--crimson-dark); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: #3a2800; box-shadow: 0 4px 18px rgba(251,192,45,0.38); }
+    .btn-gold:hover { background: #E0A800; transform: translateY(-2px); }
 
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--navy);overflow:hidden}
 .hero-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1800&auto=format&fit=crop&q=70') center/cover no-repeat;opacity:.22}
@@ -170,8 +331,31 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
   .why-grid{grid-template-columns:1fr 1fr}
   .f-grid{grid-template-columns:1fr 1fr}
 }
+@media(max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+  .nav-links, .nav-donate { display: none; }
+      .hamburger { display: flex; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+ 
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    gap:16px;
+    text-align:center;
+  }
+
+}
+@media screen and (max-width:500px){
+    .footer-grid { grid-template-columns: 1fr; }
+}
 @media(max-width:600px){
-  nav{padding:14px 5%}
+ 
   .hero-btns,.cta-btns{flex-direction:column}
   .btn{width:100%;justify-content:center}
   .grid-partners{grid-template-columns:1fr 1fr}
@@ -188,92 +372,145 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 </head>
 <body>
 
-<div class="nav-wrap" id="navWrap">
-  <nav>
-    <a href="index.html" class="logo">ZOE<span>·</span>TIRZAH</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="About_missions.html">Our Story</a>
-      <a href="NEWS-BLOG-main/main.html">News</a>
-      <a href="impact/index.html">Impact</a>
-      <a href="About_gallery.html">Gallery</a>
-      <a href="partnership/index.html">Partners</a>
-      <a href="contact/index.html">Contact</a>
-      <a href="donate/index.html" class="nav-cta">Donate Now</a>
+  <div class="skeleton">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+    <p>We are converting this page to <span>FRENCH</span>, please hld on</p>
+  </div>
+  <div class="nav-wrapper" id="navWrapper">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        ZOE<span class="nav-logo-dot">·</span>TIRZAH
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="lang">Home</a>
+        <a href="About_missions.html" data-i18n="lang">Our Story</a>
+        <a href="NEWS-BLOG-main/main.html" data-i18n="lang">News</a>
+        <a href="impact/index.html" data-i18n="lang">Impact</a>
+        <a href="About_gallery.html" data-i18n="lang">Gallery</a>
+        <a href="partnership/index.html" data-i18n="lang">Partners</a>
+        <a href="contact/index.html" data-i18n="lang">Contact</a>
+        <div class="lan_select">
+          <div class="item default" data-lang="en">
+            <div class="flag">🌐</div>
+            <b>En</b>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+          </div>
+          <div class="List_drop">
+            <div class="item" data-lang="fr">
+              <div class="flag"></div>
+              <b>Fr</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>Ar</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>En</b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
     </div>
-    <button class="burger" id="burger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</div>
+    <div class="mobile-links">
+      <a href="../index.html" data-i18n="navMobile.home">Home</a>
+      <a href="../About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
+      <a href="../NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
+      <a href="../impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
+      <a href="../About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
+      <a href="../partnership/index.html" data-i18n="navMobile.partners">Partners</a>
+      <a href="../individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
+      <a href="../../contact/index.html" data-i18n="navMobile.contact">Contact</a>
+          <div class="lan_select">
+        <div class="item default" data-lang="en">
+          <div class="flag">🌐</div>
+          <b>En</b>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+        </div>
+        <div class="List_drop">
+          <div class="item" data-lang="fr">
+            <div class="flag"></div>
+            <b>Fr</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>Ar</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>En</b>
+          </div>
+        </div>
 
-<div class="mob-menu" id="mobMenu" aria-hidden="true">
-  <div class="mob-head">
-    <a href="../index.html" class="logo">ZOE<span>·</span>TIRZAH</a>
-    <button class="mob-close" id="mobClose" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <div class="mobile-cta">
+      <a href="../donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
+        <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
+      </a>
+    </div>
   </div>
-  <div class="mob-links">
-    <a href="../index.html">Home</a>
-    <a href="../About_missions.html">Our Story</a>
-    <a href="../NEWS-BLOG-main/main.html">News</a>
-    <a href="../impact/index.html">Community Impact</a>
-    <a href="../About_gallery.html">Gallery</a>
-    <a href="../partnership/index.html">Partners</a>
-    <a href="../individuals/index.html">FAQs</a>
-    <a href="../contact/index.html">Contact</a>
-  </div>
-  <div class="mob-cta">
-    <a href="../donate/index.html" class="mob-btn"><i class="fa-solid fa-heart"></i> Donate Now</a>
-  </div>
-</div>
 
-<section class="hero">
+
+
+<section class="hero" >
   <div class="hero-img"></div>
   <div class="hero-inner">
     <div class="hero-pill">
       <i class="fa-solid fa-handshake"></i>
-      <span>Kingdom Partnerships</span>
+      <span data-i18n="hero-title">Kingdom Partnerships</span>
     </div>
-    <h1>Together, We<br>Are Reaching<br>the <em>Nations</em></h1>
-    <p>Walking alongside visionary churches, ministries, foundations, and businesses united by the Gospel and a passion for human flourishing.</p>
+    <h1 data-i18n="hero-desc">Together, We<br>Are Reaching<br>the <em>Nations</em></h1>
+    <p data-i18n="hero-descrip">Walking alongside visionary churches, ministries, foundations, and businesses united by the Gospel and a passion for human flourishing.</p>
     <div class="hero-btns">
       <button class="btn btn-light" onclick="document.getElementById('partners-grid').scrollIntoView({behavior:'smooth'})">
-        <i class="fa-solid fa-users"></i> Meet Our Partners
+        <i class="fa-solid fa-users"></i> <span data-i18n="hero-greet">Meet Our Partners</span>
       </button>
       <button class="btn btn-ghost" onclick="document.getElementById('join-section').scrollIntoView({behavior:'smooth'})">
-        Partner With Us <i class="fa-solid fa-arrow-right"></i>
+        <span data-i18n="hero-partner">Partner With Us</span> <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
   </div>
   <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
-    <span>Scroll</span>
+    <span data-i18n="page-scroll">Scroll</span>
   </div>
 </section>
 
 <section class="section" id="partners-grid" style="background:var(--white)">
   <div class="section-inner">
     <div class="partners-header reveal">
-      <div class="section-label">Our Valued Partners</div>
-      <h2 class="section-title">United in <em>Purpose</em></h2>
-      <p class="section-sub">Each partnership represents a shared calling — to see transformed lives, thriving communities, and the Gospel reach every corner of the earth.</p>
+      <div class="section-label" data-i18n="partner-value">Our Valued Partners</div>
+      <h2 class="section-title" data-i18n="partner-united">United in <em>Purpose</em></h2>
+      <p class="section-sub" data-i18n="partner-descrip">Each partnership represents a shared calling — to see transformed lives, thriving communities, and the Gospel reach every corner of the earth.</p>
     </div>
     <div class="grid-partners">
       <div class="p-card reveal d1">
         <div class="p-logo">
           <img src="../images/logo/tirzah.png" alt="Tirzah Oasis" loading="lazy">
         </div>
-        <div class="p-name">Tirzah Oasis</div>
+        <div class="p-name" data-i18n="partner-name">Tirzah Oasis</div>
         <div class="p-desc">Child Sponsorship & Community Development</div>
-        <div class="p-badge"><i class="fa-solid fa-check"></i> 10 Years Partnership</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="partner-years">10 Years Partnership</span></div>
       </div>
       <div class="p-card reveal d2">
         <div class="p-logo">
           <img src="../images/logo/Christos_prev_ui.png" alt="Christos Media" loading="lazy">
         </div>
-        <div class="p-name">Christos Media</div>
-        <div class="p-desc">Church Planting & Discipleship</div>
-        <div class="p-badge"><i class="fa-solid fa-check"></i> Strategic Alliance</div>
+        <div class="p-name" data-i18n="partner-name-2">Christos Media</div>
+        <div class="p-desc" data-i18n="partner-name-description">Church Planting & Discipleship</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="partner-strategy"> Strategic Alliance</span></div>
       </div>
     </div>
   </div>
@@ -282,30 +519,30 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 <section class="impact-section">
   <div class="impact-inner">
     <div>
-      <div class="section-label reveal" style="background:rgba(22,218,149,.12);color:var(--teal)">Impact Together</div>
-      <h2 class="section-title reveal" style="color:var(--white)">When We Partner,<br><em style="color:var(--gold)">Miracles</em> Multiply</h2>
-      <p class="section-sub reveal" style="color:rgba(255,255,255,.5);max-width:440px">Our partners don't just fund projects — they co-labor with us in the Great Commission, seeing transformed lives and churches planted.</p>
+      <div class="section-label reveal" style="background:rgba(22,218,149,.12);color:var(--teal)" data-i18n="impact-im">Impact Together</div>
+      <h2 class="section-title reveal" style="color:var(--white)">When We Partner,<br><em style="color:var(--gold)" data-i18n="impact-mr">Miracles</em> Multiply</h2>
+      <p class="section-sub reveal" style="color:rgba(255,255,255,.5);max-width:440px" data-i18n="impact-partner">Our partners don't just fund projects — they co-labor with us in the Great Commission, seeing transformed lives and churches planted.</p>
       <div class="impact-stats">
         <div class="stat-box reveal d1">
           <div class="stat-num teal">87%</div>
-          <div class="stat-desc">of field projects made possible through strategic partnerships</div>
+          <div class="stat-desc" data-i18n="impact-descriptnum1">of field projects made possible through strategic partnerships</div>
         </div>
         <div class="stat-box reveal d2">
           <div class="stat-num gold">142</div>
-          <div class="stat-desc">Joint missions completed since 2020</div>
+          <div class="stat-desc" data-i18n="impact-descriptnum2">Joint missions completed since 2020</div>
         </div>
         <div class="stat-box reveal d3">
           <div class="stat-num teal">60+</div>
-          <div class="stat-desc">Organizations partnered worldwide</div>
+          <div class="stat-desc" data-i18n="impact-descriptnum3">Organizations partnered worldwide</div>
         </div>
         <div class="stat-box reveal d4">
           <div class="stat-num gold">12k+</div>
-          <div class="stat-desc">Lives directly impacted this year</div>
+          <div class="stat-desc" data-i18n="impact-descriptnum2">Lives directly impacted this year</div>
         </div>
       </div>
     </div>
     <div class="t-card reveal d2">
-      <p class="t-text">"Partnering with Zoe-Tirzah Missions has been one of the most impactful decisions our church has made. The fruit we are seeing across Africa is truly extraordinary."</p>
+      <p class="t-text" data-i18n="impact-revealnum1">Partnering with Zoe-Tirzah Missions has been one of the most impactful decisions our church has made. The fruit we are seeing across Africa is truly extraordinary."</p>
       <div class="t-author">
         <div class="t-av">DM</div>
         <div>
@@ -320,24 +557,24 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 <section class="why-section">
   <div class="why-inner">
     <div style="text-align:center" class="reveal">
-      <div class="section-label">Why Partner With Us</div>
-      <h2 class="section-title" style="margin-top:14px">Built on <em>Relationship</em>,<br>Driven by Purpose</h2>
+      <div class="section-label" data-i18n="impact-revealnum1">Why Partner With Us</div>
+      <h2 class="section-title" style="margin-top:14px" data-i18n="impact-revealnum2">Built on <em>Relationship</em>,<br>Driven by Purpose</h2>
     </div>
     <div class="why-grid">
       <div class="why-card reveal d1">
         <div class="why-icon gold">🌍</div>
-        <h3>Kingdom Impact</h3>
-        <p>Every partnership directly supports evangelism, discipleship, and lasting community transformation across the continent and beyond.</p>
+        <h3 data-i18n="impact-revealn_kingdom">Kingdom Impact</h3>
+        <p data-i18n="impact-reveal_description">Every partnership directly supports evangelism, discipleship, and lasting community transformation across the continent and beyond.</p>
       </div>
       <div class="why-card reveal d2">
         <div class="why-icon teal">📊</div>
-        <h3>Full Transparency</h3>
-        <p>Monthly impact reports, financial accountability, and real-time field updates so you always know where your investment is going.</p>
+        <h3 data-i18n="impact-transparency">Full Transparency</h3>
+        <p data-i18n="impact-transparency_description">Monthly impact reports, financial accountability, and real-time field updates so you always know where your investment is going.</p>
       </div>
       <div class="why-card reveal d3">
         <div class="why-icon red">🙏</div>
-        <h3>Prayer & Relationship</h3>
-        <p>We build deep, lasting relationships — not just transactions. When you partner with us, you become family in the mission.</p>
+        <h3 data-i18n="impact-prayer">Prayer & Relationship</h3>
+        <p data-i18n="impact-prayer_description">We build deep, lasting relationships — not just transactions. When you partner with us, you become family in the mission.</p>
       </div>
     </div>
   </div>
@@ -345,82 +582,87 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 
 <section class="cta-section" id="join-section">
   <div class="cta-inner">
-    <div class="cta-tag reveal">Join the Movement</div>
-    <h2 class="reveal">Become Part of<br>Something That Matters</h2>
-    <p class="reveal d1">Whether you're a church, business, foundation, or individual — your partnership can bring Zoe-Tirzah to thousands who have never heard.</p>
+    <div class="cta-tag reveal" data-i18n="impact-join">Join the Movement</div>
+    <h2 class="reveal" data-i18n="impact-part">Become Part of<br>Something That Matters</h2>
+    <p class="reveal d1" data-i18n="impact-join_desc">Whether you're a church, business, foundation, or individual — your partnership can bring Zoe-Tirzah to thousands who have never heard.</p>
     <div class="cta-btns reveal d2">
       <a href="https://forms.gle/LG43ReJcDcAizGBr7" class="btn btn-white">
-        <i class="fa-solid fa-church"></i> Ministry Partner
+        <i class="fa-solid fa-church"></i><span data-i18n="impact-min_partner"> Ministry Partner</span>
       </a>
       <a href="../contact/index.html" class="btn btn-ow">
-        <i class="fa-solid fa-building"></i> Corporate Partnership
+        <i class="fa-solid fa-building"></i><span data-i18n="impact-coorp">Corporate Partnership</span> 
       </a>
     </div>
-    <p class="cta-trust reveal d3">Trusted by over 60 organizations worldwide</p>
+    <p class="cta-trust reveal d3" data-i18n="impact-worldwide">Trusted by over 60 organizations worldwide</p>
   </div>
 </section>
 
+
 <footer>
-  <div class="f-grid">
-    <div>
-      <div class="f-brand">ZOE <span>·</span> TIRZAH</div>
-      <p class="f-desc">A welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve the world.</p>
-      <div class="f-socials">
-        <a href="https://www.facebook.com/AZWC17" class="f-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/tac_zoe" class="f-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@tac_zoe" class="f-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://wa.me/233509660388" class="f-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name"><span data-i18n="footer.brand">ZOE · TIRZAH</span></div>
+      <p class="footer-brand-desc"><span data-i18n="footer.desc">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve our world.</span></p>
+      <p style="font-size:0.78rem;margin-bottom:10px;color:rgba(255,255,255,0.35);"><span data-i18n="footer.stayUpdated">Stay updated:</span></p>
+      <div class="footer-newsletter">
+        <input type="email" class="footer-email-input" id="footerEmail" placeholder="Your email address" aria-label="Newsletter email" data-i18n-placeholder="footer.emailPlaceholder"/>
+        <button class="footer-sub-btn" id="footerSignup"><span data-i18n="footer.signup">Sign Up</span></button>
       </div>
-      <p style="font-size:.72rem;color:rgba(255,255,255,.28);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px">Stay updated</p>
-      <div class="f-news">
-        <input type="email" placeholder="Your email address">
-        <button>Sign Up</button>
-      </div>
-    </div>
-    <div>
-      <div class="f-col-title">Quick Links</div>
-      <div class="f-links">
-        <a href="../index.html">Home</a>
-        <a href="../About_missions.html">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html">News</a>
-        <a href="../About_gallery.html">Gallery</a>
-        <a href="../contact/index.html">Contact</a>
+      <div class="footer-socials" style="margin-top:20px;">
+        <a href="https://www.facebook.com/AZWC17" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/tac_zoe" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@tac_zoe" class="footer-social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://wa.me/233553838464" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
     <div>
-      <div class="f-col-title">Missions</div>
-      <div class="f-links">
-        <a href="../individuals/index.html">FAQs</a>
-        <a href="../partnership/index.html">Partners</a>
-        <a href="../donate/index.html">Donate</a>
-        <a href="https://forms.gle/LG43ReJcDcAizGBr7">Partner With Us</a>
+      <div class="footer-col-title"><span data-i18n="footer.quickLinks">Quick Links</span></div>
+      <div class="footer-links">
+        <a href="index.html"><span data-i18n="footer.linkHome">Home</span></a>
+        <a href="About_missions.html"><span data-i18n="footer.linkStory">Our Story</span></a>
+        <a href="NEWS-BLOG-main/main.html"><span data-i18n="footer.linkNews">News</span></a>
+        <a href="About_gallery.html"><span data-i18n="footer.linkGallery">Gallery</span></a>
+        <a href="contact/index.html"><span data-i18n="footer.linkContact">Contact</span></a>
       </div>
     </div>
     <div>
-      <div class="f-col-title">Contact</div>
-      <div class="f-links">
-        <a href="mailto:taczoemissions@gmail.com">taczoemissions@gmail.com</a>
-        <a href="https://wa.me/233509660388">WhatsApp: +233 509 660 388</a>
-        <a href="tel:+233555033857">Call: +233 555 033 857</a>
+      <div class="footer-col-title"><span data-i18n="footer.missions">Missions</span></div>
+      <div class="footer-links">
+        <a href="individuals/index.html"><span data-i18n="footer.linkFaqs">FAQs</span></a>
+        <a href="partnership/index.html"><span data-i18n="footer.linkPartners">Partners</span></a>
+        <a href="donate/index.html"><span data-i18n="footer.linkDonate">Donate</span></a>
+        <a href="https://forms.gle/LG43ReJcDcAizGBr7"><span data-i18n="footer.linkPartnerWithUs">Partner With Us</span></a>
+        <a href="impact/index.html"><span data-i18n="footer.linkImpact">Community Impact</span></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title"><span data-i18n="footer.contact">Contact</span></div>
+      <div class="footer-links">
+        <a href="mailto:tac.azwc@gmail.com"><span data-i18n="footer.email">taczoemissions@gmail.com</span></a>
+        <a href="https://wa.me/233509660388"><span data-i18n="footer.whatsapp">WhatsApp: +233 509 660 388</span></a>
+        <a href="tel:+233555033857"><span data-i18n="footer.phone">Call: +233 555 033 857</span></a>
       </div>
     </div>
   </div>
-  <div class="f-bottom">
-    <div class="f-bl">
-      <a href="#">Cookies</a><a href="#">Terms</a><a href="#">Privacy</a>
-    </div>
-    <p>© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
+  <div class="footer-bottom">
+    <nav style="display:flex;gap:20px;">
+      <a href="#"><span data-i18n="footer.cookies">Cookies</span></a>
+      <a href="#"><span data-i18n="footer.terms">Terms</span></a>
+      <a href="#"><span data-i18n="footer.privacy">Privacy</span></a>
+    </nav>
+    <p><span data-i18n="footer.copyright">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</span></p>
   </div>
 </footer>
-
+     <script src="js/langauges.js"></script>
 <script>
 (function(){
-  var nav=document.getElementById('navWrap');
-  window.addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>60)},{passive:true});
-  var burger=document.getElementById('burger'),mob=document.getElementById('mobMenu'),mc=document.getElementById('mobClose');
-  function open(){mob.classList.add('open');mob.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';burger.classList.add('open')}
-  function close(){mob.classList.remove('open');mob.setAttribute('aria-hidden','true');document.body.style.overflow='';burger.classList.remove('open')}
-  burger.addEventListener('click',open);mc.addEventListener('click',close);
+
+  var nav=document.getElementById('navWrapper');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>60)},{passive:true});
+  var hamburger=document.getElementById('hamburger'),mob=document.getElementById('mobileMenu'),mc=document.getElementById('mobileClose');
+  function open(){mob.classList.add('open');mob.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';hamburger.classList.add('open')}
+  function close(){mob.classList.remove('open');mob.setAttribute('aria-hidden','true');document.body.style.overflow='';hamburger.classList.remove('open')}
+  hamburger.addEventListener('click',open);mc.addEventListener('click',close);
   mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
   var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});

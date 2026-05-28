@@ -97,6 +97,31 @@ a { text-decoration: none; color: inherit; }
 
       opacity: 1;
     }
+     .skeleton{
+        display: none;
+        transition:all 1s ease;
+        transform: scale(0);
+
+      }
+      .skeleton.scrolled{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #071b2a;
+        z-index: 999999999;
+        display: grid;
+        place-items: center;
+        color:var(--white);
+        font-size: 3rem;
+        transform: scale(1);
+      }
+      .skeleton span{
+        color:var(--gold);
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
     .lan_select{
       width:70px;
       min-height: 30px;
@@ -392,73 +417,95 @@ footer {
 </style>
     <body>
         <main>
+            <div class="skeleton">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+              <p>We are converting this page to <span>FRENCH</span>, please hld on</p>
+            </div>
+            <div class="nav-wrapper" id="navWrapper">
+              <nav>
+                <a href="index.html" class="nav-logo">
+                  ZOE<span class="nav-logo-dot">·</span>TIRZAH
+                </a>
+                <div class="nav-links">
+                  <a href="index.html" data-i18n="lang">Home</a>
+                  <a href="About_missions.html" data-i18n="lang">Our Story</a>
+                  <a href="NEWS-BLOG-main/main.html" data-i18n="lang">News</a>
+                  <a href="impact/index.html" data-i18n="lang">Impact</a>
+                  <a href="About_gallery.html" data-i18n="lang">Gallery</a>
+                  <a href="partnership/index.html" data-i18n="lang">Partners</a>
+                  <a href="contact/index.html" data-i18n="lang">Contact</a>
+                  <div class="lan_select">
+                    <div class="item default" data-lang="en">
+                      <div class="flag">🌐</div>
+                      <b>En</b>
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                    </div>
+                    <div class="List_drop">
+                      <div class="item" data-lang="fr">
+                        <div class="flag"></div>
+                        <b>Fr</b>
+                      </div>
+                      <div class="item" data-lang="ar">
+                        <div class="flag"></div>
+                        <b>Ar</b>
+                      </div>
+                      <div class="item" data-lang="ar">
+                        <div class="flag"></div>
+                        <b>En</b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                  <span></span><span></span><span></span>
+                </button>
+              </nav>
+            </div>
 
+            <div class="mobile-menu" id="mobileMenu">
+              <div class="mobile-menu-header">
+                <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+                <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
+              </div>
+              <div class="mobile-links">
+                <a href="index.html" data-i18n="navMobile.home">Home</a>
+                <a href="About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
+                <a href="NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
+                <a href="impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
+                <a href="About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
+                <a href="partnership/index.html" data-i18n="navMobile.partners">Partners</a>
+                <a href="individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
+                <a href="contact/index.html" data-i18n="navMobile.contact">Contact</a>
+                    <div class="lan_select">
+                  <div class="item default" data-lang="en">
+                    <div class="flag">🌐</div>
+                    <b>En</b>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                  </div>
+                  <div class="List_drop">
+                    <div class="item" data-lang="fr">
+                      <div class="flag"></div>
+                      <b>Fr</b>
+                    </div>
+                    <div class="item" data-lang="ar">
+                      <div class="flag"></div>
+                      <b>Ar</b>
+                    </div>
+                    <div class="item" data-lang="ar">
+                      <div class="flag"></div>
+                      <b>En</b>
+                    </div>
+                  </div>
 
-
-<div class="nav-wrapper" id="navWrapper">
-  <nav>
-    <a href="index.html" class="nav-logo">
-      ZOE<span class="nav-logo-dot">·</span>TIRZAH
-    </a>
-    <div class="nav-links">
-      <a href="index.html" data-i18n="nav.home">Home</a>
-      <a href="About_missions.html" data-i18n="nav.ourstory">Our Story</a>
-      <a href="NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
-      <a href="impact/index.html" data-i18n="nav.impact">Impact</a>
-      <a href="About_gallery.html" data-i18n="nav.gallery">Gallery</a>
-      <a href="partnership/index.html" data-i18n="nav.partners">Partners</a>
-      <a href="contact/index.html" data-i18n="nav.contact">Contact</a>
-    </div>
-    <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-header">
-    <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
-    <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
-  </div>
-  <div class="mobile-links">
-    <a href="index.html" data-i18n="navMobile.home">Home</a>
-    <a href="About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
-    <a href="NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
-    <a href="impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
-    <a href="About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
-    <a href="partnership/index.html" data-i18n="navMobile.partners">Partners</a>
-    <a href="individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
-    <a href="contact/index.html" data-i18n="navMobile.contact">Contact</a>
-        <div class="lan_select">
-      <div class="item default" data-lang="en">
-        <div class="flag">🌐</div>
-        <b>En</b>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
-      </div>
-      <div class="List_drop">
-        <div class="item" data-lang="fr">
-          <div class="flag"></div>
-          <b>Fr</b>
-        </div>
-        <div class="item" data-lang="ar">
-          <div class="flag"></div>
-          <b>Ar</b>
-        </div>
-        <div class="item" data-lang="ar">
-          <div class="flag"></div>
-          <b>En</b>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="mobile-cta">
-    <a href="donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
-      <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
-    </a>
-  </div>
-</div>
+                </div>
+              </div>
+              <div class="mobile-cta">
+                <a href="donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
+                  <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
+                </a>
+              </div>
+            </div>
 
 
 
@@ -471,7 +518,6 @@ footer {
 
             <section class="gallery-section">
 
-                <!-- MAJOR EVENTS -->
                 <div style="margin-bottom: 60px;">
                     <h2 style="font-family: 'Poppins', sans-serif; font-size: 34px; margin-bottom: 10px;" data-i18n="gallery_events_title">
                         Major Events
@@ -568,8 +614,8 @@ footer {
                     </div>
                 </div>
 
-            </section>
-            <section class="gallery-section">
+          </section>
+          <section class="gallery-section">
 
                 <div class="gallery-grid">
                     <div class="gallery-item">
@@ -598,62 +644,65 @@ footer {
                     </div>
                 </div>
 
-            </section>
-</main>
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="f-brand-name">ZOE · TIRZAH</div>
-      <p class="f-brand-desc">A welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve the world.</p>
-      <div class="f-socials">
-        <a href="https://www.facebook.com/AZWC17" class="f-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/tac_zoe" class="f-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@tac_zoe" class="f-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://wa.me/233509660388" class="f-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </section>
+        </main>
+
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand-name">ZOE · TIRZAH</div>
+        <p class="f-brand-desc" data-i18n="footer-desc">A welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve the world.</p>
+        <div class="f-socials">
+          <a href="https://www.facebook.com/AZWC17" class="f-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/tac_zoe" class="f-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@tac_zoe" class="f-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/233509660388" class="f-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p style="font-size:.75rem;margin-bottom:8px;color:rgba(255,255,255,.3);" data-i18n="footer-update">Stay updated:</p>
+        <div class="f-newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Newsletter"/>
+          <button data-i18n="footer-up">Sign Up</button>
+        </div>
       </div>
-      <p style="font-size:.75rem;margin-bottom:8px;color:rgba(255,255,255,.3);">Stay updated:</p>
-      <div class="f-newsletter">
-        <input type="email" placeholder="Your email address" aria-label="Newsletter"/>
-        <button>Sign Up</button>
+      <div>
+        <div class="f-col-title" data-i18n="footer-quick">Quick Links</div>
+        <div class="f-links">
+          <a href="../index.html" data-i18n="footer-home">Home</a>
+          <a href="../About_missions.html" data-i18n="footer-story">Our Story</a>
+          <a href="../NEWS-BLOG-main/main.html" data-i18n="footer-news">News</a>
+          <a href="../About_gallery.html" data-i18n="footer-gallery">Gallery</a>
+          <a href="../contact/index.html" data-i18n="footer-contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title" data-i18n="footer-missions">Missions</div>
+        <div class="f-links">
+          <a href="../individuals/index.html" data-i18n="footer-faq">FAQs</a>
+          <a href="../partnership/index.html" data-i18n="footer-partner">Partners</a>
+          <a href="../donate/index.html" data-i18n="footer-donate">Donate</a>
+          <a href="https://forms.gle/LG43ReJcDcAizGBr7" data-i18n="footer-partner">Partner With Us</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title" data-i18n="footer-cn">Contact</div>
+        <div class="f-links">
+          <a href="mailto:taczoemissions@gmail.com">taczoemissions@gmail.com</a>
+          <a href="https://wa.me/233509660388">WhatsApp: +233 509 660 388</a>
+          <a href="tel:+233555033857">Call: +233 555 033 857</a>
+        </div>
       </div>
     </div>
-    <div>
-      <div class="f-col-title">Quick Links</div>
-      <div class="f-links">
-        <a href="../index.html">Home</a>
-        <a href="../About_missions.html">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html">News</a>
-        <a href="../About_gallery.html">Gallery</a>
-        <a href="../contact/index.html">Contact</a>
-      </div>
+    <div class="footer-bottom">
+      <nav><a href="#">Cookies</a><a href="#">Terms</a><a href="#">Privacy</a></nav>
+      <p data-i18n="footer-cc">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
     </div>
-    <div>
-      <div class="f-col-title">Missions</div>
-      <div class="f-links">
-        <a href="../individuals/index.html">FAQs</a>
-        <a href="../partnership/index.html">Partners</a>
-        <a href="../donate/index.html">Donate</a>
-        <a href="https://forms.gle/LG43ReJcDcAizGBr7">Partner With Us</a>
-      </div>
-    </div>
-    <div>
-      <div class="f-col-title">Contact</div>
-      <div class="f-links">
-        <a href="mailto:taczoemissions@gmail.com">taczoemissions@gmail.com</a>
-        <a href="https://wa.me/233509660388">WhatsApp: +233 509 660 388</a>
-        <a href="tel:+233555033857">Call: +233 555 033 857</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <nav><a href="#">Cookies</a><a href="#">Terms</a><a href="#">Privacy</a></nav>
-    <p>© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
-  </div>
-</footer>
+  </footer>
 
                 
-        
+        <script src="js/langauges.js"></script>
         <script>
+
           const nav_bar = document.querySelector('nav');
           const nav = document.getElementById('navWrapper');
           window.addEventListener('scroll', () => {

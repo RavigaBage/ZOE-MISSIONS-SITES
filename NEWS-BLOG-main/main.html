@@ -87,6 +87,31 @@
 
       opacity: 1;
     }
+      .skeleton{
+        display: none;
+        transition:all 1s ease;
+        transform: scale(0);
+
+      }
+      .skeleton.scrolled{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #071b2a;
+        z-index: 999999999;
+        display: grid;
+        place-items: center;
+        color:var(--white);
+        font-size: 3rem;
+        transform: scale(1);
+      }
+      .skeleton span{
+        color:var(--gold);
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
     .lan_select{
       width:70px;
       min-height: 30px;
@@ -810,75 +835,99 @@ a { text-decoration: none; color: inherit; }
   </style>
 </head>
 <body>
+  <div class="skeleton">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+    <p>We are converting this page to <span>FRENCH</span>, please hld on</p>
+  </div>
   <div class="nav-wrapper" id="navWrapper">
     <nav>
-      <a href="../index.html" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         ZOE<span class="nav-logo-dot">·</span>TIRZAH
       </a>
       <div class="nav-links">
-        <a href="../index.html" data-i18n="nav.home">Home</a>
-        <a href="../About_missions.html" data-i18n="nav.ourstory">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html" data-i18n="nav.news">News</a>
-        <a href="../impact/index.html" data-i18n="nav.impact">Impact</a>
-        <a href="../About_gallery.html" data-i18n="nav.gallery">Gallery</a>
-        <a href="../partnership/index.html" data-i18n="nav.partners">Partners</a>
-        <a href="../contact/index.html" data-i18n="nav.contact">Contact</a>
+        <a href="index.html" data-i18n="lang">Home</a>
+        <a href="About_missions.html" data-i18n="lang">Our Story</a>
+        <a href="NEWS-BLOG-main/main.html" data-i18n="lang">News</a>
+        <a href="impact/index.html" data-i18n="lang">Impact</a>
+        <a href="About_gallery.html" data-i18n="lang">Gallery</a>
+        <a href="partnership/index.html" data-i18n="lang">Partners</a>
+        <a href="contact/index.html" data-i18n="lang">Contact</a>
+        <div class="lan_select">
+          <div class="item default" data-lang="en">
+            <div class="flag">🌐</div>
+            <b>En</b>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+          </div>
+          <div class="List_drop">
+            <div class="item" data-lang="fr">
+              <div class="flag"></div>
+              <b>Fr</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>Ar</b>
+            </div>
+            <div class="item" data-lang="ar">
+              <div class="flag"></div>
+              <b>En</b>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="../donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </div>
-
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-header">
-    <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
-    <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
-  </div>
-  <div class="mobile-links">
-    <a href="../index.html" data-i18n="navMobile.home">Home</a>
-    <a href="../About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
-    <a href="../NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
-    <a href="../impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
-    <a href="../About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
-    <a href="../partnership/index.html" data-i18n="navMobile.partners">Partners</a>
-    <a href="../individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
-    <a href="../contact/index.html" data-i18n="navMobile.contact">Contact</a>
-        <div class="lan_select">
-      <div class="item default" data-lang="en">
-        <div class="flag">🌐</div>
-        <b>En</b>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
-      </div>
-      <div class="List_drop">
-        <div class="item" data-lang="fr">
-          <div class="flag"></div>
-          <b>Fr</b>
-        </div>
-        <div class="item" data-lang="ar">
-          <div class="flag"></div>
-          <b>Ar</b>
-        </div>
-        <div class="item" data-lang="ar">
-          <div class="flag"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="mobile-links">
+      <a href="../index.html" data-i18n="navMobile.home">Home</a>
+      <a href="../About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
+      <a href="../NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
+      <a href="../impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
+      <a href="../About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
+      <a href="../partnership/index.html" data-i18n="navMobile.partners">Partners</a>
+      <a href="../individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
+      <a href="../contact/index.html" data-i18n="navMobile.contact">Contact</a>
+          <div class="lan_select">
+        <div class="item default" data-lang="en">
+          <div class="flag">🌐</div>
           <b>En</b>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
         </div>
-      </div>
+        <div class="List_drop">
+          <div class="item" data-lang="fr">
+            <div class="flag"></div>
+            <b>Fr</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>Ar</b>
+          </div>
+          <div class="item" data-lang="ar">
+            <div class="flag"></div>
+            <b>En</b>
+          </div>
+        </div>
 
+      </div>
+    </div>
+    <div class="mobile-cta">
+      <a href="../donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
+        <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
+      </a>
     </div>
   </div>
-  <div class="mobile-cta">
-    <a href="../donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
-      <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
-    </a>
-  </div>
-</div>
 
 
   <section class="hero">
     <div class="hero-text">
-      <div class="mini-tag">
+      <div class="mini-tag" data-i18n="hero-tag">
         🌍 Global Missions Update
       </div>
 
@@ -886,13 +935,13 @@ a { text-decoration: none; color: inherit; }
         Sharing Hope <span>Across Nations</span>
       </h1>
 
-      <p>
+      <p data-i18n="hero-discover">
         Discover inspiring stories, mission outreach updates, humanitarian projects, youth evangelism, and church impact reports from communities around the world. Stay connected with every soul touched and every life transformed.
       </p>
 
       <div class="hero-actions">
-        <button class="primary-btn">Explore Latest News</button>
-        <button class="secondary-btn">Watch Mission Stories</button>
+        <button class="primary-btn" data-i18n="hero-explore" data-i18n="hero-action">Explore Latest News</button>
+        <button class="secondary-btn" data-i18n="hero-watch" data-i18n="hero-watch">Watch Mission Stories</button>
       </div>
     </div>
 
@@ -904,11 +953,11 @@ a { text-decoration: none; color: inherit; }
 
         <div class="overlay-card">
           <div>
-            <h4>Medical Outreach in Kenya</h4>
-            <p>Over 3,200 lives impacted this month.</p>
+            <h4 data-i18n="hero-medical">Medical Outreach in Kenya</h4>
+            <p data-i18n="hero-population">Over 3,200 lives impacted this month.</p>
           </div>
 
-          <div class="badge-live">LIVE</div>
+          <div class="badge-live" data-i18n="hero-live">LIVE</div>
         </div>
       </div>
     </div>
@@ -917,35 +966,35 @@ a { text-decoration: none; color: inherit; }
   <section class="stats-section">
     <div class="stat-card">
       <div class="stat-number" data-count="42">0</div>
-      <div class="stat-label">Mission Countries</div>
+      <div class="stat-label" data-i18n="stat-mission">Mission Countries</div>
     </div>
 
     <div class="stat-card">
       <div class="stat-number" data-count="680">0</div>
-      <div class="stat-label">Volunteers Worldwide</div>
+      <div class="stat-label" data-i18n="stat-volunteer">Volunteers Worldwide</div>
     </div>
 
     <div class="stat-card">
       <div class="stat-number" data-count="128">0</div>
-      <div class="stat-label">Church Planting Projects</div>
+      <div class="stat-label" data-i18n="stat-church">Church Planting Projects</div>
     </div>
 
     <div class="stat-card">
       <div class="stat-number" data-count="15000">0</div>
-      <div class="stat-label">Lives Reached</div>
+      <div class="stat-label" data-i18n="stat-lives">Lives Reached</div>
     </div>
   </section>
 
 <section class="news-section">
   <div class="section-title">
     <div>
-      <h2>Missions Blog & Events</h2>
-      <h4 class="section-subtitle">
+      <h2 data-i18n="news-blog">Missions Blog & Events</h2>
+      <h4 class="section-subtitle" data-i18n="news-subtitle">
         Stories • Training • Outreach • Celebration • Mission Resources
       </h4>
     </div>
 
-    <p>
+    <p data-i18n="news-inspire">
       Explore inspiring mission stories, outreach celebrations, practical training
       guides, mission preparation tips, accommodation advice, and strategies for
       equipping believers to impact communities through evangelism and compassionate service.
@@ -959,21 +1008,21 @@ a { text-decoration: none; color: inherit; }
       <div class="news-image">
         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Mission conference team meeting">
 
-        <div class="news-tag">Mission Event</div>
+        <div class="news-tag" data-i18n="news-event">Mission Event</div>
       </div>
 
       <div class="news-content">
-        <div class="news-date">June 02, 2026</div>
+        <div class="news-date" data-i18n="news-date">June 02, 2026</div>
 
-        <h3>
+        <h3 data-i18n="news-global">
           Global Missions Conference 2026 Brings Together Evangelists Across Ghana
         </h3>
 
-        <h4 class="card-subheader">
+        <h4 class="card-subheader" data-i18n="news-outreach">
           Worship • Training Sessions • Community Outreach
         </h4>
 
-        <p>
+        <p data-i18n="news-ann">
           The annual missions conference gathered church leaders, youth ministries,
           outreach coordinators, and missionaries for a week of revival, leadership
           development, evangelism workshops, and practical outreach preparation.
@@ -981,7 +1030,7 @@ a { text-decoration: none; color: inherit; }
           missions and sustainable community impact.
         </p>
 
-        <a href="../articles/uploading.html" class="news-link">
+        <a href="../articles/uploading.html" class="news-link" data-i18n="news-highlight">
           Explore Event Highlights →
         </a>
       </div>
@@ -992,28 +1041,28 @@ a { text-decoration: none; color: inherit; }
       <div class="news-image">
         <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop" alt="Mission anniversary celebration">
 
-        <div class="news-tag">Decade Celebration</div>
+        <div class="news-tag" data-i18n="news-decade">Decade Celebration</div>
       </div>
 
       <div class="news-content">
-        <div class="news-date">May 28, 2026</div>
+        <div class="news-date" data-i18n="news-decade_date">May 28, 2026</div>
 
-        <h3>
+        <h3 data-i18n="news-celebrate">
           Celebrating 10 Years of Missions, Souls, and Community Transformation
         </h3>
 
-        <h4 class="card-subheader">
+        <h4 class="card-subheader" data-i18n="news-evan">
           A Decade of Evangelism & Humanitarian Outreach
         </h4>
 
-        <p>
+        <p data-i18n="news-cq">
           The Zoe-Tirzah Missions movement commemorated a decade of ministry impact
           with a special anniversary celebration featuring worship encounters,
           testimonies, mission documentaries, and recognition for volunteers who
           have faithfully served communities over the years.
         </p>
 
-        <a href="../articles/uploading.html" class="news-link">
+        <a href="../articles/uploading.html" class="news-link" data-i18n="news-cw">
           Read Anniversary Story →
         </a>
       </div>
@@ -1024,28 +1073,28 @@ a { text-decoration: none; color: inherit; }
       <div class="news-image">
         <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop" alt="Mission training workshop">
 
-        <div class="news-tag">Mission Training</div>
+        <div class="news-tag" data-i18n="news-ce">Mission Training</div>
       </div>
 
       <div class="news-content">
-        <div class="news-date">May 25, 2026</div>
+        <div class="news-date" data-i18n="news-cr">May 25, 2026</div>
 
-        <h3>
+        <h3 data-i18n="news-ct">
           How to Train Church Members for Effective Mission Outreach
         </h3>
 
-        <h4 class="card-subheader">
+        <h4 class="card-subheader" data-i18n="news-cy">
           Leadership Development • Evangelism Skills • Team Preparation
         </h4>
 
-        <p>
+        <p data-i18n="news-cu">
           Preparing believers for missions requires intentional discipleship,
           practical evangelism training, communication skills, prayer preparation,
           and cultural awareness. Churches are encouraged to organize workshops,
           outreach simulations, and mentorship programs to build confident mission teams.
         </p>
 
-        <a href="../articles/uploading.html" class="news-link">
+        <a href="../articles/uploading.html" class="news-link" data-i18n="news-ci">
           Learn Training Strategies →
         </a>
       </div>
@@ -1056,28 +1105,28 @@ a { text-decoration: none; color: inherit; }
       <div class="news-image">
         <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1200&auto=format&fit=crop" alt="Mission travel and accommodation">
 
-        <div class="news-tag">Travel & Stay</div>
+        <div class="news-tag" data-i18n="news-co">Travel & Stay</div>
       </div>
 
       <div class="news-content">
-        <div class="news-date">May 21, 2026</div>
+        <div class="news-date" data-i18n="news-cp">May 21, 2026</div>
 
-        <h3>
+        <h3 data-i18n="news-ca">
           Where Mission Teams Can Stay During Outreach Programs
         </h3>
 
-        <h4 class="card-subheader">
+        <h4 class="card-subheader" data-i18n="news-cs">
           Accommodation Tips for Mission Travelers
         </h4>
 
-        <p>
+        <p data-i18n="news-cd">
           Finding safe and affordable accommodation is essential during outreach
           programs. Churches are encouraged to partner with local assemblies,
           schools, retreat centers, and community facilities that can host mission
           volunteers comfortably while supporting ministry activities.
         </p>
 
-        <a href="../articles/uploading.html" class="news-link">
+        <a href="../articles/uploading.html" class="news-link" data-i18n="news-cf">
           Read Accommodation Guide →
         </a>
       </div>
@@ -1088,28 +1137,28 @@ a { text-decoration: none; color: inherit; }
       <div class="news-image">
         <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop" alt="Community outreach volunteers">
 
-        <div class="news-tag">Mission Tips</div>
+        <div class="news-tag" data-i18n="news-cg">Mission Tips</div>
       </div>
 
       <div class="news-content">
-        <div class="news-date">May 18, 2026</div>
+        <div class="news-date" data-i18n="news-ch">May 18, 2026</div>
 
-        <h3>
+        <h3 data-i18n="news-cj">
           7 Important Things Every Mission Volunteer Should Know Before Outreach
         </h3>
 
-        <h4 class="card-subheader">
+        <h4 class="card-subheader" data-i18n="news-ck">
           Preparation • Prayer • Teamwork • Community Engagement
         </h4>
 
-        <p>
+        <p data-i18n="news-cl">
           Successful mission outreach depends on preparation, humility, teamwork,
           and spiritual readiness. Volunteers are advised to prioritize prayer,
           cultural sensitivity, flexibility, and genuine compassion while engaging
           communities and sharing the Gospel message.
         </p>
 
-        <a href="../articles/uploading.html" class="news-link">
+        <a href="../articles/uploading.html" class="news-link" data-i18n="news-cz">
           Discover Mission Tips →
         </a>
       </div>
@@ -1120,28 +1169,28 @@ a { text-decoration: none; color: inherit; }
       <div class="news-image">
         <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200&auto=format&fit=crop" alt="Early morning evangelism outreach">
 
-        <div class="news-tag">Evangelism Guide</div>
+        <div class="news-tag" data-i18n="news-cx">Evangelism Guide</div>
       </div>
 
       <div class="news-content">
-        <div class="news-date">May 14, 2026</div>
+        <div class="news-date" data-i18n="news-cc">May 14, 2026</div>
 
-        <h3>
+        <h3 data-i18n="news-cv">
           What To Do During Mission Outreach Programs in Rural Communities
         </h3>
 
-        <h4 class="card-subheader">
+        <h4 class="card-subheader" data-i18n="news-cb">
           House-to-House Evangelism • Prayer Walks • Community Service
         </h4>
 
-        <p>
+        <p data-i18n="news-cn">
           Mission outreach involves more than crusades alone. Teams are encouraged
           to engage in house-to-house evangelism, medical support, youth mentoring,
           dawn broadcasting, prayer walks, and community cleanup projects that
           demonstrate both compassion and spiritual care.
         </p>
 
-        <a href="../articles/uploading.html" class="news-link">
+        <a href="../articles/uploading.html" class="news-link" data-i18n="news-cm">
           Read Outreach Guide →
         </a>
       </div>
@@ -1156,14 +1205,14 @@ a { text-decoration: none; color: inherit; }
 
       <div class="floating-box">
         <h3>12,000+</h3>
-        <p>Families impacted through global missions and humanitarian outreach programs.</p>
+        <p data-i18n="news-cqq">Families impacted through global missions and humanitarian outreach programs.</p>
       </div>
     </div>
 
-    <div class="impact-content">
-      <h2>Transforming Communities Through Missions</h2>
+    <div class="impact-content" data-i18n="news-cqw">
+      <h2 data-i18n="news-cqe">Transforming Communities Through Missions</h2>
 
-      <p>
+      <p data-i18n="news-cqr">
         Our mission network combines evangelism, education, healthcare support, leadership training, and relief initiatives to bring practical and spiritual transformation to communities worldwide.
       </p>
 
@@ -1172,8 +1221,8 @@ a { text-decoration: none; color: inherit; }
           <div class="impact-icon">⛪</div>
 
           <div>
-            <h3>Church Planting</h3>
-            <p>Supporting new churches and training local leaders in developing regions.</p>
+            <h3 data-i18n="news-cqr">Church Planting</h3>
+            <p data-i18n="news-cqt">Supporting new churches and training local leaders in developing regions.</p>
           </div>
         </div>
 
@@ -1181,8 +1230,8 @@ a { text-decoration: none; color: inherit; }
           <div class="impact-icon">📖</div>
 
           <div>
-            <h3>Bible Distribution</h3>
-            <p>Providing translated Bibles and discipleship materials to remote communities.</p>
+            <h3 data-i18n="news-cqy">Bible Distribution</h3>
+            <p data-i18n="news-cqu">Providing translated Bibles and discipleship materials to remote communities.</p>
           </div>
         </div>
       </div>
@@ -1192,70 +1241,75 @@ a { text-decoration: none; color: inherit; }
   <section class="newsletter">
     <div class="newsletter-box">
       <div>
-        <h2>Stay Updated With Every Mission Story</h2>
-        <p>
+        <h2 data-i18n="news-cqi">Stay Updated With Every Mission Story</h2>
+        <p data-i18n="news-cqo">
           Subscribe to receive outreach updates, prayer requests, event announcements, and inspiring testimonies directly in your inbox.
         </p>
       </div>
 
       <form class="newsletter-form" id="newsletterForm">
         <input type="email" placeholder="Enter your email address" required>
-        <button type="submit">Subscribe</button>
+        <button type="submit" data-i18n="news-cqp">Subscribe</button>
       </form>
     </div>
   </section>
 
 <footer>
   <div class="footer-grid">
-    <div>
-      <div class="f-brand-name">ZOE · TIRZAH</div>
-      <p class="f-brand-desc">A welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve the world.</p>
-      <div class="f-socials">
-        <a href="https://www.facebook.com/AZWC17" class="f-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/tac_zoe" class="f-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@tac_zoe" class="f-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://wa.me/233509660388" class="f-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <div class="footer-brand">
+      <div class="footer-brand-name"><span data-i18n="footer.brand">ZOE · TIRZAH</span></div>
+      <p class="footer-brand-desc"><span data-i18n="footer.desc">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve our world.</span></p>
+      <p style="font-size:0.78rem;margin-bottom:10px;color:rgba(255,255,255,0.35);"><span data-i18n="footer.stayUpdated">Stay updated:</span></p>
+      <div class="footer-newsletter">
+        <input type="email" class="footer-email-input" id="footerEmail" placeholder="Your email address" aria-label="Newsletter email" data-i18n-placeholder="footer.emailPlaceholder"/>
+        <button class="footer-sub-btn" id="footerSignup"><span data-i18n="footer.signup">Sign Up</span></button>
       </div>
-      <p style="font-size:.75rem;margin-bottom:8px;color:rgba(255,255,255,.3);">Stay updated:</p>
-      <div class="f-newsletter">
-        <input type="email" placeholder="Your email address" aria-label="Newsletter"/>
-        <button>Sign Up</button>
-      </div>
-    </div>
-    <div>
-      <div class="f-col-title">Quick Links</div>
-      <div class="f-links">
-        <a href="../index.html">Home</a>
-        <a href="../About_missions.html">Our Story</a>
-        <a href="../NEWS-BLOG-main/main.html">News</a>
-        <a href="../About_gallery.html">Gallery</a>
-        <a href="../contact/index.html">Contact</a>
+      <div class="footer-socials" style="margin-top:20px;">
+        <a href="https://www.facebook.com/AZWC17" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/tac_zoe" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@tac_zoe" class="footer-social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://wa.me/233553838464" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
     <div>
-      <div class="f-col-title">Missions</div>
-      <div class="f-links">
-        <a href="../individuals/index.html">FAQs</a>
-        <a href="../partnership/index.html">Partners</a>
-        <a href="../donate/index.html">Donate</a>
-        <a href="https://forms.gle/LG43ReJcDcAizGBr7">Partner With Us</a>
+      <div class="footer-col-title"><span data-i18n="footer.quickLinks">Quick Links</span></div>
+      <div class="footer-links">
+        <a href="index.html"><span data-i18n="footer.linkHome">Home</span></a>
+        <a href="About_missions.html"><span data-i18n="footer.linkStory">Our Story</span></a>
+        <a href="NEWS-BLOG-main/main.html"><span data-i18n="footer.linkNews">News</span></a>
+        <a href="About_gallery.html"><span data-i18n="footer.linkGallery">Gallery</span></a>
+        <a href="contact/index.html"><span data-i18n="footer.linkContact">Contact</span></a>
       </div>
     </div>
     <div>
-      <div class="f-col-title">Contact</div>
-      <div class="f-links">
-        <a href="mailto:taczoemissions@gmail.com">taczoemissions@gmail.com</a>
-        <a href="https://wa.me/233509660388">WhatsApp: +233 509 660 388</a>
-        <a href="tel:+233555033857">Call: +233 555 033 857</a>
+      <div class="footer-col-title"><span data-i18n="footer.missions">Missions</span></div>
+      <div class="footer-links">
+        <a href="individuals/index.html"><span data-i18n="footer.linkFaqs">FAQs</span></a>
+        <a href="partnership/index.html"><span data-i18n="footer.linkPartners">Partners</span></a>
+        <a href="donate/index.html"><span data-i18n="footer.linkDonate">Donate</span></a>
+        <a href="https://forms.gle/LG43ReJcDcAizGBr7"><span data-i18n="footer.linkPartnerWithUs">Partner With Us</span></a>
+        <a href="impact/index.html"><span data-i18n="footer.linkImpact">Community Impact</span></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title"><span data-i18n="footer.contact">Contact</span></div>
+      <div class="footer-links">
+        <a href="mailto:tac.azwc@gmail.com"><span data-i18n="footer.email">taczoemissions@gmail.com</span></a>
+        <a href="https://wa.me/233509660388"><span data-i18n="footer.whatsapp">WhatsApp: +233 509 660 388</span></a>
+        <a href="tel:+233555033857"><span data-i18n="footer.phone">Call: +233 555 033 857</span></a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <nav><a href="#">Cookies</a><a href="#">Terms</a><a href="#">Privacy</a></nav>
-    <p>© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
+    <nav style="display:flex;gap:20px;">
+      <a href="#"><span data-i18n="footer.cookies">Cookies</span></a>
+      <a href="#"><span data-i18n="footer.terms">Terms</span></a>
+      <a href="#"><span data-i18n="footer.privacy">Privacy</span></a>
+    </nav>
+    <p><span data-i18n="footer.copyright">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</span></p>
   </div>
 </footer>
-
+ <script src="js/langauges.js"></script>
   <script>
         (() => {
 
