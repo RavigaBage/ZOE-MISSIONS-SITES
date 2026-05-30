@@ -46,32 +46,32 @@
 
 <div class="payment-shell">
     <div class="header">
-        <h2>Payment Method</h2>
-        <p>Complete your donation via Paystack</p>
+        <h2 data-i18n="">Payment Method</h2>
+        <p data-i18n="">Complete your donation via Paystack</p>
     </div>
 
     <div class="field">
-        <label>Email Address</label>
-        <input type="email" id="email-address" placeholder="example@mail.com" required>
+        <label data-i18n="">Email Address</label>
+        <input type="email" id="email-address" placeholder="example@mail.com" required="">
     </div>
     <div class="field">
-        <label>Amount (GHS)</label>
-        <input type="number" id="amount" placeholder="0.00" required>
+        <label data-i18n="">Amount (GHS)</label>
+        <input type="number" id="amount" placeholder="0.00" required="">
     </div>
 
     <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
     <div class="methods">
         <label class="method active">
-            <input type="radio" name="pay" value="card" checked>
+            <input type="radio" name="pay" value="card" checked="">
             <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
-            <span>Card</span>
+            <span data-i18n="">Card</span>
         </label>
 
         <label class="method">
             <input type="radio" name="pay" value="bank">
             <img src="https://img.icons8.com/fluency/48/bank.png" alt="Bank Transfer">
-            <span>Bank</span>
+            <span data-i18n="">Bank</span>
         </label>
 
         <label class="method">
@@ -82,11 +82,11 @@
     </div>
 
     <div id="card" class="details active">
-        <p style="font-size: 0.8rem; color: #888;">You will be redirected to Paystack's secure card portal.</p>
+        <p style="font-size: 0.8rem; color: #888;" data-i18n="">You will be redirected to Paystack's secure card portal.</p>
     </div>
  
 
-    <button type="button" class="pay-btn" id="payWithPaystack">Pay Now</button>
+    <button type="button" class="pay-btn" id="payWithPaystack" data-i18n="">Pay Now</button>
 </div>
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
@@ -139,6 +139,6 @@
         handler.openIframe();
     });
 </script>
-
+<script src="../js/extractor.js"></script>
 </body>
 </html>

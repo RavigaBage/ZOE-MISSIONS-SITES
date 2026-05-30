@@ -69,42 +69,29 @@ async function loadLanguage(lang = "en") {
        
         Object.entries(langObj).forEach(([key, value]) => {
         const Data_list = document.querySelectorAll(`[data-i18n]`);
-        const splitkey = key.split('-')[1];
-        var ElementList = null;
-        Data_list.forEach(element_r=>{
-            const ArrayListing = [...Data_list];
-             const Index = ArrayListing.indexOf(element_r);
-             if(Index == parseInt(splitkey)){
-                ElementList = element_r;
-             }
-        })
-        
-        if(ElementList !=null){
-            
-            const el = ElementList;
+        const el = document.querySelector(`[data-i18n="${key}"]`);
+        console.log(key);
             if (el) {
                  
                 skeleton.querySelector('span').textContent = languageConvert(lang);
 
                 el.classList.add('animate_x');
                 el.classList.add('hide');  
+                
                 setTimeout(()=>{
                     if (value.includes("<") && value.includes(">")) {
-                    el.innerHTML = value;
+                        el.innerHTML = value;
                     } else {
                         el.textContent = value;
                     }
                     el.classList.remove('hide'); 
-                     skeleton.classList.remove('scrolled');
+                    skeleton.classList.remove('scrolled');
                 },900)
 
             }
-
-
-  
-            document.querySelector('html').setAttribute('lang',lang);
-                
-        }
+        document.querySelector('html').setAttribute('lang',lang);
+            
+    
  
             });
     } catch (err) {

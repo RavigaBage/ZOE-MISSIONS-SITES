@@ -322,6 +322,77 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 .reveal.visible{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
+footer {
+      background: var(--navy); border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 60px; color: rgba(255,255,255,.6);
+    }
+    .footer-grid {
+      width: min(1160px,92vw); margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .f-brand-name { font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .f-brand-desc { font-size: .87rem; line-height: 1.7; margin-bottom: 20px; }
+    .f-socials { display: flex; gap: 10px; margin-bottom: 22px; }
+    .f-social {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,.08); display: grid; place-items: center;
+      color: rgba(255,255,255,.6); font-size: .88rem; transition: var(--tr);
+    }
+    .f-social:hover { background: var(--crimson); color: var(--white); }
+    .f-newsletter { display: flex; gap: 8px; }
+    .f-newsletter input {
+      flex: 1; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 999px; padding: 9px 16px; color: var(--white); font-size: .84rem;
+      font-family: var(--font-body); outline: none;
+    }
+    .f-newsletter input::placeholder { color: rgba(255,255,255,.3); }
+    .f-newsletter input:focus { border-color: var(--teal); }
+    .f-newsletter button {
+      background: var(--teal-dk); color: var(--white); border: none;
+      padding: 9px 18px; border-radius: 999px; font-size: .84rem; font-weight: 700;
+      cursor: pointer; font-family: var(--font-body); white-space: nowrap; transition: var(--tr);
+    }
+    .f-newsletter button:hover { background: var(--teal-mid); }
+    .f-col-title { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--white); margin-bottom: 16px; }
+    .f-links { display: flex; flex-direction: column; gap: 9px; }
+    .f-links a { font-size: .87rem; transition: color .2s; }
+    .f-links a:hover { color: var(--teal); }
+    .footer-bottom {
+      width: min(1160px,92vw); margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0; font-size: .8rem; gap: 12px; flex-wrap: wrap;
+    }
+    .footer-bottom nav { display: flex; gap: 20px; }
+    .footer-bottom nav a:hover { color: var(--teal); }
+
+    .socials {
+      display: flex;
+      gap: 16px;
+    }
+
+    .socials a {
+      width: 46px;
+      height: 46px;
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--deep-blue);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: translateY(-5px);
+      background: var(--yellow);
+    }
+
+
 @media(max-width:1000px){
   .nav-links,.nav-cta-wrap{display:none}
   .burger{display:flex}
@@ -378,22 +449,22 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
   </div>
   <div class="nav-wrapper" id="navWrapper">
     <nav>
-      <a href="index.html" class="nav-logo">
+      <a href="../index.html" class="nav-logo">
         ZOE<span class="nav-logo-dot">·</span>TIRZAH
       </a>
       <div class="nav-links">
-        <a href="index.html" data-i18n="lang">Home</a>
-        <a href="About_missions.html" data-i18n="lang">Our Story</a>
-        <a href="NEWS-BLOG-main/main.html" data-i18n="lang">News</a>
-        <a href="impact/index.html" data-i18n="lang">Impact</a>
-        <a href="About_gallery.html" data-i18n="lang">Gallery</a>
-        <a href="partnership/index.html" data-i18n="lang">Partners</a>
-        <a href="contact/index.html" data-i18n="lang">Contact</a>
+        <a href="../index.html" data-i18n="lang-0">Home</a>
+        <a href="../About_missions.html" data-i18n="lang-1">Our Story</a>
+        <a href="../NEWS-BLOG-main/main.html" data-i18n="lang-2">News</a>
+        <a href="../impact/index.html" data-i18n="lang-3">Impact</a>
+        <a href="../About_gallery.html" data-i18n="lang-4">Gallery</a>
+        <a href="../partnership/index.html" data-i18n="lang-5">Partners</a>
+        <a href="../contact/index.html" data-i18n="lang-6">Contact</a>
         <div class="lan_select">
           <div class="item default" data-lang="en">
             <div class="flag">🌐</div>
             <b>En</b>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"></path></svg>
           </div>
           <div class="List_drop">
             <div class="item" data-lang="fr">
@@ -411,7 +482,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
           </div>
         </div>
       </div>
-      <a href="donate/index.html" class="nav-donate" data-i18n="nav.donate">Donate Now</a>
+      <a href="donate/index.html" class="nav-donate" data-i18n="lang-7">Donate Now</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -420,23 +491,23 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
-      <span class="nav-logo" >ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
-      <button class="mobile-close" id="mobileClose" aria-label="Close">&times;</button>
+      <span class="nav-logo">ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
     </div>
     <div class="mobile-links">
-      <a href="../index.html" data-i18n="navMobile.home">Home</a>
-      <a href="../About_missions.html" data-i18n="navMobile.ourstory">Our Story</a>
-      <a href="../NEWS-BLOG-main/main.html" data-i18n="navMobile.news">News</a>
-      <a href="../impact/index.html" data-i18n="navMobile.impact">Community Impact</a>
-      <a href="../About_gallery.html" data-i18n="navMobile.gallery">Gallery</a>
-      <a href="../partnership/index.html" data-i18n="navMobile.partners">Partners</a>
-      <a href="../individuals/index.html" data-i18n="navMobile.faqs">FAQs</a>
-      <a href="../../contact/index.html" data-i18n="navMobile.contact">Contact</a>
+      <a href="../index.html" data-i18n="lang-8">Home</a>
+      <a href="../About_missions.html" data-i18n="lang-9">Our Story</a>
+      <a href="../NEWS-BLOG-main/main.html" data-i18n="lang-10">News</a>
+      <a href="../impact/index.html" data-i18n="lang-11">Community Impact</a>
+      <a href="../About_gallery.html" data-i18n="lang-12">Gallery</a>
+      <a href="../partnership/index.html" data-i18n="lang-13">Partners</a>
+      <a href="../individuals/index.html" data-i18n="lang-14">FAQs</a>
+      <a href="../../contact/index.html" data-i18n="lang-15">Contact</a>
           <div class="lan_select">
         <div class="item default" data-lang="en">
           <div class="flag">🌐</div>
           <b>En</b>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"></path></svg>
         </div>
         <div class="List_drop">
           <div class="item" data-lang="fr">
@@ -457,92 +528,126 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
     </div>
     <div class="mobile-cta">
       <a href="../donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
-        <i class="fa-solid fa-heart"></i> <span data-i18n="nav.donate">Donate Now</span>
+        <i class="fa-solid fa-heart"></i> <span data-i18n="lang-16">Donate Now</span>
       </a>
     </div>
   </div>
 
 
 
-<section class="hero" >
+<section class="hero">
   <div class="hero-img"></div>
   <div class="hero-inner">
     <div class="hero-pill">
       <i class="fa-solid fa-handshake"></i>
-      <span data-i18n="hero-title">Kingdom Partnerships</span>
+      <span data-i18n="lang-17">Kingdom Partnerships</span>
     </div>
-    <h1 data-i18n="hero-desc">Together, We<br>Are Reaching<br>the <em>Nations</em></h1>
-    <p data-i18n="hero-descrip">Walking alongside visionary churches, ministries, foundations, and businesses united by the Gospel and a passion for human flourishing.</p>
+    <h1 data-i18n="lang-18">Together, We<br>Are Reaching<br>the <em>Nations</em></h1>
+    <p data-i18n="lang-19">Walking alongside visionary churches, ministries, foundations, and businesses united by the Gospel and a passion for human flourishing.</p>
     <div class="hero-btns">
       <button class="btn btn-light" onclick="document.getElementById('partners-grid').scrollIntoView({behavior:'smooth'})">
-        <i class="fa-solid fa-users"></i> <span data-i18n="hero-greet">Meet Our Partners</span>
+        <i class="fa-solid fa-users"></i> <span data-i18n="lang-20">Meet Our Partners</span>
       </button>
       <button class="btn btn-ghost" onclick="document.getElementById('join-section').scrollIntoView({behavior:'smooth'})">
-        <span data-i18n="hero-partner">Partner With Us</span> <i class="fa-solid fa-arrow-right"></i>
+        <span data-i18n="lang-21">Partner With Us</span> <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
   </div>
   <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
-    <span data-i18n="page-scroll">Scroll</span>
+    <span data-i18n="lang-22">Scroll</span>
   </div>
 </section>
 
 <section class="section" id="partners-grid" style="background:var(--white)">
   <div class="section-inner">
     <div class="partners-header reveal">
-      <div class="section-label" data-i18n="partner-value">Our Valued Partners</div>
-      <h2 class="section-title" data-i18n="partner-united">United in <em>Purpose</em></h2>
-      <p class="section-sub" data-i18n="partner-descrip">Each partnership represents a shared calling — to see transformed lives, thriving communities, and the Gospel reach every corner of the earth.</p>
+      <div class="section-label" data-i18n="lang-23">Our Valued Partners</div>
+      <h2 class="section-title" data-i18n="lang-24">United in <em>Purpose</em></h2>
+      <p class="section-sub" data-i18n="lang-25">Each partnership represents a shared calling — to see transformed lives, thriving communities, and the Gospel reach every corner of the earth.</p>
     </div>
     <div class="grid-partners">
       <div class="p-card reveal d1">
         <div class="p-logo">
           <img src="../images/logo/tirzah.png" alt="Tirzah Oasis" loading="lazy">
         </div>
-        <div class="p-name" data-i18n="partner-name">Tirzah Oasis</div>
-        <div class="p-desc">Child Sponsorship & Community Development</div>
-        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="partner-years">10 Years Partnership</span></div>
+        <div class="p-name" data-i18n="lang-26">Tirzah Oasis</div>
+        <div class="p-desc">Child Sponsorship &amp; Community Development</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="lang-27">10 Years Partnership</span></div>
       </div>
       <div class="p-card reveal d2">
         <div class="p-logo">
           <img src="../images/logo/Christos_prev_ui.png" alt="Christos Media" loading="lazy">
         </div>
-        <div class="p-name" data-i18n="partner-name-2">Christos Media</div>
-        <div class="p-desc" data-i18n="partner-name-description">Church Planting & Discipleship</div>
-        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="partner-strategy"> Strategic Alliance</span></div>
+        <div class="p-name" data-i18n="lang-28">Christos Media</div>
+        <div class="p-desc" data-i18n="lang-29">Church Planting &amp; Discipleship</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="lang-30"> Strategic Alliance</span></div>
+      </div>
+      <div class="p-card reveal d2">
+        <div class="p-logo">
+          <img src="../images/logo/Aiwc.png" alt="Christos Media" loading="lazy">
+        </div>
+        <div class="p-name" data-i18n="lang-31">A.I.W.C</div>
+        <div class="p-desc" data-i18n="lang-32">Apostolic mamprobi</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="lang-33">Missionaries alliance</span></div>
+      </div>
+      
+      <div class="p-card reveal d2">
+        <div class="p-logo">
+          <img src="../images/logo/kisseman.jpeg" alt="Christos Media" loading="lazy">
+        </div>
+        <div class="p-name" data-i18n="lang-34">Kisseman</div>
+        <div class="p-desc" data-i18n="lang-35">Apostolic kesseman</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="lang-36">missionary alliance</span></div>
+      </div>
+      <div class="p-card reveal d2">
+        <div class="p-logo">
+          <img src="../images/logo/mega_login.png" alt="Christos Media" loading="lazy">
+        </div>
+        <div class="p-name" data-i18n="lang-37">Mega Church</div>
+        <div class="p-desc" data-i18n="lang-38">Apostolic Church assembly</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="lang-39">missionary alliance</span></div>
+      </div>
+      <div class="p-card reveal d2">
+        <div class="p-logo">
+          <img src="../images/logo/sunda international.webp" alt="Christos Media" loading="lazy">
+        </div>
+        <div class="p-name" data-i18n="lang-40">sunda international</div>
+        <div class="p-desc" data-i18n="lang-41">Child Sponsorship &amp; Community Development</div>
+        <div class="p-badge"><i class="fa-solid fa-check"></i> <span data-i18n="lang-42">5years partnership</span></div>
       </div>
     </div>
+    
   </div>
 </section>
 
 <section class="impact-section">
   <div class="impact-inner">
     <div>
-      <div class="section-label reveal" style="background:rgba(22,218,149,.12);color:var(--teal)" data-i18n="impact-im">Impact Together</div>
-      <h2 class="section-title reveal" style="color:var(--white)">When We Partner,<br><em style="color:var(--gold)" data-i18n="impact-mr">Miracles</em> Multiply</h2>
-      <p class="section-sub reveal" style="color:rgba(255,255,255,.5);max-width:440px" data-i18n="impact-partner">Our partners don't just fund projects — they co-labor with us in the Great Commission, seeing transformed lives and churches planted.</p>
+      <div class="section-label reveal" style="background:rgba(22,218,149,.12);color:var(--teal)" data-i18n="lang-43">Impact Together</div>
+      <h2 class="section-title reveal" style="color:var(--white)">When We Partner,<br><em style="color:var(--gold)" data-i18n="lang-44">Miracles</em> Multiply</h2>
+      <p class="section-sub reveal" style="color:rgba(255,255,255,.5);max-width:440px" data-i18n="lang-45">Our partners don't just fund projects — they co-labor with us in the Great Commission, seeing transformed lives and churches planted.</p>
       <div class="impact-stats">
         <div class="stat-box reveal d1">
           <div class="stat-num teal">87%</div>
-          <div class="stat-desc" data-i18n="impact-descriptnum1">of field projects made possible through strategic partnerships</div>
+          <div class="stat-desc" data-i18n="lang-46">of field projects made possible through strategic partnerships</div>
         </div>
         <div class="stat-box reveal d2">
           <div class="stat-num gold">142</div>
-          <div class="stat-desc" data-i18n="impact-descriptnum2">Joint missions completed since 2020</div>
+          <div class="stat-desc" data-i18n="lang-47">Joint missions completed since 2020</div>
         </div>
         <div class="stat-box reveal d3">
           <div class="stat-num teal">60+</div>
-          <div class="stat-desc" data-i18n="impact-descriptnum3">Organizations partnered worldwide</div>
+          <div class="stat-desc" data-i18n="lang-48">Organizations partnered worldwide</div>
         </div>
         <div class="stat-box reveal d4">
           <div class="stat-num gold">12k+</div>
-          <div class="stat-desc" data-i18n="impact-descriptnum2">Lives directly impacted this year</div>
+          <div class="stat-desc" data-i18n="lang-49">Lives directly impacted this year</div>
         </div>
       </div>
     </div>
     <div class="t-card reveal d2">
-      <p class="t-text" data-i18n="impact-revealnum1">Partnering with Zoe-Tirzah Missions has been one of the most impactful decisions our church has made. The fruit we are seeing across Africa is truly extraordinary."</p>
+      <p class="t-text" data-i18n="lang-50">Partnering with Zoe-Tirzah Missions has been one of the most impactful decisions our church has made. The fruit we are seeing across Africa is truly extraordinary."</p>
       <div class="t-author">
         <div class="t-av">DM</div>
         <div>
@@ -557,24 +662,24 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 <section class="why-section">
   <div class="why-inner">
     <div style="text-align:center" class="reveal">
-      <div class="section-label" data-i18n="impact-revealnum1">Why Partner With Us</div>
-      <h2 class="section-title" style="margin-top:14px" data-i18n="impact-revealnum2">Built on <em>Relationship</em>,<br>Driven by Purpose</h2>
+      <div class="section-label" data-i18n="lang-51">Why Partner With Us</div>
+      <h2 class="section-title" style="margin-top:14px" data-i18n="lang-52">Built on <em>Relationship</em>,<br>Driven by Purpose</h2>
     </div>
     <div class="why-grid">
       <div class="why-card reveal d1">
         <div class="why-icon gold">🌍</div>
-        <h3 data-i18n="impact-revealn_kingdom">Kingdom Impact</h3>
-        <p data-i18n="impact-reveal_description">Every partnership directly supports evangelism, discipleship, and lasting community transformation across the continent and beyond.</p>
+        <h3 data-i18n="lang-53">Kingdom Impact</h3>
+        <p data-i18n="lang-54">Every partnership directly supports evangelism, discipleship, and lasting community transformation across the continent and beyond.</p>
       </div>
       <div class="why-card reveal d2">
         <div class="why-icon teal">📊</div>
-        <h3 data-i18n="impact-transparency">Full Transparency</h3>
-        <p data-i18n="impact-transparency_description">Monthly impact reports, financial accountability, and real-time field updates so you always know where your investment is going.</p>
+        <h3 data-i18n="lang-55">Full Transparency</h3>
+        <p data-i18n="lang-56">Monthly impact reports, financial accountability, and real-time field updates so you always know where your investment is going.</p>
       </div>
       <div class="why-card reveal d3">
         <div class="why-icon red">🙏</div>
-        <h3 data-i18n="impact-prayer">Prayer & Relationship</h3>
-        <p data-i18n="impact-prayer_description">We build deep, lasting relationships — not just transactions. When you partner with us, you become family in the mission.</p>
+        <h3 data-i18n="lang-57">Prayer &amp; Relationship</h3>
+        <p data-i18n="lang-58">We build deep, lasting relationships — not just transactions. When you partner with us, you become family in the mission.</p>
       </div>
     </div>
   </div>
@@ -582,18 +687,18 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 
 <section class="cta-section" id="join-section">
   <div class="cta-inner">
-    <div class="cta-tag reveal" data-i18n="impact-join">Join the Movement</div>
-    <h2 class="reveal" data-i18n="impact-part">Become Part of<br>Something That Matters</h2>
-    <p class="reveal d1" data-i18n="impact-join_desc">Whether you're a church, business, foundation, or individual — your partnership can bring Zoe-Tirzah to thousands who have never heard.</p>
+    <div class="cta-tag reveal" data-i18n="lang-59">Join the Movement</div>
+    <h2 class="reveal" data-i18n="lang-60">Become Part of<br>Something That Matters</h2>
+    <p class="reveal d1" data-i18n="lang-61">Whether you're a church, business, foundation, or individual — your partnership can bring Zoe-Tirzah to thousands who have never heard.</p>
     <div class="cta-btns reveal d2">
       <a href="https://forms.gle/LG43ReJcDcAizGBr7" class="btn btn-white">
-        <i class="fa-solid fa-church"></i><span data-i18n="impact-min_partner"> Ministry Partner</span>
+        <i class="fa-solid fa-church"></i><span data-i18n="lang-62"> Ministry Partner</span>
       </a>
       <a href="../contact/index.html" class="btn btn-ow">
-        <i class="fa-solid fa-building"></i><span data-i18n="impact-coorp">Corporate Partnership</span> 
+        <i class="fa-solid fa-building"></i><span data-i18n="lang-63">Corporate Partnership</span> 
       </a>
     </div>
-    <p class="cta-trust reveal d3" data-i18n="impact-worldwide">Trusted by over 60 organizations worldwide</p>
+    <p class="cta-trust reveal d3" data-i18n="lang-64">Trusted by over 60 organizations worldwide</p>
   </div>
 </section>
 
@@ -601,12 +706,12 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-brand-name"><span data-i18n="footer.brand">ZOE · TIRZAH</span></div>
-      <p class="footer-brand-desc"><span data-i18n="footer.desc">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve our world.</span></p>
-      <p style="font-size:0.78rem;margin-bottom:10px;color:rgba(255,255,255,0.35);"><span data-i18n="footer.stayUpdated">Stay updated:</span></p>
+      <div class="footer-brand-name"><span data-i18n="lang-65">ZOE · TIRZAH</span></div>
+      <p class="footer-brand-desc"><span data-i18n="lang-66">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve our world.</span></p>
+      <p style="font-size:0.78rem;margin-bottom:10px;color:rgba(255,255,255,0.35);"><span data-i18n="lang-67">Stay updated:</span></p>
       <div class="footer-newsletter">
-        <input type="email" class="footer-email-input" id="footerEmail" placeholder="Your email address" aria-label="Newsletter email" data-i18n-placeholder="footer.emailPlaceholder"/>
-        <button class="footer-sub-btn" id="footerSignup"><span data-i18n="footer.signup">Sign Up</span></button>
+        <input type="email" class="footer-email-input" id="footerEmail" placeholder="Your email address" aria-label="Newsletter email" data-i18n-placeholder="footer.emailPlaceholder">
+        <button class="footer-sub-btn" id="footerSignup"><span data-i18n="lang-68">Sign Up</span></button>
       </div>
       <div class="footer-socials" style="margin-top:20px;">
         <a href="https://www.facebook.com/AZWC17" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -616,44 +721,46 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
       </div>
     </div>
     <div>
-      <div class="footer-col-title"><span data-i18n="footer.quickLinks">Quick Links</span></div>
+      <div class="footer-col-title"><span data-i18n="lang-69">Quick Links</span></div>
       <div class="footer-links">
-        <a href="index.html"><span data-i18n="footer.linkHome">Home</span></a>
-        <a href="About_missions.html"><span data-i18n="footer.linkStory">Our Story</span></a>
-        <a href="NEWS-BLOG-main/main.html"><span data-i18n="footer.linkNews">News</span></a>
-        <a href="About_gallery.html"><span data-i18n="footer.linkGallery">Gallery</span></a>
-        <a href="contact/index.html"><span data-i18n="footer.linkContact">Contact</span></a>
+        <a href="index.html"><span data-i18n="lang-70">Home</span></a>
+        <a href="About_missions.html"><span data-i18n="lang-71">Our Story</span></a>
+        <a href="NEWS-BLOG-main/main.html"><span data-i18n="lang-72">News</span></a>
+        <a href="About_gallery.html"><span data-i18n="lang-73">Gallery</span></a>
+        <a href="contact/index.html"><span data-i18n="lang-74">Contact</span></a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title"><span data-i18n="footer.missions">Missions</span></div>
+      <div class="footer-col-title"><span data-i18n="lang-75">Missions</span></div>
       <div class="footer-links">
-        <a href="individuals/index.html"><span data-i18n="footer.linkFaqs">FAQs</span></a>
-        <a href="partnership/index.html"><span data-i18n="footer.linkPartners">Partners</span></a>
-        <a href="donate/index.html"><span data-i18n="footer.linkDonate">Donate</span></a>
-        <a href="https://forms.gle/LG43ReJcDcAizGBr7"><span data-i18n="footer.linkPartnerWithUs">Partner With Us</span></a>
-        <a href="impact/index.html"><span data-i18n="footer.linkImpact">Community Impact</span></a>
+        <a href="individuals/index.html"><span data-i18n="lang-76">FAQs</span></a>
+        <a href="partnership/index.html"><span data-i18n="lang-77">Partners</span></a>
+        <a href="donate/index.html"><span data-i18n="lang-78">Donate</span></a>
+        <a href="https://forms.gle/LG43ReJcDcAizGBr7"><span data-i18n="lang-79">Partner With Us</span></a>
+        <a href="impact/index.html"><span data-i18n="lang-80">Community Impact</span></a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title"><span data-i18n="footer.contact">Contact</span></div>
+      <div class="footer-col-title"><span data-i18n="lang-81">Contact</span></div>
       <div class="footer-links">
-        <a href="mailto:tac.azwc@gmail.com"><span data-i18n="footer.email">taczoemissions@gmail.com</span></a>
-        <a href="https://wa.me/233509660388"><span data-i18n="footer.whatsapp">WhatsApp: +233 509 660 388</span></a>
-        <a href="tel:+233555033857"><span data-i18n="footer.phone">Call: +233 555 033 857</span></a>
+        <a href="mailto:tac.azwc@gmail.com"><span data-i18n="lang-82">taczoemissions@gmail.com</span></a>
+        <a href="https://wa.me/233509660388"><span data-i18n="lang-83">WhatsApp: +233 509 660 388</span></a>
+        <a href="tel:+233555033857"><span data-i18n="lang-84">Call: +233 555 033 857</span></a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <nav style="display:flex;gap:20px;">
-      <a href="#"><span data-i18n="footer.cookies">Cookies</span></a>
-      <a href="#"><span data-i18n="footer.terms">Terms</span></a>
-      <a href="#"><span data-i18n="footer.privacy">Privacy</span></a>
+      <a href="#"><span data-i18n="lang-85">Cookies</span></a>
+      <a href="#"><span data-i18n="lang-86">Terms</span></a>
+      <a href="#"><span data-i18n="lang-87">Privacy</span></a>
     </nav>
-    <p><span data-i18n="footer.copyright">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</span></p>
+    <p><span data-i18n="lang-88">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</span></p>
   </div>
 </footer>
-     <script src="js/langauges.js"></script>
+     <script src="../js/langauges.js"></script>
+     <script src="../js/extractor.js"></script>
+     
 <script>
 (function(){
 
@@ -668,5 +775,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 })();
 </script>
+
+
 </body>
 </html>
