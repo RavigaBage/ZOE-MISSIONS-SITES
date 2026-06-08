@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Axim Mission 2026 | Zoe Tirzah — Taking the Gospel to the Coast</title>
+  <meta name="description" content="Join Zoe Tirzah on our August 2026 mission to Axim, Western Region, Ghana. Volunteer, donate, pray, or follow live updates as we carry the Gospel to the coast.">
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://zoe-tirzahmissions.com/location/2026/axim/"/>
+
+  <meta property="og:type"         content="website">
+  <meta property="og:site_name"    content="Zoe Tirzah Missions">
+  <meta property="og:url"          content="https://www.zoe-tirzahmissions.com/location/2026/axim/">
+  <meta property="og:title"        content="Axim Mission 2026 | Zoe Tirzah">
+  <meta property="og:description"  content="Follow the journey as we take the Gospel to Axim, Ghana — August 16–24, 2026.">
+  <meta property="og:image"        content="https://www.zoe-tirzahmissions.com/images/og-axim.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="icon" type="image/png" href="../../images/logo/tirzah.png">
+
+  <style>
+    :root {
+      --crimson:        #C5001E;
+      --crimson-dark:   #8B0015;
+      --crimson-light:  #FF4D4D;
+      --gold:           #FBC02D;
+      --gold-light:     #FFF9C4;
+      --teal:           #16DA95;
+      --teal-dark:      #0BA26E;
+      --teal-mid:       #078A5C;
+      --navy:           #0D1F2D;
+      --navy-mid:       #132840;
+      --white:          #FFFFFF;
+      --off-white:      #F8F8F5;
+      --soft-gray:      #F2F4F7;
+      --text-dark:      #1a1a2e;
+      --text-muted:     #64748B;
+      --border:         rgba(0,0,0,0.08);
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 28px;
+      --radius-xl: 40px;
+
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.07);
+      --shadow-lift: 0 16px 48px rgba(0,0,0,0.13);
+
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+      --font-head: 'Playfair Display', Georgia, serif;
+      --font-body: 'Poppins', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); line-height: 1.6; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { width: min(1200px, 92vw); margin: 0 auto; }
+
+    .hide{
+      transform: translateY(-10px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .animate_x{
+
+      opacity: 1;
+    }
+    .skeleton{
+      display: none;
+      transition:all 1s ease;
+      transform: scale(0);
+
+    }
+    .skeleton.scrolled{
+      position: fixed;
+      top:0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #071b2a;
+      z-index: 999999999;
+      display: grid;
+      place-items: center;
+      color:var(--white);
+      font-size: 3rem;
+      transform: scale(1);
+    }
+    .skeleton span{
+      color:var(--gold);
+      font-weight: bolder;
+      text-transform: capitalize;
+    }
+
+    .lan_select{
+      width:70px;
+      min-height: 30px;
+      color:var(--white);
+      position: relative;
+      padding:5px;
+      
+
+    }
+
+    .lan_select .item{
+      border-bottom: 1px solid var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap:0px;
+      width: 100%;
+      height: 30px;
+      padding-block: 5px;
+      background-color: #071b2a;
+    }
+    .lan_select .List_drop .item:hover{
+      background-color: #078A5C;
+    }
+    .lan_select .List_drop{
+      width: 100%;
+      height: fit-content;
+      position: absolute;
+      top:35px;
+      background-color: #071b2a;
+      display: none;
+    }
+    .lan_select:hover .List_drop{
+      display: block;
+    }
+    .scroll-top {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--crimson); color: var(--white);
+      display: grid; place-items: center; font-size: 1.1rem;
+      cursor: pointer; z-index: 9999; border: none;
+      opacity: 0; visibility: hidden; transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(197,0,30,0.38);
+    }
+    .scroll-top.show { opacity: 1; visibility: visible; }
+    .scroll-top:hover { transform: translateY(-3px); }
+
+    /* ─── NAV ────────────────────────────────────────── */
+    .nav-wrapper {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: var(--transition);
+    }
+    .nav-wrapper.scrolled {
+      background: rgba(13,31,45,0.97);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 5%;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-head); font-size: 1.3rem; font-weight: 700;
+      color: var(--white);
+    }
+    .nav-logo-dot { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500;
+      padding: 7px 13px; border-radius: 8px; transition: var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-donate {
+      background: var(--crimson); color: var(--white);
+      padding: 9px 22px; border-radius: 999px; font-size: 0.88rem; font-weight: 600;
+      transition: var(--transition);
+    }
+    .nav-donate:hover { background: var(--crimson-dark); transform: translateY(-1px); }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 6px; background: none; border: none;
+    }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: var(--transition); border-radius: 2px; }
+
+    /* ─── MOBILE MENU ────────────────────────────────── */
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: var(--navy); padding: 24px 6%;
+      flex-direction: column; gap: 0;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+    .mobile-close { background: none; border: none; color: var(--white); font-size: 1.8rem; cursor: pointer; }
+    .mobile-links { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+    .mobile-links a {
+      color: rgba(255,255,255,0.85); font-size: 1.15rem; font-weight: 500;
+      padding: 14px 12px; border-radius: 8px; transition: var(--transition);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .mobile-links a:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+    .mobile-cta { margin-top: 24px; }
+
+    /* ─── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: 999px;
+      font-family: var(--font-body); font-size: 0.95rem; font-weight: 600;
+      cursor: pointer; border: none; transition: var(--transition); white-space: nowrap;
+    }
+    .btn-primary { background: var(--teal-dark); color: var(--white); box-shadow: 0 4px 18px rgba(11,162,110,0.32); }
+    .btn-primary:hover { background: var(--teal-mid); transform: translateY(-2px); }
+    .btn-red { background: var(--crimson); color: var(--white); box-shadow: 0 4px 18px rgba(197,0,30,0.28); }
+    .btn-red:hover { background: var(--crimson-dark); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: #3a2800; box-shadow: 0 4px 18px rgba(251,192,45,0.38); }
+    .btn-gold:hover { background: #E0A800; transform: translateY(-2px); }
+    .btn-outline-dark { background: transparent; color: var(--text-dark); border: 2px solid var(--text-dark); }
+    .btn-outline-dark:hover { background: var(--text-dark); color: var(--white); }
+    .btn-outline-teal { background: transparent; color: var(--teal-dark); border: 2px solid var(--teal-dark); }
+    .btn-outline-teal:hover { background: var(--teal-dark); color: var(--white); }
+
+    /* ─── TAGS ───────────────────────────────────────── */
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1.5px; padding: 5px 14px; border-radius: 999px;
+    }
+    .tag-white  { background: rgba(255,255,255,0.18); color: var(--white); border: 1px solid rgba(255,255,255,0.25); }
+    .tag-gold   { background: rgba(251,192,45,0.15); color: #7a5a00; }
+    .tag-teal   { background: rgba(11,162,110,0.12); color: var(--teal-dark); }
+    .tag-red    { background: rgba(197,0,30,0.1); color: var(--crimson); }
+    .tag-navy   { background: rgba(13,31,45,0.08); color: var(--navy); }
+
+    /* ─── REVEAL ANIMATION ───────────────────────────── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ════════════════════════════════════════════════════
+       HERO
+    ════════════════════════════════════════════════════ */
+    .axim-hero {
+      min-height: 100svh;
+      background: var(--navy);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero-bg-overlay {
+      position: absolute; inset: 0; z-index: 0;
+      background: url('https://images.unsplash.com/photo-1630091003936-aea522c1e8c3?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      opacity: 0.13;
+    }
+    .hero-gradient {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(135deg, rgba(13,31,45,0.95) 0%, rgba(13,31,45,0.75) 55%, rgba(7,27,42,0.92) 100%);
+    }
+    /* decorative wave at bottom */
+    .hero-wave {
+      position: absolute; bottom: -2px; left: 0; right: 0; z-index: 2;
+      line-height: 0;
+    }
+    .hero-wave svg { width: 100%; height: 80px; }
+
+    .hero-inner {
+      position: relative; z-index: 3;
+      width: min(1200px, 92vw); margin: 0 auto;
+      padding: 130px 0 100px;
+      display: grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center;
+    }
+    .hero-kicker {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 2.5px; color: var(--gold); margin-bottom: 22px;
+    }
+    .hero-kicker::before { content:''; width:24px; height:2px; background:var(--gold); }
+    .hero-h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.05; margin-bottom: 12px;
+    }
+    .hero-h1 em { color: var(--teal); font-style: normal; }
+    .hero-h1 .line-gold { color: var(--gold); }
+    .hero-sub-verse {
+      font-size: 0.9rem; color: rgba(255,255,255,0.55);
+      font-style: italic; padding-left: 14px;
+      border-left: 3px solid var(--gold);
+      margin-bottom: 22px; line-height: 1.6;
+    }
+    .hero-desc {
+      font-size: 1.05rem; color: rgba(255,255,255,0.75);
+      line-height: 1.8; max-width: 520px; margin-bottom: 36px;
+    }
+    .hero-chips {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px;
+    }
+    .hero-chip {
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px; padding: 8px 16px;
+      font-size: 0.83rem; color: rgba(255,255,255,0.82); font-weight: 500;
+    }
+    .hero-chip i { color: var(--gold); }
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Countdown card */
+    .hero-countdown-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: var(--radius-xl); padding: 32px;
+      backdrop-filter: blur(10px);
+    }
+    .cd-label {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px;
+      color: rgba(255,255,255,0.4); margin-bottom: 18px; text-align: center;
+    }
+    .cd-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 28px; }
+    .cd-unit {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md); padding: 18px 8px; text-align: center;
+    }
+    .cd-num {
+      font-family: var(--font-head); font-size: 2.2rem; font-weight: 900;
+      color: var(--teal); line-height: 1; display: block;
+    }
+    .cd-unit-label {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.38); margin-top: 6px;
+    }
+    .cd-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 24px 0; }
+    .cd-mission-info { }
+    .cd-info-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.85rem; color: rgba(255,255,255,0.7);
+    }
+    .cd-info-row:last-child { border-bottom: none; }
+    .cd-info-row i { color: var(--gold); width: 16px; text-align: center; }
+    .cd-info-row strong { color: var(--white); }
+    .hero-scroll-hint {
+      position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);
+      z-index: 3; display: flex; flex-direction: column; align-items: center;
+      gap: 6px; color: rgba(255,255,255,0.35); font-size: 0.72rem;
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .scroll-line { width: 1px; height: 36px; background: rgba(255,255,255,0.2); animation: scrollPulse 2s infinite; }
+    @keyframes scrollPulse { 0%,100%{opacity:.25}50%{opacity:1} }
+
+    /* ════════════════════════════════════════════════════
+       ABOUT AXIM STRIP
+    ════════════════════════════════════════════════════ */
+    .about-axim {
+      background: var(--white); padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .about-axim-inner {
+      width: min(1200px,92vw); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+    }
+    .about-axim-img-stack { position: relative; }
+    .about-main-img {
+      width: 100%; border-radius: var(--radius-lg);
+      aspect-ratio: 4/3; object-fit: cover;
+      box-shadow: var(--shadow-lift);
+    }
+    .about-float-img {
+      position: absolute; bottom: -30px; right: -24px;
+      width: 48%; border-radius: var(--radius-md);
+      aspect-ratio: 1; object-fit: cover;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-lift);
+    }
+    .about-float-badge {
+      position: absolute; top: 20px; left: -20px;
+      background: var(--navy); color: var(--white);
+      padding: 14px 20px; border-radius: var(--radius-md);
+      font-size: 0.82rem; font-weight: 700;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      line-height: 1.5;
+    }
+    .about-float-badge span { display: block; font-size: 1.5rem; font-family: var(--font-head); color: var(--gold); }
+    .section-kicker {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 2.5px; color: var(--teal-dark); margin-bottom: 12px; display: block;
+    }
+    .section-h2 {
+      font-family: var(--font-head); font-size: clamp(1.8rem,3.5vw,2.8rem);
+      font-weight: 800; line-height: 1.2; color: var(--text-dark); margin-bottom: 16px;
+    }
+    .section-h2 em { color: var(--crimson); font-style: normal; }
+    .section-h2 .teal { color: var(--teal-dark); }
+    .section-body { font-size: 1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px; }
+    .fact-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .fact-chip {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--soft-gray); border-radius: 999px;
+      padding: 8px 16px; font-size: 0.82rem; font-weight: 600; color: var(--text-dark);
+    }
+    .fact-chip i { color: var(--teal-dark); }
+
+    /* ════════════════════════════════════════════════════
+       MISSION PILLARS
+    ════════════════════════════════════════════════════ */
+    .pillars { background: var(--soft-gray); padding: 90px 0; }
+    .pillars-inner { width: min(1200px,92vw); margin: 0 auto; }
+    .section-head { text-align: center; max-width: 640px; margin: 0 auto 60px; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); line-height: 1.75; }
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;
+    }
+    .pillar-card {
+      background: var(--white); border-radius: var(--radius-lg); padding: 36px 28px;
+      box-shadow: var(--shadow-card); border: 1px solid var(--border);
+      transition: var(--transition); position: relative; overflow: hidden;
+    }
+    .pillar-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 4px; background: var(--teal-dark);
+      transform: scaleX(0) ; transition: var(--transition);
+    }
+    .pillar-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lift); }
+    .pillar-card:hover::after { transform: scaleX(1); }
+    .pillar-card.red-accent::after { background: var(--crimson); }
+    .pillar-card.gold-accent::after { background: var(--gold); }
+    .pillar-card.navy-accent::after { background: var(--navy); }
+    .pillar-icon {
+      width: 56px; height: 56px; border-radius: var(--radius-md);
+      display: grid; place-items: center; font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .pi-teal { background: rgba(11,162,110,0.1); color: var(--teal-dark); }
+    .pi-red   { background: rgba(197,0,30,0.1); color: var(--crimson); }
+    .pi-gold  { background: rgba(251,192,45,0.15); color: #8B6914; }
+    .pi-navy  { background: rgba(13,31,45,0.08); color: var(--navy); }
+    .pillar-title { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; }
+    .pillar-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ════════════════════════════════════════════════════
+       FUNDRAISING TRACKER
+    ════════════════════════════════════════════════════ */
+    .fundraiser { background: var(--white); padding: 90px 0; }
+    .fundraiser-inner {
+      width: min(1200px,92vw); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: start;
+    }
+    .fund-left { }
+    .fund-progress-wrap { margin: 32px 0; }
+    .fund-amounts {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 10px;
+    }
+    .fund-raised {
+      font-family: var(--font-head); font-size: 2.6rem; font-weight: 900; color: var(--teal-dark);
+    }
+    .fund-goal { font-size: 0.9rem; color: var(--text-muted); }
+    .fund-bar-bg {
+      width: 100%; height: 14px; background: var(--soft-gray);
+      border-radius: 999px; overflow: hidden;
+    }
+    .fund-bar-fill {
+      height: 100%; border-radius: 999px;
+      background: linear-gradient(90deg, var(--teal-dark), var(--teal));
+      width: 0; transition: width 1.8s cubic-bezier(0.4,0,0.2,1);
+    }
+    .fund-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 10px; font-size: 0.83rem; color: var(--text-muted);
+    }
+    .fund-pct { font-weight: 700; color: var(--teal-dark); font-size: 1rem; }
+    .fund-needs { margin-top: 36px; }
+    .fund-needs-title {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px;
+      color: var(--text-muted); font-weight: 600; margin-bottom: 18px;
+    }
+    .need-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .need-item:last-child { border-bottom: none; }
+    .need-left { display: flex; align-items: center; gap: 14px; }
+    .need-icon {
+      width: 38px; height: 38px; border-radius: var(--radius-sm);
+      display: grid; place-items: center; font-size: 1rem; flex-shrink: 0;
+    }
+    .ni-teal { background: rgba(11,162,110,0.1); color: var(--teal-dark); }
+    .ni-red  { background: rgba(197,0,30,0.1); color: var(--crimson); }
+    .ni-gold { background: rgba(251,192,45,0.15); color: #8B6914; }
+    .need-name { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
+    .need-sub  { font-size: 0.76rem; color: var(--text-muted); }
+    .need-badge {
+      font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 999px;
+    }
+    .nb-active  { background: rgba(11,162,110,0.12); color: var(--teal-dark); }
+    .nb-soon    { background: rgba(251,192,45,0.15); color: #8B6914; }
+    .nb-pending { background: var(--soft-gray); color: var(--text-muted); }
+
+    /* Donate sidebar */
+    .donate-sidebar {
+      background: var(--navy); border-radius: var(--radius-xl); padding: 36px; color: var(--white);
+      position: sticky; top: 100px;
+    }
+    .donate-sidebar-title {
+      font-family: var(--font-head); font-size: 1.6rem; font-weight: 800;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .donate-sidebar-sub { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 28px; }
+    .amount-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .amount-btn {
+      padding: 14px 10px; border-radius: var(--radius-md);
+      border: 2px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06); color: var(--white);
+      font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition); text-align: center;
+    }
+    .amount-btn:hover, .amount-btn.active { border-color: var(--teal); background: rgba(22,218,149,0.12); color: var(--teal); }
+    .custom-amount {
+      width: 100%; background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-md); padding: 13px 16px;
+      color: var(--white); font-size: 0.9rem; font-family: var(--font-body);
+      outline: none; margin-bottom: 16px;
+    }
+    .custom-amount:focus { border-color: var(--teal); }
+    .custom-amount::placeholder { color: rgba(255,255,255,0.3); }
+    .donate-sidebar hr { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 24px 0; }
+    .donate-alt-actions { display: flex; flex-direction: column; gap: 10px; }
+    .alt-action {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.78);
+      font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: var(--transition);
+    }
+    .alt-action:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.2); color: var(--white); }
+    .alt-action i { width: 16px; text-align: center; color: var(--gold); }
+
+    /* ════════════════════════════════════════════════════
+       CLOTHES DRIVE
+    ════════════════════════════════════════════════════ */
+    .clothes-drive { background: var(--soft-gray); padding: 90px 0; }
+    .clothes-inner { width: min(1200px,92vw); margin: 0 auto; }
+    .clothes-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 56px;
+    }
+    .clothes-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .clothes-photo {
+      border-radius: var(--radius-md); overflow: hidden;
+      aspect-ratio: 3/4; position: relative;
+    }
+    .clothes-photo:first-child { grid-row: span 2; aspect-ratio: auto; }
+    .clothes-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .clothes-photo:hover img { transform: scale(1.05); }
+    .clothes-photo-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(13,31,45,0.65), transparent 55%);
+    }
+    .clothes-photo-label {
+      position: absolute; bottom: 12px; left: 12px; right: 12px;
+      font-size: 0.76rem; color: var(--white); font-weight: 600;
+    }
+    .clothes-info { }
+    .drive-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+    .drive-stat {
+      background: var(--white); border-radius: var(--radius-md); padding: 20px;
+      border: 1px solid var(--border); text-align: center;
+    }
+    .drive-stat-num {
+      font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: var(--crimson); line-height: 1;
+    }
+    .drive-stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+    .dropoff-box {
+      background: var(--navy); border-radius: var(--radius-lg); padding: 24px;
+      color: var(--white); margin-top: 28px;
+    }
+    .dropoff-title {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px;
+      color: var(--gold); font-weight: 700; margin-bottom: 14px;
+    }
+    .dropoff-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.85rem; color: rgba(255,255,255,0.75);
+    }
+    .dropoff-item:last-child { border-bottom: none; }
+    .dropoff-item i { color: var(--teal); margin-top: 3px; flex-shrink: 0; }
+
+    /* ════════════════════════════════════════════════════
+       PHOTO GALLERY (Mission Preview)
+    ════════════════════════════════════════════════════ */
+    .mission-gallery { background: var(--white); padding: 90px 0; }
+    .gallery-inner { width: min(1200px,92vw); margin: 0 auto; }
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: 200px 200px 200px;
+      gap: 12px; margin-top: 56px;
+    }
+    .gal-item {
+      border-radius: var(--radius-md); overflow: hidden;
+      position: relative; cursor: pointer;
+    }
+    .gal-item:nth-child(1) { grid-column: 1/3; grid-row: 1/3; }
+    .gal-item:nth-child(5) { grid-column: 3/5; grid-row: 2/4; }
+    .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gal-item:hover img { transform: scale(1.07); }
+    .gal-item::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.35), transparent 50%);
+      opacity: 0; transition: var(--transition);
+    }
+    .gal-item:hover::after { opacity: 1; }
+    .gallery-more { text-align: center; margin-top: 32px; }
+
+    /* ════════════════════════════════════════════════════
+       VOLUNTEER CTA BAND
+    ════════════════════════════════════════════════════ */
+    .volunteer-band {
+      background: var(--navy); padding: 90px 0; position: relative; overflow: hidden;
+    }
+    .volunteer-band::before {
+      content: '';
+      position: absolute; top: -120px; right: -120px;
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(22,218,149,0.07) 0%, transparent 70%);
+    }
+    .volunteer-band::after {
+      content: '';
+      position: absolute; bottom: -100px; left: -80px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(251,192,45,0.05) 0%, transparent 70%);
+    }
+    .volunteer-inner {
+      width: min(1200px,92vw); margin: 0 auto; position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .vol-left .section-h2 { color: var(--white); }
+    .vol-left .section-h2 em { color: var(--teal); }
+    .vol-body { font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 32px; }
+    .vol-features { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+    .vol-feature {
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 0.9rem; color: rgba(255,255,255,0.75);
+    }
+    .vol-feature-icon {
+      width: 36px; height: 36px; border-radius: var(--radius-sm);
+      background: rgba(22,218,149,0.12); color: var(--teal);
+      display: grid; place-items: center; font-size: 0.9rem; flex-shrink: 0;
+    }
+    .vol-feature strong { color: var(--white); display: block; font-size: 0.92rem; margin-bottom: 2px; }
+    .vol-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+    /* Registration form card */
+    .vol-right { }
+    .reg-card {
+      background: var(--white); border-radius: var(--radius-xl); padding: 36px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+    }
+    .reg-card-title {
+      font-family: var(--font-head); font-size: 1.5rem; font-weight: 800;
+      color: var(--text-dark); margin-bottom: 6px;
+    }
+    .reg-card-sub { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; }
+    .reg-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-input {
+      width: 100%; padding: 12px 16px;
+      border: 2px solid rgba(0,0,0,0.1); border-radius: var(--radius-md);
+      font-family: var(--font-body); font-size: 0.88rem; color: var(--text-dark);
+      outline: none; transition: var(--transition); background: var(--off-white);
+    }
+    .form-input:focus { border-color: var(--teal-dark); background: var(--white); }
+    .form-select {
+      width: 100%; padding: 12px 16px;
+      border: 2px solid rgba(0,0,0,0.1); border-radius: var(--radius-md);
+      font-family: var(--font-body); font-size: 0.88rem; color: var(--text-dark);
+      outline: none; transition: var(--transition); background: var(--off-white);
+      cursor: pointer;
+    }
+    .form-select:focus { border-color: var(--teal-dark); background: var(--white); }
+    .form-note { font-size: 0.76rem; color: var(--text-muted); text-align: center; }
+    .reg-spots-left {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(197,0,30,0.07); border: 1px solid rgba(197,0,30,0.15);
+      border-radius: var(--radius-md); padding: 10px 14px;
+      font-size: 0.82rem; color: var(--crimson); font-weight: 600;
+    }
+    .reg-spots-left i { font-size: 0.9rem; }
+
+    /* ════════════════════════════════════════════════════
+       UPDATES FEED
+    ════════════════════════════════════════════════════ */
+    .updates-section { background: var(--soft-gray); padding: 90px 0; }
+    .updates-inner { width: min(1200px,92vw); margin: 0 auto; }
+    .updates-layout { display: grid; grid-template-columns: 1fr 380px; gap: 48px; margin-top: 56px; }
+    .updates-feed { }
+    .update-card {
+      background: var(--white); border-radius: var(--radius-lg); padding: 28px;
+      border: 1px solid var(--border); box-shadow: var(--shadow-card);
+      margin-bottom: 16px; transition: var(--transition);
+      display: flex; gap: 18px; align-items: flex-start;
+    }
+    .update-card:hover { transform: translateX(4px); box-shadow: var(--shadow-lift); }
+    .update-dot-col { padding-top: 6px; }
+    .u-dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    }
+    .u-dot.live  { background: var(--teal); box-shadow: 0 0 0 4px rgba(22,218,149,0.2); }
+    .u-dot.soon  { background: var(--gold); }
+    .u-dot.gray  { background: #CBD5E1; }
+    .u-badge { font-size: 0.68rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 1px; }
+    .ub-live    { background: rgba(22,218,149,0.12); color: var(--teal-dark); }
+    .ub-soon    { background: rgba(251,192,45,0.15); color: #8B6914; }
+    .ub-pending { background: var(--soft-gray); color: var(--text-muted); }
+    .update-content { flex: 1; }
+    .update-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+    .update-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--text-dark); }
+    .update-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+    .update-time { font-size: 0.75rem; color: #94A3B8; margin-top: 8px; }
+
+    /* Pray sidebar */
+    .pray-card {
+      background: var(--navy); border-radius: var(--radius-xl); padding: 32px;
+      color: var(--white); height: fit-content;
+    }
+    .pray-title {
+      font-family: var(--font-head); font-size: 1.4rem; font-weight: 800;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .pray-sub { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 24px; }
+    .prayer-point {
+      display: flex; gap: 12px; padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.85rem; color: rgba(255,255,255,0.72); line-height: 1.55;
+    }
+    .prayer-point:last-of-type { border-bottom: none; }
+    .prayer-point i { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    /* ════════════════════════════════════════════════════
+       TEAM PREVIEW
+    ════════════════════════════════════════════════════ */
+    .axim-team { background: var(--white); padding: 90px 0; }
+    .axim-team-inner { width: min(1200px,92vw); margin: 0 auto; }
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr 1fr;grid-template-rows: 1fr 1fr; gap: 20px; margin-top: 56px; }
+    .team-card {
+      text-align: center; padding: 28px 16px;
+      background: var(--soft-gray); border-radius: var(--radius-lg);
+      transition: var(--transition); border: 1px solid var(--border);
+    }
+    .team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); background: var(--white); }
+    .team-avatar {
+      width: 120px; height: 120px; border-radius: 50%;
+      margin: 0 auto 14px; overflow: hidden;
+      border: 3px solid var(--gold); background: var(--white);
+    }
+    .team-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top center;transform: scale(1.3);}
+    .team-name { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; line-height: 1.3; }
+    .team-role { font-size: 0.76rem; color: var(--teal-dark); font-weight: 600; }
+    .team-see-all { text-align: center; margin-top: 40px; }
+
+    .final-cta {
+      padding: 100px 0;
+      background: linear-gradient(135deg, var(--navy) 0%, #0e2236 100%);
+      position: relative; overflow: hidden;
+    }
+    .final-cta::before {
+      content: 'AXIM'; font-family: var(--font-head); font-weight: 900;
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      font-size: 22vw; color: rgba(255,255,255,0.025);
+      white-space: nowrap; pointer-events: none; user-select: none;
+    }
+    .final-cta-inner {
+      width: min(900px,92vw); margin: 0 auto; text-align: center; position: relative; z-index: 1;
+    }
+    .final-cta-title {
+      font-family: var(--font-head); font-size: clamp(2.2rem,5vw,4rem);
+      font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 20px;
+    }
+    .final-cta-title em { color: var(--teal); font-style: normal; }
+    .final-cta-sub { font-size: 1.08rem; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto 48px; line-height: 1.8; }
+    .final-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    footer { background: var(--navy); color: rgba(255,255,255,0.65); padding-top: 64px; }
+    .footer-grid {
+      width: min(1200px,92vw); margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand-name { font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 14px; }
+    .footer-brand-desc { font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social-link {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.08); display: grid; place-items: center;
+      color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: var(--transition);
+    }
+    .footer-social-link:hover { background: var(--crimson); color: var(--white); }
+    .footer-col-title { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--white); margin-bottom: 18px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.88rem; transition: color 0.2s ease; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-newsletter { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .footer-email-input {
+      flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px; padding: 9px 16px; color: var(--white); font-size: 0.85rem;
+      outline: none; font-family: var(--font-body); min-width: 160px;
+    }
+    .footer-email-input:focus { border-color: var(--teal); }
+    .footer-email-input::placeholder { color: rgba(255,255,255,0.35); }
+    .footer-sub-btn {
+      background: var(--teal-dark); color: var(--white); border: none;
+      padding: 9px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition); white-space: nowrap; font-family: var(--font-body);
+    }
+    .footer-sub-btn:hover { background: var(--teal-mid); }
+    .footer-bottom {
+      width: min(1200px,92vw); margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 0; font-size: 0.82rem; gap: 16px; flex-wrap: wrap;
+    }
+
+    .lightbox {
+      position: fixed; inset: 0; z-index: 99999;
+      background: rgba(5,15,30,0.93); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; transition: var(--transition);
+    }
+    .lightbox.show { opacity: 1; visibility: visible; }
+    .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: var(--radius-md); object-fit: contain; }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 20px;
+      background: rgba(255,255,255,0.15); border: none; width: 44px; height: 44px;
+      border-radius: 50%; cursor: pointer; color: var(--white); font-size: 1.4rem;
+      display: grid; place-items: center;
+    }
+    .lightbox-close:hover { background: var(--crimson); }
+
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 44px; }
+      .hero-countdown-card { max-width: 480px; }
+      .about-axim-inner { grid-template-columns: 1fr; gap: 48px; }
+      .fundraiser-inner { grid-template-columns: 1fr; }
+      .donate-sidebar { position: static; }
+      .volunteer-inner { grid-template-columns: 1fr; gap: 44px; }
+      .updates-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-donate { display: none; }
+      .hamburger { display: flex; }
+      .clothes-grid { grid-template-columns: 1fr; }
+      .gallery-masonry { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gal-item:nth-child(1) { grid-column: 1/3; grid-row: auto; }
+      .gal-item:nth-child(5) { grid-column: 1/3; grid-row: auto; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .final-cta-btns { flex-direction: column; align-items: center; }
+      .hero-cta { flex-direction: column; }
+      .about-float-img, .about-float-badge { display: none; }
+    }
+    @media (max-width: 500px) {
+      .hero-h1 { font-size: 2.4rem; }
+      .cd-grid { grid-template-columns: repeat(4,1fr); }
+      .cd-num { font-size: 1.5rem; }
+      .drive-stats { grid-template-columns: 1fr 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .amount-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <div class="nav-wrapper" id="navWrapper">
+    <nav>
+      <a href="../../index.html" class="nav-logo">
+        ZOE<span class="nav-logo-dot">·</span>TIRZAH
+      </a>
+      <div class="nav-links">
+        <a href="../../index.html"              data-i18n="axim-nav-home">Home</a>
+        <a href="../../About_missions.html"     data-i18n="axim-nav-story">Our Story</a>
+        <a href="../../NEWS-BLOG-main/main.html" data-i18n="axim-nav-news">News</a>
+        <a href="../../impact/index.html"       data-i18n="axim-nav-impact">Impact</a>
+        <a href="../../About_gallery.html"      data-i18n="axim-nav-gallery">Gallery</a>
+        <a href="../../partnership/index.html"  data-i18n="axim-nav-partners">Partners</a>
+        <a href="../../contact/index.html"      data-i18n="axim-nav-contact">Contact</a>
+            <div class="lan_select">
+              <div class="item default" data-lang="en">
+                <div class="flag">🌐</div>
+                <b>En</b>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"></path></svg>
+              </div>
+              <div class="List_drop">
+                <div class="item" data-lang="fr">
+                  <div class="flag"></div>
+                  <b>Fr</b>
+                </div>
+                <div class="item" data-lang="ar">
+                  <div class="flag"></div>
+                  <b>Ar</b>
+                </div>
+                <div class="item" data-lang="ar">
+                  <div class="flag"></div>
+                  <b>En</b>
+                </div>
+              </div>
+            </div>
+      </div>
+      <a href="../../donate/index.html" class="nav-donate" data-i18n="axim-nav-donate">Donate Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="nav-logo">ZOE<span class="nav-logo-dot">·</span>TIRZAH</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
+    </div>
+    <div class="mobile-links">
+      <a href="../../index.html"               data-i18n="axim-mnav-home">Home</a>
+      <a href="../../About_missions.html"      data-i18n="axim-mnav-story">Our Story</a>
+      <a href="../../NEWS-BLOG-main/main.html" data-i18n="axim-mnav-news">News</a>
+      <a href="../../impact/index.html"        data-i18n="axim-mnav-impact">Community Impact</a>
+      <a href="../../About_gallery.html"       data-i18n="axim-mnav-gallery">Gallery</a>
+      <a href="../../partnership/index.html"   data-i18n="axim-mnav-partners">Partners</a>
+      <a href="../../individuals/index.html"   data-i18n="axim-mnav-faqs">FAQs</a>
+      <a href="../../contact/index.html"       data-i18n="axim-mnav-contact">Contact</a>
+        <div class="lan_select">
+            <div class="item default" data-lang="en">
+            <div class="flag">🌐</div>
+            <b>En</b>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360 280-560h400L480-360Z"></path></svg>
+            </div>
+            <div class="List_drop">
+            <div class="item" data-lang="fr">
+                <div class="flag"></div>
+                <b>Fr</b>
+            </div>
+            <div class="item" data-lang="ar">
+                <div class="flag"></div>
+                <b>Ar</b>
+            </div>
+            <div class="item" data-lang="ar">
+                <div class="flag"></div>
+                <b>En</b>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-cta">
+      <a href="../../donate/index.html" class="btn btn-red" style="width:100%;justify-content:center;">
+        <i class="fa-solid fa-heart"></i> <span data-i18n="axim-mnav-donate">Donate Now</span>
+      </a>
+    </div>
+  </div>
+
+      <div class="skeleton">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" width="200" height="200"><path fill="none" stroke="#FF156D" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg>
+        <p>We are converting this page to <span>FRENCH</span>, please hld on</p>
+      </div>
+
+  <section class="axim-hero" id="home">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-gradient"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-kicker" data-i18n="axim-hero-kicker">Zoe Tirzah · Next Mission</div>
+        <h1 class="hero-h1">
+          <span data-i18n="axim-hero-h1-line1">The Gospel</span><br>
+          <em data-i18n="axim-hero-h1-line2">Goes to</em><br>
+          <span class="line-gold" data-i18n="axim-hero-h1-line3">Axim</span>
+        </h1>
+        <p class="hero-sub-verse" data-i18n="axim-hero-verse">"How beautiful are the feet of those who bring good news!" — Romans 10:15</p>
+        <p class="hero-desc" data-i18n="axim-hero-desc">
+          This August, Zoe Tirzah carries the Gospel to the historic coastal shores of Axim in Ghana's Western Region — evangelism, medical care, community service, and children's ministry all in one week of purpose.
+        </p>
+        <div class="hero-chips">
+          <div class="hero-chip"><i class="fa-solid fa-calendar-days"></i> <span data-i18n="axim-chip-dates">Aug 16 – 24, 2026</span></div>
+          <div class="hero-chip"><i class="fa-solid fa-map-pin"></i> <span data-i18n="axim-chip-loc">Axim, Western Region</span></div>
+          <div class="hero-chip"><i class="fa-solid fa-users"></i> <span data-i18n="axim-chip-team">23+ Missionaries</span></div>
+        </div>
+        <div class="hero-cta">
+          <a href="https://forms.gle/aeuQuJxUmezHdBef9" class="btn btn-gold">
+            <i class="fa-solid fa-user-plus"></i> <span data-i18n="axim-hero-cta-register">Register to Join</span>
+          </a>
+          <a href="../../donate/index.html" class="btn btn-primary">
+            <i class="fa-solid fa-heart"></i> <span data-i18n="axim-hero-cta-donate">Support this Mission</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-countdown-card">
+        <p class="cd-label" data-i18n="axim-cd-label">Mission departs in</p>
+        <div class="cd-grid">
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-days">--</span>
+            <span class="cd-unit-label" data-i18n="axim-cd-days">Days</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-hours">--</span>
+            <span class="cd-unit-label" data-i18n="axim-cd-hours">Hours</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-mins">--</span>
+            <span class="cd-unit-label" data-i18n="axim-cd-mins">Mins</span>
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-secs">--</span>
+            <span class="cd-unit-label" data-i18n="axim-cd-secs">Secs</span>
+          </div>
+        </div>
+        <hr class="cd-divider">
+        <div class="cd-mission-info">
+          <div class="cd-info-row">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span data-i18n="axim-cd-depart">Departs <strong>Sunday, Aug 16th</strong></span>
+          </div>
+          <div class="cd-info-row">
+            <i class="fa-solid fa-plane-arrival"></i>
+            <span data-i18n="axim-cd-return">Returns <strong>Monday, Aug 24th</strong></span>
+          </div>
+          <div class="cd-info-row">
+            <i class="fa-solid fa-map-pin"></i>
+            <span data-i18n="axim-cd-location">Axim, <strong>Western Region, Ghana</strong></span>
+          </div>
+          <div class="cd-info-row">
+            <i class="fa-solid fa-person-running"></i>
+            <span data-i18n="axim-cd-spots">Only <strong>limited spots</strong> remaining</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span data-i18n="axim-hero-scroll">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <section class="about-axim" id="about">
+    <div class="about-axim-inner container">
+      <div class="about-axim-img-stack reveal">
+        <img class="about-main-img"
+          src="https://images.unsplash.com/photo-1630091003936-aea522c1e8c3?q=80&w=800&auto=format&fit=crop"
+          alt="Axim coastal community" loading="lazy">
+        <img class="about-float-img"
+          src="https://media.evendo.com/locations-resized/Images/515x380/5e0989b1-6070-4f6c-9879-7f1d369d6885.jpg?type=webp"
+          alt="Children in the community" loading="lazy">
+        <div class="about-float-badge">
+          <span data-i18n="axim-badge-num">2026</span>
+          <span data-i18n="axim-badge-label">Our Destination</span>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <span class="section-kicker" data-i18n="axim-about-kicker">Why Axim?</span>
+        <h2 class="section-h2">
+          <span data-i18n="axim-about-h2-1">A Historic City</span><br>
+          <em data-i18n="axim-about-h2-2">Calling for the Gospel</em>
+        </h2>
+        <p class="section-body" data-i18n="axim-about-body1">
+          Axim is one of Ghana's oldest towns, nestled on the beautiful Western coast. Despite its rich history, many communities here remain unreached by the full power of the Gospel — families who need healing, children who need hope, and hearts that are open to transformation.
+        </p>
+        <p class="section-body" data-i18n="axim-about-body2">
+          Zoe Tirzah sees Axim as a strategic gateway — a city where planting deep roots for Christ can ripple out across the Western Region and beyond.
+        </p>
+        <div class="fact-chips">
+          <div class="fact-chip"><i class="fa-solid fa-water"></i> <span data-i18n="axim-fact-coast">Coastal city, W. Region</span></div>
+          <div class="fact-chip"><i class="fa-solid fa-church"></i> <span data-i18n="axim-fact-unreached">Underserved communities</span></div>
+          <div class="fact-chip"><i class="fa-solid fa-children"></i> <span data-i18n="axim-fact-youth">High youth population</span></div>
+          <div class="fact-chip"><i class="fa-solid fa-stethoscope"></i> <span data-i18n="axim-fact-health">Limited healthcare access</span></div>
+          <div class="fact-chip"><i class="fa-solid fa-star-and-crescent"></i> <span data-i18n="axim-fact-religion">Mixed religious landscape</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="pillars" id="mission">
+    <div class="pillars-inner">
+      <div class="section-head reveal">
+        <span class="section-kicker" data-i18n="axim-pillars-kicker">What We'll Do</span>
+        <h2 class="section-h2" data-i18n="axim-pillars-h2">Four Pillars of the <span class="teal">Axim Mission</span></h2>
+        <p class="section-sub" data-i18n="axim-pillars-sub">Every activity is a deliberate act of love — meeting people where they are, spirit, soul, and body.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon pi-teal"><i class="fa-solid fa-book-bible"></i></div>
+          <h3 class="pillar-title" data-i18n="axim-pillar1-title">Gospel Evangelism</h3>
+          <p class="pillar-text" data-i18n="axim-pillar1-text">Open-air crusades, door-to-door outreach, and church services bringing the transforming message of Christ to every home in Axim.</p>
+        </div>
+        <div class="pillar-card red-accent reveal reveal-delay-1">
+          <div class="pillar-icon pi-red"><i class="fa-solid fa-kit-medical"></i></div>
+          <h3 class="pillar-title" data-i18n="axim-pillar2-title">Medical Outreach</h3>
+          <p class="pillar-text" data-i18n="axim-pillar2-text">Free health screenings, treatments, and medications provided by our volunteer medical team to underserved families and communities.</p>
+        </div>
+        <div class="pillar-card gold-accent reveal reveal-delay-2">
+          <div class="pillar-icon pi-gold"><i class="fa-solid fa-shirt"></i></div>
+          <h3 class="pillar-title" data-i18n="axim-pillar3-title">Community Giving</h3>
+          <p class="pillar-text" data-i18n="axim-pillar3-text">Distributing donated clothes, food, and essential supplies to families in need — practical love that opens hearts to the Gospel.</p>
+        </div>
+        <div class="pillar-card navy-accent reveal reveal-delay-3">
+          <div class="pillar-icon pi-navy"><i class="fa-solid fa-children"></i></div>
+          <h3 class="pillar-title" data-i18n="axim-pillar4-title">Children's Ministry</h3>
+          <p class="pillar-text" data-i18n="axim-pillar4-text">Dedicated children's programmes with music, Bible stories, activities, and teaching — nurturing the next generation of disciples.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="fundraiser" id="give">
+    <div class="fundraiser-inner container">
+      <div class="fund-left">
+        <span class="section-kicker" data-i18n="axim-fund-kicker">Fundraising Progress</span>
+        <h2 class="section-h2 reveal">
+          <span data-i18n="axim-fund-h2-1">Help Us</span> <span class="teal" data-i18n="axim-fund-h2-2">Reach the Goal</span>
+        </h2>
+        <p class="section-body reveal" data-i18n="axim-fund-body">
+          Every cedi raised goes directly into Gospel materials, medical supplies, transport, accommodation, and community giving. Together we fund the mission.
+        </p>
+
+        <div class="fund-progress-wrap reveal">
+          <div class="fund-amounts">
+            <span class="fund-raised" id="fundRaised" data-i18n="axim-fund-raised">GHS 0</span>
+            <span class="fund-goal" data-i18n="axim-fund-goal">Goal: GHS 117,000</span>
+          </div>
+          <div class="fund-bar-bg">
+            <div class="fund-bar-fill" id="fundBar" data-pct="20"></div>
+          </div>
+          <div class="fund-meta">
+            <span data-i18n="axim-fund-supporters">30 supporters so far</span>
+            <span class="fund-pct" id="fundPct" data-i18n="axim-fund-pct">20% raised</span>
+          </div>
+        </div>
+
+        <div class="fund-needs reveal">
+          <p class="fund-needs-title" data-i18n="axim-fund-needs-title">Mission Budget Breakdown</p>
+
+          <div class="need-item">
+            <div class="need-left">
+              <div class="need-icon ni-teal"><i class="fa-solid fa-book-bible"></i></div>
+              <div>
+                <div class="need-name" data-i18n="axim-need1-name">Gospel Outreach Materials</div>
+                <div class="need-sub" data-i18n="axim-need1-sub">Bibles, tracts &amp; literature</div>
+              </div>
+            </div>
+            <span class="need-badge nb-active" data-i18n="axim-need1-status">Active</span>
+          </div>
+
+          <div class="need-item">
+            <div class="need-left">
+              <div class="need-icon ni-red"><i class="fa-solid fa-shirt"></i></div>
+              <div>
+                <div class="need-name" data-i18n="axim-need2-name">Clothes &amp; Donations Drive</div>
+                <div class="need-sub" data-i18n="axim-need2-sub">Items for Axim families</div>
+              </div>
+            </div>
+            <span class="need-badge nb-active" data-i18n="axim-need2-status">Active</span>
+          </div>
+
+          <div class="need-item">
+            <div class="need-left">
+              <div class="need-icon ni-gold"><i class="fa-solid fa-kit-medical"></i></div>
+              <div>
+                <div class="need-name" data-i18n="axim-need3-name">Medical Outreach Setup</div>
+                <div class="need-sub" data-i18n="axim-need3-sub">Medicines &amp; health equipment</div>
+              </div>
+            </div>
+            <span class="need-badge nb-soon" data-i18n="axim-need3-status">Coming Soon</span>
+          </div>
+
+          <div class="need-item">
+            <div class="need-left">
+              <div class="need-icon ni-teal"><i class="fa-solid fa-children"></i></div>
+              <div>
+                <div class="need-name" data-i18n="axim-need4-name">Children's Ministry Materials</div>
+                <div class="need-sub" data-i18n="axim-need4-sub">Books, activities &amp; supplies</div>
+              </div>
+            </div>
+            <span class="need-badge nb-soon" data-i18n="axim-need4-status">Coming Soon</span>
+          </div>
+
+          <div class="need-item">
+            <div class="need-left">
+              <div class="need-icon ni-red"><i class="fa-solid fa-bus"></i></div>
+              <div>
+                <div class="need-name" data-i18n="axim-need5-name">Transport &amp; Logistics</div>
+                <div class="need-sub" data-i18n="axim-need5-sub">Vehicles &amp; accommodation</div>
+              </div>
+            </div>
+            <span class="need-badge nb-pending" data-i18n="axim-need5-status">Pending</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donate sidebar -->
+      <div class="donate-sidebar reveal reveal-delay-2">
+        <h3 class="donate-sidebar-title" data-i18n="axim-donate-title">Give to Axim</h3>
+        <p class="donate-sidebar-sub" data-i18n="axim-donate-sub">Choose an amount to support the mission. Every gift — big or small — directly funds lives being transformed.</p>
+
+        <div class="amount-grid" id="amountGrid">
+          <button class="amount-btn" data-amount="50" data-i18n="axim-amount-50">GHS 50</button>
+          <button class="amount-btn" data-amount="100" data-i18n="axim-amount-100">GHS 100</button>
+          <button class="amount-btn active" data-amount="200" data-i18n="axim-amount-200">GHS 200</button>
+          <button class="amount-btn" data-amount="500" data-i18n="axim-amount-500">GHS 500</button>
+          <button class="amount-btn" data-amount="1000" data-i18n="axim-amount-1000">GHS 1,000</button>
+          <button class="amount-btn" data-amount="custom" data-i18n="axim-amount-custom">Custom</button>
+        </div>
+
+        <input type="number" class="custom-amount" id="customAmount" placeholder="Enter custom amount (GHS)" aria-label="Custom donation amount" data-i18n-placeholder="axim-custom-placeholder" style="display:none;">
+
+        <a href="../../donate/index.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-bottom:16px;" id="donateLinkBtn">
+          <i class="fa-solid fa-circle-dollar-to-slot"></i> <span data-i18n="axim-donate-btn">Donate GHS 200</span>
+        </a>
+
+        <hr>
+
+        <div class="donate-alt-actions">
+          <a href="https://forms.gle/aeuQuJxUmezHdBef9" class="alt-action">
+            <i class="fa-solid fa-user-plus"></i>
+            <div>
+              <div style="font-weight:600;color:#fff;font-size:0.85rem;" data-i18n="axim-alt-register">Register as Missionary</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);" data-i18n="axim-alt-register-sub">Join the team on the field</div>
+            </div>
+          </a>
+          <a href="https://forms.gle/aeuQuJxUmezHdBef9" class="alt-action">
+            <i class="fa-solid fa-hands-praying"></i>
+            <div>
+              <div style="font-weight:600;color:#fff;font-size:0.85rem;" data-i18n="axim-alt-pray">Join Prayer Network</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);" data-i18n="axim-alt-pray-sub">Intercede for the mission</div>
+            </div>
+          </a>
+          <button class="alt-action" onclick="sharePage()" style="border:none;width:100%;text-align:left;cursor:pointer;">
+            <i class="fa-solid fa-share-nodes"></i>
+            <div>
+              <div style="font-weight:600;color:#fff;font-size:0.85rem;" data-i18n="axim-alt-share">Share this Mission</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.45);" data-i18n="axim-alt-share-sub">Spread the word</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clothes-drive" id="clothes-drive">
+    <div class="clothes-inner">
+      <div class="section-head reveal">
+        <span class="section-kicker" data-i18n="axim-clothes-kicker">Clothes Drive</span>
+        <h2 class="section-h2" data-i18n="axim-clothes-h2">Give the Gift of <em>Dignity</em></h2>
+        <p class="section-sub" data-i18n="axim-clothes-sub">Our clothes and donations drive is actively collecting items for Axim families. Drop off before August 10th at any TAC branch near you.</p>
+      </div>
+
+      <div class="clothes-grid">
+        <div class="clothes-photos reveal">
+          <div class="clothes-photo">
+            <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=600&auto=format&fit=crop"
+                 alt="Clothes being collected for the mission" loading="lazy">
+            <div class="clothes-photo-overlay"></div>
+            <div class="clothes-photo-label" data-i18n="axim-photo-label1">Collecting clothes for Axim families</div>
+          </div>
+          <div class="clothes-photo">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=400&auto=format&fit=crop"
+                 alt="Sorted donations ready for distribution" loading="lazy">
+            <div class="clothes-photo-overlay"></div>
+            <div class="clothes-photo-label" data-i18n="axim-photo-label2">Sorted &amp; ready for distribution</div>
+          </div>
+          <div class="clothes-photo">
+            <img src="https://images.unsplash.com/photo-1503792501406-2c40da09e1e2?q=80&w=400&auto=format&fit=crop"
+                 alt="Community giving in action" loading="lazy">
+            <div class="clothes-photo-overlay"></div>
+            <div class="clothes-photo-label" data-i18n="axim-photo-label3">Love made tangible</div>
+          </div>
+        </div>
+
+        <div class="clothes-info reveal reveal-delay-2">
+          <span class="section-kicker" data-i18n="axim-clothes-info-kicker">Drive Status: Active</span>
+          <h3 class="section-h2" style="font-size:1.8rem;" data-i18n="axim-clothes-info-h3">What We're Collecting</h3>
+          <p class="section-body" data-i18n="axim-clothes-info-body">
+            We are collecting new or gently-used clothing for men, women, and children, as well as shoes, bags, and household items. Every donation will be sorted, packed, and personally delivered to families in Axim during the mission week.
+          </p>
+
+          <div class="drive-stats">
+            <div class="drive-stat">
+              <div class="drive-stat-num" id="driveBags" data-i18n="axim-drive-bags-num">0</div>
+              <div class="drive-stat-label" data-i18n="axim-drive-bags-label">Bags Collected</div>
+            </div>
+            <div class="drive-stat">
+              <div class="drive-stat-num" data-i18n="axim-drive-deadline">Aug 10</div>
+              <div class="drive-stat-label" data-i18n="axim-drive-deadline-label">Drop-off Deadline</div>
+            </div>
+            <div class="drive-stat">
+              <div class="drive-stat-num" data-i18n="axim-drive-branches">All</div>
+              <div class="drive-stat-label" data-i18n="axim-drive-branches-label">TAC Branches Accepting</div>
+            </div>
+            <div class="drive-stat">
+              <div class="drive-stat-num" data-i18n="axim-drive-items">100+</div>
+              <div class="drive-stat-label" data-i18n="axim-drive-items-label">Families to Receive</div>
+            </div>
+          </div>
+
+          <div class="dropoff-box">
+            <p class="dropoff-title" data-i18n="axim-dropoff-title"><i class="fa-solid fa-location-dot"></i> &nbsp;Drop-Off Locations</p>
+            <div class="dropoff-item">
+              <i class="fa-solid fa-church"></i>
+              <span data-i18n="axim-dropoff-1">Any TAC (The Apostolic Church) Branch — <strong>Accra, Tema &amp; Greater Accra</strong></span>
+            </div>
+            <div class="dropoff-item">
+              <i class="fa-solid fa-clock"></i>
+              <span data-i18n="axim-dropoff-deadline">Deadline: <strong>Sunday, August 10th, 2026</strong></span>
+            </div>
+            <div class="dropoff-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="axim-dropoff-contact">Call/WhatsApp: <strong>+233 555 033 857</strong> to arrange pickup</span>
+            </div>
+          </div>
+
+          <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="https://wa.me/233555033857" class="btn btn-primary">
+              <i class="fa-brands fa-whatsapp"></i> <span data-i18n="axim-clothes-cta1">WhatsApp a Donation</span>
+            </a>
+            <a href="https://forms.gle/aeuQuJxUmezHdBef9" class="btn btn-outline-dark" style="font-size:0.88rem;">
+              <span data-i18n="axim-clothes-cta2">Pledge a Donation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mission-gallery" id="gallery">
+    <div class="gallery-inner">
+      <div class="section-head reveal">
+        <span class="section-kicker" data-i18n="axim-gallery-kicker">Mission Moments</span>
+        <h2 class="section-h2" data-i18n="axim-gallery-h2">From the <em>Field</em></h2>
+        <p class="section-sub" data-i18n="axim-gallery-sub">A glimpse of what Zoe Tirzah looks like in action — real communities, real transformation.</p>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gal-item reveal" data-lightbox="../../images/missions/kyiasi.jpg?q=80&w=1200">
+          <img src="../../images/missions/kyiasi.jpg" alt="Mission outreach" loading="lazy">
+        </div>
+        <div class="gal-item reveal reveal-delay-1" data-lightbox="../../images/missions/kyiasi1.jpg?q=80&w=1200">
+          <img src="../../images/missions/kyiasi1.jpg?q=80&w=500&auto=format&fit=crop" alt="Community gathering" loading="lazy">
+        </div>
+        <div class="gal-item reveal reveal-delay-2" data-lightbox="../../images/missions/kyiasi2.jpg?q=80&w=1200">
+          <img src="../../images/missions/kyiasi2.jpg?q=80&w=500&auto=format&fit=crop" alt="Medical outreach" loading="lazy">
+        </div>
+        <div class="gal-item reveal reveal-delay-3" data-lightbox="../../images/missions/medi.jpg?q=80&w=1200">
+          <img src="../../images/missions/medi.jpg?q=80&w=500&auto=format&fit=crop" alt="Children's ministry" loading="lazy">
+        </div>
+        <div class="gal-item reveal reveal-delay-4" data-lightbox="../../images/missions/walk_1025.jpg?q=80&w=1200">
+          <img src="../../images/missions/walk_1025.jpg?q=80&w=800&auto=format&fit=crop" alt="Gospel sharing" loading="lazy">
+        </div>
+        <div class="gal-item reveal reveal-delay-5" data-lightbox="../../images/missions/ns_dw.jpg?q=80&w=1200">
+          <img src="../../images/missions/ns_dw.jpg?q=80&w=500&auto=format&fit=crop" alt="Community service" loading="lazy">
+        </div>
+      </div>
+      <div class="gallery-more">
+        <a href="../../About_gallery.html" class="btn btn-outline-teal" data-i18n="axim-gallery-more">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="volunteer-band" id="volunteer">
+    <div class="volunteer-inner">
+      <div class="vol-left">
+        <span class="section-kicker" style="color:var(--gold);" data-i18n="axim-vol-kicker">Join the Team</span>
+        <h2 class="section-h2 reveal">
+          <span data-i18n="axim-vol-h2-1">Be the Hands and</span><br>
+          <em data-i18n="axim-vol-h2-2">Feet of Christ</em>
+        </h2>
+        <p class="vol-body reveal" data-i18n="axim-vol-body">
+          We are looking for passionate believers ready to serve in Axim for 9 days. Whether you're a preacher, doctor, teacher, or willing heart — there's a place for you on this team.
+        </p>
+        <div class="vol-features">
+          <div class="vol-feature reveal">
+            <div class="vol-feature-icon"><i class="fa-solid fa-book-bible"></i></div>
+            <div>
+              <strong data-i18n="axim-vol-f1-title">Evangelism Team</strong>
+              <span data-i18n="axim-vol-f1-sub">Preach, testify, and lead people to Christ on the streets and in homes.</span>
+            </div>
+          </div>
+          <div class="vol-feature reveal reveal-delay-1">
+            <div class="vol-feature-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <div>
+              <strong data-i18n="axim-vol-f2-title">Medical Volunteers</strong>
+              <span data-i18n="axim-vol-f2-sub">Doctors, nurses, pharmacists — bring your skills to those who need them most.</span>
+            </div>
+          </div>
+          <div class="vol-feature reveal reveal-delay-2">
+            <div class="vol-feature-icon"><i class="fa-solid fa-children"></i></div>
+            <div>
+              <strong data-i18n="axim-vol-f3-title">Children's Ministry</strong>
+              <span data-i18n="axim-vol-f3-sub">Lead VBS sessions, games, stories, and songs that plant seeds for life.</span>
+            </div>
+          </div>
+          <div class="vol-feature reveal reveal-delay-3">
+            <div class="vol-feature-icon"><i class="fa-solid fa-camera"></i></div>
+            <div>
+              <strong data-i18n="axim-vol-f4-title">Media &amp; Documentation</strong>
+              <span data-i18n="axim-vol-f4-sub">Capture testimonies, photos, and stories to share the mission with the world.</span>
+            </div>
+          </div>
+        </div>
+        <div class="vol-cta-row reveal">
+          <a href="https://forms.gle/aeuQuJxUmezHdBef9" class="btn btn-gold">
+            <i class="fa-solid fa-user-plus"></i> <span data-i18n="axim-vol-cta1">Register Now</span>
+          </a>
+          <a href="tel:+233555033857" class="btn btn-outline-teal" style="color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.25);">
+            <i class="fa-solid fa-phone"></i> <span data-i18n="axim-vol-cta2">Call to Find Out More</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="vol-right reveal reveal-delay-2">
+        <div class="reg-card">
+          <h3 class="reg-card-title" data-i18n="axim-reg-title">Express Interest</h3>
+          <p class="reg-card-sub" data-i18n="axim-reg-sub">Fill in your details and we'll get in touch with everything you need to join the Axim 2026 Mission.</p>
+          <div class="reg-spots-left">
+            <i class="fa-solid fa-fire"></i>
+            <span data-i18n="axim-reg-spots">23 missionaries registered · Spots filling fast!</span>
+          </div>
+          <br>
+          <div class="reg-form" id="regForm">
+             <img src="../../images/og-axim.png" alt="image of call to action axim">
+            <button type="button" class="btn btn-red" style="width:100%;justify-content:center;" id="regSubmitBtn">
+              <i class="fa-solid fa-paper-plane"></i> <span data-i18n="axim-form-submit">Register My Interest</span>
+            </button>
+            <p class="form-note" data-i18n="axim-form-note">We will contact you within 48 hours with next steps.</p>
+          </div>>
+          <div id="regSuccess" style="display:none;text-align:center;padding:20px 0;">
+            <div style="font-size:2.5rem;margin-bottom:12px;">🙌</div>
+            <div style="font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--teal-dark);margin-bottom:8px;" data-i18n="axim-reg-success-title">Thank You for Registering!</div>
+            <div style="font-size:0.88rem;color:var(--text-muted);" data-i18n="axim-reg-success-sub">We'll reach out within 48 hours with your next steps. God bless you!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="updates-section" id="updates">
+    <div class="updates-inner">
+      <div class="section-head reveal">
+        <span class="section-kicker" data-i18n="axim-updates-kicker">Live Updates</span>
+        <h2 class="section-h2" data-i18n="axim-updates-h2">Follow the <em>Mission Progress</em></h2>
+        <p class="section-sub" data-i18n="axim-updates-sub">Stay informed as we prepare for Axim 2026. Every update brings us one step closer.</p>
+      </div>
+
+      <div class="updates-layout">
+        <div class="updates-feed">
+
+          <div class="update-card reveal">
+            <div class="update-dot-col"><div class="u-dot live"></div></div>
+            <div class="update-content">
+              <div class="update-header">
+                <h4 class="update-title" data-i18n="axim-update1-title">Clothes Drive is LIVE!</h4>
+                <span class="u-badge ub-live" data-i18n="axim-update1-badge">Live</span>
+              </div>
+              <p class="update-text" data-i18n="axim-update1-text">Drop off donations at any TAC branch before August 10th. New and gently-used clothing, shoes, and household items are all welcome. Tell your friends and family!</p>
+              <div class="update-time" data-i18n="axim-update1-time">3 days ago</div>
+            </div>
+          </div>
+
+          <div class="update-card reveal reveal-delay-1">
+            <div class="update-dot-col"><div class="u-dot live"></div></div>
+            <div class="update-content">
+              <div class="update-header">
+                <h4 class="update-title" data-i18n="axim-update2-title">Registration Is Open</h4>
+                <span class="u-badge ub-live" data-i18n="axim-update2-badge">Live</span>
+              </div>
+              <p class="update-text" data-i18n="axim-update2-text">23 missionaries have registered for the Axim 2026 Mission. Spots are limited — if you feel called to serve, don't wait. Register today!</p>
+              <div class="update-time" data-i18n="axim-update2-time">1 week ago</div>
+            </div>
+          </div>
+
+          <div class="update-card reveal reveal-delay-2">
+            <div class="update-dot-col"><div class="u-dot soon"></div></div>
+            <div class="update-content">
+              <div class="update-header">
+                <h4 class="update-title" data-i18n="axim-update3-title">Medical Team Forming</h4>
+                <span class="u-badge ub-soon" data-i18n="axim-update3-badge">Coming Soon</span>
+              </div>
+              <p class="update-text" data-i18n="axim-update3-text">We are assembling our medical volunteer team. If you are a doctor, nurse, pharmacist, or healthcare worker, we need you! Details dropping soon.</p>
+              <div class="update-time" data-i18n="axim-update3-time">Coming soon</div>
+            </div>
+          </div>
+
+          <div class="update-card reveal reveal-delay-3">
+            <div class="update-dot-col"><div class="u-dot soon"></div></div>
+            <div class="update-content">
+              <div class="update-header">
+                <h4 class="update-title" data-i18n="axim-update4-title">Transport &amp; Logistics Planning</h4>
+                <span class="u-badge ub-soon" data-i18n="axim-update4-badge">Coming Soon</span>
+              </div>
+              <p class="update-text" data-i18n="axim-update4-text">Our logistics team is finalising accommodation and transport arrangements for the journey to and within Axim. Full details will be shared with registered missionaries.</p>
+              <div class="update-time" data-i18n="axim-update4-time">Coming soon</div>
+            </div>
+          </div>
+
+          <div class="update-card reveal reveal-delay-4">
+            <div class="update-dot-col"><div class="u-dot gray"></div></div>
+            <div class="update-content">
+              <div class="update-header">
+                <h4 class="update-title" data-i18n="axim-update5-title">Children's Programme Schedule</h4>
+                <span class="u-badge ub-pending" data-i18n="axim-update5-badge">Upcoming</span>
+              </div>
+              <p class="update-text" data-i18n="axim-update5-text">Our children's ministry team is developing a full-week programme for the children of Axim. Watch this space for the curriculum and activities outline.</p>
+              <div class="update-time" data-i18n="axim-update5-time">Upcoming</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pray-card reveal reveal-delay-2">
+          <h3 class="pray-title" data-i18n="axim-pray-title">Pray With Us</h3>
+          <p class="pray-sub" data-i18n="axim-pray-sub">Prayer is the engine of every mission. Here are specific things to bring before God for Axim 2026.</p>
+
+          <div class="prayer-point">
+            <i class="fa-solid fa-shield"></i>
+            <span data-i18n="axim-prayer1">Safety and divine protection for every missionary travelling to and serving in Axim.</span>
+          </div>
+          <div class="prayer-point">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="axim-prayer2">Open hearts in Axim — that the community receives the Gospel with eagerness and faith.</span>
+          </div>
+          <div class="prayer-point">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span data-i18n="axim-prayer3">Provision — that all fundraising goals are met and supplies flow abundantly.</span>
+          </div>
+          <div class="prayer-point">
+            <i class="fa-solid fa-stethoscope"></i>
+            <span data-i18n="axim-prayer4">Healing miracles in the medical outreach — signs and wonders that declare Christ is alive.</span>
+          </div>
+          <div class="prayer-point">
+            <i class="fa-solid fa-children"></i>
+            <span data-i18n="axim-prayer5">The children of Axim — that seeds planted in their hearts bear fruit for generations.</span>
+          </div>
+          <div class="prayer-point">
+            <i class="fa-solid fa-fire"></i>
+            <span data-i18n="axim-prayer6">Revival — that this mission sparks a lasting spiritual awakening in the Western Region.</span>
+          </div>
+
+          <br>
+          <a href="https://forms.gle/aeuQuJxUmezHdBef9" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <i class="fa-solid fa-hands-praying"></i> <span data-i18n="axim-pray-cta">Join Prayer Network</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="axim-team" id="team">
+    <div class="axim-team-inner">
+      <div class="section-head reveal">
+        <span class="section-kicker" data-i18n="axim-team-kicker">Mission Leaders</span>
+        <h2 class="section-h2" data-i18n="axim-team-h2">The People <em>Sending You</em></h2>
+        <p class="section-sub" data-i18n="axim-team-sub">Trusted, experienced, and passionate — the leadership team behind the Axim 2026 Mission.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <img src="../../images/missionaries/Apostle-Aaron.webp" alt="Apostle Aaron" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Aaron+Ami-Narh&background=0D1F2D&color=FBC02D&size=80'">
+          </div>
+          <div class="team-name" data-i18n="axim-team1-name">Apostle Aaron Ami-Narh</div>
+          <div class="team-role" data-i18n="axim-team1-role">President, T.A.C</div>
+        </div>
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar">
+            <img src="../../images/missionaries/chair.png" alt="Elder Nana Osei Bonsu" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Nana+Bonsu&background=0D1F2D&color=FBC02D&size=80'">
+          </div>
+          <div class="team-name" data-i18n="axim-team2-name">Elder Nana Osei Bonsu</div>
+          <div class="team-role" data-i18n="axim-team2-role">Mission Director</div>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar">
+            <img src="../../images/missionaries/m_dir.png" alt="Overseer Foster" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Foster+Quashie&background=0D1F2D&color=FBC02D&size=80'">
+          </div>
+          <div class="team-name" data-i18n="axim-team3-name">Overseer Foster Ahiadu Quashie</div>
+          <div class="team-role" data-i18n="axim-team3-role">Founder, Tirzah Oasis Foundation</div>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="team-avatar">
+            <img src="../../images/missionaries/patrone.png" alt="Pastor Emmanuel" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Emmanuel+Agordorku&background=0D1F2D&color=FBC02D&size=80'">
+          </div>
+          <div class="team-name" data-i18n="axim-team4-name">Pastor Emmanuel Agordorku</div>
+          <div class="team-role" data-i18n="axim-team4-role">Mission Patron</div>
+        </div>
+        <div class="team-card reveal reveal-delay-4">
+          <div class="team-avatar">
+            <img src="../../images/missionaries/tirzah.png" alt="Dr. Henrietta" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Henrietta+Codjoe&background=0D1F2D&color=FBC02D&size=80'">
+          </div>
+          <div class="team-name" data-i18n="axim-team5-name">Dr. Henrietta Codjoe</div>
+          <div class="team-role" data-i18n="axim-team5-role">CEO, Tirzah Oasis Foundation</div>
+        </div>
+        <div class="team-card reveal reveal-delay-5">
+          <div class="team-avatar">
+            <img src="../../images/missionaries/desy.png" alt="Eld. Emmanuel Buxton" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name=Emmanuel+Buxton&background=0D1F2D&color=FBC02D&size=80'">
+          </div>
+          <div class="team-name" data-i18n="axim-team6-name">Eld. Emmanuel Desmond Buxton</div>
+          <div class="team-role" data-i18n="axim-team6-role">Field Coordinator</div>
+        </div>
+      </div>
+      <div class="team-see-all">
+        <a href="../../About_missions.html" class="btn btn-outline-teal" data-i18n="axim-team-see-all">View Full Mission Team</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <span class="section-kicker" style="color:var(--gold);display:flex;justify-content:center;" data-i18n="axim-fcta-kicker">August 16–24, 2026</span>
+      <h2 class="final-cta-title reveal">
+        <span data-i18n="axim-fcta-h2-1">Will You Answer</span><br>
+        <em data-i18n="axim-fcta-h2-2">the Axim Call?</em>
+      </h2>
+      <p class="final-cta-sub reveal" data-i18n="axim-fcta-sub">
+        Every soul won in Axim is a shared victory. Whether you go, give, or pray — your obedience advances the Kingdom. Don't let this moment pass you by.
+      </p>
+      <div class="final-cta-btns reveal">
+        <a href="https://forms.gle/aeuQuJxUmezHdBef9" class="btn btn-gold">
+          <i class="fa-solid fa-user-plus"></i> <span data-i18n="axim-fcta-btn1">Register for Axim</span>
+        </a>
+        <a href="../../donate/index.html" class="btn btn-primary">
+          <i class="fa-solid fa-heart"></i> <span data-i18n="axim-fcta-btn2">Donate to the Mission</span>
+        </a>
+        <button class="btn" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.2);" onclick="sharePage()">
+          <i class="fa-solid fa-share-nodes"></i> <span data-i18n="axim-fcta-btn3">Share this Page</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name" data-i18n="axim-footer-brand">ZOE · TIRZAH</div>
+        <p class="footer-brand-desc" data-i18n="axim-footer-brand-desc">Zoe Tirzah is a welcoming community of faith dedicated to loving God and loving others. Join us as we explore God's Word, experience His presence, and serve our world.</p>
+        <p style="font-size:0.78rem;margin-bottom:10px;color:rgba(255,255,255,0.35);" data-i18n="axim-footer-newsletter-label">Stay updated:</p>
+        <div class="footer-newsletter">
+          <input type="email" class="footer-email-input" id="footerEmail" placeholder="Your email address" aria-label="Newsletter email" data-i18n-placeholder="axim-footer-email-ph">
+          <button class="footer-sub-btn" id="footerSignup" data-i18n="axim-footer-signup">Sign Up</button>
+        </div>
+        <div class="footer-socials" style="margin-top:20px;">
+          <a href="https://www.facebook.com/AZWC17"      class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/tac_zoe"    class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@tac_zoe"      class="footer-social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/233553838464"            class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-i18n="axim-footer-links-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="../../index.html"               data-i18n="axim-footer-home">Home</a>
+          <a href="../../About_missions.html"      data-i18n="axim-footer-story">Our Story</a>
+          <a href="../../NEWS-BLOG-main/main.html" data-i18n="axim-footer-news">News</a>
+          <a href="../../About_gallery.html"       data-i18n="axim-footer-gallery">Gallery</a>
+          <a href="../../contact/index.html"       data-i18n="axim-footer-contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-i18n="axim-footer-axim-title">Axim 2026</div>
+        <div class="footer-links">
+          <a href="#about"        data-i18n="axim-footer-axim-about">About Axim</a>
+          <a href="#mission"      data-i18n="axim-footer-axim-mission">Mission Pillars</a>
+          <a href="#give"         data-i18n="axim-footer-axim-give">Give</a>
+          <a href="#clothes-drive" data-i18n="axim-footer-axim-clothes">Clothes Drive</a>
+          <a href="#volunteer"    data-i18n="axim-footer-axim-vol">Volunteer</a>
+          <a href="#updates"      data-i18n="axim-footer-axim-updates">Updates</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" data-i18n="axim-footer-contact-title">Contact</div>
+        <div class="footer-links">
+          <a href="mailto:taczoemissions@gmail.com" data-i18n="axim-footer-email">taczoemissions@gmail.com</a>
+          <a href="tel:+233555033857"               data-i18n="axim-footer-phone">+233 555 033 857</a>
+          <a href="https://wa.me/233553838464"      data-i18n="axim-footer-wa">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav style="display:flex;gap:20px;">
+        <a href="#" data-i18n="axim-footer-cookies">Cookies</a>
+        <a href="#" data-i18n="axim-footer-terms">Terms</a>
+        <a href="#" data-i18n="axim-footer-privacy">Privacy</a>
+      </nav>
+      <p data-i18n="axim-footer-copy">© 2020 Reg. Mission in Ghana &amp; Beyond (1175049) and Scotland (SCO48330).</p>
+    </div>
+  </footer>
+
+    <script src="../../js/langauges.js"></script>
+  <script>
+  (() => {
+    'use strict';
+
+    const nav       = document.getElementById('navWrapper');
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      nav.classList.toggle('scrolled', y > 60);
+      scrollBtn.classList.toggle('show', y > 400);
+    }, { passive: true });
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    });
+
+    const missionDate = new Date('2026-08-16T00:00:00').getTime();
+    const pad = n => String(n).padStart(2, '0');
+    const cdDays  = document.getElementById('cd-days');
+    const cdHours = document.getElementById('cd-hours');
+    const cdMins  = document.getElementById('cd-mins');
+    const cdSecs  = document.getElementById('cd-secs');
+    const updateCd = () => {
+      const diff = missionDate - Date.now();
+      if (diff <= 0) { [cdDays,cdHours,cdMins,cdSecs].forEach(el=>el&&(el.textContent='00')); return; }
+      if (cdDays)  cdDays.textContent  = pad(Math.floor(diff / 86400000));
+      if (cdHours) cdHours.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+      if (cdMins)  cdMins.textContent  = pad(Math.floor((diff % 3600000) / 60000));
+      if (cdSecs)  cdSecs.textContent  = pad(Math.floor((diff % 60000) / 1000));
+    };
+    updateCd();
+    setInterval(updateCd, 1000);
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    const fundBar   = document.getElementById('fundBar');
+    const fundRaised = document.getElementById('fundRaised');
+    const fundPct   = document.getElementById('fundPct');
+    let fundAnimated = false;
+    if (fundBar) {
+      const fundObs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !fundAnimated) {
+          fundAnimated = true;
+          const pct  = parseInt(fundBar.dataset.pct) || 20;
+          const goal = 117000;
+          const raised = Math.round((pct/100) * goal);
+          setTimeout(() => {
+            fundBar.style.width = pct + '%';
+            let cur = 0;
+            const step = Math.ceil(raised / 70);
+            const t = setInterval(() => {
+              cur = Math.min(cur + step, raised);
+              if (fundRaised) fundRaised.textContent = 'GHS ' + cur.toLocaleString();
+              if (fundPct)    fundPct.textContent    = pct + '% raised';
+              if (cur >= raised) clearInterval(t);
+            }, 25);
+          }, 300);
+          fundObs.unobserve(fundBar);
+        }
+      }, { threshold: 0.3 });
+      fundObs.observe(fundBar);
+    }
+
+    const driveBags = document.getElementById('driveBags');
+    let bagsAnimated = false;
+    if (driveBags) {
+      const bagsObs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !bagsAnimated) {
+          bagsAnimated = true;
+          let v = 0; const target = 47;
+          const t = setInterval(() => {
+            v = Math.min(v + 1, target);
+            driveBags.textContent = v;
+            if (v >= target) clearInterval(t);
+          }, 40);
+          bagsObs.unobserve(driveBags);
+        }
+      }, { threshold: 0.5 });
+      bagsObs.observe(driveBags);
+    }
+
+    const amountBtns = document.querySelectorAll('.amount-btn');
+    const customInput = document.getElementById('customAmount');
+    const donateLinkBtn = document.getElementById('donateLinkBtn');
+    let selectedAmount = 200;
+
+    amountBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        amountBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const val = btn.dataset.amount;
+        if (val === 'custom') {
+          customInput.style.display = 'block';
+          customInput.focus();
+          selectedAmount = null;
+        } else {
+          customInput.style.display = 'none';
+          selectedAmount = parseInt(val);
+          const span = donateLinkBtn.querySelector('span');
+          if (span) span.textContent = `Donate GHS ${Number(val).toLocaleString()}`;
+        }
+      });
+    });
+
+    customInput?.addEventListener('input', () => {
+      const v = parseInt(customInput.value);
+      if (v > 0) {
+        selectedAmount = v;
+        const span = donateLinkBtn?.querySelector('span');
+        if (span) span.textContent = `Donate GHS ${v.toLocaleString()}`;
+      }
+    });
+
+    document.getElementById('regSubmitBtn')?.addEventListener('click', () => {
+      const fn = document.getElementById('regFirstName')?.value.trim();
+      const ln = document.getElementById('regLastName')?.value.trim();
+      const em = document.getElementById('regEmail')?.value.trim();
+      const ph = document.getElementById('regPhone')?.value.trim();
+      const ro = document.getElementById('regRole')?.value;
+      if (!fn || !ln || !em || !ph || !ro) {
+        alert('Please fill in all fields before registering.');
+        return;
+      }
+      if (!em.includes('@')) { alert('Please enter a valid email address.'); return; }
+      window.open(`https://forms.gle/aeuQuJxUmezHdBef9`, '_blank');
+      document.getElementById('regForm').style.display = 'none';
+      document.getElementById('regSuccess').style.display = 'block';
+    });
+
+    document.getElementById('footerSignup')?.addEventListener('click', () => {
+      const email = document.getElementById('footerEmail')?.value.trim();
+      if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+      alert('Thank you for subscribing! We\'ll keep you updated on the Axim mission.');
+      document.getElementById('footerEmail').value = '';
+    });
+
+    const lightbox    = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.gal-item[data-lightbox]').forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImg.src = item.dataset.lightbox;
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    document.getElementById('lightboxClose')?.addEventListener('click', closeLightbox);
+    lightbox?.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    function closeLightbox() {
+      lightbox.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    const sections  = document.querySelectorAll('section[id]');
+    const navLinks  = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+      });
+    }, { passive: true });
+  })();
+
+  function sharePage() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Axim Mission 2026 — Zoe Tirzah',
+        text: 'Join us as we take the Gospel to the historic shores of Axim, Ghana. Aug 16–24, 2026.',
+        url: window.location.href
+      });
+    } else {
+      navigator.clipboard?.writeText(window.location.href)
+        .then(() => alert('Link copied to clipboard! Share it with your friends and church.'))
+        .catch(() => alert('Copy this link: ' + window.location.href));
+    }
+  }
+  </script>
+
+</body>
+</html>

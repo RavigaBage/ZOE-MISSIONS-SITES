@@ -1147,6 +1147,7 @@
                 <div class="mission-meta-chip"><i class="fa-solid fa-plane-departure"></i> <span data-i18n="lang-44">Departs SUN, Aug 16</span></div>
                 <div class="mission-meta-chip"><i class="fa-solid fa-plane-arrival"></i> <span data-i18n="lang-45">Returns MON, Aug 24</span></div>
                 <div class="mission-meta-chip"><i class="fa-solid fa-map-pin"></i> <span data-i18n="lang-46">Axim, Western Region</span></div>
+                <a href="./location/2026/axim.html"><div class="mission-meta-chip" style="background-color: crimson;font-size:bolder;"><i class="fa-solid fa-map-pin"></i> <span data-i18n="lang-46" >Get more information</span></div></a>
               </div>
 
               <div class="countdown-block">
@@ -1183,13 +1184,13 @@
                 <p class="tracker-title"><i class="fa-solid fa-circle-dollar-to-slot"></i> &nbsp;<span data-i18n="lang-54">Mission Fundraising Tracker</span></p>
                 <div class="tracker-goal-row">
                   <span class="tracker-amount-raised" id="trackerRaised" data-i18n="lang-55">GHS 0</span>
-                  <span class="tracker-goal" data-i18n="lang-56">Goal: GHS 15,000</span>
+                  <span class="tracker-goal" data-i18n="lang-56">Goal: GHS 117,000</span>
                 </div>
                 <div class="tracker-bar-bg">
-                  <div class="tracker-bar-fill" id="trackerBar" data-pct="44"></div>
+                  <div class="tracker-bar-fill" id="trackerBar" data-pct="20"></div>
                 </div>
                 <div class="tracker-meta">
-                  <span data-i18n="lang-57">234 supporters</span>
+                  <span data-i18n="lang-57">30 supporters</span>
                   <span class="tracker-percent" id="trackerPct" data-i18n="lang-58">44% raised</span>
                 </div>
 
@@ -1772,7 +1773,7 @@
             const raisedEl = document.getElementById('trackerRaised');
             if (!bar) return;
             const pct = parseInt(bar.dataset.pct) || 44;
-            const goal = 15000;
+            const goal = 117000;
             const raised = Math.round((pct / 100) * goal);
             setTimeout(() => {
               bar.style.width = pct + '%';
@@ -1848,7 +1849,6 @@
           document.getElementById('testiPrev')?.addEventListener('click', () => moveTesti(-1));
           document.getElementById('testiNext')?.addEventListener('click', () => moveTesti(1));
           setInterval(() => moveTesti(1), 8000);
-
           document.getElementById('footerSignup')?.addEventListener('click', () => {
             const email = document.getElementById('footerEmail').value.trim();
             if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
