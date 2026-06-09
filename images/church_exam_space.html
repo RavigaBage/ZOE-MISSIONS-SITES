@@ -1,0 +1,419 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);background:var(--color-background-primary)}
+.exam-wrap{max-width:680px;margin:0 auto;padding:1.5rem 1rem 3rem}
+.header{text-align:center;padding:2rem 1rem 1.5rem;border-bottom:0.5px solid var(--color-border-tertiary);margin-bottom:2rem}
+.level-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:4px 12px;border-radius:var(--border-radius-md);background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary);margin-bottom:12px}
+.header h1{font-size:22px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px}
+.header p{font-size:14px;color:var(--color-text-secondary);max-width:400px;margin:0 auto}
+.meta-row{display:flex;justify-content:center;gap:24px;margin-top:16px}
+.meta-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--color-text-secondary)}
+.progress-bar-wrap{background:var(--color-background-secondary);border-radius:99px;height:6px;margin-bottom:2rem;overflow:hidden;border:0.5px solid var(--color-border-tertiary)}
+.progress-bar-fill{height:100%;border-radius:99px;background:#4A90D9;transition:width 0.4s ease}
+.q-counter{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.q-counter span{font-size:13px;color:var(--color-text-secondary)}
+.q-counter .timer{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.question-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;margin-bottom:1.5rem}
+.q-type-tag{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.5px;color:var(--color-text-tertiary);margin-bottom:10px}
+.q-text{font-size:16px;color:var(--color-text-primary);line-height:1.6;margin-bottom:1.25rem}
+.q-marks{font-size:12px;color:var(--color-text-secondary);margin-bottom:1.25rem}
+.options-list{display:flex;flex-direction:column;gap:10px}
+.option-btn{width:100%;text-align:left;padding:12px 16px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);background:var(--color-background-primary);cursor:pointer;font-size:14px;color:var(--color-text-primary);display:flex;align-items:center;gap:12px;transition:border-color .15s,background .15s}
+.option-btn:hover{border-color:var(--color-border-secondary);background:var(--color-background-secondary)}
+.option-btn.selected{border-color:#4A90D9;background:#E6F1FB;color:#185FA5}
+.option-btn.correct{border-color:#3B6D11;background:#EAF3DE;color:#3B6D11}
+.option-btn.wrong{border-color:#A32D2D;background:#FCEBEB;color:#A32D2D}
+.option-letter{width:26px;height:26px;border-radius:50%;border:0.5px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;opacity:.6}
+.option-btn.selected .option-letter{opacity:1}
+.short-answer{width:100%;min-height:90px;padding:12px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);font-size:14px;font-family:var(--font-sans);color:var(--color-text-primary);background:var(--color-background-primary);resize:vertical}
+.short-answer:focus{outline:none;border-color:#4A90D9}
+.nav-row{display:flex;gap:12px;justify-content:space-between;margin-top:1.5rem}
+.btn-prev{padding:10px 20px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);font-size:14px;cursor:pointer;color:var(--color-text-primary);display:flex;align-items:center;gap:6px}
+.btn-prev:hover{background:var(--color-background-secondary)}
+.btn-next{padding:10px 24px;border:none;border-radius:var(--border-radius-md);background:#4A90D9;color:#fff;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px}
+.btn-next:hover{background:#185FA5}
+.btn-next:disabled{background:var(--color-background-secondary);color:var(--color-text-tertiary);cursor:not-allowed}
+.dot-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.5rem}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);cursor:pointer;transition:background .15s}
+.dot.answered{background:#4A90D9;border-color:#4A90D9}
+.dot.current{background:#185FA5;border-color:#185FA5}
+.screen{display:none}
+.screen.active{display:block}
+.result-wrap{text-align:center;padding:2rem 1rem}
+.score-circle{width:120px;height:120px;border-radius:50%;margin:0 auto 1.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:32px;font-weight:500}
+.score-circle.pass{background:#EAF3DE;color:#3B6D11;border:2px solid #97C459}
+.score-circle.fail{background:#FCEBEB;color:#A32D2D;border:2px solid #F09595}
+.result-title{font-size:22px;font-weight:500;margin-bottom:8px;color:var(--color-text-primary)}
+.result-sub{font-size:14px;color:var(--color-text-secondary);max-width:360px;margin:0 auto 2rem}
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:2rem}
+.stat-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem;text-align:center}
+.stat-card .val{font-size:24px;font-weight:500;color:var(--color-text-primary)}
+.stat-card .lbl{font-size:12px;color:var(--color-text-secondary);margin-top:4px}
+.btn-review{padding:10px 24px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);font-size:14px;cursor:pointer;color:var(--color-text-primary);margin-right:10px}
+.btn-review:hover{background:var(--color-background-secondary)}
+.review-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;margin-bottom:1rem;background:var(--color-background-primary)}
+.review-card .badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:3px 8px;border-radius:var(--border-radius-md);margin-bottom:10px}
+.badge.correct{background:#EAF3DE;color:#3B6D11}
+.badge.wrong{background:#FCEBEB;color:#A32D2D}
+.badge.skipped{background:var(--color-background-secondary);color:var(--color-text-secondary)}
+.login-wrap{max-width:380px;margin:3rem auto;background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:2rem}
+.login-logo{text-align:center;margin-bottom:1.5rem}
+.login-logo .icon{font-size:36px;color:#4A90D9}
+.login-logo h2{font-size:18px;font-weight:500;margin-top:8px;color:var(--color-text-primary)}
+.login-logo p{font-size:13px;color:var(--color-text-secondary)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;color:var(--color-text-secondary);margin-bottom:6px}
+.field input,.field select{width:100%}
+.btn-login{width:100%;padding:11px;background:#4A90D9;border:none;border-radius:var(--border-radius-md);color:#fff;font-size:14px;font-weight:500;cursor:pointer;margin-top:6px}
+.btn-login:hover{background:#185FA5}
+.exam-list-item{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;margin-bottom:1rem;display:flex;align-items:center;gap:16px;cursor:pointer;transition:border-color .15s,background .15s}
+.exam-list-item:hover{border-color:#4A90D9;background:#E6F1FB}
+.exam-icon{width:44px;height:44px;border-radius:var(--border-radius-md);background:#E6F1FB;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#185FA5;font-size:20px}
+.exam-info h3{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.exam-info p{font-size:13px;color:var(--color-text-secondary)}
+.exam-info .tags{display:flex;gap:8px;margin-top:6px}
+.tag{font-size:11px;padding:2px 8px;border-radius:var(--border-radius-md);background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)}
+.back-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--color-text-secondary);cursor:pointer;margin-bottom:1.5rem;border:none;background:none;padding:0}
+.back-btn:hover{color:var(--color-text-primary)}
+</style>
+
+<h2 class="sr-only">Church member exam and quiz platform</h2>
+
+<div class="exam-wrap">
+
+<div id="screen-login" class="screen active">
+  <div style="text-align:center;padding:2rem 0 1rem">
+    <i class="ti ti-building-church" style="font-size:40px;color:#4A90D9" aria-hidden="true"></i>
+    <h1 style="font-size:22px;font-weight:500;margin-top:10px;color:var(--color-text-primary)">Church Learning Portal</h1>
+    <p style="font-size:14px;color:var(--color-text-secondary);margin-top:6px">Sign in to take your exam</p>
+  </div>
+  <div class="login-wrap">
+    <div class="field">
+      <label>Select your name</label>
+      <select id="member-select">
+        <option value="">Choose member...</option>
+        <option value="1|Emmanuel Asante|Foundation School|1">Emmanuel Asante — Foundation School</option>
+        <option value="2|Abena Mensah|Membership Class|2">Abena Mensah — Membership Class</option>
+        <option value="3|Kofi Boateng|Discipleship School|3">Kofi Boateng — Discipleship School</option>
+        <option value="4|Akosua Darko|Leadership School|4">Akosua Darko — Leadership School</option>
+        <option value="5|Yaw Osei|Pastor / Mentorship|5">Yaw Osei — Pastor / Mentorship</option>
+        <option value="6|Ama Quaye|Foundation School|1">Ama Quaye — Foundation School</option>
+        <option value="7|Kwame Adu|Membership Class|2">Kwame Adu — Membership Class</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Phone / PIN</label>
+      <input type="password" id="pin-input" placeholder="Enter last 4 digits of phone" maxlength="4" />
+    </div>
+    <button class="btn-login" onclick="doLogin()">
+      <i class="ti ti-login" aria-hidden="true"></i> Sign in
+    </button>
+    <p id="login-err" style="font-size:12px;color:var(--color-text-danger);margin-top:8px;display:none">Please select your name and enter your PIN.</p>
+  </div>
+</div>
+
+<div id="screen-lobby" class="screen">
+  <button class="back-btn" onclick="showScreen('login')"><i class="ti ti-arrow-left" aria-hidden="true"></i> Sign out</button>
+  <div class="header" style="margin-bottom:1.5rem">
+    <div id="lobby-avatar" style="width:56px;height:56px;border-radius:50%;background:#E6F1FB;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:#185FA5;margin:0 auto 12px" aria-hidden="true"></div>
+    <h1 id="lobby-name" style="font-size:20px;margin-bottom:4px"></h1>
+    <p id="lobby-level" style="font-size:13px;color:var(--color-text-secondary)"></p>
+  </div>
+  <p style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:12px">Available exams</p>
+  <div id="exam-list"></div>
+</div>
+
+<div id="screen-briefing" class="screen">
+  <button class="back-btn" onclick="showScreen('lobby')"><i class="ti ti-arrow-left" aria-hidden="true"></i> Back</button>
+  <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;margin-bottom:1.5rem;background:var(--color-background-primary)">
+    <div id="brief-icon" style="width:48px;height:48px;border-radius:var(--border-radius-md);background:#E6F1FB;display:flex;align-items:center;justify-content:center;color:#185FA5;font-size:22px;margin-bottom:12px" aria-hidden="true"><i class="ti ti-file-text"></i></div>
+    <h2 id="brief-title" style="font-size:18px;font-weight:500;margin-bottom:6px"></h2>
+    <p id="brief-desc" style="font-size:14px;color:var(--color-text-secondary);line-height:1.6;margin-bottom:16px"></p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+      <div class="stat-card"><div id="brief-q" class="val"></div><div class="lbl">Questions</div></div>
+      <div class="stat-card"><div id="brief-time" class="val"></div><div class="lbl">Minutes</div></div>
+      <div class="stat-card"><div id="brief-pass" class="val"></div><div class="lbl">Pass score</div></div>
+    </div>
+    <p style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;border-top:0.5px solid var(--color-border-tertiary);padding-top:12px"><i class="ti ti-info-circle" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"></i>Answer all questions to the best of your ability. Short-answer questions are auto-reviewed for this demo.</p>
+  </div>
+  <button class="btn-next" style="width:100%;justify-content:center;" onclick="startExam()">
+    <i class="ti ti-player-play" aria-hidden="true"></i> Begin exam
+  </button>
+</div>
+
+<div id="screen-exam" class="screen">
+  <div class="header">
+    <div class="level-badge"><i class="ti ti-certificate" aria-hidden="true"></i> <span id="exam-level-label"></span></div>
+    <h1 id="exam-title"></h1>
+    <p id="exam-desc"></p>
+    <div class="meta-row">
+      <div class="meta-item"><i class="ti ti-clock" aria-hidden="true"></i> <span id="timer-display">45:00</span></div>
+      <div class="meta-item"><i class="ti ti-list-check" aria-hidden="true"></i> <span id="q-total-label"></span></div>
+    </div>
+  </div>
+  <div class="dot-nav" id="dot-nav" role="navigation" aria-label="Question navigation"></div>
+  <div class="progress-bar-wrap" role="progressbar" aria-label="Exam progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar-fill" id="progress-bar" style="width:0%"></div>
+  </div>
+  <div class="q-counter">
+    <span id="q-label">Question 1 of 4</span>
+    <span class="timer"><i class="ti ti-clock" aria-hidden="true"></i> <span id="q-timer"></span></span>
+  </div>
+  <div class="question-card" id="question-card">
+  </div>
+  <div class="nav-row">
+    <button class="btn-prev" id="btn-prev" onclick="navigate(-1)"><i class="ti ti-arrow-left" aria-hidden="true"></i> Previous</button>
+    <button class="btn-next" id="btn-next" onclick="navigate(1)">Next <i class="ti ti-arrow-right" aria-hidden="true"></i></button>
+  </div>
+</div>
+
+<div id="screen-result" class="screen">
+  <div class="result-wrap">
+    <div id="score-circle" class="score-circle pass"></div>
+    <h2 id="result-title" class="result-title"></h2>
+    <p id="result-sub" class="result-sub"></p>
+    <div class="result-stats">
+      <div class="stat-card"><div id="res-score" class="val"></div><div class="lbl">Score</div></div>
+      <div class="stat-card"><div id="res-correct" class="val"></div><div class="lbl">Correct</div></div>
+      <div class="stat-card"><div id="res-time" class="val"></div><div class="lbl">Time taken</div></div>
+    </div>
+    <button class="btn-review" onclick="showReview()"><i class="ti ti-eye" aria-hidden="true"></i> Review answers</button>
+    <button class="btn-next" onclick="showScreen('lobby')"><i class="ti ti-home" aria-hidden="true"></i> Back to portal</button>
+  </div>
+  <div id="review-section" style="display:none;margin-top:1.5rem">
+    <p style="font-size:14px;font-weight:500;margin-bottom:1rem;color:var(--color-text-primary)">Answer review</p>
+    <div id="review-list"></div>
+  </div>
+</div>
+
+</div>
+
+<script>
+const EXAMS=[
+  {id:1,title:"Foundation to Membership Exam",desc:"Core knowledge test to advance from Foundation School to Membership Class.",level_id:1,level_name:"Foundation School",pass_score:70,duration:45,questions:[
+    {id:1,text:"What is the primary purpose of the church according to the Great Commission?",type:"mcq",marks:2,options:[{id:1,text:"To build large buildings",correct:false},{id:2,text:"To make disciples of all nations",correct:true},{id:3,text:"To collect offerings",correct:false},{id:4,text:"To organize social events",correct:false}]},
+    {id:2,text:"The Bible consists of how many books?",type:"mcq",marks:1,options:[{id:5,text:"39",correct:false},{id:6,text:"66",correct:true},{id:7,text:"72",correct:false},{id:8,text:"54",correct:false}]},
+    {id:3,text:"Prayer is only for ordained ministers.",type:"true_false",marks:1,options:[{id:9,text:"True",correct:false},{id:10,text:"False",correct:true}]},
+    {id:4,text:"What does it mean to be "born again"?",type:"short",marks:3,short_answer_key:"spiritual rebirth"}
+  ]},
+  {id:2,title:"Membership to Discipleship Exam",desc:"Assess readiness for deep discipleship training.",level_id:2,level_name:"Membership Class",pass_score:75,duration:60,questions:[
+    {id:5,text:"What are the two primary sacraments recognized in most Protestant churches?",type:"mcq",marks:2,options:[{id:11,text:"Baptism and the Lord's Supper",correct:true},{id:12,text:"Confirmation and Marriage",correct:false},{id:13,text:"Anointing and Confession",correct:false},{id:14,text:"Prayer and Fasting",correct:false}]},
+    {id:6,text:"Which book of the Bible contains the Sermon on the Mount?",type:"mcq",marks:1,options:[{id:15,text:"Luke",correct:false},{id:16,text:"John",correct:false},{id:17,text:"Matthew",correct:true},{id:18,text:"Mark",correct:false}]},
+    {id:7,text:"Sanctification is a one-time event that happens at salvation.",type:"true_false",marks:1,options:[{id:19,text:"True",correct:false},{id:20,text:"False",correct:true}]},
+    {id:8,text:"Describe one way you can serve in the church using your God-given gifts.",type:"short",marks:3,short_answer_key:"serve"}
+  ]}
+];
+
+let currentMember=null,currentExam=null,answers={},currentQ=0,timerInterval=null,secondsLeft=0,startTime=null;
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('screen-'+id).classList.add('active');
+}
+
+function initials(name){return name.split(' ').map(n=>n[0]).join('').substring(0,2).toUpperCase()}
+
+function doLogin(){
+  const sel=document.getElementById('member-select').value;
+  const pin=document.getElementById('pin-input').value;
+  const err=document.getElementById('login-err');
+  if(!sel||!pin){err.style.display='block';return}
+  err.style.display='none';
+  const parts=sel.split('|');
+  currentMember={id:parseInt(parts[0]),name:parts[1],level:parts[2],level_id:parseInt(parts[3])};
+  loadLobby();showScreen('lobby');
+}
+
+function loadLobby(){
+  document.getElementById('lobby-avatar').textContent=initials(currentMember.name);
+  document.getElementById('lobby-name').textContent=currentMember.name;
+  document.getElementById('lobby-level').textContent='Current level: '+currentMember.level;
+  const list=document.getElementById('exam-list');
+  const available=EXAMS.filter(e=>e.level_id===currentMember.level_id);
+  if(available.length===0){list.innerHTML='<p style="font-size:14px;color:var(--color-text-secondary);text-align:center;padding:2rem 0"><i class="ti ti-check-circle" style="font-size:24px;display:block;margin:0 auto 8px;color:#3B6D11"></i>No exams available at your current level yet.</p>';return}
+  list.innerHTML=available.map(e=>`
+    <div class="exam-list-item" onclick="openBriefing(${e.id})" role="button" tabindex="0" aria-label="Open ${e.title}">
+      <div class="exam-icon"><i class="ti ti-file-certificate" aria-hidden="true"></i></div>
+      <div class="exam-info">
+        <h3>${e.title}</h3>
+        <p>${e.desc}</p>
+        <div class="tags">
+          <span class="tag"><i class="ti ti-clock" aria-hidden="true"></i> ${e.duration} min</span>
+          <span class="tag"><i class="ti ti-list" aria-hidden="true"></i> ${e.questions.length} questions</span>
+          <span class="tag"><i class="ti ti-target" aria-hidden="true"></i> Pass: ${e.pass_score}%</span>
+        </div>
+      </div>
+      <i class="ti ti-chevron-right" style="color:var(--color-text-tertiary);font-size:18px" aria-hidden="true"></i>
+    </div>
+  `).join('');
+}
+
+function openBriefing(examId){
+  currentExam=EXAMS.find(e=>e.id===examId);
+  document.getElementById('brief-title').textContent=currentExam.title;
+  document.getElementById('brief-desc').textContent=currentExam.desc;
+  document.getElementById('brief-q').textContent=currentExam.questions.length;
+  document.getElementById('brief-time').textContent=currentExam.duration;
+  document.getElementById('brief-pass').textContent=currentExam.pass_score+'%';
+  showScreen('briefing');
+}
+
+function startExam(){
+  answers={};currentQ=0;
+  secondsLeft=currentExam.duration*60;
+  startTime=Date.now();
+  document.getElementById('exam-level-label').textContent=currentExam.level_name;
+  document.getElementById('exam-title').textContent=currentExam.title;
+  document.getElementById('exam-desc').textContent=currentExam.desc;
+  document.getElementById('q-total-label').textContent=currentExam.questions.length+' questions';
+  buildDotNav();renderQuestion();
+  showScreen('exam');
+  if(timerInterval)clearInterval(timerInterval);
+  timerInterval=setInterval(tickTimer,1000);
+  updateTimerDisplay();
+}
+
+function buildDotNav(){
+  const nav=document.getElementById('dot-nav');
+  nav.innerHTML=currentExam.questions.map((_,i)=>`<div class="dot${i===0?' current':''}" id="dot-${i}" onclick="jumpTo(${i})" title="Question ${i+1}" aria-label="Go to question ${i+1}"></div>`).join('');
+}
+
+function jumpTo(i){currentQ=i;renderQuestion()}
+
+function tickTimer(){
+  secondsLeft--;
+  if(secondsLeft<=0){clearInterval(timerInterval);submitExam();return}
+  updateTimerDisplay();
+}
+
+function updateTimerDisplay(){
+  const m=Math.floor(secondsLeft/60),s=secondsLeft%60;
+  const str=m+':'+(s<10?'0'+s:s);
+  document.getElementById('timer-display').textContent=str;
+  document.getElementById('q-timer').textContent=str;
+  if(secondsLeft<120){
+    document.getElementById('timer-display').style.color='#A32D2D';
+    document.getElementById('q-timer').style.color='#A32D2D';
+  }
+}
+
+function renderQuestion(){
+  const q=currentExam.questions[currentQ];
+  const total=currentExam.questions.length;
+  document.getElementById('q-label').textContent='Question '+(currentQ+1)+' of '+total;
+  document.querySelectorAll('.dot').forEach((d,i)=>{
+    d.className='dot'+(answers[i]!==undefined?' answered':'')+(i===currentQ?' current':'');
+  });
+  const prog=Math.round(((currentQ)/total)*100);
+  document.getElementById('progress-bar').style.width=prog+'%';
+  document.getElementById('progress-bar').closest('[role=progressbar]').setAttribute('aria-valuenow',prog);
+  const isLast=currentQ===total-1;
+  const btn=document.getElementById('btn-next');
+  btn.innerHTML=isLast?'Submit exam <i class="ti ti-check" aria-hidden="true"></i>':'Next <i class="ti ti-arrow-right" aria-hidden="true"></i>';
+  document.getElementById('btn-prev').style.visibility=currentQ===0?'hidden':'visible';
+  let typeLabel={mcq:'Multiple choice',true_false:'True / False',short:'Short answer'}[q.type]||q.type;
+  let html=`<div class="q-type-tag">${typeLabel}</div>
+<p class="q-text">${q.text}</p>
+<div class="q-marks"><i class="ti ti-star" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"></i>${q.marks} mark${q.marks>1?'s':''}</div>`;
+  if(q.type==='mcq'||q.type==='true_false'){
+    const letters=['A','B','C','D'];
+    html+=`<div class="options-list" role="radiogroup" aria-label="Answer options">`;
+    q.options.forEach((opt,oi)=>{
+      const sel=answers[currentQ]===opt.id;
+      html+=`<button class="option-btn${sel?' selected':''}" onclick="selectOption(${opt.id})" role="radio" aria-checked="${sel}">
+        <span class="option-letter" aria-hidden="true">${letters[oi]}</span>
+        <span>${opt.text}</span>
+      </button>`;
+    });
+    html+=`</div>`;
+  } else {
+    const existing=answers[currentQ]||'';
+    html+=`<textarea class="short-answer" id="short-input-${q.id}" placeholder="Type your answer here..." aria-label="Short answer" oninput="saveShort(this.value)">${existing}</textarea>`;
+  }
+  document.getElementById('question-card').innerHTML=html;
+}
+
+function selectOption(optId){
+  answers[currentQ]=optId;
+  renderQuestion();
+}
+
+function saveShort(val){
+  answers[currentQ]=val;
+  document.getElementById('dot-'+currentQ).className='dot answered current';
+}
+
+function navigate(dir){
+  const total=currentExam.questions.length;
+  if(dir===1&&currentQ===total-1){submitExam();return}
+  currentQ=Math.max(0,Math.min(total-1,currentQ+dir));
+  renderQuestion();
+}
+
+function submitExam(){
+  clearInterval(timerInterval);
+  const elapsed=Math.round((Date.now()-startTime)/1000);
+  const mins=Math.floor(elapsed/60),secs=elapsed%60;
+  let totalMarks=0,earnedMarks=0,correct=0;
+  currentExam.questions.forEach((q,i)=>{
+    totalMarks+=q.marks;
+    if(q.type==='mcq'||q.type==='true_false'){
+      const sel=answers[i];
+      const correctOpt=q.options.find(o=>o.correct);
+      if(sel&&correctOpt&&sel===correctOpt.id){earnedMarks+=q.marks;correct++}
+    } else {
+      const ans=(answers[i]||'').toLowerCase();
+      if(ans.length>10){earnedMarks+=Math.round(q.marks*0.7);correct++}
+    }
+  });
+  const pct=Math.round((earnedMarks/totalMarks)*100);
+  const passed=pct>=currentExam.pass_score;
+  const circle=document.getElementById('score-circle');
+  circle.className='score-circle '+(passed?'pass':'fail');
+  circle.innerHTML=`<span style="font-size:28px;font-weight:500">${pct}%</span><span style="font-size:11px;opacity:.7">${passed?'Passed':'Failed'}</span>`;
+  document.getElementById('result-title').textContent=passed?'Congratulations, '+currentMember.name.split(' ')[0]+'!':'Keep studying, '+currentMember.name.split(' ')[0];
+  document.getElementById('result-sub').textContent=passed?'You passed the '+currentExam.title+' and are ready to advance to the next level.':'You scored below the pass mark. Review your answers and try again.';
+  document.getElementById('res-score').textContent=pct+'%';
+  document.getElementById('res-correct').textContent=correct+'/'+currentExam.questions.length;
+  document.getElementById('res-time').textContent=mins+'m '+secs+'s';
+  document.getElementById('review-section').style.display='none';
+  showScreen('result');
+  buildReview();
+}
+
+function showReview(){
+  const rs=document.getElementById('review-section');
+  rs.style.display=rs.style.display==='none'?'block':'none';
+}
+
+function buildReview(){
+  const list=document.getElementById('review-list');
+  list.innerHTML=currentExam.questions.map((q,i)=>{
+    let status='skipped',statusLabel='Skipped';
+    if(q.type==='mcq'||q.type==='true_false'){
+      const sel=answers[i];
+      const correctOpt=q.options.find(o=>o.correct);
+      if(sel){status=sel===correctOpt.id?'correct':'wrong';statusLabel=status==='correct'?'Correct':'Incorrect'}
+    } else {
+      const ans=answers[i]||'';
+      if(ans.length>10){status='correct';statusLabel='Submitted'}
+      else if(ans.length){status='wrong';statusLabel='Too brief'}
+    }
+    let answerDetail='';
+    if(q.type!=='short'){
+      const selOpt=answers[i]?q.options.find(o=>o.id===answers[i]):null;
+      const corrOpt=q.options.find(o=>o.correct);
+      answerDetail=`<p style="font-size:13px;color:var(--color-text-secondary);margin-top:8px">Your answer: <strong style="color:var(--color-text-primary)">${selOpt?selOpt.text:'—'}</strong></p>`;
+      if(status==='wrong')answerDetail+=`<p style="font-size:13px;color:#3B6D11;margin-top:4px">Correct answer: <strong>${corrOpt.text}</strong></p>`;
+    } else {
+      answerDetail=`<p style="font-size:13px;color:var(--color-text-secondary);margin-top:8px">Your answer: <em style="color:var(--color-text-primary)">${answers[i]||'Not answered'}</em></p>`;
+    }
+    return `<div class="review-card">
+      <div class="badge ${status}">${statusLabel}</div>
+      <p style="font-size:14px;color:var(--color-text-primary);margin-bottom:4px"><strong>Q${i+1}.</strong> ${q.text}</p>
+      ${answerDetail}
+    </div>`;
+  }).join('');
+}
+</script>
