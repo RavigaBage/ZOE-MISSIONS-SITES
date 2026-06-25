@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mailing List · Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --paper-soft:#F7F8FA;
+    --ink:#15171C;
+    --ink-soft:#6B7280;
+    --ink-faint:#9CA3AF;
+    --line:#E4E7EC;
+    --accent:#C0152F;
+    --accent-soft:#FBE9EA;
+    --success:#1F8A57;
+    --success-soft:#E7F5ED;
+    --radius:14px;
+    --radius-sm:9px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+
+  .dashboard{
+    max-width:1080px;
+    margin:0 auto;
+    padding:40px 28px 80px;
+  }
+
+  /* ---------- header ---------- */
+  .topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    padding-bottom:28px;
+    border-bottom:2px dashed var(--line);
+    flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:flex-start;gap:14px;}
+  .seal{
+    flex:none;
+    width:44px;height:44px;
+    border-radius:50%;
+    border:2px dashed var(--accent);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--accent);
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:18px;
+    transform:rotate(-6deg);
+    margin-top:2px;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:26px;
+    font-weight:700;
+    margin:0 0 4px;
+    letter-spacing:-0.01em;
+  }
+  .subtitle{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:14px;
+  }
+
+  .actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .search-wrap{
+    position:relative;
+    display:flex;
+    align-items:center;
+  }
+  .search-wrap svg{
+    position:absolute;
+    left:12px;
+    width:15px;height:15px;
+    color:var(--ink-faint);
+    pointer-events:none;
+  }
+  #searchInput{
+    width:230px;
+    padding:9px 12px 9px 34px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-family:'Inter',sans-serif;
+    font-size:13.5px;
+    color:var(--ink);
+    background:var(--paper-soft);
+    transition:border-color .15s, box-shadow .15s;
+  }
+  #searchInput:focus{
+    outline:none;
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-soft);
+    background:var(--paper);
+  }
+  #searchInput::placeholder{color:var(--ink-faint);}
+
+  .btn-primary{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    padding:9px 16px;
+    border-radius:10px;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    cursor:pointer;
+    transition:background .15s, transform .1s;
+  }
+  .btn-primary:hover{background:#a31127;}
+  .btn-primary:active{transform:scale(0.98);}
+  .btn-primary:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+
+  /* ---------- stats ---------- */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    padding:36px 0 8px;
+  }
+  .stat-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    padding:8px 0 4px;
+  }
+  .stat-ring{
+    width:104px;height:104px;
+    border-radius:50%;
+    border:2px dashed var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:26px;
+    color:var(--ink);
+    transition:border-color .2s;
+  }
+  .stat-card:nth-child(1) .stat-ring{transform:rotate(-3deg);border-color:var(--accent);color:var(--accent);}
+  .stat-card:nth-child(2) .stat-ring{transform:rotate(2deg);}
+  .stat-card:nth-child(3) .stat-ring{transform:rotate(-1deg);border-color:var(--success);color:var(--success);}
+  .stat-label{
+    margin:0;
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+
+  /* ---------- table card ---------- */
+  .table-card{
+    margin-top:28px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:var(--paper);
+  }
+  .table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:18px 22px;
+    border-bottom:1px solid var(--line);
+  }
+  .table-header h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:16px;
+    margin:0;
+    font-weight:600;
+  }
+  .table-count{
+    font-size:12.5px;
+    color:var(--ink-faint);
+    margin-left:8px;
+    font-weight:400;
+    font-family:'Inter',sans-serif;
+  }
+  .chips{display:flex;gap:6px;}
+  .chip{
+    border:1px solid var(--line);
+    background:var(--paper);
+    color:var(--ink-soft);
+    font-size:12.5px;
+    font-weight:600;
+    padding:6px 13px;
+    border-radius:20px;
+    cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:all .15s;
+  }
+  .chip:hover{border-color:var(--ink-faint);}
+  .chip.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .chip:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+
+  .table-scroll{overflow-x:auto;}
+  table{width:100%;border-collapse:collapse;min-width:680px;}
+  thead th{
+    text-align:left;
+    font-size:11.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    font-weight:600;
+    padding:13px 22px;
+    border-bottom:1px solid var(--line);
+    background:var(--paper-soft);
+    white-space:nowrap;
+  }
+  th.sortable{cursor:pointer;user-select:none;}
+  th.sortable:hover{color:var(--ink-soft);}
+  th .arrow{font-size:10px;margin-left:4px;opacity:0;}
+  th.sorted .arrow{opacity:1;}
+
+  tbody tr{border-bottom:1px solid var(--line);transition:background .12s;}
+  tbody tr:last-child{border-bottom:none;}
+  tbody tr:hover{background:var(--paper-soft);}
+  tbody tr:hover .row-actions{opacity:1;}
+  td{padding:13px 22px;font-size:13.5px;vertical-align:middle;}
+  .cell-name{font-weight:600;}
+  .cell-email{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .tag{
+    display:inline-block;
+    font-size:11.5px;
+    font-weight:600;
+    padding:3px 10px;
+    border-radius:6px;
+    background:var(--paper-soft);
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+    font-family:'Inter',sans-serif;
+  }
+  .joined-date{color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:12.5px;}
+
+  .status-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    font-weight:600;
+    padding:4px 10px;
+    border-radius:20px;
+  }
+  .status-badge.active{background:var(--success-soft);color:var(--success);}
+  .status-badge.unsubscribed{background:var(--paper-soft);color:var(--ink-faint);}
+  .status-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+
+  .row-actions{
+    display:flex;
+    gap:4px;
+    justify-content:flex-end;
+    opacity:0;
+    transition:opacity .12s;
+  }
+  .icon-btn{
+    width:28px;height:28px;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid transparent;
+    background:none;
+    border-radius:7px;
+    cursor:pointer;
+    color:var(--ink-faint);
+    transition:all .12s;
+  }
+  .icon-btn:hover{background:var(--paper-soft);color:var(--ink);border-color:var(--line);}
+  .icon-btn.danger:hover{color:var(--accent);}
+  .icon-btn:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+  .icon-btn svg{width:14px;height:14px;}
+
+  .empty-state{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding:60px 20px;
+    color:var(--ink-faint);
+    text-align:center;
+  }
+  .empty-state.show{display:flex;}
+  .empty-state svg{width:32px;height:32px;margin-bottom:6px;opacity:.5;}
+  .empty-state p{margin:0;font-size:13.5px;}
+  .empty-state span{font-size:12px;}
+
+  /* ---------- modal ---------- */
+  .modal-overlay{
+    position:fixed;inset:0;
+    background:rgba(21,23,28,0.45);
+    display:flex;align-items:center;justify-content:center;
+    padding:20px;
+    opacity:0;visibility:hidden;
+    transition:opacity .15s;
+    z-index:50;
+  }
+  .modal-overlay.show{opacity:1;visibility:visible;}
+  .modal{
+    background:var(--paper);
+    border-radius:var(--radius);
+    width:100%;
+    max-width:400px;
+    padding:26px;
+    box-shadow:0 24px 48px -12px rgba(21,23,28,0.25);
+    transform:translateY(8px) scale(.98);
+    transition:transform .15s;
+  }
+  .modal-overlay.show .modal{transform:translateY(0) scale(1);}
+  .modal h3{
+    font-family:'Space Grotesk',sans-serif;
+    margin:0 0 4px;
+    font-size:18px;
+    font-weight:700;
+  }
+  .modal .modal-sub{margin:0 0 20px;font-size:13px;color:var(--ink-soft);}
+  .field{margin-bottom:14px;}
+  .field label{
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .field input,.field select{
+    width:100%;
+    padding:9px 11px;
+    border:1px solid var(--line);
+    border-radius:9px;
+    font-family:'Inter',sans-serif;
+    font-size:13.5px;
+    color:var(--ink);
+    background:var(--paper);
+  }
+  .field input:focus,.field select:focus{
+    outline:none;
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-soft);
+  }
+  .modal-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:8px;
+    margin-top:20px;
+  }
+  .btn-ghost{
+    background:none;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    padding:9px 16px;
+    border-radius:10px;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    cursor:pointer;
+  }
+  .btn-ghost:hover{background:var(--paper-soft);}
+  .hidden{display:none !important;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+
+  @media (max-width:640px){
+    .stats{grid-template-columns:1fr 1fr;}
+    .stat-card:nth-child(3){grid-column:span 2;}
+    .topbar{flex-direction:column;}
+    #searchInput{width:100%;}
+    .actions{width:100%;}
+    .search-wrap{flex:1;}
+  }
+</style>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="seal">@</div>
+      <div>
+        <h1>Mailing List</h1>
+        <p class="subtitle">Your newsletter subscribers, at a glance</p>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="searchInput" type="text" placeholder="Search name or email">
+      </div>
+      <button class="btn-primary" id="addBtn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        Add subscriber
+      </button>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stat-card">
+      <div class="stat-ring" id="statTotal">0</div>
+      <p class="stat-label">Total subscribers</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-ring" id="statNew">0</div>
+      <p class="stat-label">New this month</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-ring" id="statActive">0%</div>
+      <p class="stat-label">Active rate</p>
+    </div>
+  </section>
+
+  <section class="table-card">
+    <div class="table-header">
+      <h2>Subscribers<span class="table-count" id="tableCount"></span></h2>
+      <div class="chips" id="filterChips">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="active">Active</button>
+        <button class="chip" data-filter="unsubscribed">Unsubscribed</button>
+      </div>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th class="sortable" data-sort="name">Name <span class="arrow">▾</span></th>
+            <th class="sortable" data-sort="email">Email <span class="arrow">▾</span></th>
+            <th>Tag</th>
+            <th class="sortable" data-sort="joined">Joined <span class="arrow">▾</span></th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <div class="empty-state" id="emptyState">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <p>No subscribers match your search</p>
+      <span>Try a different name, email, or filter</span>
+    </div>
+  </section>
+
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <h3>Add subscriber</h3>
+    <p class="modal-sub">They'll appear in your list right away.</p>
+    <form id="addForm">
+      <div class="field">
+        <label for="inputName">Name</label>
+        <input id="inputName" type="text" required placeholder="Jordan Blake">
+      </div>
+      <div class="field">
+        <label for="inputEmail">Email</label>
+        <input id="inputEmail" type="email" required placeholder="jordan@example.com">
+      </div>
+      <div class="field">
+        <label for="inputTag">Tag</label>
+        <select id="inputTag">
+          <option>Newsletter</option>
+          <option>Product updates</option>
+          <option>Beta</option>
+          <option>Events</option>
+        </select>
+      </div>
+      <div class="modal-buttons">
+        <button type="button" class="btn-ghost" id="cancelBtn">Cancel</button>
+        <button type="submit" class="btn-primary">Add subscriber</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+
+  // ---------- seed data ----------
+  let subscribers = [
+    {id:1,  name:"Amara Okafor",     email:"amara.okafor@gmail.com",     tag:"Newsletter",       joined:"2025-08-12", status:"active"},
+    {id:2,  name:"Liam Foster",      email:"liam.foster@outlook.com",    tag:"Product updates",  joined:"2025-11-03", status:"active"},
+    {id:3,  name:"Nadia Petrov",     email:"n.petrov@protonmail.com",    tag:"Beta",              joined:"2026-01-22", status:"active"},
+    {id:4,  name:"Kwame Asante",     email:"kwame.asante@yahoo.com",     tag:"Newsletter",        joined:"2025-06-30", status:"unsubscribed"},
+    {id:5,  name:"Sofia Marin",      email:"sofia.marin@icloud.com",     tag:"Events",            joined:"2026-03-09", status:"active"},
+    {id:6,  name:"Daniel Cho",       email:"d.cho@gmail.com",            tag:"Newsletter",        joined:"2026-06-02", status:"active"},
+    {id:7,  name:"Priya Nair",       email:"priya.nair@hotmail.com",     tag:"Product updates",   joined:"2025-09-17", status:"active"},
+    {id:8,  name:"Elena Vasquez",    email:"elena.vasquez@gmail.com",    tag:"Beta",               joined:"2026-06-18", status:"active"},
+    {id:9,  name:"Tobias Mensah",    email:"t.mensah@outlook.com",       tag:"Newsletter",        joined:"2025-04-25", status:"unsubscribed"},
+    {id:10, name:"Hannah Wright",    email:"hannah.wright@gmail.com",    tag:"Events",            joined:"2026-02-14", status:"active"},
+    {id:11, name:"Mateo Rossi",      email:"mateo.rossi@icloud.com",     tag:"Newsletter",        joined:"2025-12-05", status:"active"},
+    {id:12, name:"Chioma Eze",       email:"chioma.eze@protonmail.com",  tag:"Product updates",   joined:"2026-06-10", status:"active"},
+    {id:13, name:"Oscar Lindqvist",  email:"oscar.lindqvist@gmail.com",  tag:"Beta",               joined:"2025-10-08", status:"unsubscribed"},
+    {id:14, name:"Yuki Tanaka",      email:"yuki.tanaka@yahoo.com",      tag:"Newsletter",        joined:"2026-05-29", status:"active"}
+  ];
+  let nextId = 15;
+
+  let state = {search:"", filter:"all", sortKey:"joined", sortDir:"desc"};
+
+  // ---------- elements ----------
+  const tableBody   = document.getElementById('tableBody');
+  const emptyState  = document.getElementById('emptyState');
+  const searchInput = document.getElementById('searchInput');
+  const chips       = document.querySelectorAll('.chip');
+  const tableCount  = document.getElementById('tableCount');
+  const statTotal   = document.getElementById('statTotal');
+  const statNew     = document.getElementById('statNew');
+  const statActive  = document.getElementById('statActive');
+  const modalOverlay= document.getElementById('modalOverlay');
+  const addForm     = document.getElementById('addForm');
+
+  // ---------- helpers ----------
+  function formatDate(str){
+    const d = new Date(str + 'T00:00:00');
+    return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  }
+
+  function escapeHtml(str){
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function getFiltered(){
+    const term = state.search.trim().toLowerCase();
+    let list = subscribers.filter(s=>{
+      const matchesSearch = !term || s.name.toLowerCase().includes(term) || s.email.toLowerCase().includes(term);
+      const matchesFilter = state.filter === 'all' || s.status === state.filter;
+      return matchesSearch && matchesFilter;
+    });
+    list.sort((a,b)=>{
+      let av = a[state.sortKey], bv = b[state.sortKey];
+      if(state.sortKey === 'joined'){ av = new Date(av); bv = new Date(bv); }
+      else { av = av.toLowerCase(); bv = bv.toLowerCase(); }
+      if(av < bv) return state.sortDir === 'asc' ? -1 : 1;
+      if(av > bv) return state.sortDir === 'asc' ? 1 : -1;
+      return 0;
+    });
+    return list;
+  }
+
+  function renderStats(){
+    const now = new Date();
+    const total = subscribers.length;
+    const newThisMonth = subscribers.filter(s=>{
+      const d = new Date(s.joined + 'T00:00:00');
+      return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+    }).length;
+    const activeCount = subscribers.filter(s=>s.status==='active').length;
+    const activeRate = total ? Math.round((activeCount/total)*100) : 0;
+
+    statTotal.textContent = total.toLocaleString();
+    statNew.textContent = '+' + newThisMonth;
+    statActive.textContent = activeRate + '%';
+  }
+
+  function renderTable(){
+    const list = getFiltered();
+
+    tableCount.textContent = list.length === subscribers.length
+      ? `· ${subscribers.length} total`
+      : `· ${list.length} of ${subscribers.length}`;
+
+    if(list.length === 0){
+      tableBody.innerHTML = '';
+      emptyState.classList.add('show');
+    } else {
+      emptyState.classList.remove('show');
+      tableBody.innerHTML = list.map(s => `
+        <tr data-id="${s.id}">
+          <td class="cell-name">${escapeHtml(s.name)}</td>
+          <td class="cell-email">${escapeHtml(s.email)}</td>
+          <td><span class="tag">${escapeHtml(s.tag)}</span></td>
+          <td class="joined-date">${formatDate(s.joined)}</td>
+          <td>
+            <span class="status-badge ${s.status}">
+              <span class="dot"></span>${s.status === 'active' ? 'Active' : 'Unsubscribed'}
+            </span>
+          </td>
+          <td>
+            <div class="row-actions">
+              <button class="icon-btn" data-action="toggle" title="${s.status === 'active' ? 'Mark unsubscribed' : 'Reactivate'}">
+                ${s.status === 'active'
+                  ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>'
+                  : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>'}
+              </button>
+              <button class="icon-btn danger" data-action="delete" title="Remove subscriber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v4"/><path d="M14 11v4"/><path d="M9 6V4h6v2"/></svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    document.querySelectorAll('th.sortable').forEach(th=>{
+      th.classList.toggle('sorted', th.dataset.sort === state.sortKey);
+      th.querySelector('.arrow').textContent = state.sortDir === 'asc' ? '▴' : '▾';
+    });
+  }
+
+  function render(){
+    renderStats();
+    renderTable();
+  }
+
+  // ---------- events ----------
+  searchInput.addEventListener('input', e=>{
+    state.search = e.target.value;
+    renderTable();
+  });
+
+  chips.forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      chips.forEach(c=>c.classList.remove('active'));
+      chip.classList.add('active');
+      state.filter = chip.dataset.filter;
+      renderTable();
+    });
+  });
+
+  document.querySelectorAll('th.sortable').forEach(th=>{
+    th.addEventListener('click', ()=>{
+      const key = th.dataset.sort;
+      if(state.sortKey === key){
+        state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.sortKey = key;
+        state.sortDir = 'asc';
+      }
+      renderTable();
+    });
+  });
+
+  tableBody.addEventListener('click', e=>{
+    const btn = e.target.closest('.icon-btn');
+    if(!btn) return;
+    const row = e.target.closest('tr');
+    const id = Number(row.dataset.id);
+    const sub = subscribers.find(s=>s.id === id);
+    if(!sub) return;
+
+    if(btn.dataset.action === 'toggle'){
+      sub.status = sub.status === 'active' ? 'unsubscribed' : 'active';
+      render();
+    } else if(btn.dataset.action === 'delete'){
+      subscribers = subscribers.filter(s=>s.id !== id);
+      render();
+    }
+  });
+
+  function openModal(){
+    modalOverlay.classList.add('show');
+    document.getElementById('inputName').focus();
+  }
+  function closeModal(){
+    modalOverlay.classList.remove('show');
+    addForm.reset();
+  }
+
+  document.getElementById('addBtn').addEventListener('click', openModal);
+  document.getElementById('cancelBtn').addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', e=>{ if(e.target === modalOverlay) closeModal(); });
+  document.addEventListener('keydown', e=>{ if(e.key === 'Escape' && modalOverlay.classList.contains('show')) closeModal(); });
+
+  addForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    const name = document.getElementById('inputName').value.trim();
+    const email = document.getElementById('inputEmail').value.trim();
+    const tag = document.getElementById('inputTag').value;
+    if(!name || !email) return;
+
+    const today = new Date();
+    const joined = today.toISOString().slice(0,10);
+
+    subscribers.unshift({id:nextId++, name, email, tag, joined, status:'active'});
+    closeModal();
+    render();
+  });
+
+  // ---------- init ----------
+  render();
+
+})();
+</script>
+
+</body>
+</html>
+Done
+
+You are out o

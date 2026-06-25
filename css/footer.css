@@ -1,226 +1,48 @@
-body{
-    cursor: pointer;
-}
 footer {
-  overflow: hidden;
-  width: 100%;
-  margin-top:30px;
-  background-color: var(--fuel-bank-dark);
+    background: var(--navy); color: rgba(255,255,255,0.65);
+    padding-top: 64px;
 }
-footer .container {
-  width: calc(100% - 100px);
-  min-height: 200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: var(--fuel-bank-dark);
-  gap: 20px;
-  color: #fff;
-  padding: 40px;
+.footer-grid {
+    width: min(1200px,92vw); margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+    padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-footer .container .brand header {
-  font-size: 23px;
-  min-height: 0px;
-  font-family: plumpfull, sans-serif;
+.footer-brand { }
+.footer-brand-name {
+    font-family: var(--font-head); font-size: 1.4rem; font-weight: 800;
+    color: var(--white); margin-bottom: 14px;
 }
-.footer-text {
-    margin-top: 30px;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.8);
+.footer-brand-desc { font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+.footer-socials { display: flex; gap: 10px; }
+.footer-social-link {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); display: grid; place-items: center;
+    color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: var(--transition);
 }
-
-.footer-text .church-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: white;
-    margin-top: 5px;
-    display: block;
+.footer-social-link:hover { background: var(--crimson); color: var(--white); }
+.footer-col-title {
+    font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--white); margin-bottom: 18px;
 }
-
-footer .container .brand ul,
-footer .container .links ul {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  list-style: none;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-footer .container .links ul{
-    flex-direction: column;
-}
-footer .container .field ul {
-  width: 100%;
-  margin-top: 10px;
-  list-style: none;
-  display: block;
-}
-footer .container .brand ul li {
-  width: 30px;
-  height: 30px;
-  margin: 10px;
-  border: 2px solid #fff;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-}
-footer .container .field ul li {
-  margin-block: 10px;
-}
-footer .container .field ul li span {
-  text-decoration: underline;
-}
-footer .container .links{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-footer .container .links ul li {
-  margin:0px;
-  word-break: break-word;
-}
-footer .container .links ul {
-  margin-bottom: 10px;
-}
-.site-footer {
-
-    color: #fff;
-    padding: 30px 20px 15px;
-    margin-top: 40px;
-}
-
-.footer-top {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    justify-content: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #444;
-}
-
-.email-signup h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.email-signup form {
-    display: flex;
-    margin-bottom: 10px;
-    border-radius: 16px;
-    overflow: hidden;
-    background-color: #fff;
-}
-
-.email-signup input[type="email"] {
-    padding: 8px;
-    border: none;
-    border-radius: 4px 0 0 4px;
-    width: 80%;
-    height: 40px;
-}
-
-.email-signup button {
-    background-color: var(--fuel-bank-blue);
-    color: #fff;
-    border: none;
-    padding: 8px 15px;
-    width:20%;
-    cursor: pointer;
-}
-
-.email-signup p {
-    font-size: 0.8em;
-    opacity: 0.7;
-}
-
-.social-links a {
-    color: #fff;
-    font-size: 1.5em;
-    text-decoration: none;
-    margin-left: 15px;
-}
-
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 0.88rem; transition: color 0.2s ease; }
+.footer-links a:hover { color: var(--teal); }
 .footer-bottom {
-    max-width: 960px;
-    margin: 15px auto 0;
-    text-align: center;
+    width: min(1200px,92vw); margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0; font-size: 0.82rem; gap: 16px; flex-wrap: wrap;
 }
-
-.footer-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.85em;
-    opacity: 0.8;
+.footer-newsletter { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.footer-email-input {
+    flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px; padding: 9px 16px; color: var(--white); font-size: 0.85rem;
+    outline: none; font-family: var(--font-body);
 }
-
-.footer-bottom p {
-    margin-top: 10px;
-    font-size: 0.8em;
-    opacity: 0.6;
+.footer-email-input::placeholder { color: rgba(255,255,255,0.35); }
+.footer-email-input:focus { border-color: var(--teal); }
+.footer-sub-btn {
+    background: var(--teal-dark); color: var(--white); border: none;
+    padding: 9px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; transition: var(--transition); white-space: nowrap; font-family: var(--font-body);
 }
-.animate_hover{
-    animation: hoverBounce 1.5s infinite ease-in-out;
-}
-.social_links{
-    display: flex;
-    align-items: center;
-    gap:20px;
-}
-.social_links a{
-    padding: 10px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    transition: all 0.3s ease;
-}
-.social_links a:hover{
-    transform: translateY(-10px);
-}
-@media screen and (max-width:1024px) {
-    footer .container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap:20px;
-        column-gap: 50px;
-    }
-    footer .container .brand {
-        width: 100%;
-        grid-column: 1;
-        text-align: start;
-    }
-}
-@media screen and (max-width:768px) {
-    
-    .footer-top {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .social-links {
-        margin-top: 20px;
-    }
-    .email-signup form {
-        justify-content: center;
-    }
-}
-@media screen and (max-width:600px) {
-    footer .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        row-gap:30px;
-        column-gap: 0px;
-        padding: 10px;
-    }
-}
-@media screen and (max-width:280px) {
-    .email-signup input[type="email"]{
-        width: 70%;
-    }
-    .email-signup button{
-        width:30%;
-    }
-}
+.footer-sub-btn:hover { background: var(--teal-mid); }

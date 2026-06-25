@@ -1855,10 +1855,25 @@
             const email = document.getElementById('footerEmail').value.trim();
             if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
             alert('Thank you for subscribing! We\'ll keep you updated on our missions.');
+            const response = mailList(email);
             document.getElementById('footerEmail').value = '';
           });
         })();
+        async function mailList(email_) {
+          const res = await fetch("http://localhost:3000",{
+            method:'POST',
+            body:JSON.stringify({email:email_})
+          });
 
+          const data = await res.json();
+
+          if (!res.ok) {
+            console.log("Request failed ", data);
+            return;
+          }
+
+          console.log("Success 🚀", data);
+        }
         function sharePage() {
           if (navigator.share) {
             navigator.share({

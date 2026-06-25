@@ -1,0 +1,28 @@
+[
+  {
+    "user_x": {
+      "id": 1,
+      "name": "Amara Okafor",
+      "email": "amara.okafor@gmail.com",
+      "tag": "Newsletter",
+      "joined": "2025-08-12",
+      "status": "active"
+    },
+    "user_y": {
+      "id": 1,
+      "name": "Amara Okafor",
+      "email": "amara.okafor@gmail.com",
+      "tag": "Newsletter",
+      "joined": "2025-08-12",
+      "status": "active"
+    }
+  },
+  {
+    "id": "mqtnzb2wyx5oa50mix9",
+    "name": "",
+    "email": "helllo@gmail.com",
+    "tag": "Newsletter",
+    "joined": "2026-06-25",
+    "status": "active"
+  }
+]

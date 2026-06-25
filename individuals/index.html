@@ -27,7 +27,7 @@
 <link rel="icon" type="image/png" href="../apple-touch-icon.png">
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-
+    <link rel="stylesheet" href="../css/footer.css" />
 <link rel="manifest" href="../site.webmanifest">
 
 <script type="application/ld+json">
@@ -1241,7 +1241,7 @@ window.addEventListener('scroll',()=>{
     });
 const faqItems = document.querySelectorAll('.faq-item');
 
-faqItems.forEach(item=>{
+        faqItems.forEach(item=>{
 
   const header = item.querySelector('.faq-header');
 
@@ -1274,6 +1274,29 @@ faqItems.forEach(item=>{
   });
 
 });
+        
+document.getElementById('footerSignup')?.addEventListener('click', () => {
+          const email = document.getElementById('footerEmail').value.trim();
+          if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+          alert('Thank you for subscribing! We\'ll keep you updated on our missions.');
+          const response = mailList(email);
+          document.getElementById('footerEmail').value = '';
+        });
+        async function mailList(email_) {
+          const res = await fetch("http://localhost:3000",{
+            method:'POST',
+            body:JSON.stringify({email:email_})
+          });
+
+          const data = await res.json();
+
+          if (!res.ok) {
+            console.log("Request failed ", data);
+            return;
+          }
+
+          console.log("Success 🚀", data);
+        }
 
 </script>
 
