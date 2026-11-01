@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | Zoe Tirzah Missions in Ghana</title>
-  <meta name="description" content="Explore photos and moments from Zoe Tirzah Missions' evangelism, medical clinics, church planting, and community outreach across Ghana.">
-  <link rel="canonical" href="https://www.zoe-tirzahmissions.com/gallery/"/>
+  <meta name="description"
+    content="Explore photos and moments from Zoe Tirzah Missions' evangelism, medical clinics, church planting, and community outreach across Ghana.">
+  <link rel="canonical" href="https://www.zoe-tirzahmissions.com/gallery/" />
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zoe Tirzah Missions">
   <meta property="og:url" content="https://www.zoe-tirzahmissions.com/gallery/">
   <meta property="og:title" content="Gallery | Zoe Tirzah Missions in Ghana">
-  <meta property="og:description" content="Explore photos and moments from Zoe Tirzah Missions' evangelism, medical clinics, church planting, and community outreach across Ghana.">
-  <link rel="icon" type="image/png" href="/images/logo/tirzah.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-  <link rel="stylesheet" href="/css/theme-hopebridge.css"/>
+  <meta property="og:description"
+    content="Explore photos and moments from Zoe Tirzah Missions' evangelism, medical clinics, church planting, and community outreach across Ghana.">
+  <link rel="icon" type="image/png" href="../images/logo/tirzah.png">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/theme-hopebridge.css" />
 
   <!-- Structured Data linking Church ownership -->
   <script type="application/ld+json">
@@ -63,7 +66,68 @@
     ]
   }
   </script>
+  <style>
+    .gallery-filter-btn {
+      padding: 9px 20px;
+      border-radius: var(--radius-full, 9999px);
+      border: 1px solid #D1D5DB;
+      background: #FFFFFF;
+      color: var(--text-main, #1F2937);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .gallery-filter-btn:hover {
+      border-color: var(--green-primary, #134B38);
+      color: var(--green-primary, #134B38);
+      background: #F0FDF4;
+    }
+    .gallery-filter-btn.active {
+      background: var(--green-primary, #134B38);
+      color: #FFFFFF !important;
+      border-color: var(--green-primary, #134B38);
+      box-shadow: 0 4px 14px rgba(19, 75, 56, 0.28);
+    }
+    .gallery-item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1) !important;
+    }
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #FFFFFF;
+      font-size: 1.6rem;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, transform 0.2s ease;
+      z-index: 100001;
+    }
+    .lightbox-nav-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: translateY(-50%) scale(1.08);
+    }
+    @media (max-width: 640px) {
+      .lightbox-nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Top Announcement Bar -->
@@ -85,7 +149,8 @@
           <a href="tel:+233509660388">(233) 509-660-388</a>
         </div>
         <div class="topbar-item">
-          <a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener noreferrer" style="color:var(--green-primary);font-weight:600;display:flex;align-items:center;gap:4px;">
+          <a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener noreferrer"
+            style="color:var(--green-primary);font-weight:600;display:flex;align-items:center;gap:4px;">
             <i class="fa-brands fa-facebook"></i> <span>AZWC Official</span>
           </a>
         </div>
@@ -96,29 +161,25 @@
   <!-- Navbar -->
   <header class="navbar-clean" id="navWrapper">
     <div class="container navbar-inner">
-      <a href="/" class="nav-brand">
-        <img src="/images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
+      <a href="../" class="nav-brand">
+        <img src="../images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
         <span class="nav-brand-name">zoe-tirzah</span>
       </a>
 
       <nav class="nav-menu">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/about/" class="nav-link">About Us</a>
-        <a href="/missions/2026/axim/axim.html" class="nav-link">Missions</a>
-        <a href="/impact/" class="nav-link">Impact</a>
-        <a href="/gallery/" class="nav-link active">Gallery</a>
-        <a href="/news/" class="nav-link">News</a>
-        <a href="/partnership/" class="nav-link">Partners</a>
-        <a href="/individuals/" class="nav-link">FAQs</a>
-        <a href="/contact/" class="nav-link">Contact</a>
+        <a href="../" class="nav-link">Home</a>
+        <a href="../about/" class="nav-link">About Us</a>
+        <a href="../missions/2026/axim/axim.html" class="nav-link">Missions</a>
+        <a href="../impact/" class="nav-link">Impact</a>
+        <a href="../gallery/" class="nav-link active">Gallery</a>
+        <a href="../news/" class="nav-link">News</a>
+        <a href="../partnership/" class="nav-link">Partners</a>
+        <a href="../individuals/" class="nav-link">FAQs</a>
+        <a href="../contact/" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="tel:+233509660388" class="nav-phone">
-          <i class="fa-solid fa-phone-volume"></i>
-          <span>(233) 509-660-388</span>
-        </a>
-        <a href="/donate/" class="btn-donate-orange">
+        <a href="../donate/" class="btn-donate-orange">
           <i class="fa-solid fa-heart"></i>
           <span>Donate Now</span>
         </a>
@@ -134,26 +195,27 @@
     <div class="mobile-drawer-content">
       <div class="mobile-drawer-header">
         <div class="nav-brand">
-          <img src="/images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
+          <img src="../images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
           <span class="nav-brand-name">zoe-tirzah</span>
         </div>
-        <button class="mobile-close" id="mobileClose" aria-label="Close" style="background:none;border:none;font-size:1.6rem;cursor:pointer;">
+        <button class="mobile-close" id="mobileClose" aria-label="Close"
+          style="background:none;border:none;font-size:1.6rem;cursor:pointer;">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
       <div class="mobile-drawer-links">
-        <a href="/">Home</a>
-        <a href="/about/">About Us</a>
-        <a href="/missions/2026/axim/axim.html">Missions</a>
-        <a href="/impact/">Impact</a>
-        <a href="/gallery/">Gallery</a>
-        <a href="/news/">News</a>
-        <a href="/partnership/">Partners</a>
-        <a href="/individuals/">FAQs</a>
-        <a href="/contact/">Contact Us</a>
+        <a href="../">Home</a>
+        <a href="../about/">About Us</a>
+        <a href="../missions/2026/axim/axim.html">Missions</a>
+        <a href="../impact/">Impact</a>
+        <a href="../gallery/">Gallery</a>
+        <a href="../news/">News</a>
+        <a href="../partnership/">Partners</a>
+        <a href="../individuals/">FAQs</a>
+        <a href="../contact/">Contact Us</a>
       </div>
       <div style="margin-top:auto;padding-top:20px;">
-        <a href="/donate/" class="btn-donate-orange" style="width:100%;">
+        <a href="../donate/" class="btn-donate-orange" style="width:100%;">
           <i class="fa-solid fa-heart"></i> <span>Donate Now</span>
         </a>
       </div>
@@ -166,7 +228,8 @@
       <span class="section-eyebrow">FIELD ARCHIVES</span>
       <h1 class="section-heading" style="font-size:clamp(2.2rem,4.5vw,3.4rem);">Mission Moments &amp; Memories</h1>
       <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.7;">
-        A visual record of God's power at work across Ghana — crusades, free clinics, baptisms, children's ministry, and the joy of transformed lives.
+        A visual record of God's power at work across Ghana — crusades, free clinics, baptisms, children's ministry, and
+        the joy of transformed lives.
       </p>
     </div>
   </section>
@@ -177,96 +240,641 @@
       <!-- Major Events Highlights -->
       <div style="margin-bottom:50px;">
         <span class="section-eyebrow">SIGNIFICANT GATHERINGS</span>
-        <h2 style="font-family:var(--font-serif);font-size:2rem;font-weight:800;color:var(--text-main);margin-bottom:24px;">Major Mission Milestones</h2>
+        <h2
+          style="font-family:var(--font-serif);font-size:2rem;font-weight:800;color:var(--text-main);margin-bottom:24px;">
+          Major Mission Milestones</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-          <div class="campaign-card" onclick="openLightbox('/images/missions/missions10_8.jpg', '10th Anniversary Launch')">
+          <div class="campaign-card"
+            onclick="openLightbox('../images/missions/missions10_8.jpg', '10th Anniversary Launch')">
             <div class="campaign-img-wrap" style="height:220px;cursor:pointer;">
-              <img src="/images/missions/missions10_8.jpg" alt="10 Years Anniversary Launch">
+              <img src="../images/missions/missions10_8.jpg" alt="10 Years Anniversary Launch">
             </div>
             <div style="padding:20px;">
-              <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;margin-bottom:6px;">10 Years Anniversary Launch</h3>
-              <p style="font-size:0.85rem;color:var(--text-muted);">Celebrating a decade of faithful gospel outreach and community transformation.</p>
+              <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;margin-bottom:6px;">10 Years
+                Anniversary Launch</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Celebrating a decade of faithful gospel outreach and
+                community transformation.</p>
             </div>
           </div>
 
-          <div class="campaign-card" onclick="openLightbox('/images/missions/nsadwir.jpg', 'Nsadwir Mission Outreach')">
+          <div class="campaign-card"
+            onclick="openLightbox('../images/missions/nsadwir.jpg', 'Nsadwir Mission Outreach')">
             <div class="campaign-img-wrap" style="height:220px;cursor:pointer;">
-              <img src="/images/missions/nsadwir.jpg" alt="Nsadwir Mission Outreach">
+              <img src="../images/missions/nsadwir.jpg" alt="Nsadwir Mission Outreach">
             </div>
             <div style="padding:20px;">
-              <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;margin-bottom:6px;">Nsadwir Mission</h3>
-              <p style="font-size:0.85rem;color:var(--text-muted);">Partners, youth, and volunteers bringing Christ's love to rural villages.</p>
+              <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;margin-bottom:6px;">Nsadwir
+                Mission</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Partners, youth, and volunteers bringing Christ's
+                love to rural villages.</p>
             </div>
           </div>
 
-          <div class="campaign-card" onclick="openLightbox('/images/missions/kyiasi.jpg', 'Kyiasi Community Outreach')">
+          <div class="campaign-card"
+            onclick="openLightbox('../images/missions/kyiasi.jpg', 'Kyiasi Community Outreach')">
             <div class="campaign-img-wrap" style="height:220px;cursor:pointer;">
-              <img src="/images/missions/kyiasi.jpg" alt="Kyiasi Community Outreach">
+              <img src="../images/missions/kyiasi.jpg" alt="Kyiasi Community Outreach">
             </div>
             <div style="padding:20px;">
-              <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;margin-bottom:6px;">Kyiasi Outreach</h3>
-              <p style="font-size:0.85rem;color:var(--text-muted);">Food, clothing, and the Word delivered to over 300 vulnerable families.</p>
+              <h3 style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;margin-bottom:6px;">Kyiasi
+                Outreach</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Food, clothing, and the Word delivered to over 300
+                vulnerable families.</p>
             </div>
           </div>
         </div>
       </div>
+            <!-- Field Photo Album & Complete Archives -->
+      <div style="margin-top:60px;">
+        <span class="section-eyebrow">FIELD ARCHIVES &amp; DOCUMENTARY</span>
+        <h2 style="font-family:var(--font-serif);font-size:2.2rem;font-weight:800;color:var(--text-main);margin-bottom:12px;">
+          Missions 2026 &amp; Field Photo Gallery
+        </h2>
+        <p style="color:var(--text-muted);font-size:1rem;max-width:760px;margin-bottom:28px;line-height:1.6;">
+          Explore all 28 field photo chronicles from our mission in Nkroful &amp; Teleku Bokaso, Western Region — covering preparations, prayer walks, personal evangelism, nightly crusades, free clinics, youth assemblies, and baptisms — along with historic mission moments across Ghana.
+        </p>
 
-      <!-- Field Photo Album -->
-      <div>
-        <span class="section-eyebrow">FIELD ALBUM</span>
-        <h2 style="font-family:var(--font-serif);font-size:2rem;font-weight:800;color:var(--text-main);margin-bottom:24px;">Community, Medical &amp; Crusade Photos</h2>
-        
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;">
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/Woe.jpg', 'Woe Mission Gathering')">
-            <img src="/images/missions/Woe.jpg" alt="Woe Mission Gathering" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Woe Mission Outreach</div>
+        <!-- Interactive Category Filter Tabs -->
+        <div class="gallery-filters" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px;">
+          <button type="button" class="gallery-filter-btn active" data-filter="all" onclick="filterGallery('all', this)">All Photos (36)</button>
+          <button type="button" class="gallery-filter-btn" data-filter="2026" onclick="filterGallery('2026', this)">Missions 2026 (28)</button>
+          <button type="button" class="gallery-filter-btn" data-filter="crusade" onclick="filterGallery('crusade', this)">Crusades &amp; Revival</button>
+          <button type="button" class="gallery-filter-btn" data-filter="evangelism" onclick="filterGallery('evangelism', this)">Evangelism &amp; Prayer</button>
+          <button type="button" class="gallery-filter-btn" data-filter="medical" onclick="filterGallery('medical', this)">Medical Clinics</button>
+          <button type="button" class="gallery-filter-btn" data-filter="youth" onclick="filterGallery('youth', this)">Youth &amp; Schools</button>
+          <button type="button" class="gallery-filter-btn" data-filter="baptism" onclick="filterGallery('baptism', this)">Water Baptisms</button>
+          <button type="button" class="gallery-filter-btn" data-filter="community" onclick="filterGallery('community', this)">Community &amp; Relief</button>
+        </div>
+
+        <!-- Dynamic Photo Grid -->
+        <div id="galleryGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;">
+          <!-- Card 1: Supplies & Packing for Outreach -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="0" onclick="openLightboxIndex(0)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_preparation.jpg" alt="Supplies & Packing for Outreach" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 1 · Preparation</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Supplies & Packing for Outreach</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Volunteers sorting medical kits, bibles, and relief goods before departure.</p>
+            </div>
           </div>
 
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/colab.jpg', 'Gospel Crusade in Session')">
-            <img src="/images/missions/colab.jpg" alt="Gospel Crusade in Session" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Open-Air Gospel Crusade</div>
+          <!-- Card 2: Team Orientation & Consecration -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="1" onclick="openLightboxIndex(1)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_preparations.jpg" alt="Team Orientation & Consecration" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 1 · Briefing</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Team Orientation & Consecration</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Mission leaders and field volunteers uniting in preparatory orientation and prayer.</p>
+            </div>
           </div>
 
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/medi2.jpg', 'Medical Doctor Screening Patient')">
-            <img src="/images/missions/medi2.jpg" alt="Medical Doctor Screening Patient" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Free Medical Clinic</div>
+          <!-- Card 3: Arrival in Nkroful & Teleku Bokaso -->
+          <div class="gallery-item-card" data-category="2026 community" data-index="2" onclick="openLightboxIndex(2)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_arrival.jpg" alt="Arrival in Nkroful & Teleku Bokaso" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 1 · Arrival</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Arrival in Nkroful & Teleku Bokaso</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">The Zoe Tirzah mission convoy reaching the Western Region community.</p>
+            </div>
           </div>
 
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/IMG_7355.jpg', 'Children Joy in Ghana')">
-            <img src="/images/missions/IMG_7355.jpg" alt="Children Joy in Ghana" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Children Discipleship</div>
+          <!-- Card 4: Ground Headquarters Setup -->
+          <div class="gallery-item-card" data-category="2026 community" data-index="3" onclick="openLightboxIndex(3)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_arrival_2.jpg" alt="Ground Headquarters Setup" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 1 · Basecamp</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Ground Headquarters Setup</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Unloading sound rigs, staging, and establishing operational field headquarters.</p>
+            </div>
           </div>
 
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/IMG_6512.jpg', 'Volunteer Ministry')">
-            <img src="/images/missions/IMG_6512.jpg" alt="Volunteer Ministry" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Hands-on Ministry</div>
+          <!-- Card 5: Dawn Community Intercession Walk -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="4" onclick="openLightboxIndex(4)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_prayer_walk.jpg" alt="Dawn Community Intercession Walk" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Prayer Walk</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Dawn Community Intercession Walk</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Early morning intercessors walking through villages to cover the ground in prayer.</p>
+            </div>
           </div>
 
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/prayer_walk1.jpg', 'Morning Prayer Walk')">
-            <img src="/images/missions/prayer_walk1.jpg" alt="Morning Prayer Walk" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Intercession &amp; Prayer Walk</div>
+          <!-- Card 6: Village Neighborhood Prayer Walk -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="5" onclick="openLightboxIndex(5)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_prayer_walk_2.jpg" alt="Village Neighborhood Prayer Walk" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Intercession</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Village Neighborhood Prayer Walk</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Intercessory teams praying for peace, families, and revival across rural lanes.</p>
+            </div>
           </div>
 
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/IMG_8668.jpg', 'Patient Consultation')">
-            <img src="/images/missions/IMG_8668.jpg" alt="Patient Consultation" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Medical Diagnostics</div>
+          <!-- Card 7: Daytime Community Blessing -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="6" onclick="openLightboxIndex(6)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_prayer_walk_day.jpg" alt="Daytime Community Blessing" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Prayer Outreach</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Daytime Community Blessing</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Daytime prayer teams speaking blessings and encouragement over local homes.</p>
+            </div>
           </div>
 
-          <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;height:240px;" onclick="openLightbox('/images/missions/clothings.jpg', 'Clothing Distribution Drive')">
-            <img src="/images/missions/clothings.jpg" alt="Clothing Distribution Drive" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:#fff;padding:12px 14px;font-size:0.85rem;font-weight:600;">Relief &amp; Clothing Drive</div>
+          <!-- Card 8: Combined Prayer & Evangelism Walk -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="7" onclick="openLightboxIndex(7)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_prayer_evangelism_walk.jpg" alt="Combined Prayer & Evangelism Walk" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Evangelism</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Combined Prayer & Evangelism Walk</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Sharing tracts and engaging community members along village paths.</p>
+            </div>
+          </div>
+
+          <!-- Card 9: Gospel Proclamation Street March -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="8" onclick="openLightboxIndex(8)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/missions_street_evangelism_march.jpg" alt="Gospel Proclamation Street March" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Street March</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Gospel Proclamation Street March</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Joyful street procession proclaiming the Gospel and inviting all to crusade grounds.</p>
+            </div>
+          </div>
+
+          <!-- Card 10: Personal Ministry & Salvation Prayer -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="9" onclick="openLightboxIndex(9)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_2_evangelism_prayer_for_person.jpg" alt="Personal Ministry & Salvation Prayer" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Personal Ministry</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Personal Ministry & Salvation Prayer</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Missionary leading a village resident to faith in Jesus Christ.</p>
+            </div>
+          </div>
+
+          <!-- Card 11: Laying on of Hands & Blessing -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="10" onclick="openLightboxIndex(10)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_2_evangelsim_prayer_person.jpg" alt="Laying on of Hands & Blessing" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Personal Ministry</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Laying on of Hands & Blessing</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Fervent personal prayer for spiritual breakthrough, peace, and comfort.</p>
+            </div>
+          </div>
+
+          <!-- Card 12: Compassionate Healing Prayer -->
+          <div class="gallery-item-card" data-category="2026 evangelism medical" data-index="11" onclick="openLightboxIndex(11)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/mission_prayerforleg.jpg" alt="Compassionate Healing Prayer" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 2 · Healing</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Compassionate Healing Prayer</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Praying with compassion and faith for the healing of an injured resident.</p>
+            </div>
+          </div>
+
+          <!-- Card 13: Door-to-Door Village Witnessing -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="12" onclick="openLightboxIndex(12)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_3_evangelism.jpg" alt="Door-to-Door Village Witnessing" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 3 · Evangelism</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Door-to-Door Village Witnessing</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Outreach teams going house to house sharing the message of Christ&#39;s love.</p>
+            </div>
+          </div>
+
+          <!-- Card 14: Open-Air Gospel Crusade Night 1 -->
+          <div class="gallery-item-card" data-category="2026 crusade" data-index="13" onclick="openLightboxIndex(13)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_3_crusade.jpg" alt="Open-Air Gospel Crusade Night 1" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 3 · Crusade</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Open-Air Gospel Crusade Night 1</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Crowds gathering under the open sky for bold gospel preaching and salvation.</p>
+            </div>
+          </div>
+
+          <!-- Card 15: Night of Worship & Divine Power -->
+          <div class="gallery-item-card" data-category="2026 crusade" data-index="14" onclick="openLightboxIndex(14)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_3_crusade_2.jpg" alt="Night of Worship & Divine Power" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 3 · Revival</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Night of Worship & Divine Power</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Passionate worship and praises rising as souls seek God on the crusade field.</p>
+            </div>
+          </div>
+
+          <!-- Card 16: Crusade Altar Call & Surrender -->
+          <div class="gallery-item-card" data-category="2026 crusade" data-index="15" onclick="openLightboxIndex(15)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_4_crusade.jpg" alt="Crusade Altar Call & Surrender" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 4 · Crusade</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Crusade Altar Call & Surrender</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Scores of men, women, and youth stepping forward to receive Christ.</p>
+            </div>
+          </div>
+
+          <!-- Card 17: Community Discipleship & Sharing -->
+          <div class="gallery-item-card" data-category="2026 evangelism" data-index="16" onclick="openLightboxIndex(16)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_5_evangelism.jpg" alt="Community Discipleship & Sharing" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 5 · Evangelism</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Community Discipleship & Sharing</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Distributing scriptures and counseling new believers across the village.</p>
+            </div>
+          </div>
+
+          <!-- Card 18: Night of Miracles & Deliverance -->
+          <div class="gallery-item-card" data-category="2026 crusade" data-index="17" onclick="openLightboxIndex(17)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_5_crusade.jpg" alt="Night of Miracles & Deliverance" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 5 · Crusade</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Night of Miracles & Deliverance</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">A memorable crusade service marked by healing testimonies and victory in Christ.</p>
+            </div>
+          </div>
+
+          <!-- Card 19: Grand Revival Evening Service -->
+          <div class="gallery-item-card" data-category="2026 crusade" data-index="18" onclick="openLightboxIndex(18)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_6_crusade.jpg" alt="Grand Revival Evening Service" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 6 · Crusade</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Grand Revival Evening Service</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Inspiring closing crusade rally uniting the entire community in joyful praise.</p>
+            </div>
+          </div>
+
+          <!-- Card 20: Free Doctor Consultations & Screening -->
+          <div class="gallery-item-card" data-category="2026 medical" data-index="19" onclick="openLightboxIndex(19)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_6_medicals.jpg" alt="Free Doctor Consultations & Screening" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 6 · Medical Outreach</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Free Doctor Consultations & Screening</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Volunteer physicians conducting one-on-one medical examinations for rural families.</p>
+            </div>
+          </div>
+
+          <!-- Card 21: Clinical Diagnostic Health Checkups -->
+          <div class="gallery-item-card" data-category="2026 medical" data-index="20" onclick="openLightboxIndex(20)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_6_medicals_2.jpg" alt="Clinical Diagnostic Health Checkups" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 6 · Healthcare</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Clinical Diagnostic Health Checkups</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Vital health screening, blood pressure checks, and preventive treatment.</p>
+            </div>
+          </div>
+
+          <!-- Card 22: Free Community Pharmacy Dispensary -->
+          <div class="gallery-item-card" data-category="2026 medical" data-index="21" onclick="openLightboxIndex(21)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_6_medicals_pharmacy.jpg" alt="Free Community Pharmacy Dispensary" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 6 · Pharmacy</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Free Community Pharmacy Dispensary</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Licensed pharmacists dispensing essential medications and hygiene supplies.</p>
+            </div>
+          </div>
+
+          <!-- Card 23: Senior High School Gospel Assembly -->
+          <div class="gallery-item-card" data-category="2026 youth" data-index="22" onclick="openLightboxIndex(22)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_7_highschoolvisit.jpg" alt="Senior High School Gospel Assembly" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 7 · Youth Ministry</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Senior High School Gospel Assembly</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Reaching hundreds of high school students with the Gospel and encouragement.</p>
+            </div>
+          </div>
+
+          <!-- Card 24: Student Mentorship & Spiritual Guidance -->
+          <div class="gallery-item-card" data-category="2026 youth" data-index="23" onclick="openLightboxIndex(23)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_7_highschoolvisit_2.jpg" alt="Student Mentorship & Spiritual Guidance" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 7 · Youth Ministry</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Student Mentorship & Spiritual Guidance</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Counseling students on purity, academic dedication, and Christian character.</p>
+            </div>
+          </div>
+
+          <!-- Card 25: Water Baptism of New Converts -->
+          <div class="gallery-item-card" data-category="2026 baptism" data-index="24" onclick="openLightboxIndex(24)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_7_baptism.jpg" alt="Water Baptism of New Converts" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 7 · Baptism</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Water Baptism of New Converts</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">New believers taking the step of obedience through public water baptism.</p>
+            </div>
+          </div>
+
+          <!-- Card 26: Celebration of New Life in Christ -->
+          <div class="gallery-item-card" data-category="2026 baptism" data-index="25" onclick="openLightboxIndex(25)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_7_baptism_2.jpg" alt="Celebration of New Life in Christ" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 7 · Baptism</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Celebration of New Life in Christ</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Pastors and converts celebrating total renewal in Christ at the water&#39;s edge.</p>
+            </div>
+          </div>
+
+          <!-- Card 27: Local Church Benevolence & Equipment -->
+          <div class="gallery-item-card" data-category="2026 community" data-index="26" onclick="openLightboxIndex(26)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_7_churchdonation.jpg" alt="Local Church Benevolence & Equipment" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 7 · Church Support</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Local Church Benevolence & Equipment</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Donating sound gear and church furnishings to strengthen the local fellowship.</p>
+            </div>
+          </div>
+
+          <!-- Card 28: Missions 2026 Team Victory Photo -->
+          <div class="gallery-item-card" data-category="2026 community" data-index="27" onclick="openLightboxIndex(27)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/missions_2026/day_7_group_picture.jpg" alt="Missions 2026 Team Victory Photo" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Day 7 · Team Victory</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Missions 2026 Team Victory Photo</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">The complete missionary team, pastors, and volunteers celebrating a fruitful mission.</p>
+            </div>
+          </div>
+
+          <!-- Card 29: Woe Coastal Mission Gathering -->
+          <div class="gallery-item-card" data-category="community crusade" data-index="28" onclick="openLightboxIndex(28)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/Woe.jpg" alt="Woe Coastal Mission Gathering" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Volta Region · Outreach</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Woe Coastal Mission Gathering</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Bringing the message of salvation to coastal fishing communities in the Volta Region.</p>
+            </div>
+          </div>
+
+          <!-- Card 30: Inter-Denominational Crusade Rally -->
+          <div class="gallery-item-card" data-category="crusade" data-index="29" onclick="openLightboxIndex(29)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/colab.jpg" alt="Inter-Denominational Crusade Rally" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Crusade Rally</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Inter-Denominational Crusade Rally</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Churches uniting across denominational lines to proclaim the Gospel as one body.</p>
+            </div>
+          </div>
+
+          <!-- Card 31: Medical Outreach & Patient Care -->
+          <div class="gallery-item-card" data-category="medical" data-index="30" onclick="openLightboxIndex(30)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/medi2.jpg" alt="Medical Outreach & Patient Care" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Health Clinic</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Medical Outreach & Patient Care</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Medical volunteers attending to elderly and vulnerable rural residents.</p>
+            </div>
+          </div>
+
+          <!-- Card 32: Joyful Children Discipleship -->
+          <div class="gallery-item-card" data-category="youth" data-index="31" onclick="openLightboxIndex(31)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/IMG_7355.jpg" alt="Joyful Children Discipleship" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Children Ministry</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Joyful Children Discipleship</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Kids celebrating Bible songs and receiving school supplies during outreach.</p>
+            </div>
+          </div>
+
+          <!-- Card 33: Hands-on Youth Ministry -->
+          <div class="gallery-item-card" data-category="youth" data-index="32" onclick="openLightboxIndex(32)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/IMG_6512.jpg" alt="Hands-on Youth Ministry" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Youth Mentorship</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Hands-on Youth Ministry</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Volunteers engaging young adults with mentorship, sports, and spiritual guidance.</p>
+            </div>
+          </div>
+
+          <!-- Card 34: Atwea Mountain Prayer Expedition -->
+          <div class="gallery-item-card" data-category="evangelism" data-index="33" onclick="openLightboxIndex(33)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/prayer_walk1.jpg" alt="Atwea Mountain Prayer Expedition" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Intercession Expedition</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Atwea Mountain Prayer Expedition</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Days of prayer, fasting, and intercession for Ghana on the sacred heights of Atwea.</p>
+            </div>
+          </div>
+
+          <!-- Card 35: Rural Clinic Diagnostics in Navrongo -->
+          <div class="gallery-item-card" data-category="medical" data-index="34" onclick="openLightboxIndex(34)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/IMG_8668.jpg" alt="Rural Clinic Diagnostics in Navrongo" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Northern Outreach</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Rural Clinic Diagnostics in Navrongo</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Healthcare workers bringing clinical diagnostics to underserved communities.</p>
+            </div>
+          </div>
+
+          <!-- Card 36: Relief & Clothing Distribution Drive -->
+          <div class="gallery-item-card" data-category="community" data-index="35" onclick="openLightboxIndex(35)"
+            style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;position:relative;background:#FFFFFF;border:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.3s ease, box-shadow 0.3s ease;">
+            <div style="position:relative;height:240px;overflow:hidden;background:#134B38;">
+              <img src="../images/missions/clothings.jpg" alt="Relief & Clothing Distribution Drive" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
+                onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+              <span style="position:absolute;top:12px;left:12px;background:rgba(11,40,31,0.85);backdrop-filter:blur(4px);color:#FFFFFF;font-size:0.75rem;font-weight:700;padding:4px 11px;border-radius:9999px;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.18);box-shadow:0 2px 6px rgba(0,0,0,0.2);">Benevolence Drive</span>
+            </div>
+            <div style="padding:16px 18px;display:flex;flex-direction:column;flex-grow:1;">
+              <h4 style="font-family:var(--font-serif);font-size:1.05rem;font-weight:700;color:var(--text-main);margin:0 0 6px;line-height:1.4;">Relief & Clothing Distribution Drive</h4>
+              <p style="font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;">Blessing hundreds of families with warm clothing, fabrics, and household essentials.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Lightbox Modal -->
-  <div id="galleryLightbox" style="display:none;position:fixed;inset:0;background:rgba(11,40,31,0.95);z-index:99999;align-items:center;justify-content:center;padding:24px;" onclick="closeLightbox()">
-    <button onclick="closeLightbox()" style="position:absolute;top:20px;right:28px;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;">&times;</button>
-    <div style="max-width:90vw;max-height:85vh;text-align:center;" onclick="event.stopPropagation()">
-      <img id="lightboxImg" src="" alt="Full view" style="max-width:100%;max-height:78vh;border-radius:var(--radius-md);box-shadow:0 20px 50px rgba(0,0,0,0.5);">
-      <div id="lightboxCaption" style="color:#fff;font-size:1rem;font-weight:600;margin-top:14px;"></div>
+    <!-- Enhanced Lightbox Modal with Arrow & Keyboard Navigation -->
+  <div id="galleryLightbox"
+    style="display:none;position:fixed;inset:0;background:rgba(11,40,31,0.95);z-index:99999;align-items:center;justify-content:center;padding:20px;"
+    onclick="closeLightbox()">
+    <button onclick="closeLightbox()"
+      style="position:absolute;top:20px;right:28px;background:none;border:none;color:#FFFFFF;font-size:2.8rem;cursor:pointer;z-index:100002;line-height:1;" aria-label="Close lightbox">&times;</button>
+
+    <!-- Prev Arrow Button -->
+    <button class="lightbox-nav-btn" style="left:20px;" onclick="event.stopPropagation(); navigateLightbox(-1)" aria-label="Previous photo">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Next Arrow Button -->
+    <button class="lightbox-nav-btn" style="right:20px;" onclick="event.stopPropagation(); navigateLightbox(1)" aria-label="Next photo">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div style="max-width:92vw;max-height:86vh;text-align:center;" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="Full view"
+        style="max-width:100%;max-height:72vh;border-radius:var(--radius-md);box-shadow:0 20px 50px rgba(0,0,0,0.6);object-fit:contain;">
+      <div id="lightboxCaption" style="color:#FFFFFF;font-size:1.15rem;font-weight:700;margin-top:14px;font-family:var(--font-serif);"></div>
+      <div id="lightboxSub" style="color:rgba(255,255,255,0.78);font-size:0.88rem;margin-top:6px;max-width:680px;margin-left:auto;margin-right:auto;"></div>
+      <div id="lightboxCounter" style="color:var(--orange-primary);font-size:0.8rem;font-weight:700;margin-top:8px;letter-spacing:0.04em;"></div>
     </div>
   </div>
 
@@ -277,7 +885,8 @@
         <i class="fa-solid fa-paper-plane" style="color:var(--orange-primary); font-size:1.4rem;"></i>
         <div>
           <h4 style="margin:0; font-size:1.1rem; color:var(--green-dark);">Stay Updated</h4>
-          <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">Subscribe to get field reports and mission articles delivered to your inbox.</p>
+          <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">Subscribe to get field reports and mission
+            articles delivered to your inbox.</p>
         </div>
       </div>
       <form class="newsletter-form" id="newsletterForm">
@@ -293,23 +902,29 @@
       <div class="footer-top-grid">
         <div>
           <div class="footer-brand-title">
-            <img src="/images/logo/tirzah.png" alt="zoe-tirzah" style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);" />
+            <img src="../images/logo/tirzah.png" alt="zoe-tirzah"
+              style="height:36px;width:auto;object-fit:contain;filter:brightness(0) invert(1);" />
             <span style="text-transform:lowercase;letter-spacing:-0.02em;">zoe-tirzah</span>
           </div>
           <p class="footer-brand-p">
-            A Gospel outreach and community relief organisation under the Apostolic Zion Worship Centre (AZWC), dedicated to advancing the Kingdom of God across Ghana and the nations.
+            A Gospel outreach and community relief organisation under the Apostolic Zion Worship Centre (AZWC),
+            dedicated to advancing the Kingdom of God across Ghana and the nations.
           </p>
           <div class="footer-social-icons">
-            <a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Apostolic Zion Worship Centre on Facebook" aria-label="Facebook">
+            <a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener noreferrer"
+              class="footer-social-btn" title="Apostolic Zion Worship Centre on Facebook" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/tac_zoe" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="TAC Zoe Instagram" aria-label="Instagram">
+            <a href="https://www.instagram.com/tac_zoe" target="_blank" rel="noopener noreferrer"
+              class="footer-social-btn" title="TAC Zoe Instagram" aria-label="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.tiktok.com/@tac_zoe" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="TAC Zoe TikTok" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@tac_zoe" target="_blank" rel="noopener noreferrer"
+              class="footer-social-btn" title="TAC Zoe TikTok" aria-label="TikTok">
               <i class="fa-brands fa-tiktok"></i>
             </a>
-            <a href="https://wa.me/233553838464" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
+            <a href="https://wa.me/233553838464" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+              title="Chat on WhatsApp" aria-label="WhatsApp">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
@@ -318,33 +933,33 @@
         <div>
           <h4 class="footer-heading">Quick Links</h4>
           <div class="footer-link-list">
-            <a href="/">Home</a>
-            <a href="/about/">About Us</a>
-            <a href="/missions/2026/axim/axim.html">Missions</a>
-            <a href="/impact/">Our Impact</a>
-            <a href="/gallery/">Photo Gallery</a>
-            <a href="/contact/">Contact Us</a>
+            <a href="../">Home</a>
+            <a href="../about/">About Us</a>
+            <a href="../missions/2026/axim/axim.html">Missions</a>
+            <a href="../impact/">Our Impact</a>
+            <a href="../gallery/">Photo Gallery</a>
+            <a href="../contact/">Contact Us</a>
           </div>
         </div>
 
         <div>
           <h4 class="footer-heading">Our Causes</h4>
           <div class="footer-link-list">
-            <a href="/about/">Gospel Evangelism</a>
-            <a href="/impact/">Free Medical Clinics</a>
-            <a href="/impact/">Relief &amp; Clothing</a>
-            <a href="/about/">Church Planting</a>
-            <a href="/gallery/">Child Discipleship</a>
+            <a href="../about/">Gospel Evangelism</a>
+            <a href="../impact/">Free Medical Clinics</a>
+            <a href="../impact/">Relief &amp; Clothing</a>
+            <a href="../about/">Church Planting</a>
+            <a href="../gallery/">Child Discipleship</a>
           </div>
         </div>
 
         <div>
           <h4 class="footer-heading">Support</h4>
           <div class="footer-link-list">
-            <a href="/donate/">Donate Now</a>
+            <a href="../donate/">Donate Now</a>
             <a href="https://forms.gle/aeuQuJxUmezHdBef9" target="_blank" rel="noopener noreferrer">Volunteer</a>
-            <a href="/partnership/">Partner With Us</a>
-            <a href="/individuals/">FAQs</a>
+            <a href="../partnership/">Partner With Us</a>
+            <a href="../individuals/">FAQs</a>
           </div>
         </div>
 
@@ -367,12 +982,14 @@
 
       <div class="footer-bottom-row">
         <p>
-          © 2026 Zoe Tirzah Missions · Apostolic Zion Worship Centre (<a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF;text-decoration:underline;">web.facebook.com/AZWC17</a>). All rights reserved.
+          © 2026 Zoe Tirzah Missions · Apostolic Zion Worship Centre (<a href="https://web.facebook.com/AZWC17"
+            target="_blank" rel="noopener noreferrer"
+            style="color:#FFFFFF;text-decoration:underline;">web.facebook.com/AZWC17</a>). All rights reserved.
         </p>
         <div class="footer-legal-links">
-          <a href="/about/">Privacy Policy</a>
-          <a href="/about/">Terms of Use</a>
-          <a href="/contact/">Sitemap</a>
+          <a href="../about/">Privacy Policy</a>
+          <a href="../about/">Terms of Use</a>
+          <a href="../contact/">Sitemap</a>
         </div>
       </div>
     </div>
@@ -388,19 +1005,89 @@
       if (mobileClose && mobileMenu) mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
       if (mobileMenu) mobileMenu.addEventListener('click', (e) => { if (e.target === mobileMenu) mobileMenu.classList.remove('open'); });
 
-      window.openLightbox = function(src, caption) {
+      // Gallery data
+      const galleryData = [{"file": "../images/missions/missions_2026/missions_preparation.jpg", "title": "Supplies & Packing for Outreach", "tag": "Day 1 \u00b7 Preparation", "cat": "2026 evangelism", "desc": "Volunteers sorting medical kits, bibles, and relief goods before departure."}, {"file": "../images/missions/missions_2026/missions_preparations.jpg", "title": "Team Orientation & Consecration", "tag": "Day 1 \u00b7 Briefing", "cat": "2026 evangelism", "desc": "Mission leaders and field volunteers uniting in preparatory orientation and prayer."}, {"file": "../images/missions/missions_2026/missions_arrival.jpg", "title": "Arrival in Nkroful & Teleku Bokaso", "tag": "Day 1 \u00b7 Arrival", "cat": "2026 community", "desc": "The Zoe Tirzah mission convoy reaching the Western Region community."}, {"file": "../images/missions/missions_2026/missions_arrival_2.jpg", "title": "Ground Headquarters Setup", "tag": "Day 1 \u00b7 Basecamp", "cat": "2026 community", "desc": "Unloading sound rigs, staging, and establishing operational field headquarters."}, {"file": "../images/missions/missions_2026/missions_prayer_walk.jpg", "title": "Dawn Community Intercession Walk", "tag": "Day 2 \u00b7 Prayer Walk", "cat": "2026 evangelism", "desc": "Early morning intercessors walking through villages to cover the ground in prayer."}, {"file": "../images/missions/missions_2026/missions_prayer_walk_2.jpg", "title": "Village Neighborhood Prayer Walk", "tag": "Day 2 \u00b7 Intercession", "cat": "2026 evangelism", "desc": "Intercessory teams praying for peace, families, and revival across rural lanes."}, {"file": "../images/missions/missions_2026/missions_prayer_walk_day.jpg", "title": "Daytime Community Blessing", "tag": "Day 2 \u00b7 Prayer Outreach", "cat": "2026 evangelism", "desc": "Daytime prayer teams speaking blessings and encouragement over local homes."}, {"file": "../images/missions/missions_2026/missions_prayer_evangelism_walk.jpg", "title": "Combined Prayer & Evangelism Walk", "tag": "Day 2 \u00b7 Evangelism", "cat": "2026 evangelism", "desc": "Sharing tracts and engaging community members along village paths."}, {"file": "../images/missions/missions_2026/missions_street_evangelism_march.jpg", "title": "Gospel Proclamation Street March", "tag": "Day 2 \u00b7 Street March", "cat": "2026 evangelism", "desc": "Joyful street procession proclaiming the Gospel and inviting all to crusade grounds."}, {"file": "../images/missions/missions_2026/day_2_evangelism_prayer_for_person.jpg", "title": "Personal Ministry & Salvation Prayer", "tag": "Day 2 \u00b7 Personal Ministry", "cat": "2026 evangelism", "desc": "Missionary leading a village resident to faith in Jesus Christ."}, {"file": "../images/missions/missions_2026/day_2_evangelsim_prayer_person.jpg", "title": "Laying on of Hands & Blessing", "tag": "Day 2 \u00b7 Personal Ministry", "cat": "2026 evangelism", "desc": "Fervent personal prayer for spiritual breakthrough, peace, and comfort."}, {"file": "../images/missions/missions_2026/mission_prayerforleg.jpg", "title": "Compassionate Healing Prayer", "tag": "Day 2 \u00b7 Healing", "cat": "2026 evangelism medical", "desc": "Praying with compassion and faith for the healing of an injured resident."}, {"file": "../images/missions/missions_2026/day_3_evangelism.jpg", "title": "Door-to-Door Village Witnessing", "tag": "Day 3 \u00b7 Evangelism", "cat": "2026 evangelism", "desc": "Outreach teams going house to house sharing the message of Christ's love."}, {"file": "../images/missions/missions_2026/day_3_crusade.jpg", "title": "Open-Air Gospel Crusade Night 1", "tag": "Day 3 \u00b7 Crusade", "cat": "2026 crusade", "desc": "Crowds gathering under the open sky for bold gospel preaching and salvation."}, {"file": "../images/missions/missions_2026/day_3_crusade_2.jpg", "title": "Night of Worship & Divine Power", "tag": "Day 3 \u00b7 Revival", "cat": "2026 crusade", "desc": "Passionate worship and praises rising as souls seek God on the crusade field."}, {"file": "../images/missions/missions_2026/day_4_crusade.jpg", "title": "Crusade Altar Call & Surrender", "tag": "Day 4 \u00b7 Crusade", "cat": "2026 crusade", "desc": "Scores of men, women, and youth stepping forward to receive Christ."}, {"file": "../images/missions/missions_2026/day_5_evangelism.jpg", "title": "Community Discipleship & Sharing", "tag": "Day 5 \u00b7 Evangelism", "cat": "2026 evangelism", "desc": "Distributing scriptures and counseling new believers across the village."}, {"file": "../images/missions/missions_2026/day_5_crusade.jpg", "title": "Night of Miracles & Deliverance", "tag": "Day 5 \u00b7 Crusade", "cat": "2026 crusade", "desc": "A memorable crusade service marked by healing testimonies and victory in Christ."}, {"file": "../images/missions/missions_2026/day_6_crusade.jpg", "title": "Grand Revival Evening Service", "tag": "Day 6 \u00b7 Crusade", "cat": "2026 crusade", "desc": "Inspiring closing crusade rally uniting the entire community in joyful praise."}, {"file": "../images/missions/missions_2026/day_6_medicals.jpg", "title": "Free Doctor Consultations & Screening", "tag": "Day 6 \u00b7 Medical Outreach", "cat": "2026 medical", "desc": "Volunteer physicians conducting one-on-one medical examinations for rural families."}, {"file": "../images/missions/missions_2026/day_6_medicals_2.jpg", "title": "Clinical Diagnostic Health Checkups", "tag": "Day 6 \u00b7 Healthcare", "cat": "2026 medical", "desc": "Vital health screening, blood pressure checks, and preventive treatment."}, {"file": "../images/missions/missions_2026/day_6_medicals_pharmacy.jpg", "title": "Free Community Pharmacy Dispensary", "tag": "Day 6 \u00b7 Pharmacy", "cat": "2026 medical", "desc": "Licensed pharmacists dispensing essential medications and hygiene supplies."}, {"file": "../images/missions/missions_2026/day_7_highschoolvisit.jpg", "title": "Senior High School Gospel Assembly", "tag": "Day 7 \u00b7 Youth Ministry", "cat": "2026 youth", "desc": "Reaching hundreds of high school students with the Gospel and encouragement."}, {"file": "../images/missions/missions_2026/day_7_highschoolvisit_2.jpg", "title": "Student Mentorship & Spiritual Guidance", "tag": "Day 7 \u00b7 Youth Ministry", "cat": "2026 youth", "desc": "Counseling students on purity, academic dedication, and Christian character."}, {"file": "../images/missions/missions_2026/day_7_baptism.jpg", "title": "Water Baptism of New Converts", "tag": "Day 7 \u00b7 Baptism", "cat": "2026 baptism", "desc": "New believers taking the step of obedience through public water baptism."}, {"file": "../images/missions/missions_2026/day_7_baptism_2.jpg", "title": "Celebration of New Life in Christ", "tag": "Day 7 \u00b7 Baptism", "cat": "2026 baptism", "desc": "Pastors and converts celebrating total renewal in Christ at the water's edge."}, {"file": "../images/missions/missions_2026/day_7_churchdonation.jpg", "title": "Local Church Benevolence & Equipment", "tag": "Day 7 \u00b7 Church Support", "cat": "2026 community", "desc": "Donating sound gear and church furnishings to strengthen the local fellowship."}, {"file": "../images/missions/missions_2026/day_7_group_picture.jpg", "title": "Missions 2026 Team Victory Photo", "tag": "Day 7 \u00b7 Team Victory", "cat": "2026 community", "desc": "The complete missionary team, pastors, and volunteers celebrating a fruitful mission."}, {"file": "../images/missions/Woe.jpg", "title": "Woe Coastal Mission Gathering", "tag": "Volta Region \u00b7 Outreach", "cat": "community crusade", "desc": "Bringing the message of salvation to coastal fishing communities in the Volta Region."}, {"file": "../images/missions/colab.jpg", "title": "Inter-Denominational Crusade Rally", "tag": "Crusade Rally", "cat": "crusade", "desc": "Churches uniting across denominational lines to proclaim the Gospel as one body."}, {"file": "../images/missions/medi2.jpg", "title": "Medical Outreach & Patient Care", "tag": "Health Clinic", "cat": "medical", "desc": "Medical volunteers attending to elderly and vulnerable rural residents."}, {"file": "../images/missions/IMG_7355.jpg", "title": "Joyful Children Discipleship", "tag": "Children Ministry", "cat": "youth", "desc": "Kids celebrating Bible songs and receiving school supplies during outreach."}, {"file": "../images/missions/IMG_6512.jpg", "title": "Hands-on Youth Ministry", "tag": "Youth Mentorship", "cat": "youth", "desc": "Volunteers engaging young adults with mentorship, sports, and spiritual guidance."}, {"file": "../images/missions/prayer_walk1.jpg", "title": "Atwea Mountain Prayer Expedition", "tag": "Intercession Expedition", "cat": "evangelism", "desc": "Days of prayer, fasting, and intercession for Ghana on the sacred heights of Atwea."}, {"file": "../images/missions/IMG_8668.jpg", "title": "Rural Clinic Diagnostics in Navrongo", "tag": "Northern Outreach", "cat": "medical", "desc": "Healthcare workers bringing clinical diagnostics to underserved communities."}, {"file": "../images/missions/clothings.jpg", "title": "Relief & Clothing Distribution Drive", "tag": "Benevolence Drive", "cat": "community", "desc": "Blessing hundreds of families with warm clothing, fabrics, and household essentials."}];
+      let currentActiveIndex = 0;
+      let visibleIndices = galleryData.map((_, i) => i);
+
+      // Category filter handler
+      window.filterGallery = function (filter, btn) {
+        document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.gallery-item-card');
+        visibleIndices = [];
+
+        cards.forEach((card, idx) => {
+          const categories = card.getAttribute('data-category') || '';
+          if (filter === 'all' || categories.includes(filter)) {
+            card.style.display = 'flex';
+            visibleIndices.push(idx);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      };
+
+      // Lightbox open / close / navigate
+      window.openLightboxIndex = function (idx) {
+        if (idx < 0 || idx >= galleryData.length) return;
+        currentActiveIndex = idx;
+        const item = galleryData[idx];
+
         const lb = document.getElementById('galleryLightbox');
-        document.getElementById('lightboxImg').src = src;
-        document.getElementById('lightboxCaption').textContent = caption || '';
+        document.getElementById('lightboxImg').src = item.file;
+        document.getElementById('lightboxCaption').textContent = item.title;
+        document.getElementById('lightboxSub').textContent = item.desc;
+
+        // Find position within currently visible items
+        const visiblePos = visibleIndices.indexOf(idx);
+        const countText = visiblePos !== -1 
+          ? `Photo ${visiblePos + 1} of ${visibleIndices.length}` 
+          : `Photo ${idx + 1} of ${galleryData.length}`;
+        document.getElementById('lightboxCounter').textContent = `${item.tag} · ${countText}`;
+
         lb.style.display = 'flex';
         document.body.style.overflow = 'hidden';
       };
 
-      window.closeLightbox = function() {
+      window.openLightbox = function (src, caption) {
+        // Backwards compatibility for milestone cards
+        const lb = document.getElementById('galleryLightbox');
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightboxCaption').textContent = caption || '';
+        document.getElementById('lightboxSub').textContent = '';
+        document.getElementById('lightboxCounter').textContent = '';
+        lb.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeLightbox = function () {
         document.getElementById('galleryLightbox').style.display = 'none';
         document.body.style.overflow = '';
       };
+
+      window.navigateLightbox = function (direction) {
+        if (!visibleIndices.length) return;
+        let pos = visibleIndices.indexOf(currentActiveIndex);
+        if (pos === -1) pos = 0;
+        pos += direction;
+        if (pos < 0) pos = visibleIndices.length - 1;
+        if (pos >= visibleIndices.length) pos = 0;
+        openLightboxIndex(visibleIndices[pos]);
+      };
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        const lb = document.getElementById('galleryLightbox');
+        if (lb && lb.style.display === 'flex') {
+          if (e.key === 'Escape') closeLightbox();
+          else if (e.key === 'ArrowLeft') navigateLightbox(-1);
+          else if (e.key === 'ArrowRight') navigateLightbox(1);
+        }
+      });
     })();
   </script>
 </body>
+
 </html>

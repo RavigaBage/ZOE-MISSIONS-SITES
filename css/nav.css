@@ -6,7 +6,7 @@ nav.active{
     position: fixed;
     padding: 0px;
     top:0;
-    background: url('../svg/Colored\ Shapes\ \(1\).svg');
+    background: url('../svg/Colored Shapes (1).svg');
     background-size: contain;
     display: block;
 }

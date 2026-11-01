@@ -5,7 +5,7 @@
   <title>Complete Donation | Paystack Gateway | Zoe Tirzah Missions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Complete your secure seed donation to Zoe Tirzah Missions & Apostolic Zion Worship Centre." />
-  <link rel="icon" type="image/png" href="/images/logo/tirzah.png" />
+  <link rel="icon" type="image/png" href="../images/logo/tirzah.png" />
 
   <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
   <!-- HopeBridge Master Theme -->
-  <link rel="stylesheet" href="/css/theme-hopebridge.css" />
+  <link rel="stylesheet" href="../css/theme-hopebridge.css" />
 
   <style>
     .pay-container {
@@ -85,12 +85,12 @@
   <!-- Sticky Navbar -->
   <header class="navbar-clean" id="navWrapper">
     <div class="container navbar-inner" style="justify-content:space-between;">
-      <a href="/" class="nav-brand">
-        <img src="/images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
+      <a href="../" class="nav-brand">
+        <img src="../images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
         <span class="nav-brand-name">zoe-tirzah</span>
       </a>
       <div style="display:flex; align-items:center; gap:16px;">
-        <a href="/donate/" class="btn-outline-custom" style="padding:8px 18px; font-size:0.85rem;">&larr; Back to Giving</a>
+        <a href="../donate/" class="btn-outline-custom" style="padding:8px 18px; font-size:0.85rem;">&larr; Back to Giving</a>
       </div>
     </div>
   </header>
@@ -196,7 +196,7 @@
           currency: 'GHS',
           ref: 'ZOE_' + Math.floor((Math.random() * 1000000000) + 1),
           callback: function(response) {
-            window.location.href = "/payment/success.html?ref=" + encodeURIComponent(response.reference);
+            window.location.href = "success.html?ref=" + encodeURIComponent(response.reference);
           },
           onClose: function() {
             showNotice('Payment modal closed. You can re-attempt anytime.', false);
