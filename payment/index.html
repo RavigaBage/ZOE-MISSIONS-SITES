@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Complete Donation | Paystack Gateway | Zoe Tirzah Missions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete your secure seed donation to Zoe Tirzah Missions & Apostolic Zion Worship Centre." />
+  <link rel="icon" type="image/png" href="/images/logo/tirzah.png" />
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- HopeBridge Master Theme -->
+  <link rel="stylesheet" href="/css/theme-hopebridge.css" />
+
+  <style>
+    .pay-container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 24px;
+      padding: 36px;
+      border: 1px solid #ECEAE3;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+    }
+    .pay-methods {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .pay-method-pill {
+      border: 2px solid #E8E6DF;
+      border-radius: 14px;
+      padding: 14px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .pay-method-pill.active {
+      border-color: var(--orange-primary);
+      background: rgba(245, 106, 0, 0.08);
+      color: var(--orange-primary);
+    }
+    .pay-method-pill i {
+      font-size: 1.3rem;
+    }
+    .pay-field {
+      margin-bottom: 18px;
+    }
+    .pay-field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+    .pay-field input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1.5px solid #E8E6DF;
+      background: var(--bg-soft);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .pay-field input:focus {
+      border-color: var(--green-primary);
+      background: #fff;
+    }
+  </style>
+</head>
+<body style="background:var(--bg-soft); min-height:100vh; display:flex; flex-direction:column;">
+
+  <!-- Sticky Navbar -->
+  <header class="navbar-clean" id="navWrapper">
+    <div class="container navbar-inner" style="justify-content:space-between;">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
+        <span class="nav-brand-name">zoe-tirzah</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <a href="/donate/" class="btn-outline-custom" style="padding:8px 18px; font-size:0.85rem;">&larr; Back to Giving</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex:1; display:grid; place-items:center; padding:20px;">
+    <div class="pay-container">
+      <div style="text-align:center; margin-bottom:24px;">
+        <span class="tag-pill" style="margin-bottom:10px;"><i class="fa-solid fa-lock"></i> Secure Gateway</span>
+        <h2 style="font-size:1.6rem; color:var(--green-dark); margin-bottom:6px;">Seed Donation</h2>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin:0;">Complete your online gift via Paystack or MoMo</p>
+      </div>
+
+      <div class="pay-field">
+        <label for="email-address">Email Address</label>
+        <input type="email" id="email-address" placeholder="your.name@example.com" required />
+      </div>
+
+      <div class="pay-field">
+        <label for="amount">Donation Amount (GHS ₵)</label>
+        <input type="number" id="amount" placeholder="100.00" min="1" step="any" required />
+      </div>
+
+      <div class="pay-methods">
+        <div class="pay-method-pill active" onclick="selectMethod(this, 'card')">
+          <i class="fa-solid fa-credit-card"></i>
+          <span style="font-size:0.8rem; font-weight:700;">Debit Card</span>
+        </div>
+        <div class="pay-method-pill" onclick="selectMethod(this, 'momo')">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span style="font-size:0.8rem; font-weight:700;">MTN / MoMo</span>
+        </div>
+        <div class="pay-method-pill" onclick="selectMethod(this, 'bank')">
+          <i class="fa-solid fa-building-columns"></i>
+          <span style="font-size:0.8rem; font-weight:700;">Bank Transfer</span>
+        </div>
+      </div>
+
+      <p style="font-size:0.8rem; color:var(--text-muted); text-align:center; margin-bottom:20px;">
+        <i class="fa-solid fa-shield-halved" style="color:var(--green-primary);"></i> Encrypted 256-bit SSL transaction for Apostolic Zion Worship Centre missions.
+      </p>
+
+      <button type="button" class="btn-primary-custom" id="payWithPaystack" style="width:100%; justify-content:center; padding:16px; font-size:1rem; background:var(--orange-primary); color:#fff; border-radius:14px;">
+        Proceed to Secure Payment &rarr;
+      </button>
+
+      <div id="noticeMsg" style="display:none; margin-top:16px; padding:12px; border-radius:10px; font-size:0.85rem; text-align:center;"></div>
+    </div>
+  </main>
+
+  <footer class="hb-footer" style="padding-top:30px;">
+    <div class="hb-footer-bottom">
+      <div class="bottom-inner">
+        <div>
+          &copy; 2026 Zoe Tirzah Missions &bull; Outreach of <strong>Apostolic Zion Worship Centre (AZWC)</strong>.
+        </div>
+        <div>
+          <a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener">AZWC Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+    let activeChannel = 'card';
+    function selectMethod(el, channel) {
+      document.querySelectorAll('.pay-method-pill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      activeChannel = channel;
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const presetAmount = urlParams.get('amount') || window.location.href.split('{Amn}=')[1];
+    if (presetAmount) {
+      document.getElementById('amount').value = parseFloat(presetAmount) || '';
+    }
+
+    function showNotice(msg, isSuccess = true) {
+      const box = document.getElementById('noticeMsg');
+      box.style.display = 'block';
+      box.style.background = isSuccess ? 'rgba(19,75,56,0.1)' : 'rgba(197,0,30,0.1)';
+      box.style.color = isSuccess ? '#0B281F' : '#C5001E';
+      box.textContent = msg;
+    }
+
+    document.getElementById('payWithPaystack').addEventListener('click', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email-address').value.trim();
+      const amountVal = document.getElementById('amount').value.trim();
+
+      if (!email || !amountVal || parseFloat(amountVal) <= 0) {
+        showNotice('Please enter a valid email address and donation amount.', false);
+        return;
+      }
+
+      showNotice('Initializing secure checkout with Paystack...');
+
+      try {
+        let handler = PaystackPop.setup({
+          key: 'pk_test_00fa63cfd72750621a5c9ebac4f0ad0a912cee0b',
+          email: email,
+          amount: Math.round(parseFloat(amountVal) * 100),
+          currency: 'GHS',
+          ref: 'ZOE_' + Math.floor((Math.random() * 1000000000) + 1),
+          callback: function(response) {
+            window.location.href = "/payment/success.html?ref=" + encodeURIComponent(response.reference);
+          },
+          onClose: function() {
+            showNotice('Payment modal closed. You can re-attempt anytime.', false);
+          }
+        });
+        handler.openIframe();
+      } catch (err) {
+        showNotice('Unable to load Paystack gateway. Please try MoMo code *234*16932*GHS# instead.', false);
+      }
+    });
+  </script>
+</body>
+</html>

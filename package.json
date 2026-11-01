@@ -1,0 +1,16 @@
+{
+  "name": "zoe-tirzah-missions",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Build ready')\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.3.0",
+    "mongoose": "^9.1.1",
+    "nodemailer": "^7.0.12"
+  }
+}

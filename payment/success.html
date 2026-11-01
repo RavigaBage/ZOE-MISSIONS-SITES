@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Donation Confirmed | Zoe Tirzah Missions</title>
+  <link rel="icon" type="image/png" href="/images/logo/tirzah.png" />
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <!-- HopeBridge Master Theme -->
+  <link rel="stylesheet" href="/css/theme-hopebridge.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+    .success-container {
+      max-width: 540px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 28px;
+      padding: 48px 36px;
+      border: 1px solid #ECEAE3;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .check-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(19, 75, 56, 0.1);
+      color: var(--green-primary);
+      display: grid;
+      place-items: center;
+      font-size: 2.2rem;
+      margin: 0 auto 20px;
+    }
+  </style>
+</head>
+<body style="background:var(--bg-soft); min-height:100vh; display:flex; flex-direction:column;">
+
+  <!-- Sticky Navbar -->
+  <header class="navbar-clean" id="navWrapper">
+    <div class="container navbar-inner" style="justify-content:space-between;">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo/tirzah.png" alt="zoe-tirzah" class="nav-brand-logo" />
+        <span class="nav-brand-name">zoe-tirzah</span>
+      </a>
+      <a href="/" class="btn-outline-custom" style="padding:8px 18px; font-size:0.85rem;">&larr; Return Home</a>
+    </div>
+  </header>
+
+  <main style="flex:1; display:grid; place-items:center; padding:20px;">
+    <div class="success-container">
+      <div class="check-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <span class="tag-pill" style="margin-bottom:14px; background:rgba(245, 106, 0, 0.1); color:var(--orange-primary);">
+        <i class="fa-solid fa-seedling"></i> Seed of Faith Sown
+      </span>
+
+      <h1 style="font-family:var(--font-head); font-size:2.4rem; color:var(--green-dark); margin-bottom:12px;">
+        Thank You for Giving!
+      </h1>
+
+      <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.7; margin-bottom:24px;">
+        Your generous kingdom investment has been received. Because of your faithfulness, medical care, warm clothing, and the eternal message of Jesus Christ will reach precious lives across Ghana.
+      </p>
+
+      <div style="border-radius:18px; overflow:hidden; margin-bottom:28px; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+        <img src="/images/missions/IMG_7355.jpg" alt="Mission field children" style="width:100%; height:200px; object-fit:cover;" />
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <a href="/" class="btn-primary-custom" style="justify-content:center; padding:15px;">
+          Return to Homepage
+        </a>
+        <button onclick="window.print()" class="btn-outline-custom" style="justify-content:center; padding:12px; font-size:0.9rem;">
+          <i class="fa-solid fa-print"></i> Print Receipt
+        </button>
+      </div>
+
+      <div style="margin-top:24px; padding-top:18px; border-top:1px solid #ECEAE3; font-size:0.82rem; color:var(--text-muted);">
+        An Outreach of <strong>Apostolic Zion Worship Centre (AZWC)</strong> &bull; <a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener" style="color:var(--orange-primary); font-weight:700;">web.facebook.com/AZWC17</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="hb-footer" style="padding-top:20px;">
+    <div class="hb-footer-bottom">
+      <div class="bottom-inner">
+        <div>&copy; 2026 Zoe Tirzah Missions &bull; AZWC Ghana.</div>
+        <div><a href="https://web.facebook.com/AZWC17" target="_blank" rel="noopener">AZWC Facebook</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#0B281F', '#F56A00', '#134B38', '#E0A800']
+        });
+      }
+    });
+  </script>
+</body>
+</html>

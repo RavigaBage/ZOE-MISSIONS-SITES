@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="697px" height="601px" viewBox="0 0 697 601" version="1.1">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Fill 1 Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0.0838557994" width="730" height="600"/>
+    </defs>
+    <g id="fuelbankfoundation_home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="fuelbankfoundation_partners" transform="translate(0.000000, -2556.000000)">
+            <g id="Fill-1-Copy-3" transform="translate(0.000000, 2556.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"/>
+                </mask>
+                <g id="Mask"/>
+                <path d="M133.753711,710.031576 C-124.255948,656.871495 -294.405843,460.589891 -245.67158,222.880803 C-196.948825,-14.8282859 51.7052355,-164.433307 309.714894,-111.273226 C567.724552,-58.113144 737.379625,177.669353 688.65687,415.378442 C639.934114,653.08753 391.763369,763.180121 133.753711,710.031576 Z" fill="#FFD300" mask="url(#mask-2)"/>
+            </g>
+        </g>
+    </g>
+</svg>

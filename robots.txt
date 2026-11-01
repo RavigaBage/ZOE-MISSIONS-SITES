@@ -1,0 +1,1 @@
+User-agent: * Allow: / # Block private/admin paths (update if yours differ) Disallow: /admin/ Disallow: /private/ Disallow: /tmp/ # Crawl-delay for politeness Crawl-delay: 5 # Sitemap location Sitemap: https://www.zoe-tirzahmissions.com/sitemap.xml

@@ -1,0 +1,8 @@
+{
+  "name": "Zoe Tirzah Missions",
+  "description": "Zoe Tirzah Missions reaches unreached communities in Ghana through evangelism, medical outreach, church planting, and discipleship.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

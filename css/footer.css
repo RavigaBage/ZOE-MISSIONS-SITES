@@ -1,0 +1,48 @@
+footer {
+    background: var(--navy); color: rgba(255,255,255,0.65);
+    padding-top: 64px;
+}
+.footer-grid {
+    width: min(1200px,92vw); margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+    padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand { }
+.footer-brand-name {
+    font-family: var(--font-head); font-size: 1.4rem; font-weight: 800;
+    color: var(--white); margin-bottom: 14px;
+}
+.footer-brand-desc { font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+.footer-socials { display: flex; gap: 10px; }
+.footer-social-link {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); display: grid; place-items: center;
+    color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: var(--transition);
+}
+.footer-social-link:hover { background: var(--crimson); color: var(--white); }
+.footer-col-title {
+    font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--white); margin-bottom: 18px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 0.88rem; transition: color 0.2s ease; }
+.footer-links a:hover { color: var(--teal); }
+.footer-bottom {
+    width: min(1200px,92vw); margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0; font-size: 0.82rem; gap: 16px; flex-wrap: wrap;
+}
+.footer-newsletter { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.footer-email-input {
+    flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px; padding: 9px 16px; color: var(--white); font-size: 0.85rem;
+    outline: none; font-family: var(--font-body);
+}
+.footer-email-input::placeholder { color: rgba(255,255,255,0.35); }
+.footer-email-input:focus { border-color: var(--teal); }
+.footer-sub-btn {
+    background: var(--teal-dark); color: var(--white); border: none;
+    padding: 9px 18px; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; transition: var(--transition); white-space: nowrap; font-family: var(--font-body);
+}
+.footer-sub-btn:hover { background: var(--teal-mid); }

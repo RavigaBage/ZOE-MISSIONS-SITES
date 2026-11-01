@@ -1,0 +1,130 @@
+[
+  {
+    "id": "mvy19nzi2vf8c",
+    "name": "",
+    "email": "testpartner@example.com",
+    "tag": "Newsletter",
+    "joined": "2026-11-01",
+    "status": "active"
+  },
+  {
+    "id": "mvy0ag5nb39mx",
+    "name": "Grace Mensah",
+    "email": "test_outreach@missions.gh",
+    "tag": "Newsletter",
+    "joined": "2026-11-01",
+    "status": "active"
+  },
+  {
+    "id": 1,
+    "name": "Amara Okafor",
+    "email": "amara.okafor@gmail.com",
+    "tag": "Newsletter",
+    "joined": "2025-08-12",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "Liam Foster",
+    "email": "liam.foster@outlook.com",
+    "tag": "Product updates",
+    "joined": "2025-11-03",
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "name": "Nadia Petrov",
+    "email": "n.petrov@protonmail.com",
+    "tag": "Beta",
+    "joined": "2026-01-22",
+    "status": "active"
+  },
+  {
+    "id": 4,
+    "name": "Kwame Asante",
+    "email": "kwame.asante@yahoo.com",
+    "tag": "Newsletter",
+    "joined": "2025-06-30",
+    "status": "unsubscribed"
+  },
+  {
+    "id": 5,
+    "name": "Sofia Marin",
+    "email": "sofia.marin@icloud.com",
+    "tag": "Events",
+    "joined": "2026-03-09",
+    "status": "active"
+  },
+  {
+    "id": 6,
+    "name": "Daniel Cho",
+    "email": "d.cho@gmail.com",
+    "tag": "Newsletter",
+    "joined": "2026-06-02",
+    "status": "active"
+  },
+  {
+    "id": 7,
+    "name": "Priya Nair",
+    "email": "priya.nair@hotmail.com",
+    "tag": "Product updates",
+    "joined": "2025-09-17",
+    "status": "active"
+  },
+  {
+    "id": 8,
+    "name": "Elena Vasquez",
+    "email": "elena.vasquez@gmail.com",
+    "tag": "Beta",
+    "joined": "2026-06-18",
+    "status": "active"
+  },
+  {
+    "id": 9,
+    "name": "Tobias Mensah",
+    "email": "t.mensah@outlook.com",
+    "tag": "Newsletter",
+    "joined": "2025-04-25",
+    "status": "unsubscribed"
+  },
+  {
+    "id": 10,
+    "name": "Hannah Wright",
+    "email": "hannah.wright@gmail.com",
+    "tag": "Events",
+    "joined": "2026-02-14",
+    "status": "active"
+  },
+  {
+    "id": 11,
+    "name": "Mateo Rossi",
+    "email": "mateo.rossi@icloud.com",
+    "tag": "Newsletter",
+    "joined": "2025-12-05",
+    "status": "active"
+  },
+  {
+    "id": 12,
+    "name": "Chioma Eze",
+    "email": "chioma.eze@protonmail.com",
+    "tag": "Product updates",
+    "joined": "2026-06-10",
+    "status": "active"
+  },
+  {
+    "id": 13,
+    "name": "Oscar Lindqvist",
+    "email": "oscar.lindqvist@gmail.com",
+    "tag": "Beta",
+    "joined": "2025-10-08",
+    "status": "unsubscribed"
+  },
+  {
+    "id": 14,
+    "name": "Yuki Tanaka",
+    "email": "yuki.tanaka@yahoo.com",
+    "tag": "Newsletter",
+    "joined": "2026-05-29",
+    "status": "active"
+  }
+]
